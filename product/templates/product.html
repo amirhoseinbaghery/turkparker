@@ -1,0 +1,362 @@
+{% extends 'shared/main.html' %}
+{% load static %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block desc %}{{ object.description }}{% endblock %}
+{% block keywords %}{{ object.keyword }}{% endblock %}
+
+{% block content %}
+    <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
+        <!--begin::Page title-->
+        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
+            <div class="page-title d-flex flex-column me-3">
+                <!--begin::Title-->
+                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">مقالات</h1>
+                <!--end::Title-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-gray-600">
+                        <a href="/"
+                           class="text-gray-600 text-hover-primary">خانه</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-gray-600">
+                        <a href="{% url 'blog:PostList' %}"
+                           class="text-gray-600 text-hover-primary">مقالات</a>
+                    </li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+        </div>
+        <!--end::Page title-->
+    </div>
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+        <div class="content flex-row-fluid" id="kt_content">
+            <!--begin::Careers - List-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-17">
+                    <!--begin::Hero-->
+                    <div class="position-relative mb-17">
+                        <!--begin::Overlay-->
+                        <div class="overlay overlay-show">
+                            <!--begin::Image-->
+                            <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-250px"
+                                 style="background-image:url('{{ object.image.url }}')"></div>
+                            <!--end::Image-->
+                        </div>
+                        <!--end::Overlay-->
+                        <!--begin::Heading-->
+                    </div>
+                    <!--end::-->
+                    <!--begin::Layout-->
+                    <div class="d-flex flex-column flex-lg-row mb-17">
+                        <!--begin::Content-->
+                        <div class="flex-lg-row-fluid me-0 me-lg-20">
+                            <!--begin::Job-->
+                            <div class="mb-17">
+                                <!--begin::Description-->
+                                <div class="m-0">
+                                    <!--begin::Title-->
+                                    <h1 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h1>
+                                    <!--end::Title-->
+                                    <!--begin::Text-->
+                                    <p class="fw-bold fs-4 text-gray-600 mb-2">{{ object.body|safe }}</p>
+                                    <!--end::Text-->
+                                </div>
+                                <!--end::Description-->
+                                <!--begin::Accordion-->
+                                <!--begin::Section-->
+                                <div class="m-0">
+                                    <!--begin::Heading-->
+                                    <div class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_1">
+                                        <!--begin::Icon-->
+                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
+                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="6.0104" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+                                            <span class="svg-icon toggle-off svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="10.8891" y="17.8033" width="12" height="2"
+                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
+                                                                          fill="currentColor"></rect>
+																	<rect x="6.01041" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                        </div>
+                                        <!--end::Icon-->
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">موارد مصرف</h4>
+                                        <!--end::Title-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Body-->
+                                    <div id="kt_job_1_1" class="collapse show fs-6 ms-1">
+                                        <!--begin::Item-->
+                                        {% for a in object.usage.all %}
+                                            <div class="mb-4">
+                                                <!--begin::Item-->
+                                                <div class="d-flex align-items-center ps-10 mb-n1">
+                                                    <!--begin::Bullet-->
+                                                    <span class="bullet me-3"></span>
+                                                    <!--end::Bullet-->
+                                                    <!--begin::Label-->
+                                                    <div class="text-gray-600 fw-bold fs-6">{{ a.title }}</div>
+                                                    <!--end::Label-->
+                                                </div>
+                                                <!--end::Item-->
+                                            </div>
+                                        {% endfor %}
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Content-->
+                                    <!--begin::Separator-->
+                                    <div class="separator separator-dashed"></div>
+                                    <!--end::Separator-->
+                                </div>
+                                <!--end::Section-->
+                                <!--begin::Section-->
+                                <div class="m-0">
+                                    <!--begin::Heading-->
+                                    <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0"
+                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_2">
+                                        <!--begin::Icon-->
+                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
+                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="6.0104" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+                                            <span class="svg-icon toggle-off svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="10.8891" y="17.8033" width="12" height="2"
+                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
+                                                                          fill="currentColor"></rect>
+																	<rect x="6.01041" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                        </div>
+                                        <!--end::Icon-->
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">مزایا</h4>
+                                        <!--end::Title-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Body-->
+                                    <div id="kt_job_1_2" class="collapse fs-6 ms-1">
+                                        <!--begin::Item-->
+                                        {% for b in object.feature.all %}
+                                            <div class="mb-4">
+                                                <!--begin::Item-->
+                                                <div class="d-flex align-items-center ps-10 mb-n1">
+                                                    <!--begin::Bullet-->
+                                                    <span class="bullet me-3"></span>
+                                                    <!--end::Bullet-->
+                                                    <!--begin::Label-->
+                                                    <div class="text-gray-600 fw-bold fs-6">{{ b.title }}</div>
+                                                    <!--end::Label-->
+                                                </div>
+                                                <!--end::Item-->
+                                            </div>
+                                        {% endfor %}
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Content-->
+                                    <!--begin::Separator-->
+                                    <div class="separator separator-dashed"></div>
+                                    <!--end::Separator-->
+                                </div>
+                                <!--end::Section-->
+                                <!--begin::Section-->
+                                <div class="m-0">
+                                    <!--begin::Heading-->
+                                    <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0"
+                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_3">
+                                        <!--begin::Icon-->
+                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
+                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="6.0104" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+                                            <span class="svg-icon toggle-off svg-icon-1">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.3" x="2" y="2" width="20"
+                                                                          height="20" rx="5" fill="currentColor"></rect>
+																	<rect x="10.8891" y="17.8033" width="12" height="2"
+                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
+                                                                          fill="currentColor"></rect>
+																	<rect x="6.01041" y="10.9247" width="12" height="2"
+                                                                          rx="1" fill="currentColor"></rect>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->
+                                        </div>
+                                        <!--end::Icon-->
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">گالری تصاویر</h4>
+                                        <!--end::Title-->
+                                    </div>
+                                    <!--end::Heading-->
+                                    <!--begin::Body-->
+                                    <div id="kt_job_1_3" class="collapse fs-6 ms-1">
+                                        <div class="row g-10 row-cols-2 row-cols-lg-5">
+                                            {% for c in object.gallery.all %}
+                                            <!--begin::Col-->
+                                            <div class="col">
+                                                <!--begin::Overlay-->
+                                                <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
+                                                   href="{{ c.image.url }}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
+                                                         style="background-image:url('{{ c.image.url }}')"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-2x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                            </div>
+                                            <!--end::Col-->
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <!--end::Content-->
+                                    <!--begin::Separator-->
+                                    <div class="separator separator-dashed"></div>
+                                    <!--end::Separator-->
+                                </div>
+                                <!--end::Section-->
+                                <!--end::Accordion-->
+                            </div>
+                            <!--end::Job-->
+                            <!--begin::Job-->
+
+                            <!--end::Job-->
+                        </div>
+                        <!--end::Content-->
+                        <!--begin::Sidebar-->
+                        <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px">
+                            <!--begin::Careers about-->
+                            <div class="card bg-light">
+                                <!--begin::Body-->
+                                <div class="card-body">
+                                    <!--begin::Top-->
+                                    <div class="mb-7">
+                                        <!--begin::Title-->
+                                        <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
+                                        <!--end::Title-->
+                                        <!--begin::Text-->
+                                        <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
+                                        <!--end::Text-->
+                                    </div>
+                                    <!--end::Top-->
+                                    <!--begin::Item-->
+                                    <div class="mb-8">
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
+                                        <!--end::Title-->
+                                        <!--begin::Section-->
+                                        <div class="my-2">
+                                            <!--begin::Row-->
+                                            {% for s in object.category.all %}
+                                            <div class="d-flex align-items-center mb-3">
+                                                <!--begin::Bullet-->
+                                                <span class="bullet me-3"></span>
+                                                <!--end::Bullet-->
+                                                <!--begin::Label-->
+                                                <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
+                                                <!--end::Label-->
+                                            </div>
+                                            {% endfor %}
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="mb-8">
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
+                                        <!--end::Title-->
+                                        <!--begin::Section-->
+                                        <div class="my-2">
+                                            <!--begin::Row-->
+                                            {% for d in object.tag.all %}
+                                            <div class="d-flex align-items-center mb-3">
+                                                <!--begin::Bullet-->
+                                                <span class="bullet me-3"></span>
+                                                <!--end::Bullet-->
+                                                <!--begin::Label-->
+                                                <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
+                                                <!--end::Label-->
+                                            </div>
+                                            {% endfor %}
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Link-->
+                                    <a href="/metronic8/demo16/../demo16/pages/blog/post.html"
+                                       class="link-primary fs-6 fw-bold">Explore More</a>
+                                    <!--end::Link-->
+                                </div>
+                                <!--end::Body-->
+                            </div>
+                            <!--end::Careers about-->
+                        </div>
+                        <!--end::Sidebar-->
+                    </div>
+                    <!--end::Layout-->
+                    <!--begin::Section-->
+
+                    <!--end::Section-->
+                    <!--begin::Card-->
+
+                    <!--end::Card-->
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Careers - List-->
+        </div>
+    </div>
+{% endblock %}

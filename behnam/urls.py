@@ -21,7 +21,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('', include('blog.urls')),
+    path('blog/', include('blog.urls')),
+    path('project/', include('project.urls')),
+    path('product/', include('product.urls')),
 
 ]
 if settings.DEBUG:

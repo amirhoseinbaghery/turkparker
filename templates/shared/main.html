@@ -7,6 +7,10 @@
     {% include 'shared/head.html' %}
 
     <title>{% block title %}{% endblock %}</title>
+    <meta name="description"
+          content="{% block desc %}{% endblock %}">
+    <meta name="keywords"
+          content="{% block keywords %}{% endblock %}">
     <link rel="shortcut icon" href="{% static 'media/logos/favicon.ico' %}"/>
     <!--end::Page Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
