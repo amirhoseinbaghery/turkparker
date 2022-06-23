@@ -52,7 +52,6 @@
                                 <img src="{{ object.image.url }}" alt="{% if object.get_full_name %}
                                                 {{ object.get_full_name }}{% else %}
                                                 {{ object }}{% endif %}">
-                                <div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px"></div>
                             </div>
                         </div>
                         <!--end::Pic-->
@@ -119,7 +118,7 @@
 														</span>
                                                 {{ h.title }}</h5>
                                         {% endfor %}
-                                        <a target="_blank" href="https://instagram.com/arash.moradvand1381"
+                                        <a
                                            class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
                                             <!--begin::Svg Icon | path: icons/duotune/communication/com011.svg-->
                                             <span class="svg-icon svg-icon-4 me-1">
@@ -132,36 +131,11 @@
                                                                       fill="currentColor"></path>
 															</svg>
 														</span>
-                                            <!--end::Svg Icon-->social media</a>
+                                            <!--end::Svg Icon-->{{ object.email }}</a>
                                     </div>
                                     <!--end::Info-->
                                 </div>
                                 <!--end::User-->
-                                <!--begin::Actions-->
-                                <div class="d-flex my-4">
-                                    <a href="#" class="btn btn-sm btn-light me-2" id="kt_user_follow_button">
-                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr012.svg-->
-                                        <span class="svg-icon svg-icon-3 d-none">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                 height="24" viewBox="0 0 24 24" fill="none">
-																<path opacity="0.3"
-                                                                      d="M10 18C9.7 18 9.5 17.9 9.3 17.7L2.3 10.7C1.9 10.3 1.9 9.7 2.3 9.3C2.7 8.9 3.29999 8.9 3.69999 9.3L10.7 16.3C11.1 16.7 11.1 17.3 10.7 17.7C10.5 17.9 10.3 18 10 18Z"
-                                                                      fill="currentColor"></path>
-																<path d="M10 18C9.7 18 9.5 17.9 9.3 17.7C8.9 17.3 8.9 16.7 9.3 16.3L20.3 5.3C20.7 4.9 21.3 4.9 21.7 5.3C22.1 5.7 22.1 6.30002 21.7 6.70002L10.7 17.7C10.5 17.9 10.3 18 10 18Z"
-                                                                      fill="currentColor"></path>
-															</svg>
-														</span>
-                                        <!--end::Svg Icon-->
-                                        <!--begin::Indicator-->
-                                        <span class="indicator-label">Follow</span>
-                                        <span class="indicator-progress">Please wait...
-														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                        <!--end::Indicator-->
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-primary me-2" data-bs-toggle="modal"
-                                       data-bs-target="#kt_modal_offer_a_deal">Hire Me</a>
-                                </div>
-                                <!--end::Actions-->
                             </div>
                             <!--end::Title-->
                             <!--begin::Stats-->

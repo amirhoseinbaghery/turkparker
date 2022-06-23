@@ -11,11 +11,11 @@
                     <div class="mb-15">
                         <!--begin::Input group-->
                         <div class="mb-0">
-                            <form method="post" class="comment-form" action=".">
+                            <form method="post" class="comment-form">
                                 {% csrf_token %}
                                 {{ comment_form.as_p }}
                                 {% if request.user.is_authenticated %}
-                                    <button type="submit"
+                                    <button
                                             class="btn btn-primary mt-n20 mb-20 position-relative float-end me-7"><span
                                             class="btn-title">ارسال دیدگاه <i
                                             class="arrow flaticon-play-button-1"></i></span></button>
@@ -46,7 +46,9 @@
                                                 <div class="d-flex align-items-center f">
                                                     <!--begin::Author-->
                                                     <div class="symbol symbol-50px me-5">
-                                                        <img src="{{ a.user.image.url }}" alt="{{ a.user }}"
+                                                        <img src="{{ a.user.image.url }}" alt="{% if a.user.get_full_name %}
+                                                                    {{ a.user.get_full_name }}{% else %}
+                                                                    {{ a.user }}{% endif %}"
                                                              class="symbol-label fs-1 fw-bolder bg-light-info text-info">
                                                     </div>
                                                     <!--end::Author-->
@@ -92,15 +94,15 @@
                             <!--end::Comment-->
                             <!--begin::Comment-->
                         </div>
-                        <div class="mb-15 replied-comments mt-5" style="display: none">
+                        <div class="mb-15 replied-comments mt-5">
                             <!--begin::Input group-->
                             <div class="mb-0">
-                                <form method="post" class="reply-form" action=".">
+                                <form method="post" class="reply-form">
                                     {% csrf_token %}
                                     <input type="hidden" name="comment_id" value="{{ a.id }}">
                                     {{ comment_form.as_p }}
                                     {% if request.user.is_authenticated %}
-                                        <button type="submit"
+                                        <button
                                                 class="btn btn-primary mt-n20 mb-20 position-relative float-end me-7"><span
                                                 class="btn-title">ارسال دیدگاه <i
                                                 class="arrow flaticon-play-button-1"></i></span></button>
@@ -155,11 +157,6 @@
                                                         <!--end::Info-->
                                                     </div>
                                                     <!--end::Container-->
-                                                    <!--begin::Actions-->
-                                                    <div class="m-0">
-                                                        <i class="las la-reply fs-2qx"></i>
-                                                    </div>
-                                                    <!--end::Actions-->
                                                 </div>
                                                 <!--end::Wrapper-->
                                                 <!--begin::Desc-->

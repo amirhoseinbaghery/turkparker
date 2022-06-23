@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 
@@ -38,20 +39,12 @@ def SinglePost(request, slug):
 
 
 class PostList(ListView):
-    template_name = 'home.html'
+    template_name = 'list.html'
 
     def get_queryset(self):
         global blog
         blog = Blog.objects.filter(status='p')
         return blog
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['newest'] = blog.order_by('-publish')[:1]
-        context['new'] = blog.order_by('-publish')[1:4]
-        context['similar'] = blog.filter(category__slug='استراتژی-ولوم-تریدینگ')
-        context['filter'] = blog.filter(category__slug='فیلتر-نویسی')
-        return context
 
 
 class categoryList(ListView):
@@ -101,3 +94,15 @@ class Author(ListView):
         context['object'] = author
         return context
 
+
+class SearchBlog(ListView):
+    model = Blog
+    template_name = "list.html"
+
+    def get_queryset(self):  # new
+        query = self.request.GET.get("q")
+        object_list = Blog.objects.filter(
+            Q(title__icontains=query) | Q(description__icontains=query) | Q(keyword__icontains=query) | Q(
+                body__icontains=query)
+        )
+        return object_list

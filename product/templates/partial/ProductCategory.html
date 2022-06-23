@@ -1,0 +1,43 @@
+{% load static %}
+<div class="mb-16">
+    <h4 class="text-black mb-7">دسته بندی ها</h4>
+    <!--begin::Item-->
+    {% for i in category %}
+        <div class="d-flex flex-stack fw-bold fs-5 text-muted mb-4">
+            <!--begin::Text-->
+            {% if i.Category %}
+                <a href="{% url 'product:categoryList' i.slug %}"
+                   class="text-muted text-hover-primary pe-2">{{ i.title }}</a>
+                <!--end::Text-->
+                <!--begin::Number-->
+                <div class="m-0">{{ i.Category.count }}</div>
+                <!--end::Number-->
+            {% else %}
+            {% endif %}
+        </div>
+    {% endfor %}
+    <!--end::Item-->
+</div>
+<!--end::Catigories-->
+<!--begin::Recent posts-->
+<div class="m-0">
+    <h4 class="text-black mb-7">محصولات جدید</h4>
+    <!--begin::Item-->
+    {% for a in recently %}
+        <div class="d-flex flex-stack mb-7">
+            <!--begin::Symbol-->
+            <div class="symbol symbol-60px symbol-2by3 me-4">
+                <a href="{% url 'product:product' a.slug %}"><img class="symbol-label" src="{{ a.image.url }}"></a>
+
+            </div>
+            <!--end::Symbol-->
+            <!--begin::Title-->
+            <div class="m-0">
+                <a href="{% url 'product:product' a.slug %}" class="text-dark fw-bolder text-hover-primary fs-6">{{ a.title }}</a>
+                <span class="text-gray-600 fw-bold d-block pt-1 fs-7">{{ a.description|truncatewords_html:15|safe }}</span>
+            </div>
+            <!--end::Title-->
+        </div>
+    {% endfor %}
+    <!--end::Item-->
+</div>

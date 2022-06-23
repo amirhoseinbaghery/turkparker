@@ -10,7 +10,7 @@
         <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
             <div class="page-title d-flex flex-column me-3">
                 <!--begin::Title-->
-                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">مقالات</h1>
+                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">{{ object.title }}</h1>
                 <!--end::Title-->
                 <!--begin::Breadcrumb-->
                 <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
@@ -22,10 +22,14 @@
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item text-gray-600">
-                        <a href="{% url 'blog:PostList' %}"
-                           class="text-gray-600 text-hover-primary">مقالات</a>
+                        <a href="{% url 'product:ProductList' %}"
+                           class="text-gray-600 text-hover-primary">محصولات</a>
                     </li>
                     <!--end::Item-->
+                    <li class="breadcrumb-item text-gray-600">
+                        <a
+                           class="text-gray-600 text-hover-primary">{{ object.title }}</a>
+                    </li>
                 </ul>
                 <!--end::Breadcrumb-->
             </div>
@@ -335,10 +339,6 @@
                                         <!--end::Section-->
                                     </div>
                                     <!--end::Item-->
-                                    <!--begin::Link-->
-                                    <a href="/metronic8/demo16/../demo16/pages/blog/post.html"
-                                       class="link-primary fs-6 fw-bold">Explore More</a>
-                                    <!--end::Link-->
                                 </div>
                                 <!--end::Body-->
                             </div>

@@ -1,12 +1,13 @@
 from django.urls import path
 
-from product.views import product
-from project.models import Project, ProjectCategory, ProjectTag, ProjectComment
+from product.views import product, ProductList, ProductCategoryList, ProductTagList, SearchProduct
 
 app_name = 'product'
 urlpatterns = [
+    path('category/<slug>', ProductCategoryList.as_view(), name='categoryList'),
+
+    path("search/", SearchProduct.as_view(), name="search"),
     path('<slug>', product, name='product'),
-    # path('', ProjectCategory.as_view(), name='project_home'),
-    # path('category/<slug>', ProjectTag.as_view(), name='project_category'),
-    # path('tag/<slug>', ProjectComment.as_view(), name='project_tag'),
+    path('', ProductList.as_view(), name='ProductList'),
+    path('tag/<slug>', ProductTagList.as_view(), name='tagList'),
 ]

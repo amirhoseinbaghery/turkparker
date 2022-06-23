@@ -26,12 +26,6 @@
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-600">
-                    <a href="{% url 'blog:categoryList' object.similar_category.slug %}"
-                       class="text-gray-600 text-hover-primary">{{ object.similar_category.title }}</a>
-                </li>
-                <!--end::Item-->
-                <!--begin::Item-->
                 <li class="breadcrumb-item text-gray-600">{{ object.title }}</li>
                 <!--end::Item-->
             </ul>
@@ -267,9 +261,10 @@
                             <div class="mb-16">
                                 <h4 class="text-black mb-7">جستجو</h4>
                                 <!--begin::Input group-->
-                                <div class="position-relative">
-                                    <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-                                    <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute top-50 translate-middle ms-6">
+                                <form action="{% url 'blog:search' %}" method="get">
+                                    <div class="position-relative">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                                        <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute top-50 translate-middle ms-6">
 														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                              viewBox="0 0 24 24" fill="none">
 															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546"
@@ -279,10 +274,15 @@
                                                                   fill="black"/>
 														</svg>
 													</span>
-                                    <!--end::Svg Icon-->
-                                    <input type="text" class="form-control form-control-solid ps-10" name="search"
-                                           value="" placeholder="جستجو کنید..."/>
-                                </div>
+                                        <!--end::Svg Icon-->
+
+                                        <input class="form-control form-control-solid ps-10" name="q" type="text"
+                                               placeholder="جستجو کنید..."/>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary mt-2" type="submit">جست و جو</button>
+                                    </div>
+                                </form>
                                 <!--end::Input group-->
                             </div>
                             <!--end::Search blog-->
