@@ -1,11 +1,12 @@
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
-from account.models import User
-from project.models import Project, ProjectComment, ProjectCategory, ProjectTag
+
 from project.forms import CommentForm
+from project.models import Project, ProjectComment, ProjectCategory, ProjectTag
 
 
-def SinglePost(request, slug):
+def single_project(request, slug):
     project = get_object_or_404(Project, status='p', slug=slug)
     comments = ProjectComment.objects.filter(project=project, reply=None, status="p")
     ip_address = request.user.ip_address
@@ -32,44 +33,36 @@ def SinglePost(request, slug):
         'related': project.get_related_posts_by_tags()[:3],
         'comment_form': comment_form,
     }
-    return render(request, 'singleBlog.html', context)
+    return render(request, 'project.html', context)
 
 
-class PostList(ListView):
-    template_name = 'home.html'
+class ProjectList(ListView):
+    template_name = 'projectlist.html'
 
     def get_queryset(self):
         global project_
         project_ = Project.objects.filter(status='p')
         return project_
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['newest'] = project_[:1]
-        context['new'] = project_[1:4]
-        context['similar'] = project_.filter(category__slug='استراتژی-ولوم-تریدینگ')
-        context['filter'] = project_.filter(category__slug='فیلتر-نویسی')
-        return context
 
-
-class categoryList(ListView):
-    template_name = 'list.html'
+class ProjectCategoryList(ListView):
+    template_name = 'projectlist.html'
     paginate_by = 15
 
     def get_queryset(self):
-        global category
+        global proj
         slug = self.kwargs.get('slug')
-        category = get_object_or_404(ProjectCategory, slug=slug)
-        return category.ProjectCategory.all()
+        proj = get_object_or_404(ProjectCategory, status='p', slug=slug)
+        return proj.ProjectCategory.filter(status='p')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['object'] = category
+        context['object'] = proj
         return context
 
 
-class tagList(ListView):
-    template_name = 'list.html'
+class ProjectTagList(ListView):
+    template_name = 'projectlist.html'
     paginate_by = 15
 
     def get_queryset(self):
@@ -83,3 +76,15 @@ class tagList(ListView):
         context['object'] = tag
         return context
 
+
+class SearchProject(ListView):
+    model = Project
+    template_name = "projectlist.html"
+
+    def get_queryset(self):  # new
+        query = self.request.GET.get("q")
+        object_list = Project.objects.filter(
+            Q(title__icontains=query) | Q(description__icontains=query) | Q(keyword__icontains=query) | Q(
+                body__icontains=query)
+        )
+        return object_list

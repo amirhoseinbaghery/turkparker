@@ -1,0 +1,168 @@
+{% extends 'shared/main.html' %}
+{% load ProjectTT %}
+{% load static %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block content %}
+    <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
+        <!--begin::Page title-->
+        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
+            <div class="page-title d-flex flex-column me-3">
+                <!--begin::Title-->
+                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">{{ object.title }}</h1>
+                <!--end::Title-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-gray-600">
+                        <a href="/"
+                           class="text-gray-600 text-hover-primary">خانه</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-gray-600">
+                        <a href="{% url 'project:ProjectList' %}"
+                           class="text-gray-600 text-hover-primary">پروژه ها</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+        </div>
+        <!--end::Page title-->
+    </div>
+
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+        <div class="content flex-row-fluid" id="kt_content">
+            <!--begin::Post card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-15 pb-lg-0">
+                    <!--begin::Layout-->
+                    <div class="d-flex flex-column flex-xl-row">
+                        <!--begin::Content-->
+                        <div class="flex-lg-row-fluid me-xl-15  scroll h-800px" id="listscroll">
+                            <!--begin::Post content-->
+
+                            <!--end::Post content-->
+                            <div class="row g-10 me-0">
+                                <!--begin::Col-->
+                                {% for a in object_list %}
+                                    <div class="col-md-4">
+                                        <!--begin::Feature post-->
+                                        <div class="card-xl-stretch me-md-6">
+                                            <!--begin::Image-->
+                                            <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
+                                               style=""
+                                               data-fslightbox="lightbox-video-tutorials"
+                                               href="{% url 'project:Project' a.slug %}">
+                                                <img src="{{ a.image.url }}"
+                                                     class="position-absolute top-50 start-50 translate-middle card-img"
+                                                     alt=""/>
+                                            </a>
+                                            <!--end::Image-->
+                                            <!--begin::Body-->
+                                            <div class="m-0">
+                                                <!--begin::Title-->
+                                                <a href="{% url 'project:Project' a.slug %}"
+                                                   class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base">{{ a.title }}</a>
+                                                <!--end::Title-->
+                                                <!--begin::Text-->
+                                                <div class="fw-bold fs-5 text-gray-600 text-dark my-4">
+                                                    {{ a.description }}
+                                                </div>
+                                                <!--end::Text-->
+                                            </div>
+                                            <!--end::Body-->
+                                        </div>
+                                        <!--end::Feature post-->
+                                    </div>
+                                    <!--end::Col-->
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!--end::Content-->
+                        <!--begin::Sidebar-->
+                        <div class="flex-column flex-lg-row-auto w-100 w-xl-300px mb-10">
+                            <!--begin::Search blog-->
+                            <div class="mb-16">
+                                <h4 class="text-black mb-7">جستجو</h4>
+                                <!--begin::Input group-->
+                                <form action="{% url 'project:search' %}" method="get">
+                                    <div class="position-relative">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                                        <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute top-50 translate-middle ms-6">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546"
+                                                                  height="2" rx="1"
+                                                                  transform="rotate(45 17.0365 15.1223)" fill="black"/>
+															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+                                                                  fill="black"/>
+														</svg>
+													</span>
+                                        <!--end::Svg Icon-->
+
+                                        <input class="form-control form-control-solid ps-10" name="q" type="text"
+                                               placeholder="جستجو کنید..."/>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary mt-2" type="submit">جست و جو</button>
+                                    </div>
+                                </form>
+                                <!--end::Input group-->
+                            </div>
+                            <!--end::Search blog-->
+                            <!--begin::Catigories-->
+                            {% ProjectCategoryTT %}
+                            <!--end::Catigories-->
+                        </div>
+                        <!--end::Sidebar-->
+                    </div>
+                </div>
+                <!--end::Body-->
+            </div>
+            <div class="pt-10">
+                <!--begin::Pages-->
+                {% if is_paginated %}
+                    <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item previous">
+                                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">
+                                    <i class="previous"></i>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item previous">
+                            </li>
+                        {% endif %}
+                        {% for i in paginator.page_range %}
+                            {% if page_obj.number == i %}
+                                <li class="page-item active">
+                                    <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+                                </li>
+                            {% else %}
+                                <li class="page-item">
+                                    <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if page_obj.has_next %}
+                            <li class="page-item next">
+                                <a href="?page={{ page_obj.next_page_number }}" class="page-link">
+                                    <i class="next"></i>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item next">
+                            </li>
+                            </ul>
+                        {% endif %}
+                {% endif %}
+                <!--end::Pages-->
+            </div>
+            <!--end::Post card-->
+        </div>
+    </div>
+{% endblock %}

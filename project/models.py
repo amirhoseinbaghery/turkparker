@@ -3,10 +3,10 @@ from django.db import models
 from django.urls import reverse
 from django.utils.html import format_html
 
-from costumer.models import Costumer
-from ip.models import IpAddress
 from account.models import User
+from costumer.models import Costumer
 from extension.utils import jalali_conv
+from ip.models import IpAddress
 
 
 class Project(models.Model):
@@ -41,6 +41,16 @@ class Project(models.Model):
     def cat_pub(self):
         return self.category.filter(publish="p")
 
+    def jstart(self):
+        return jalali_conv(self.startDate)
+
+    jstart.short_description = "تاریخ شروع"
+
+    def jend(self):
+        return jalali_conv(self.endDate)
+
+    jend.short_description = "تاریخ شروع"
+
     def categorySTR(self):
         return ", ".join([category.title for category in self.category.all()])
 
@@ -59,10 +69,6 @@ class Project(models.Model):
 
 
 class ProjectCategory(models.Model):
-    choices = (
-        ('d', 'پیش نویس'),
-        ('p', 'انتشار'),
-    )
     title = models.CharField(max_length=50, verbose_name='عنوان')
     slug = models.SlugField(verbose_name='آدرس', unique=True, max_length=50, allow_unicode=True)
     subClass = models.ForeignKey("self", verbose_name='دسته مادر', related_name='ProjectChild', null=True, blank=True,

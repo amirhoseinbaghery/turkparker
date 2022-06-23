@@ -5,11 +5,11 @@
     {% for i in category %}
         <div class="d-flex flex-stack fw-bold fs-5 text-muted mb-4">
             <!--begin::Text-->
-                <a href="{% url 'product:categoryList' i.slug %}"
+                <a href="{% url 'project:CategoryList' i.slug %}"
                    class="text-muted text-hover-primary pe-2">{{ i.title }}</a>
                 <!--end::Text-->
                 <!--begin::Number-->
-                <div class="m-0">{{ i.ProductCategory.count }}</div>
+                <div class="m-0">{{ i.ProjectCategory.count }}</div>
                 <!--end::Number-->
         </div>
     {% endfor %}
@@ -24,13 +24,13 @@
         <div class="d-flex flex-stack mb-7">
             <!--begin::Symbol-->
             <div class="symbol symbol-60px symbol-2by3 me-4">
-                <a href="{% url 'product:product' a.slug %}"><img class="symbol-label" src="{{ a.image.url }}"></a>
+                <a href="{% url 'project:Project' a.slug %}"><img class="symbol-label" src="{{ a.image.url }}"></a>
 
             </div>
             <!--end::Symbol-->
             <!--begin::Title-->
             <div class="m-0">
-                <a href="{% url 'product:product' a.slug %}" class="text-dark fw-bolder text-hover-primary fs-6">{{ a.title }}</a>
+                <a href="{% url 'project:Project' a.slug %}" class="text-dark fw-bolder text-hover-primary fs-6">{{ a.title }}</a>
                 <span class="text-gray-600 fw-bold d-block pt-1 fs-7">{{ a.description|truncatewords_html:15|safe }}</span>
             </div>
             <!--end::Title-->

@@ -5,7 +5,6 @@ from product.views import product, ProductList, ProductCategoryList, ProductTagL
 app_name = 'product'
 urlpatterns = [
     path('category/<slug>', ProductCategoryList.as_view(), name='categoryList'),
-
     path("search/", SearchProduct.as_view(), name="search"),
     path('<slug>', product, name='product'),
     path('', ProductList.as_view(), name='ProductList'),

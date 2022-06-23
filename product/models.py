@@ -104,7 +104,7 @@ class ProductCategory(models.Model):
 
     class Meta:
         verbose_name = 'دسته بندی'
-        verbose_name_plural = 'دسته بندی های مقالات'
+        verbose_name_plural = 'دسته بندی های محصولات'
 
     def __str__(self):
         return self.title

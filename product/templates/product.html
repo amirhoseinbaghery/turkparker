@@ -307,7 +307,7 @@
                                                 <span class="bullet me-3"></span>
                                                 <!--end::Bullet-->
                                                 <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
+                                                <a href="{% url 'product:categoryList' s.slug %}"><div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div></a>
                                                 <!--end::Label-->
                                             </div>
                                             {% endfor %}
@@ -330,7 +330,7 @@
                                                 <span class="bullet me-3"></span>
                                                 <!--end::Bullet-->
                                                 <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
+                                                <a href="{% url 'product:tagList' d.slug %}"><div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div></a>
                                                 <!--end::Label-->
                                             </div>
                                             {% endfor %}
