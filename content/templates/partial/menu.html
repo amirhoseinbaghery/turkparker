@@ -1,0 +1,75 @@
+<div class="header-menu container-xxl flex-column align-items-stretch flex-lg-row"
+     data-kt-drawer="true"
+     data-kt-drawer-name="header-menu"
+     data-kt-drawer-activate="{default: true, lg: false}"
+     data-kt-drawer-overlay="true"
+     data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+     data-kt-drawer-direction="start"
+     data-kt-drawer-toggle="#kt_header_menu_toggle"
+     data-kt-swapper="true"
+     data-kt-swapper-mode="prepend"
+     data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}"
+>
+    <!--begin::Menu-->
+    <div
+            class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch flex-grow-1"
+            id="#kt_header_menu"
+            data-kt-menu="true"
+    >
+        <div
+                class="menu-item {% if app == 'blog' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"><a href="{% url 'blog:PostList' %}">
+                      <span class="menu-title">مقالات</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+        <div
+                class="menu-item {% if app == 'product' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"><a href="{% url 'product:ProductList' %}">
+                      <span class="menu-title">محصولات</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+        <div
+                class="menu-item {% if app == 'project' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"><a href="{% url 'project:ProjectList' %}">
+                      <span class="menu-title">پروژه ها</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+       <div
+                class="menu-item {% if app == 'catalog' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"> <a href="{% url 'catalog:List' %}">
+                      <span class="menu-title">کاتالوگ</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+        <div
+                class="menu-item {% if app_ == 'contactus' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"><a href="{% url 'content:contactus' %}">
+                      <span class="menu-title">تماس با ما</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+        <div
+                class="menu-item {% if app_ == 'about' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
+        >
+                    <span class="menu-link py-3"><a href="{% url 'content:about' %}">
+                      <span class="menu-title">درباره ما</span>
+                        <span class="menu-arrow d-lg-none"></span></a>
+                    </span>
+        </div>
+    </div>
+    <!--end::Menu-->
+    <!--begin::Actions-->
+
+    <!--end::Actions-->
+</div>
+
+
+

@@ -38,6 +38,7 @@ def single_project(request, slug):
 
 class ProjectList(ListView):
     template_name = 'projectlist.html'
+    paginate_by = 15
 
     def get_queryset(self):
         global project_

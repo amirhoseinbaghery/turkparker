@@ -1,0 +1,62 @@
+{% extends 'shared/Share/blank.html' %}
+{% load static %}
+{% block title %}صفحه مورد نظر یافت نشد{% endblock %}
+{% block content %}
+    <!--begin::Head-->
+    <link rel="shortcut icon" href="{% static '/media/logos/favicon.ico' %}"/>
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <!--end::Fonts-->
+    <!--begin::Global Stylesheets Bundle(used by all pages)-->
+    <link href="{% static '/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static '/css/style.bundle.css' %}" rel="stylesheet" type="text/css"/>
+        <!--end::Global Stylesheets Bundle-->
+        <!--Begin::Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&amp;l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5FS8GGP');</script>
+        <!--End::Google Tag Manager -->
+    <!--end::Head-->
+    <!--begin::Body-->
+    <body id="kt_body" class="auth-bg">
+    <!--Begin::Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!--End::Google Tag Manager (noscript) -->
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Authentication - 404 Page-->
+        <div class="d-flex flex-column flex-center flex-column-fluid p-10">
+            <!--begin::Illustration-->
+            <img src="{% static '/media/illustrations/sketchy-1/18.png' %}" alt=""
+                 class="mw-100 mb-10 h-lg-450px"/>
+            <!--end::Illustration-->
+            <!--begin::Message-->
+            <h1 class="fw-bold mb-10" style="color: #A3A3C7">اوووووووووه مثل اینکه گم شدی</h1>
+            <!--end::Message-->
+            <!--begin::Link-->
+            <a href="{% url 'blog:home' %}" class="btn btn-primary">برگشت به صفحه اصلی</a>
+            <!--end::Link-->
+        </div>
+        <!--end::Authentication - 404 Page-->
+    </div>
+    <!--end::Root-->
+    <!--end::Main-->
+    <!--begin::Javascript-->
+    <script>var hostUrl = "/metronic8/demo20/assets/";</script>
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="{% static '/plugins/global/plugins.bundle.js' %}"></script>
+    <script src="{% static '/js/scripts.bundle.js' %}"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--end::Javascript-->
+    </body>
+    <!--end::Body-->
+{% endblock %}
