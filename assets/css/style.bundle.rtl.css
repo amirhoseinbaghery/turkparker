@@ -336,7 +336,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family:'IRANSansWeb' ,inherit;
+  font-family:'IRANSansWeb' !important;
   font-size: inherit;
   line-height: inherit;
 }
@@ -47888,9 +47888,9 @@ body {
     position: relative;
     flex-direction: column;
     z-index: 2;
-    height: 180px;
+    height: 80px;
     transition: right ease;
-    background-color:#F5F5F5 !important;
+    background-color:#ffff !important;
   }
   .header .header-logo {
     padding: 0;

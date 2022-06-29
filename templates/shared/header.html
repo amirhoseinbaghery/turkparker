@@ -1,14 +1,111 @@
 {% load header %}
+<!--new header-->
+
+    <!--begin::Header top-->
+    <div class="header-top d-flex align-items-stretch flex-grow-1 h-60px h-lg-100px" data-kt-sticky="true"
+         data-kt-sticky-name="header-topbar" data-kt-sticky-offset="{default: '100px', lg: 'false'}"
+         data-kt-sticky-dependencies="#kt_wrapper" data-kt-sticky-class="fixed-top bg-body shadow-sm border-0">
+        <!--begin::Brand container-->
+        <div class="container-custom container-xxl d-flex w-100">
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-center align-items-stretch w-100">
+                <!--begin::Brand-->
+                <div class="d-flex align-items-center align-items-lg-center ">
+                    <!--begin::Heaeder navs toggle-->
+                    <!--end::Heaeder navs toggle-->
+                    <!--begin::Logo-->
+                    <a href="/metronic8/demo21/../demo21/index.html" class="d-flex align-items-center">
+                        <img alt="Logo" src="https://en.reformsports.com/oxegrebi/2020/10/28-years-reform-logo.png"
+                             class="h-25px h-lg-50px">
+                    </a>
+                    <!--end::Logo-->
+                </div>
+                <!--end::Brand-->
+                <!--begin::Topbar-->
+
+                <!--end::Topbar-->
+            </div>
+            <div class="d-flex flex-end align-items-stretch ">
+                <div class="topbar d-flex align-items-center flex-shrink-0">
+                    <!--begin::Search-->
+                    <!--end::Search-->
+
+                    <!--begin::Theme mode-->
+                    <div class="d-flex align-items-center ms-2">
+                        <!--begin::Menu toggle-->
+                        <a href="#" class="btn btn-icon btn-custom" data-kt-menu-trigger="click"
+                           data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
+                            <i class="fonticon-sun fs-2"></i>
+                            <i class="fonticon-moon fs-2 d-none"></i>
+                        </a>
+                        <!--begin::Menu toggle-->
+                        <!--begin::Menu-->
+                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-primary fw-bold py-4 fs-6 w-200px"
+                             data-kt-menu="true">
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3 my-1">
+                                <a href="{% logo %}" class="menu-link px-3 active">
+														<span class="menu-icon">
+															<i class="fonticon-sun fs-2"></i>
+														</span>
+                                    <span class="menu-title">Light</span>
+                                </a>
+                            </div>
+                            <!--end::Menu item-->
+                            <!--begin::Menu item-->
+                            <div class="menu-item px-3 my-1">
+                                <a href="/metronic8/demo21/../demo21/dark/index.html" class="menu-link px-3">
+														<span class="menu-icon">
+															<i class="fonticon-moon fs-2"></i>
+														</span>
+                                    <span class="menu-title">Dark</span>
+                                </a>
+                            </div>
+                            <!--end::Menu item-->
+                        </div>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Theme mode-->
+
+
+                    <!--begin::Heaeder menu toggle-->
+                    <!--end::Heaeder menu toggle-->
+                </div>
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Brand container-->
+    </div>
+    <!--end::Header top-->
+    <!--begin::Header bottom-->
+    <div class="header-bottom d-lg-flex flex-column align-items-stretch w-100" id="kt_header_navs" data-kt-drawer="true"
+         data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}"
+         data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+         data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_header_navs_toggle" data-kt-swapper="true"
+         data-kt-swapper-mode="append" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header'}">
+        <!--begin::Tabs container-->
+        <div class="container-custom container-xxl d-lg-flex flex-column w-100">
+            <!--begin::Header tabs-->
+            <!--end::Header tabs-->
+        </div>
+        <!--end::Tabs container-->
+        <!--begin::Header panel-->
+        <!--end::Header panel-->
+    </div>
+    <!--end::Header bottom-->
+
+<!--end new header-->
 
 <div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header"
      data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+
     <!--begin::Container-->
-    <div class="container-xxl d-flex flex-grow-1 flex-stack">
+    <div class=" d-flex flex-grow-1 flex-stack">
         <!--begin::Header Logo-->
         <div class="d-flex align-items-center me-5">
             <!--begin::Heaeder menu toggle-->
-            <div class="d-lg-none btn btn-icon btn-active-color-primary w-30px h-30px ms-n2 me-3"
-                    id="kt_header_menu_toggle"
+            <div class="d-lg-none btn btn-icon btn-active-color-primary w-30px h-30px  ms-4"
+                 id="kt_header_menu_toggle"
             >
                 <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
                 <span class="svg-icon svg-icon-1">
@@ -48,9 +145,6 @@
     </div>
     <!--end::Container-->
     <!--begin::Container-->
-    <div class="header-menu-container d-flex align-items-stretch bg-white flex-stack h-lg-70px w-100">
-        {% logo %}
 
-    </div>
     <!--end::Container-->
 </div>
