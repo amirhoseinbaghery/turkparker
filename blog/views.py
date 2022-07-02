@@ -81,7 +81,7 @@ class tagList(ListView):
 
 class Author(ListView):
     template_name = 'author.html'
-    paginate_by = 2
+    paginate_by = 15
 
     def get_queryset(self):
         global author
@@ -98,6 +98,7 @@ class Author(ListView):
 class SearchBlog(ListView):
     model = Blog
     template_name = "list.html"
+    paginate_by = 15
 
     def get_queryset(self):  # new
         query = self.request.GET.get("q")

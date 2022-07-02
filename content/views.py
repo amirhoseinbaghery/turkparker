@@ -1,12 +1,10 @@
-from msilib.schema import ListView
-
-from django.db.models import Q
 from django.shortcuts import render, redirect
 
+from blog.models import Blog
 from content.forms import ContactUsForm
-from content.models import About, ContactUs, Communication
+from content.models import About, ContactUs, Communication, Slider
 from costumer.models import Costumer
-from product.models import Product
+from product.models import ProductCategory, Product
 from project.models import Project
 
 
@@ -47,3 +45,14 @@ def contactus(request):
         'object': about_,
     }
     return render(request, 'contact us.html', context)
+
+
+def home(request):
+    context = {
+        'slide': Slider.objects.all(),
+        'category': ProductCategory.objects.filter(status='p'),
+        'project': Project.objects.filter(status='p'),
+        'product': Product.objects.filter(status='p'),
+        'blog': Blog.objects.filter(status='p'),
+    }
+    return render(request, 'index.html', context)

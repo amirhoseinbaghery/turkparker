@@ -1,7 +1,9 @@
 {% extends 'shared/main.html' %}
 {% load static %}
 {% load BlogTT %}
-{% block title %}{{ object.title }}{% endblock %}
+{% block title %}مقاله | {{ object.title }}{% endblock %}
+{% block desc %}{{ object.description }}{% endblock %}
+{% block keywords %}{{ object.keyword }}{% endblock %}
 {% block content %}
     <!--begin::Container-->
     <div id="kt_toolbar" class="toolbar py-5 py-lg-7">

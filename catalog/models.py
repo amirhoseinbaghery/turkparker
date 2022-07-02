@@ -6,8 +6,6 @@ class Catalog(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     image = models.ImageField(upload_to='catalog/', verbose_name='تصویر')
     file = models.FileField(upload_to='catalog/', verbose_name='کاتالوگ')
-    keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
-    description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
 
 
     class Meta:

@@ -53,7 +53,7 @@ class ProjectCategoryList(ListView):
     def get_queryset(self):
         global proj
         slug = self.kwargs.get('slug')
-        proj = get_object_or_404(ProjectCategory, status='p', slug=slug)
+        proj = get_object_or_404(ProjectCategory, slug=slug)
         return proj.ProjectCategory.filter(status='p')
 
     def get_context_data(self, **kwargs):
@@ -81,6 +81,7 @@ class ProjectTagList(ListView):
 class SearchProject(ListView):
     model = Project
     template_name = "projectlist.html"
+    paginate_by = 15
 
     def get_queryset(self):  # new
         query = self.request.GET.get("q")

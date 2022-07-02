@@ -1,7 +1,9 @@
 {% extends 'shared/main.html' %}
 {% load static %}
 {% load BlogTT %}
-{% block title %}{{ object.username }}{% endblock %}
+{% block title %}مقالات | {{ object.username }}{% endblock %}
+{% block desc %}{{ object.description }}{% endblock %}
+{% block keywords %}{{ object.keyword }}{% endblock %}
 {% block content %}
     <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
         <!--begin::Page title-->

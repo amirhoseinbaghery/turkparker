@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from content.models import About, SocialMedia, ContactUs, SiteSetting, Communication
+from content.models import About, SocialMedia, ContactUs, SiteSetting, Communication, Slider, Licence
 
 admin.site.register(About)
 
@@ -39,3 +39,19 @@ class CommunicationAdmin(admin.ModelAdmin):
         'email',
         'phone',
         'tel',)
+
+
+@admin.register(Slider)
+class SliderAdmin(admin.ModelAdmin):
+    list_display = (
+        'thumb',
+        'title',)
+    list_display_links = ('thumb', 'title')
+
+
+@admin.register(Licence)
+class LicenceAdmin(admin.ModelAdmin):
+    list_display = (
+        'thumb',
+        'title',)
+    list_display_links = ('thumb', 'title')

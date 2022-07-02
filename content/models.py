@@ -97,3 +97,38 @@ class Communication(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Slider(models.Model):
+    image = models.FileField(upload_to='slider/', verbose_name='عکس')
+    title = models.CharField(max_length=50, verbose_name='عنوان', null=True)
+    link = models.CharField(max_length=300, verbose_name='لینک')
+
+    class Meta:
+        verbose_name = 'اسلاید'
+        verbose_name_plural = 'اسلاید'
+
+    def __str__(self):
+        return self.title
+
+    def thumb(self):
+        return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
+
+    thumb.short_description = "تصویر"
+
+
+class Licence(models.Model):
+    image = models.FileField(upload_to='slider/', verbose_name='عکس')
+    title = models.CharField(max_length=50, verbose_name='عنوان', null=True)
+
+    class Meta:
+        verbose_name = 'مجوز'
+        verbose_name_plural = 'مجوزها'
+
+    def __str__(self):
+        return self.title
+
+    def thumb(self):
+        return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
+
+    thumb.short_description = "تصویر"

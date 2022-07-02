@@ -1,12 +1,13 @@
+import readtime
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.html import format_html
-from ip.models import IpAddress
+
 from account.models import User
 from extension.utils import jalali_conv
-import readtime
+from ip.models import IpAddress
 
 
 class Blog(models.Model):
@@ -65,7 +66,7 @@ class Blog(models.Model):
     thumb.short_description = "تصویر"
 
     def get_absolute_url(self):
-        return reverse('blog:SinglePost', kwargs={'Slug': self.slug})
+        return reverse('blog:SinglePost', kwargs={'slug': self.slug})
 
     def get_readtime(self):
         result = readtime.of_text(self.body)
@@ -89,26 +90,36 @@ class BlogCategory(models.Model):
                                  on_delete=models.CASCADE)
     keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
     description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
+    publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
 
     class Meta:
         verbose_name = 'دسته بندی'
         verbose_name_plural = 'دسته بندی های مقالات'
+        ordering = ['-publish']
 
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('blog:categoryList', kwargs={'slug': self.slug})
 
 class BlogTag(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     slug = models.SlugField(verbose_name='آدرس', unique=True, max_length=50, allow_unicode=True)
+    publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
+    keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
+    description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
 
     class Meta:
         verbose_name = 'برچسب'
         verbose_name_plural = 'برچسب ها'
+        ordering = ['-publish']
 
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('blog:tagList', kwargs={'slug': self.slug})
 
 class BlogComment(models.Model):
     choices = (

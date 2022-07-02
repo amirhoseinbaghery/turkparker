@@ -1,6 +1,7 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.html import format_html
 
 from account.models import User
@@ -34,6 +35,7 @@ class Project(models.Model):
     class Meta:
         verbose_name = 'پروژه'
         verbose_name_plural = 'پروژه ها'
+        ordering = ['-startDate']
 
     def __str__(self):
         return self.title
@@ -62,7 +64,7 @@ class Project(models.Model):
     thumb.short_description = "تصویر"
 
     def get_absolute_url(self):
-        return reverse('', kwargs={'slug': self.slug})
+        return reverse('project:Project', kwargs={'slug': self.slug})
 
     def get_related_posts_by_tags(self):
         return Project.objects.filter(tag__in=self.tag.all())
@@ -76,25 +78,37 @@ class ProjectCategory(models.Model):
     image = models.ImageField(upload_to='project/category/', verbose_name='تصویر', null=True)
     keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
     description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
+    publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
 
     class Meta:
         verbose_name = 'دسته بندی'
         verbose_name_plural = 'دسته بندی های پروژه ها'
+        ordering = ['-publish']
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('project:CategoryList', kwargs={'slug': self.slug})
 
 
 class ProjectTag(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     slug = models.SlugField(verbose_name='آدرس', unique=True, max_length=50, allow_unicode=True)
+    publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
+    keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
+    description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
 
     class Meta:
         verbose_name = 'برچسب'
         verbose_name_plural = 'برچسب ها'
+        ordering = ['-publish']
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('project:tagList', kwargs={'slug': self.slug})
 
 
 class ProjectComment(models.Model):

@@ -38,6 +38,7 @@ class AdminProductTag(admin.ModelAdmin):
 @admin.register(ProductCategory)
 class AdminProductCategory(admin.ModelAdmin):
     list_display = (
+        'thumb',
         'title',
         'slug',
         'status',

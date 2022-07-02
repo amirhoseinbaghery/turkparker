@@ -1,6 +1,6 @@
 {% extends 'shared/main.html' %}
 {% load static %}
-{% block title %}{{ object.title }}{% endblock %}
+{% block title %} محصول | {{ object.title }}{% endblock %}
 {% block desc %}{{ object.description }}{% endblock %}
 {% block keywords %}{{ object.keyword }}{% endblock %}
 
@@ -314,7 +314,7 @@
                                                         <span class="bullet me-3"></span>
                                                         <!--end::Bullet-->
                                                         <!--begin::Label-->
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
+                                                        <a href="{% url 'product:categoryList' s.slug %}"><div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div></a>
                                                         <!--end::Label-->
                                                     </div>
                                                 {% endfor %}
@@ -337,7 +337,9 @@
                                                         <span class="bullet me-3"></span>
                                                         <!--end::Bullet-->
                                                         <!--begin::Label-->
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
+                                                        <a href="{% url 'product:tagList' d.slug %}">
+                                                            <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
+                                                        </a>
                                                         <!--end::Label-->
                                                     </div>
                                                 {% endfor %}

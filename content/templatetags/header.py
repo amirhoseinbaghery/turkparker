@@ -1,5 +1,7 @@
 from django import template
-from content.models import SiteSetting, About, Communication
+
+from content.models import SiteSetting, About, Communication, SocialMedia
+
 register = template.Library()
 
 
@@ -21,4 +23,18 @@ def menu(request):
 def logo():
     return {
         'logo': SiteSetting.objects.last(),
+    }
+
+
+@register.inclusion_tag('partial/social.html')
+def social():
+    return {
+        'social': SocialMedia.objects.all(),
+    }
+
+
+@register.inclusion_tag('partial/com.html')
+def com():
+    return {
+        'com': Communication.objects.last(),
     }
