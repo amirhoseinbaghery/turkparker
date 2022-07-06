@@ -46,22 +46,22 @@
 
                     <!--end::-->
                     <!--begin::Layout-->
-                    <div class="d-flex flex-column flex-lg-row mb-17">
+                    <div class="d-flex flex-column flex-lg-row mb-17 position-lg-relative" >
                         <!--begin::Content-->
                         <div class="flex-lg-row-fluid me-0 me-lg-20">
                             <!--begin::Job-->
                             <div class="mb-17">
-                            <div class="overlay mt-8">
-                            <!--begin::Image-->
-{#                            <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="#}
-{#                                background-image: url('assets/media/stock/1600x800/img-1.jpg');#}
-{#                              "></div>#}
-                                <img class="card-img  card-rounded" src="{{ object.image.url }}" />
-                            <!--end::Image-->
-                            <!--begin::Links-->
+                                <div class="overlay mt-8">
+                                    <!--begin::Image-->
+                                    {#                            <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="#}
+                                    {#                                background-image: url('assets/media/stock/1600x800/img-1.jpg');#}
+                                    {#                              "></div>#}
+                                    <img class="card-img  card-rounded" src="{{ object.image.url }}"/>
+                                    <!--end::Image-->
+                                    <!--begin::Links-->
 
-                            <!--end::Links-->
-                          </div>
+                                    <!--end::Links-->
+                                </div>
                                 <!--begin::Description-->
                                 <div class="m-0">
                                     <!--begin::Title-->
@@ -245,16 +245,17 @@
                                         <div class="row g-10 row-cols-2 row-cols-lg-5">
                                             {% for c in object.gallery.all %}
                                                 <!--begin::Col-->
-                                                <div class="col">
+                                                <div class="col mx-10">
                                                     <!--begin::Overlay-->
                                                     <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
                                                        href="{{ c.image.url }}">
                                                         <!--begin::Image-->
-                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
-                                                             style="background-image:url('{{ c.image.url }}')"></div>
+                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-150px"
+                                                             style="background-image:url('{{ c.image.url }}');width: 200px"></div>
                                                         <!--end::Image-->
                                                         <!--begin::Action-->
-                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25"
+                                                             style="width: 200px">
                                                             <i class="bi bi-eye-fill fs-2x text-white"></i>
                                                         </div>
                                                         <!--end::Action-->
@@ -279,14 +280,10 @@
                         </div>
                         <!--end::Content-->
                         <!--begin::Sidebar-->
-                        <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px">
+                        <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px position-lg-relative">
                             <!--begin::Careers about-->
-                            <div class="card bg-light card-flush" data-kt-sticky="true"
-                                 data-kt-sticky-name="docs-sticky-summary"
-                                 data-kt-sticky-offset="{default: false, xl: '100px'}"
-                                 data-kt-sticky-width="{lg: '275px', xl: '350px'}" data-kt-sticky-left="auto"
-                                 data-kt-sticky-top="300px" data-kt-sticky-animation="true" data-kt-sticky-zindex="95"
-                                 style="animation-duration: 0.3s; z-index: 95; position: fixed; top: 275px; width: 300px; left: 250px;">
+
+                            <div class="card bg-light selector position-lg-static" data-sticky-container data-margin-top="20" data-sticky-for="1023" data-sticky-class="is-sticky">
                                 <div class=" d-lg-block  d-none ">
                                     <!--begin::Body-->
                                     <div class="card-body">
@@ -314,7 +311,9 @@
                                                         <span class="bullet me-3"></span>
                                                         <!--end::Bullet-->
                                                         <!--begin::Label-->
-                                                        <a href="{% url 'product:categoryList' s.slug %}"><div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div></a>
+                                                        <a href="{% url 'product:categoryList' s.slug %}">
+                                                            <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
+                                                        </a>
                                                         <!--end::Label-->
                                                     </div>
                                                 {% endfor %}
@@ -351,70 +350,85 @@
                                     </div>
                                     <!--end::Body-->
                                 </div>
+                            <script>
+                                var sticky = new Sticky('.selector');
+
+                            </script>
                             </div>
                             <div class="card bg-light  d-lg-none  d-block">
-                                    <!--begin::Body-->
-                                    <div class="card-body">
-                                        <!--begin::Top-->
-                                        <div class="mb-7">
-                                            <!--begin::Title-->
-                                            <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
-                                            <!--end::Text-->
-                                        </div>
-                                        <!--end::Top-->
-                                        <!--begin::Item-->
-                                        <div class="mb-8">
-                                            <!--begin::Title-->
-                                            <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
-                                            <!--end::Title-->
-                                            <!--begin::Section-->
-                                            <div class="my-2">
-                                                <!--begin::Row-->
-                                                {% for s in object.category.all %}
-                                                    <div class="d-flex align-items-center mb-3">
-                                                        <!--begin::Bullet-->
-                                                        <span class="bullet me-3"></span>
-                                                        <!--end::Bullet-->
-                                                        <!--begin::Label-->
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
-                                                        <!--end::Label-->
-                                                    </div>
-                                                {% endfor %}
-                                                <!--end::Row-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="mb-8">
-                                            <!--begin::Title-->
-                                            <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
-                                            <!--end::Title-->
-                                            <!--begin::Section-->
-                                            <div class="my-2">
-                                                <!--begin::Row-->
-                                                {% for d in object.tag.all %}
-                                                    <div class="d-flex align-items-center mb-3">
-                                                        <!--begin::Bullet-->
-                                                        <span class="bullet me-3"></span>
-                                                        <!--end::Bullet-->
-                                                        <!--begin::Label-->
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
-                                                        <!--end::Label-->
-                                                    </div>
-                                                {% endfor %}
-                                                <!--end::Row-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Item-->
+                                <!--begin::Body-->
+                                <div class="card-body">
+                                    <!--begin::Top-->
+                                    <div class="mb-7">
+                                        <!--begin::Title-->
+                                        <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
+                                        <!--end::Title-->
+                                        <!--begin::Text-->
+                                        <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
+                                        <!--end::Text-->
                                     </div>
-                                    <!--end::Body-->
+                                    <!--end::Top-->
+                                    <!--begin::Item-->
+                                    <div class="mb-8">
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
+                                        <!--end::Title-->
+                                        <!--begin::Section-->
+                                        <div class="my-2">
+                                            <!--begin::Row-->
+                                            {% for s in object.category.all %}
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <!--begin::Bullet-->
+                                                    <span class="bullet me-3"></span>
+                                                    <!--end::Bullet-->
+                                                    <!--begin::Label-->
+                                                    <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
+                                                    <!--end::Label-->
+                                                </div>
+                                            {% endfor %}
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="mb-8">
+                                        <!--begin::Title-->
+                                        <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
+                                        <!--end::Title-->
+                                        <!--begin::Section-->
+                                        <div class="my-2">
+                                            <!--begin::Row-->
+                                            {% for d in object.tag.all %}
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <!--begin::Bullet-->
+                                                    <span class="bullet me-3"></span>
+                                                    <!--end::Bullet-->
+                                                    <!--begin::Label-->
+                                                    <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
+                                                    <!--end::Label-->
+                                                </div>
+                                            {% endfor %}
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Section-->
+                                    </div>
+                                    <!--end::Item-->
                                 </div>
-
+                                <!--end::Body-->
+                            </div>
+                            <script>var exports = {};</script>
+                            <script>
+                                var contentSticky = new VanillaSticky({
+                                    HTMLElement: document.querySelector('.sticky-content'),
+                                    position: 'top',
+                                    indents: {
+                                        top: 70,
+                                        bottom: 10
+                                    }
+                                });
+                                contentSticky.init();
+                            </script>
                             <!--end::Careers about-->
                         </div>
                         <!--end::Sidebar-->

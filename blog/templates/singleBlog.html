@@ -8,32 +8,7 @@
     <!--begin::Container-->
     <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
         <!--begin::Page title-->
-        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
-            <div class="page-title d-flex flex-column me-3">
-            <!--begin::Title-->
-            <h1 class="d-flex text-dark fw-bolder my-1 fs-3">{{ object.title }}</h1>
-            <!--end::Title-->
-            <!--begin::Breadcrumb-->
-            <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
-                <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-600">
-                    <a href="/"
-                       class="text-gray-600 text-hover-primary">خانه</a>
-                </li>
-                <!--end::Item-->
-                <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-600">
-                    <a href="{% url 'blog:PostList' %}"
-                       class="text-gray-600 text-hover-primary">مقالات</a>
-                </li>
-                <!--end::Item-->
-                <!--begin::Item-->
-                <li class="breadcrumb-item text-gray-600">{{ object.title }}</li>
-                <!--end::Item-->
-            </ul>
-            <!--end::Breadcrumb-->
-        </div>
-        </div>
+
         <!--end::Page title-->
     </div>
     <!--end::Container-->

@@ -48248,7 +48248,7 @@ body {
     transition: padding-left ease, margin-right ease;
   }
   .header-fixed[data-kt-sticky-header=on] .wrapper {
-    padding-top: 180px;
+    padding-top: 20px;
   }
 }
 @media (max-width: 991.98px) {
