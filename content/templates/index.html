@@ -5,13 +5,28 @@
 {% block keywords %}{% endblock %}
 {% block content %}
 
-    <div class=" mb-20">
+    <div class=" mb-10 d-lg-block d-md-block d-none">
         <div class="">
             <div dir="rtl" class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     {% for a in slide %}
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" >
                             <img class="" src="{{ a.image.url }}" alt="{{ a.title }}">
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" mb-10 d-lg-none d-md-none d-block">
+        <div class="">
+            <div dir="rtl" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for a in slide %}
+                        <div class="swiper-slide" style="width: 492px;height: 268px">
+                            <img  class="" src="{{ a.image.url }}" alt="{{ a.title }}">
                         </div>
                     {% endfor %}
                 </div>
@@ -24,7 +39,7 @@
     <style>
         .swiper {
             width: 100% !important;
-            height: 50%;
+            height: 100%;
         }
 
         .swiper-slide img {
@@ -43,7 +58,7 @@
             effect: "fade",
             centeredSlides: true,
             autoplay: {
-                delay: 2500,
+                delay: 3500,
                 disableOnInteraction: false,
             },
             navigation: {
@@ -201,13 +216,13 @@
                         <div class="row g-5 g-lg-10 ">
                             <!--begin::Col-->
                             {% for b in category %}
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-6  mb-xl-10">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-6  mb-xl-10" >
                                 <!--begin::Statistics Widget 1-->
-                                <div class="card here bgi-no-repeat h-xl-100"
-                                     style="background-position: right top; background-image: url('{{ b.image.url }}')">
+                                <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px " style=" background-image: url('{{ b.image.url }}')">
                                     <!--begin::Body-->
-                                    <div class="card-body">
-                                        <a href="{% url 'product:categoryList' b.slug %}"><h3 class="text-dark-75 fw-bold fs-3 m-0">
+                                    <div class="card-body " >
+
+                                        <a href="{% url 'product:categoryList' b.slug %}"><h3 class="text-white fw-bold fs-3 mt-100 ms-100">
                                             {{ b.title }}
                                         </h3></a>
                                     </div>

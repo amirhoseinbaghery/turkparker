@@ -1,7 +1,13 @@
-<div class="d-flex container-xl flex-column flex-md-row align-items-center justify-content-between">
-    <div class="d-flex flex-column flex-xl-row gap-7 gap-lg-10 mt-20">
+<div class="container-xxl">
+    <div class="row">
+
+    </div>
+    <div class=" row">
+
+
+    <div class="row mt-20">
         <!--begin::Order details-->
-        <div class="py-4 col-6 flex-row-fluid">
+<div class="py-4 col-lg-6 col-12  col-12 ">
             <!--begin::Card header-->
             <h2 class="text-muted mb-5">درباره تورک پارکر
             </h2>
@@ -14,7 +20,7 @@
         </div>
         <!--end::Order details-->
         <!--begin::Customer details-->
-        <div class="py-4 col-2 flex-row-fluid">
+        <div class="py-4 col-lg-2  col-6 ">
             <!--begin::Card header-->
             <h2 class="text-muted mb-5">دسترسی سریع</h2>
             <!--end::Card header-->
@@ -56,7 +62,7 @@
         <!--end::Customer details-->
         <!--begin::Documents-->
 
-        <div class="py-4 d-flex col-2 flex-column">
+        <div class="py-4 d-flex col-lg-2 col-6 flex-column">
             <h2 class="text-muted mb-5">ارتباط با ما</h2>
             <div class="p-2 "><i class="las la-mobile-alt me-2 text-success fs-2x"></i><a
                     class="text-muted text-hover-primary" href="tel:{{ com.phone }}">{{ com.phone }}</a></div>
@@ -64,21 +70,37 @@
                                                                                    href="tel:{{ com.tel }}">{{ com.tel }}</a>
             </div>
         </div>
-        <div class="py-4">
+        <div class="py-4  col-lg-2 col-md-2 col-12">
             <h2 class="text-muted mb-5">مجوز ها</h2>
-            <div class="tns">
-                <div data-tns-controls="false">
-                    <!--begin::Item-->
-                    {% for licence in licence %}
-                        <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-                            <a href="{{ licence.image.url }}"><img src="{{ licence.image.url }}"
-                                                                   class="card-rounded shadow mw-150px"
-                                                                   alt="{{ licence.title }}"/></a>
-                        </div>
-                    {% endfor %}
-                    <!--end::Item-->
-                    ...
-                </div>
+            <div class="row">
+
+
+
+                                                <!--begin::Col-->
+                                            {% for licence in licence %}
+                                                <div class="col-lg-8 col-md-8 col-6 mb-5">
+                                                    <!--begin::Overlay-->
+                                                    <a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="{{ licence.image.url }}">
+                                                        <!--begin::Image-->
+                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-175px" style="background-image:url('{{ licence.image.url }}')"></div>
+                                                        <!--end::Image-->
+                                                        <!--begin::Action-->
+                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25" >
+                                                            <i class="bi bi-eye-fill fs-2x text-white"></i>
+                                                        </div>
+                                                        <!--end::Action-->
+                                                    </a>
+                                                </div>
+                                            {% endfor %}
+                                                <!--end::Col-->
+
+                                                <!--begin::Col-->
+
+                                                <!--end::Col-->
+
+
+
+
             </div>
         </div>
         <!--end::Documents-->
@@ -86,6 +108,8 @@
     <!--begin::Copyright-->
     <!--end::Copyright-->
 </div>
+</div>
+
 <div class="container-xxl">
     <div class="rounded border border-dashed p-10">
         <div class="row">
