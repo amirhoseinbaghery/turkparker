@@ -11,204 +11,200 @@
     <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl mt-20">
         <div class="content flex-row-fluid" id="kt_content">
             <div class="card">
-        <!--begin::Body-->
-        <div class="card-body p-lg-17">
-            <!--begin::Row-->
-            <div class="row mb-3">
-                <!--begin::Col-->
-                <div class="col-md-6 pe-lg-10">
-                    <!--begin::Form-->
-
-                    <form method="post" enctype="multipart/form-data"
-                          class="form mb-15 fv-plugins-bootstrap5 fv-plugins-framework"
-                          id="kt_contact_form">
-                        {% csrf_token %}
-                        <h1 class="fw-bolder text-dark mb-9">تماس با ما</h1>
-                        <!--begin::Input group-->
-                        <div class="row mb-5">
-                            <!--begin::Col-->
-                            <div class="col-md-6 fv-row fv-plugins-icon-container">
-                                <!--begin::Label-->
-                                <label class="fs-5 fw-bold mb-2">نام و نام خانوادگی</label>
-                                {{ contact_form.name }}
-                                <!--end::Label-->
-                                <!--begin::Input-->
-
-                                <!--end::Input-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div>
-                            </div>
-                            <!--end::Col-->
-                            <!--begin::Col-->
-                            <div class="col-md-6 fv-row fv-plugins-icon-container">
-                                <!--end::Label-->
-                                <label class="fs-5 fw-bold mb-2">ایمیل</label>
-                                {{ contact_form.email }}
-                                <!--end::Label-->
-                                <!--end::Input-->
-
-                                <!--end::Input-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div>
-                            </div>
-                            <!--end::Col-->
-                            <!--begin::Col-->
-                            <div class="col-md-6 fv-row fv-plugins-icon-container">
-                                <!--end::Label-->
-                                <label class="fs-5 fw-bold mb-2">شماره تماس</label>
-                                {{ contact_form.phone }}
-                                <!--end::Label-->
-                                <!--end::Input-->
-
-                                <!--end::Input-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div>
-                            </div>
-                            <!--end::Col-->
-                            <!--begin::Col-->
-                            <!--end::Col-->
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Input group-->
-                        <div class="d-flex flex-column mb-5 fv-row">
-                            <!--begin::Label-->
-                            <label class="fs-5 fw-bold mb-2">موضوع</label>
-                            <!--end::Label-->
-                            <!--begin::Input-->
-
-                            {{ contact_form.subject }}
-                            <!--end::Input-->
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Input group-->
-                        <div class="d-flex flex-column mb-10 fv-row fv-plugins-icon-container">
-                            <label class="fs-6 fw-bold mb-2">متن پیام</label>
-
-                            {{ contact_form.message }}
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <div class="d-flex flex-column mb-10 fv-row fv-plugins-icon-container">
-                            <button type="submit" class="btn btn-primary" id="kt_contact_submit_button">
-                                <!--begin::Indicator-->
-                                <span class="indicator-label">ارسال</span>
-
-                            </button>
-                            <div class="fv-plugins-message-container invalid-feedback"></div>
-                        </div>
-                        <!--end::Input group-->
-                        <!--begin::Submit-->
-                        <!--end::Submit-->
-
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-md-6 ps-lg-10">
-                    <div id="kt_contact_map"
-                         class="w-100 rounded mb-2 mb-lg-0 mt-2 leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-                         style="height: 486px">
-
-                        <iframe class="mt-20 w-100 rounded mb-10 mb-lg-0 leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1570.789317913003!2d46.28627435451572!3d38.056903400044945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401a1b5069cc8587%3A0xd058ef15f08cba9!2z2LTYsdqp2Kog2KrZiNix2qkg2b7Yp9ix2qnYsQ!5e0!3m2!1sfa!2s!4v1641621343100!5m2!1sfa!2s"
-                                style="border:0;" height="500px" allowfullscreen="true" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <!--end::Col-->
-            </div>
-            <!--end::Row-->
-            <!--begin::Row-->
-            <div class="row g-5 mb-5 mb-lg-15 mt-20 mt-lg-0 mt-md-0 mt-30">
-                <!--begin::Col-->
-                <div class="col-sm-6 pe-lg-10 ">
-                    <!--begin::Phone-->
-                    <div class="text-center bg-light card-rounded d-flex flex-column justify-content-center p-10 h-100">
-                        <!--begin::Icon-->
-                        <!--SVG file not found: icons/duotune/finance/fin006.svgPhone.svg-->
-                        <!--end::Icon-->
-                        <!--begin::Subtitle-->
-
-                        <!--end::Number-->
-                        <h2 class="text-dark fw-bolder my-5">شماره مدیر فروش</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Number-->
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.phone }}</div>
-
-                        <h2 class="text-dark fw-bolder my-5">شماره کارشناسان فروش</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Number-->
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.staff }}</div>
-
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.staff1 }}</div>
-
-
-                        <h2 class="text-dark fw-bolder my-5">ایمیل</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Number-->
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.email }}</div>
-                    </div>
-                    <!--end::Phone-->
-                </div>
-                <!--end::Col-->
-                <!--begin::Col-->
-                <div class="col-sm-6 ps-lg-10">
-                    <!--begin::Address-->
-                    <div class="text-center bg-light card-rounded d-flex flex-column justify-content-center p-10 h-100">
-                        <!--begin::Icon-->
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
-                        <span class="svg-icon svg-icon-3tx svg-icon-primary">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                         viewBox="0 0 24 24" fill="none">
-														<path opacity="0.3"
-                                                              d="M18.0624 15.3453L13.1624 20.7453C12.5624 21.4453 11.5624 21.4453 10.9624 20.7453L6.06242 15.3453C4.56242 13.6453 3.76242 11.4453 4.06242 8.94534C4.56242 5.34534 7.46242 2.44534 11.0624 2.04534C15.8624 1.54534 19.9624 5.24534 19.9624 9.94534C20.0624 12.0453 19.2624 13.9453 18.0624 15.3453Z"
-                                                              fill="currentColor"></path>
-														<path d="M12.0624 13.0453C13.7193 13.0453 15.0624 11.7022 15.0624 10.0453C15.0624 8.38849 13.7193 7.04535 12.0624 7.04535C10.4056 7.04535 9.06241 8.38849 9.06241 10.0453C9.06241 11.7022 10.4056 13.0453 12.0624 13.0453Z"
-                                                              fill="currentColor"></path>
-													</svg>
-												</span>
-                        <!--end::Svg Icon-->
-                        <!--end::Icon-->
-                        <!--begin::Subtitle-->
-                        <h2 class="text-dark fw-bolder my-5">دفتر مرکزی</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Description-->
-                        <div class="text-gray-700 fs-3 fw-bold">{{ com.address }}</div>
-                        <h2 class="text-dark fw-bolder my-5">شماره دفتر</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Number-->
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.tel }}</div>
-                        <h2 class="text-dark fw-bolder my-5">فکس</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Number-->
-                        <div class="text-gray-700 fw-bold fs-2">{{ com.fax }}</div>
-
-                        <h2 class="text-dark fw-bolder my-5">کارخانه</h2>
-                        <!--end::Subtitle-->
-                        <!--begin::Description-->
-                        <div class="text-gray-700 fs-3 fw-bold">{{ com.address1 }}</div>
-                        <!--end::Description-->
-                    </div>
-                    <!--end::Address-->
-                </div>
-                <!--end::Col-->
-            </div>
-            <!--end::Row-->
-            <!--begin::Card-->
-            <div class="card mb-4 bg-light text-center">
                 <!--begin::Body-->
-                <div class="card-body py-12">
-                    <!--begin::Icon-->
-                    {% for s in object.social_media.all %}
-                        <a href="{{ s.link }}" class="mx-4">
-                            <img src="{{ s.image.url }}" class="h-30px my-2"
-                                 alt="{{ s.title }}">
-                        </a>
-                    {% endfor %}
-                    <!--end::Icon-->
+                <div class="card-body p-lg-17">
+                    <!--begin::Row-->
+                    <div class="row mb-3">
+                        <!--begin::Col-->
+                        <div class="col-md-6 pe-lg-10">
+                            <!--begin::Form-->
+
+                            <form method="post" enctype="multipart/form-data"
+                                  class="form mb-15 fv-plugins-bootstrap5 fv-plugins-framework"
+                                  id="kt_contact_form">
+                                {% csrf_token %}
+                                <h1 class="fw-bolder text-dark mb-9">تماس با ما</h1>
+                                <!--begin::Input group-->
+                                <div class="row mb-5">
+                                    <!--begin::Col-->
+                                    <div class="col-md-6 fv-row fv-plugins-icon-container">
+                                        <!--begin::Label-->
+                                        <label class="fs-5 fw-bold mb-2">نام و نام خانوادگی</label>
+                                        {{ contact_form.name }}
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+
+                                        <!--end::Input-->
+                                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-md-6 fv-row fv-plugins-icon-container">
+                                        <!--end::Label-->
+                                        <label class="fs-5 fw-bold mb-2">ایمیل</label>
+                                        {{ contact_form.email }}
+                                        <!--end::Label-->
+                                        <!--end::Input-->
+
+                                        <!--end::Input-->
+                                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-md-6 fv-row fv-plugins-icon-container">
+                                        <!--end::Label-->
+                                        <label class="fs-5 fw-bold mb-2">شماره تماس</label>
+                                        {{ contact_form.phone }}
+                                        <!--end::Label-->
+                                        <!--end::Input-->
+
+                                        <!--end::Input-->
+                                        <div class="fv-plugins-message-container invalid-feedback"></div>
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="d-flex flex-column mb-5 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="fs-5 fw-bold mb-2">موضوع</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+
+                                    {{ contact_form.subject }}
+                                    <!--end::Input-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="d-flex flex-column mb-10 fv-row fv-plugins-icon-container">
+                                    <label class="fs-6 fw-bold mb-2">متن پیام</label>
+
+                                    {{ contact_form.message }}
+                                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                                </div>
+                                <div class="d-flex flex-column mb-10 fv-row fv-plugins-icon-container">
+                                    <button type="submit" class="btn btn-primary" id="kt_contact_submit_button">
+                                        <!--begin::Indicator-->
+                                        <span class="indicator-label">ارسال</span>
+
+                                    </button>
+                                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Submit-->
+                                <!--end::Submit-->
+
+                            </form>
+                            <!--end::Form-->
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6 ps-lg-10">
+                            <iframe class="mt-20 w-100 rounded mb-10 mb-lg-0 leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1570.789317913003!2d46.28627435451572!3d38.056903400044945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401a1b5069cc8587%3A0xd058ef15f08cba9!2z2LTYsdqp2Kog2KrZiNix2qkg2b7Yp9ix2qnYsQ!5e0!3m2!1sfa!2s!4v1641621343100!5m2!1sfa!2s"
+                                    style="border:0;" height="500px" allowfullscreen="true" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                    <!--begin::Row-->
+                    <div class="row g-5 mb-5 mb-lg-15 mt-20 mt-lg-0 mt-md-0 mt-30">
+                        <!--begin::Col-->
+                        <div class="col-sm-6 pe-lg-10 ">
+                            <!--begin::Phone-->
+                            <div class="text-center bg-light card-rounded d-flex flex-column justify-content-center p-10 h-100">
+                                <!--begin::Icon-->
+                                <!--SVG file not found: icons/duotune/finance/fin006.svgPhone.svg-->
+                                <!--end::Icon-->
+                                <!--begin::Subtitle-->
+
+                                <!--end::Number-->
+                                <h2 class="text-dark fw-bolder my-5">شماره مدیر فروش</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Number-->
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.phone }}</div>
+
+                                <h2 class="text-dark fw-bolder my-5">شماره کارشناسان فروش</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Number-->
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.staff }}</div>
+
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.staff1 }}</div>
+
+
+                                <h2 class="text-dark fw-bolder my-5">ایمیل</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Number-->
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.email }}</div>
+                            </div>
+                            <!--end::Phone-->
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-sm-6 ps-lg-10">
+                            <!--begin::Address-->
+                            <div class="text-center bg-light card-rounded d-flex flex-column justify-content-center p-10 h-100">
+                                <!--begin::Icon-->
+                                <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
+                                <span class="svg-icon svg-icon-3tx svg-icon-primary">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                 viewBox="0 0 24 24" fill="none">
+                                                                <path opacity="0.3"
+                                                                      d="M18.0624 15.3453L13.1624 20.7453C12.5624 21.4453 11.5624 21.4453 10.9624 20.7453L6.06242 15.3453C4.56242 13.6453 3.76242 11.4453 4.06242 8.94534C4.56242 5.34534 7.46242 2.44534 11.0624 2.04534C15.8624 1.54534 19.9624 5.24534 19.9624 9.94534C20.0624 12.0453 19.2624 13.9453 18.0624 15.3453Z"
+                                                                      fill="currentColor"></path>
+                                                                <path d="M12.0624 13.0453C13.7193 13.0453 15.0624 11.7022 15.0624 10.0453C15.0624 8.38849 13.7193 7.04535 12.0624 7.04535C10.4056 7.04535 9.06241 8.38849 9.06241 10.0453C9.06241 11.7022 10.4056 13.0453 12.0624 13.0453Z"
+                                                                      fill="currentColor"></path>
+                                                            </svg>
+                                                        </span>
+                                <!--end::Svg Icon-->
+                                <!--end::Icon-->
+                                <!--begin::Subtitle-->
+                                <h2 class="text-dark fw-bolder my-5">دفتر مرکزی</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Description-->
+                                <div class="text-gray-700 fs-3 fw-bold">{{ com.address }}</div>
+                                <h2 class="text-dark fw-bolder my-5">شماره دفتر</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Number-->
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.tel }}</div>
+                                <h2 class="text-dark fw-bolder my-5">فکس</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Number-->
+                                <div class="text-gray-700 fw-bold fs-2">{{ com.fax }}</div>
+
+                                <h2 class="text-dark fw-bolder my-5">کارخانه</h2>
+                                <!--end::Subtitle-->
+                                <!--begin::Description-->
+                                <div class="text-gray-700 fs-3 fw-bold">{{ com.address1 }}</div>
+                                <!--end::Description-->
+                            </div>
+                            <!--end::Address-->
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--end::Row-->
+                    <!--begin::Card-->
+                    <div class="card mb-4 bg-light text-center">
+                        <!--begin::Body-->
+                        <div class="card-body py-12">
+                            <!--begin::Icon-->
+                            {% for s in social %}
+                                <a href="{{ s.link }}" class="mx-4">
+                                    <img src="{{ s.image.url }}" class="h-30px my-2"
+                                         alt="{{ s.title }}">
+                                </a>
+                            {% endfor %}
+                            <!--end::Icon-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Card-->
                 </div>
                 <!--end::Body-->
             </div>
-            <!--end::Card-->
-        </div>
-        <!--end::Body-->
-    </div>
         </div>
     </div>
 

@@ -132,3 +132,17 @@ class Licence(models.Model):
         return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
 
     thumb.short_description = "تصویر"
+
+
+class First(models.Model):
+    image = models.FileField(upload_to='first/', verbose_name='عکس')
+    body = RichTextUploadingField(verbose_name='متن درباره ما')
+
+    class Meta:
+        verbose_name = 'بخش زیر اسلایدر'
+        verbose_name_plural = 'بخش زیر اسلایدر'
+
+    def thumb(self):
+        return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
+
+    thumb.short_description = "تصویر"

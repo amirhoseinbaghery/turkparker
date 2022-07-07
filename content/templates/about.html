@@ -7,16 +7,17 @@
 
 {% endblock %}
 {% block content %}
-    <div class="content flex-row-fluid mt-20" id="kt_content">
-        <!--begin::About card-->
-        <div class="card">
-            <!--begin::Body-->
-            <div class="card-body p-lg-17">
-                <!--begin::About-->
-                <div class="mb-18">
-                    <!--begin::Wrapper-->
-                    <div class="mb-10">
-                        <!--begin::Top-->
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+        <div class="content flex-row-fluid mt-20" id="kt_content">
+            <!--begin::About card-->
+            <div class="card">
+                <!--begin::Body-->
+                <div class="card-body p-lg-17">
+                    <!--begin::About-->
+                    <div class="mb-18">
+                        <!--begin::Wrapper-->
+                        <div class="mb-10">
+                            <!--begin::Top-->
                         <div class="text-center mb-15">
                             <!--begin::Title-->
                             <h3 class="fs-2hx text-dark mb-5">درباره ما</h3>
@@ -180,7 +181,7 @@
                     </div>
                     <!--end::Heading-->
                     <!--begin::Slider-->
-                    <div class="tns tns-default mb-10 tns-initiazlied">
+                    <div class="tns tns-default mb-10 tns-initiazlied" >
                         <!--begin::Wrapper-->
                         <div class="tns-outer" id="tns1-ow">
                             <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide
@@ -259,7 +260,7 @@
                     <div class="card-body py-12">
                         <!--begin::Icon-->
                         {% for s in object.social_media.all %}
-                            <a href="{{ s.link }}" class="mx-4">
+                            <a href="https://{{ s.link }}" class="mx-4">
                                 <img src="{{ s.image.url }}" class="h-30px my-2"
                                      alt="{{ s.title }}">
                             </a>
@@ -268,10 +269,11 @@
                     </div>
                     <!--end::Body-->
                 </div>
-                <!--end::Card-->
+                    <!--end::Card-->
+                </div>
+                <!--end::Body-->
             </div>
-            <!--end::Body-->
+            <!--end::About card-->
         </div>
-        <!--end::About card-->
     </div>
 {% endblock %}

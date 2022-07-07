@@ -99,8 +99,8 @@
                                     <!--begin::Body-->
                                     <div class="card-body p-0 d-flex flex-column">
                                         <img class="card-img"
-                                             src="https://en.reformsports.com/oxegrebi/2022/04/reform-anasayfa-image-001.jpg"
-                                             alt="">
+                                             src="{{ first.image.url }}"
+                                             alt="turkparker">
                                         <!--end::Chart-->
                                     </div>
                                     <!--end::Body-->
@@ -116,15 +116,10 @@
 
                                     <!--begin::Body-->
                                     <div class="card-body">
-                                        <h3 class="text-white fw-bolder my-7">Reform Sports
-                                            “Establishes Sports Facilities”</h3>
-                                        <p class="text-muted fs-6 mb-7">
-                                            As Reform Group we are proud to leave 28 years of success in our journey
-                                            that began in 1994. With our experienced staff, high quality products and
-                                            services, we continue to grow with 6 companies and 9 brands, each of which
-                                            is a leader in its own sector.
-
-                                        </p>
+                                        <h3 class="text-white fw-bolder my-7">تورک پارکر</h3>
+                                        <h7 class="text-white fs-6 mb-7">
+                                            {{ first.body|safe }}
+                                        </h7>
 
                                     </div>
                                     <!--end::Body-->
@@ -135,6 +130,7 @@
                             <!--end::Col-->
 
                         </div>
+
                         <!--end::Row-->
                         <!--begin::Row-->
                         <!--begin category-->
@@ -216,20 +212,42 @@
                         <div class="row  ">
                             <!--begin::Col-->
                             {% for b in category %}
-                            <div class=" col-lg-3 col-md-3 col-6  mb-10" >
-                                <!--begin::Statistics Widget 1-->
-                                <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px " style=" background-image: url('{{ b.image.url }}')">
-                                    <!--begin::Body-->
-                                    <div class="card-body " >
+                                <div class=" d-lg-block d-md-block d-none" style="width: 280px;height:250px">
+                                    <!--begin::Statistics Widget 1-->
+                                    <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded  min-h-250px"
+                                         style=" background-image: url('{{ b.image.url }}')">
+                                        <!--begin::Body-->
+                                        <div class="position-absolute  " style="margin-top: 80%; margin-right: 60%">
 
-                                        <a href="{% url 'product:categoryList' b.slug %}"><h3 class="text-white fw-bold fs-3 mt-100 ms-100">
-                                            {{ b.title }}
-                                        </h3></a>
+                                            <a href="{% url 'product:categoryList' b.slug %}">
+                                                <h3 class="text-dark fw-bold fs-3 ">
+                                                    {{ b.title }}
+
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        <!--end::Body-->
                                     </div>
-                                    <!--end::Body-->
+                                    <!--end::Statistics Widget 1-->
                                 </div>
-                                <!--end::Statistics Widget 1-->
-                            </div>
+                                <div class="col-6  d-lg-none d-md-none d-block" >
+                                    <!--begin::Statistics Widget 1-->
+                                    <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded  min-h-250px"
+                                         style=" background-image: url('{{ b.image.url }}')">
+                                        <!--begin::Body-->
+                                        <div class="position-absolute d-flex align-items-start" style="text-align: left">
+
+                                            <a href="{% url 'product:categoryList' b.slug %}">
+                                                <h3 class="text-dark fw-bold fs-3 ">
+                                                    {{ b.title }}
+
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                    <!--end::Statistics Widget 1-->
+                                </div>
                             {% endfor %}
                             <!--end::Col-->
                         </div>
