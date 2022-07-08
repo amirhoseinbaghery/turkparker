@@ -7,7 +7,9 @@
 {% block content %}
     <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
         <div class="content flex-row-fluid" id="kt_content">
-        `   <div class="row g-10 row-cols-2 row-cols-lg-5">
+         <div class="card my-15">
+             <div class="card-body  p-lg-15 ">
+                 <div class="row g-10 row-cols-2 row-cols-lg-5">
         <!--begin::Col-->
         {% for a in object_list %}
         <div class="col">
@@ -28,6 +30,8 @@
         {% endfor %}
         <!--end::Col-->
     </div>
+             </div>
+         </div>
         </div>
     </div>
 

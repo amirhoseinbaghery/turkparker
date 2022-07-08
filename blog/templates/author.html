@@ -51,7 +51,7 @@
                         <!--begin: Pic-->
                         <div class="me-7 mb-4">
                             <div class="symbol symbol-100px symbol-lg-200px symbol-fixed position-relative">
-                                <img src="{{ object.image.url }}" alt="{% if object.get_full_name %}
+                                <img class="card-img" src="{{ object.image.url }}" alt="{% if object.get_full_name %}
                                                 {{ object.get_full_name }}{% else %}
                                                 {{ object }}{% endif %}">
                             </div>
@@ -182,9 +182,9 @@
                                 <!--begin::Card Title-->
                                 <div class="card-title m-0">
                                     <!--begin::Avatar-->
-                                    <div class="symbol symbol-50px w-100px bg-light">
+                                    <div class="symbol card-img bg-light">
                                         <a href="{% url 'blog:SinglePost' a.slug %}">
-                                            <img src="{{ a.image.url }}" alt="{{ a.title }}"
+                                            <img class=" card-img" src="{{ a.image.url }}" alt="{{ a.title }}"
                                                  class="card-img p-3">
                                         </a>
                                     </div>
