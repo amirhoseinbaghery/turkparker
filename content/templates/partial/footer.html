@@ -5,109 +5,109 @@
     <div class=" row">
 
 
-    <div class="row mt-20">
-        <!--begin::Order details-->
-<div class="py-4 col-lg-6 col-12  col-12 ">
-            <!--begin::Card header-->
-            <h2 class="text-muted mb-5">درباره تورک پارکر
-            </h2>
-            {#            <img alt="تورک پارکر" src="{{ logo.image.url }}" class="w-200px">#}
-            <!--end::Card header-->
-            <!--begin::Card body-->
-            <h7 class="text-muted">{{ object.body|safe }}</h7>
+        <div class="row mt-20">
+            <!--begin::Order details-->
+            <div class="py-4 col-lg-6 col-12  col-12 ">
+                <!--begin::Card header-->
+                <h2 class="text-muted mb-5">درباره تورک پارکر
+                </h2>
+                {#            <img alt="تورک پارکر" src="{{ logo.image.url }}" class="w-200px">#}
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <h7 class="text-muted">{{ object.body|safe }}</h7>
 
-            <!--end::Card body-->
-        </div>
-        <!--end::Order details-->
-        <!--begin::Customer details-->
-        <div class="py-4 col-lg-2  col-6 ">
-            <!--begin::Card header-->
-            <h2 class="text-muted mb-5">دسترسی سریع</h2>
-            <!--end::Card header-->
-            <!--begin::Card body-->
-            <div class="fw-bold my-5 my-lg-0">
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'blog:PostList' %}">
-                        مقالات
-                    </a>
+                <!--end::Card body-->
+            </div>
+            <!--end::Order details-->
+            <!--begin::Customer details-->
+            <div class="py-4 col-lg-2  col-6 ">
+                <!--begin::Card header-->
+                <h2 class="text-muted mb-5">دسترسی سریع</h2>
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <div class="fw-bold my-5 my-lg-0">
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'blog:PostList' %}">
+                            مقالات
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'product:ProductList' %}">
+                            محصولات
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'project:ProjectList' %}">
+                            پروژه ها
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'catalog:List' %}">
+                            کاتالوگ</a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'content:contactus' %}">
+                            تماس با ما
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <a class="text-muted text-hover-primary" href="{% url 'content:about' %}">
+                            درباره ما
+                        </a>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'product:ProductList' %}">
-                        محصولات
-                    </a>
-                </div>
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'project:ProjectList' %}">
-                        پروژه ها
-                    </a>
-                </div>
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'catalog:List' %}">
-                        کاتالوگ</a>
-                </div>
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'content:contactus' %}">
-                        تماس با ما
-                    </a>
-                </div>
-                <div class="mb-3">
-                    <a class="text-muted text-hover-primary" href="{% url 'content:about' %}">
-                        درباره ما
-                    </a>
+
+                <!--end::Card body-->
+            </div>
+            <!--end::Customer details-->
+            <!--begin::Documents-->
+
+            <div class="py-4 d-flex col-lg-2 col-6 flex-column">
+                <h2 class="text-muted mb-5">ارتباط با ما</h2>
+                <div class="p-2 "><i class="las la-mobile-alt me-2 text-success fs-2x"></i><a
+                        class="text-muted text-hover-primary" href="tel:{{ com.phone }}">{{ com.phone }}</a></div>
+                <div class="p-2 "><i class="las la-tty text-success me-2 fs-2x"></i><a
+                        class="text-muted text-hover-primary"
+                        href="tel:{{ com.tel }}">{{ com.tel }}</a>
                 </div>
             </div>
+            <div class="py-4  col-lg-2 col-md-2 col-12">
+                <h2 class="text-muted mb-5">مجوز ها</h2>
+                <div class="row">
 
-            <!--end::Card body-->
-        </div>
-        <!--end::Customer details-->
-        <!--begin::Documents-->
 
-        <div class="py-4 d-flex col-lg-2 col-6 flex-column">
-            <h2 class="text-muted mb-5">ارتباط با ما</h2>
-            <div class="p-2 "><i class="las la-mobile-alt me-2 text-success fs-2x"></i><a
-                    class="text-muted text-hover-primary" href="tel:{{ com.phone }}">{{ com.phone }}</a></div>
-            <div class="p-2 "><i class="las la-tty text-success me-2 fs-2x"></i><a class="text-muted text-hover-primary"
-                                                                                   href="tel:{{ com.tel }}">{{ com.tel }}</a>
+                    <!--begin::Col-->
+                    {% for licence in licence %}
+                        <div class="col-lg-8 col-md-8 col-6 mb-5">
+                            <!--begin::Overlay-->
+                            <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
+                               href="{{ licence.image.url }}">
+                                <!--begin::Image-->
+                                <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-175px"
+                                     style="background-image:url('{{ licence.image.url }}')"></div>
+                                <!--end::Image-->
+                                <!--begin::Action-->
+                                <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                    <i class="bi bi-eye-fill fs-2x text-white"></i>
+                                </div>
+                                <!--end::Action-->
+                            </a>
+                        </div>
+                    {% endfor %}
+                    <!--end::Col-->
+
+                    <!--begin::Col-->
+
+                    <!--end::Col-->
+
+
+                </div>
             </div>
+            <!--end::Documents-->
         </div>
-        <div class="py-4  col-lg-2 col-md-2 col-12">
-            <h2 class="text-muted mb-5">مجوز ها</h2>
-            <div class="row">
-
-
-
-                                                <!--begin::Col-->
-                                            {% for licence in licence %}
-                                                <div class="col-lg-8 col-md-8 col-6 mb-5">
-                                                    <!--begin::Overlay-->
-                                                    <a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="{{ licence.image.url }}">
-                                                        <!--begin::Image-->
-                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-175px" style="background-image:url('{{ licence.image.url }}')"></div>
-                                                        <!--end::Image-->
-                                                        <!--begin::Action-->
-                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25" >
-                                                            <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                                        </div>
-                                                        <!--end::Action-->
-                                                    </a>
-                                                </div>
-                                            {% endfor %}
-                                                <!--end::Col-->
-
-                                                <!--begin::Col-->
-
-                                                <!--end::Col-->
-
-
-
-
-            </div>
-        </div>
-        <!--end::Documents-->
+        <!--begin::Copyright-->
+        <!--end::Copyright-->
     </div>
-    <!--begin::Copyright-->
-    <!--end::Copyright-->
-</div>
 </div>
 
 <div class="container-xxl">
