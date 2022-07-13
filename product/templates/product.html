@@ -46,7 +46,7 @@
 
                     <!--end::-->
                     <!--begin::Layout-->
-                    <div class="d-flex flex-column flex-lg-row mb-17 position-lg-relative" >
+                    <div class="d-flex flex-column flex-lg-row mb-17 position-lg-relative">
                         <!--begin::Content-->
                         <div class="flex-lg-row-fluid me-0 me-lg-20">
                             <!--begin::Job-->
@@ -248,10 +248,14 @@
                                                 <div class="col mx-10">
                                                     <!--begin::Overlay-->
                                                     <a class="d-block overlay"
-                                                       href="{{ c.image.url }}">
+                                                       href="{{ c.image.url }}"
+                                                        data-fslightbox="lightbox-hot-sales"
+                                                    >
                                                         <!--begin::Image-->
                                                         <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-150px"
-                                                             style="background-image:url('{{ c.image.url }}');width: 200px"></div>
+                                                             style="background-image:url('{{ c.image.url }}');width: 200px">
+
+                                                        </div>
                                                         <!--end::Image-->
                                                         <!--begin::Action-->
                                                         <div class="overlay-layer card-rounded bg-dark bg-opacity-25"
@@ -283,7 +287,8 @@
                         <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px position-lg-relative">
                             <!--begin::Careers about-->
 
-                            <div class="card bg-light selector position-lg-static" data-sticky-container data-margin-top="20" data-sticky-for="1023" data-sticky-class="is-sticky">
+                            <div class="card bg-light sticky " data-sticky-container
+                                 data-margin-top="20" data-sticky-for="1023" data-sticky-class="is-sticky">
                                 <div class=" d-lg-block  d-none ">
                                     <!--begin::Body-->
                                     <div class="card-body">
@@ -352,6 +357,9 @@
                                 </div>
 
                             </div>
+                            <script>
+                                var sticky = new Sticky('.sticky');
+                            </script>
                             <div class="card bg-light  d-lg-none  d-block">
                                 <!--begin::Body-->
                                 <div class="card-body">
