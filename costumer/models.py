@@ -5,6 +5,8 @@ from django.utils.html import format_html
 class Costumer(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام مشتری/شرکت')
     image = models.FileField(upload_to='costumer/', verbose_name='لوگو')
+    location = models.ForeignKey('Locality', verbose_name='موقعییت مشتری', on_delete=models.CASCADE,
+                                 related_name='costumer', null=True)
 
     class Meta:
         verbose_name = 'مشتری'
@@ -20,12 +22,12 @@ class Costumer(models.Model):
 
 
 class Locality(models.Model):
-    country = models.CharField(max_length=100, verbose_name='کشور')
+    country = models.CharField(max_length=100, verbose_name='کشور', default='ایران')
     city = models.CharField(max_length=100, verbose_name='شهر')
 
     class Meta:
-        verbose_name = 'مشتری'
-        verbose_name_plural = 'مشتریان'
+        verbose_name = 'موقعیت مشتری'
+        verbose_name_plural = 'موقعیت مشتری ها'
 
     def __str__(self):
         return f"{self.country} {self.city}"

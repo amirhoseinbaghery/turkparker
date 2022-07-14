@@ -55,5 +55,7 @@ def home(request):
         'product': Product.objects.filter(status='p'),
         'blog': Blog.objects.filter(status='p'),
         'first': First.objects.first(),
+        'costumer': Costumer.objects.all(),
+        'about': About.objects.all().first(),
     }
     return render(request, 'index.html', context)
