@@ -140,7 +140,7 @@
 						</div>
                         <div class="row g-5 g-lg-10 ">
 							<!--begin::Col-->
-							<div class="col-xl-4 col-lg-4 col-md-4 col-12  mb-xl-10">
+							<div class=" col-lg-4 col-md-4 col-6  mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url('assets/media/svg/shapes/abstract-4.svg')">
 									<!--begin::Body-->
@@ -157,7 +157,7 @@
 							</div>
 							<!--end::Col-->
 							<!--begin::Col-->
-							<div class="col-xl-4 col-lg-4 col-md-4 col-12 mb-xl-10">
+							<div class=" col-lg-4 col-md-4 col-6 mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url('assets/media/svg/shapes/abstract-4.svg')">
 									<!--begin::Body-->
@@ -174,7 +174,7 @@
 							</div>
 							<!--end::Col-->
 							<!--begin::Col-->
-							<div class="col-xl-4 mb-xl-10">
+							<div class=" col-lg-4 col-md-4 col-6 mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url("assets/media/svg/shapes/abstract-4.svg")">
 									<!--begin::Body-->
@@ -191,9 +191,9 @@
 							</div>
 							<!--end::Col-->
 						</div>
-                        <div class="row g-5 g-lg-10 ">
+                        <div class="row g-5 g-lg-10 mt-5">
 							<!--begin::Col-->
-							<div class="col-xl-4 col-lg-4 col-md-4 col-12  mb-xl-10">
+							<div class="col-lg-4 col-md-4 col-6  mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url('assets/media/svg/shapes/abstract-4.svg')">
 									<!--begin::Body-->
@@ -210,7 +210,7 @@
 							</div>
 							<!--end::Col-->
 							<!--begin::Col-->
-							<div class="col-xl-4 col-lg-4 col-md-4 col-12 mb-xl-10">
+							<div class=" col-lg-4 col-md-4 col-6 mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-4.svg)">
 									<!--begin::Body-->
@@ -227,7 +227,7 @@
 							</div>
 							<!--end::Col-->
 							<!--begin::Col-->
-							<div class="col-xl-4 mb-xl-10">
+							<div class=" col-lg-4 col-md-4 col-6 mb-xl-10">
 								<!--begin::Statistics Widget 1-->
 								<div class="card here bgi-no-repeat h-xl-100" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-4.svg)">
 									<!--begin::Body-->
@@ -255,6 +255,7 @@
                         }
                         .product-count-box{
                             margin-top: 20px;
+
                         }
                     }
 
@@ -359,7 +360,7 @@
 
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="d-flex flex-column flex-center h-200px w-200px mx-auto my-5 bg-light rounded-circle">
+                                    <div class="d-flex flex-column flex-center h-200px w-200px  mx-auto my-5 bg-light rounded-circle">
                                         <!--begin::Symbol-->
                                         <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
                                         <span class="svg-icon svg-icon-4x svg-icon-primary mb-3">
@@ -445,7 +446,7 @@
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-12  mb-xl-10">
                                 <!--begin::Statistics Widget 1-->
-                                <div class="card  h-xl-100"
+                                <div class="card  "
                                 >
                                     <!--begin::Body-->
                                     <div class="card-body">
@@ -495,43 +496,21 @@
                         <div class="row  ">
                             <!--begin::Col-->
                             {% for b in category %}
-                                <div class=" d-lg-block d-md-block d-none" style="width: 280px;height:250px">
-                                    <!--begin::Statistics Widget 1-->
-                                    <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded  min-h-250px"
-                                         style=" background-image: url('{{ b.image.url }}')">
-                                        <!--begin::Body-->
-                                        <div class="position-absolute  " style="margin-top: 80%; margin-right: 60%">
-
-                                            <a href="{% url 'product:categoryList' b.slug %}">
+                                <div class="col-lg-3 col-md-4 col-6">
+                                    <div class="card bgi-position-center bgi-size-cover min-h-175px "   style=" background-image: url('{{ b.image.url }}')">
+                                        <div class="card-body">
+                                            <div style="margin-top: 100%;text-align: left">
+                                                <a class=""  href="{% url 'product:categoryList' b.slug %}">
                                                 <h3 class="text-dark fw-bold fs-3 ">
                                                     {{ b.title }}
 
                                                 </h3>
                                             </a>
+                                            </div>
                                         </div>
-                                        <!--end::Body-->
                                     </div>
-                                    <!--end::Statistics Widget 1-->
                                 </div>
-                                <div class="col-6  d-lg-none d-md-none d-block">
-                                    <!--begin::Statistics Widget 1-->
-                                    <div class="card bgi-no-repeat bgi-position-center bgi-size-cover card-rounded  min-h-250px"
-                                         style=" background-image: url('{{ b.image.url }}')">
-                                        <!--begin::Body-->
-                                        <div class="position-absolute d-flex align-items-start"
-                                             style="text-align: left">
 
-                                            <a href="{% url 'product:categoryList' b.slug %}">
-                                                <h3 class="text-dark fw-bold fs-3 ">
-                                                    {{ b.title }}
-
-                                                </h3>
-                                            </a>
-                                        </div>
-                                        <!--end::Body-->
-                                    </div>
-                                    <!--end::Statistics Widget 1-->
-                                </div>
                             {% endfor %}
                             <!--end::Col-->
                         </div>
