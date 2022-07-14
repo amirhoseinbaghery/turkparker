@@ -526,66 +526,7 @@
                             });
                         </script>
 
-                        <div class="row g-5 g-lg-10 my-20">
-                            <!--begin::Col-->
-                            <div class="card">
-                                <div class="my-20 mb-5 text-center">
-                                    <h3>پروژه های انجام شده توسط تورک پارکر
-                                    </h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-17">
-                                        <!--begin::Content-->
-                                        <div class="d-flex flex-stack mb-5">
-                                            <!--begin::Title-->
-                                            <h3 class="text-dark">جدیدترین پروژه ها</h3>
-                                            <!--end::Title-->
-                                            <!--begin::Link-->
-                                            <a href="{% url 'project:ProjectList' %}"
-                                               class="fs-6 fw-bold link-primary">مشاهده همه</a>
-                                            <!--end::Link-->
-                                        </div>
-                                        <!--end::Content-->
-                                        <!--begin::Separator-->
-                                        <div class="separator separator-dashed mb-9"></div>
-                                        <!--end::Separator-->
-                                        <!--begin::Row-->
-                                        <div class="row g-10">
-                                            <!--begin::Col-->
-                                            {% for c in project %}
-                                                <div class="col-lg-3 col-md-3 col-6">
-                                                    <!--begin::Hot sales post-->
-                                                    <div class="card-xl-stretch me-md-6">
-                                                        <!--begin::Overlay-->
-                                                        <a class="d-block overlay"
-                                                           data-fslightbox="lightbox-hot-sales"
-                                                           href="{% url 'project:Project' c.slug %}">
-                                                            <!--begin::Image-->
-                                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
-                                                                 style="background-image:url('{{ c.image.url }}')"></div>
-                                                            <!--end::Image-->
-                                                            <!--begin::Action-->
-                                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                                                <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                                            </div>
-                                                            <!--end::Action-->
-                                                        </a>
-                                                        <!--end::Overlay-->
-                                                        <!--begin::Body-->
 
-                                                        <!--end::Body-->
-                                                    </div>
-                                                    <!--end::Hot sales post-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Col-->
-                                        </div>
-                                        <!--end::Row-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end::Col-->
-                        </div>
                         <!--end::Row-->
                         <!--begin::Calendar Widget 1-->
 
@@ -1044,7 +985,7 @@
                                             <!--begin::Hot sales post-->
                                             <div class="card-xl-stretch me-md-6">
                                                 <!--begin::Overlay-->
-                                                <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
+                                                <a class="d-block "
                                                    href="{% url 'product:product' e.slug %}">
                                                     <!--begin::Image-->
                                                     <!-- <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('assets/media/stock/600x400/img-23.jpg')"></div> -->
@@ -1054,9 +995,7 @@
                                                          alt="">
                                                     <!--end::Image-->
                                                     <!--begin::Action-->
-                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                                        <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                                    </div>
+
                                                     <!--end::Action-->
                                                 </a>
                                                 <!--end::Overlay-->

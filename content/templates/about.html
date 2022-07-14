@@ -18,257 +18,221 @@
                         <!--begin::Wrapper-->
                         <div class="mb-10">
                             <!--begin::Top-->
-                        <div class="text-center mb-15">
+                            <div class="text-center mb-15">
+                                <!--begin::Title-->
+                                <h3 class="fs-2hx text-dark mb-5">درباره ما</h3>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::Top-->
+                            <!--begin::Overlay-->
+                            <div class="overlay">
+                                <!--begin::Image-->
+                                <img class="w-100 card-rounded"
+                                     src="{{ object.image.url }}" alt="درباره ما">
+                                <!--end::Image-->
+                            </div>
+                            <!--end::Container-->
+                        </div>
+                        <!--end::Wrapper-->
+                        <!--begin::Description-->
+                        <div class="fs-5 fw-bold text-gray-600">
+                            <!--begin::Text-->
+                            <p class="mb-8">{{ object.body|truncatewords_html:300|safe }}</p>
+                            <!--end::Text-->
+                        </div>
+                        <!--end::Description-->
+                    </div>
+                    <!--end::About-->
+                    <!--begin::Statistics-->
+                    <div class="card bg-light mb-18">
+                        <!--begin::Body-->
+                        <div class="card-body py-15">
+                            <!--begin::Wrapper-->
+                            <div class="d-flex flex-center">
+                                <!--begin::Items-->
+                                <div class="row d-flex- justify-content-center ">
+                                    <div class="col-lg-4 col-md-4 col-12 ">
+                                        <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-auto my-5">
+                                            <!--begin::Content-->
+                                            <div class="text-center">
+                                                <!--begin::Symbol-->
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                                <i class="bi bi-award fs-3x text-warning"></i>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Symbol-->
+                                                <!--begin::Text-->
+                                                <div class="mt-1">
+                                                    <!--begin::Animation-->
+                                                    <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+                                                        <div class="min-w-70px counted" data-kt-countup="true"
+                                                             data-kt-countup-value="0"> بیش از{{ project }}
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Animation-->
+                                                    <!--begin::Label-->
+                                                    <span class="text-gray-600 fw-bold fs-5 lh-0">پروژه</span>
+                                                    <!--end::Label-->
+                                                </div>
+                                                <!--end::Text-->
+                                            </div>
+                                            <!--end::Content-->
+                                        </div>
+                                    </div>
+                                    <!--begin::Item-->
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-auto ">
+                                            <!--begin::Content-->
+                                            <div class="text-center">
+                                                <!--begin::Symbol-->
+                                                <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
+                                                <i class="bi bi-person-video3 fs-3x text-primary"></i>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Symbol-->
+                                                <!--begin::Text-->
+                                                <div class="mt-1">
+                                                    <!--begin::Animation-->
+                                                    <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+                                                        <div class="min-w-50px counted" data-kt-countup="true"
+                                                             data-kt-countup-value="0"> بیش از{{ costumer }}
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Animation-->
+                                                    <!--begin::Label-->
+                                                    <span class="text-gray-600 fw-bold fs-5 lh-0">طرف قرارداد</span>
+                                                    <!--end::Label-->
+                                                </div>
+                                                <!--end::Text-->
+                                            </div>
+                                            <!--end::Content-->
+                                        </div>
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-auto my-5">
+                                            <!--begin::Content-->
+                                            <div class="text-center">
+                                                <!--begin::Symbol-->
+                                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+                                                <i class="bi bi-clock-history fs-3x text-info"></i>
+                                                <!--end::Svg Icon-->
+                                                <!--end::Symbol-->
+                                                <!--begin::Text-->
+                                                <div class="mt-1">
+                                                    <!--begin::Animation-->
+                                                    <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
+                                                        <div class="min-w-50px counted" data-kt-countup="true"
+                                                             data-kt-countup-value="0"> بیش از{{ object.history }}
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Animation-->
+                                                    <!--begin::Label-->
+                                                    <span class="text-gray-600 fw-bold fs-5 lh-0">سابقه کاری</span>
+                                                    <!--end::Label-->
+                                                </div>
+                                                <!--end::Text-->
+                                            </div>
+                                            <!--end::Content-->
+                                        </div>
+
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <!--end::Item-->
+                                </div>
+                                <!--end::Items-->
+                            </div>
+                            <!--end::Wrapper-->
+                            <!--begin::Testimonial-->
+                            <div class="fs-2 fw-bold text-muted text-center mb-3">
+                                <span class="fs-1 lh-1 text-gray-700"></span>{{ object.admin_message }}
+                            </div>
+                            <!--end::Testimonial-->
+                            <!--begin::Author-->
+                            <div class="fs-2 fw-bold text-muted text-center">
+                                <h3
+                                        class="fs-4 fw-bolder">بهنام سعیدی</h3>
+                                <span class="fs-4 fw-bolder text-gray-600">مدیر عامل شرکت تورک پارکر</span>
+                            </div>
+                            <!--end::Author-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Statistics-->
+                    <!--begin::Section-->
+                    <div class="mb-16">
+                        <!--begin::Top-->
+                        <div class="text-center mb-12">
                             <!--begin::Title-->
-                            <h3 class="fs-2hx text-dark mb-5">درباره ما</h3>
+
                             <!--end::Title-->
+                            <!--begin::Text-->
+
+                            <!--end::Text-->
                         </div>
                         <!--end::Top-->
-                        <!--begin::Overlay-->
-                        <div class="overlay">
-                            <!--begin::Image-->
-                            <img class="w-100 card-rounded"
-                                 src="{{ object.image.url }}" alt="">
-                            <!--end::Image-->
-                        </div>
-                        <!--end::Container-->
-                    </div>
-                    <!--end::Wrapper-->
-                    <!--begin::Description-->
-                    <div class="fs-5 fw-bold text-gray-600">
-                        <!--begin::Text-->
-                        <p class="mb-8">{{ object.body|truncatewords_html:300|safe }}</p>
-                        <!--end::Text-->
-                    </div>
-                    <!--end::Description-->
-                </div>
-                <!--end::About-->
-                <!--begin::Statistics-->
-                <div class="card bg-light mb-18">
-                    <!--begin::Body-->
-                    <div class="card-body py-15">
-                        <!--begin::Wrapper-->
-                        <div class="d-flex flex-center">
-                            <!--begin::Items-->
-                            <div class="d-flex justify-content-between mb-10 mx-auto w-xl-900px">
-                                <!--begin::Item-->
-                                <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
-                                    <!--begin::Content-->
-                                    <div class="text-center">
-                                        <!--begin::Symbol-->
-                                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-                                        <i class="bi bi-award fs-3x text-warning"></i>
-                                        <!--end::Svg Icon-->
-                                        <!--end::Symbol-->
-                                        <!--begin::Text-->
-                                        <div class="mt-1">
-                                            <!--begin::Animation-->
-                                            <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
-                                                <div class="min-w-70px counted" data-kt-countup="true"
-                                                     data-kt-countup-value="0"> بیش از{{ project }}
-                                                </div>
-                                            </div>
-                                            <!--end::Animation-->
-                                            <!--begin::Label-->
-                                            <span class="text-gray-600 fw-bold fs-5 lh-0">پروژه</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Content-->
-                                </div>
-                                <!--end::Item-->
-                                <!--begin::Item-->
-                                <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
-                                    <!--begin::Content-->
-                                    <div class="text-center">
-                                        <!--begin::Symbol-->
-                                        <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
-                                        <i class="bi bi-person-video3 fs-3x text-primary"></i>
-                                        <!--end::Svg Icon-->
-                                        <!--end::Symbol-->
-                                        <!--begin::Text-->
-                                        <div class="mt-1">
-                                            <!--begin::Animation-->
-                                            <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
-                                                <div class="min-w-50px counted" data-kt-countup="true"
-                                                     data-kt-countup-value="0"> بیش از{{ costumer }}
-                                                </div>
-                                            </div>
-                                            <!--end::Animation-->
-                                            <!--begin::Label-->
-                                            <span class="text-gray-600 fw-bold fs-5 lh-0">طرف قرارداد</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Content-->
-                                </div>
-                                <!--end::Item-->
-                                <!--begin::Item-->
-                                <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
-                                    <!--begin::Content-->
-                                    <div class="text-center">
-                                        <!--begin::Symbol-->
-                                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
-                                        <i class="bi bi-clock-history fs-3x text-info"></i>
-                                        <!--end::Svg Icon-->
-                                        <!--end::Symbol-->
-                                        <!--begin::Text-->
-                                        <div class="mt-1">
-                                            <!--begin::Animation-->
-                                            <div class="fs-lg-2hx fs-2x fw-bolder text-gray-800 d-flex align-items-center">
-                                                <div class="min-w-50px counted" data-kt-countup="true"
-                                                     data-kt-countup-value="0"> بیش از{{ object.history }}
-                                                </div>
-                                            </div>
-                                            <!--end::Animation-->
-                                            <!--begin::Label-->
-                                            <span class="text-gray-600 fw-bold fs-5 lh-0">سابقه کاری</span>
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Content-->
-                                </div>
-                                <!--end::Item-->
-                            </div>
-                            <!--end::Items-->
-                        </div>
-                        <!--end::Wrapper-->
-                        <!--begin::Testimonial-->
-                        <div class="fs-2 fw-bold text-muted text-center mb-3">
-                            <span class="fs-1 lh-1 text-gray-700"></span>{{ object.admin_message }}
-                        </div>
-                        <!--end::Testimonial-->
-                        <!--begin::Author-->
-                        <div class="fs-2 fw-bold text-muted text-center">
-                            <h3
-                                    class="fs-4 fw-bolder">بهنام سعیدی</h3>
-                            <span class="fs-4 fw-bolder text-gray-600">مدیر عامل شرکت تورک پارکر</span>
-                        </div>
-                        <!--end::Author-->
-                    </div>
-                    <!--end::Body-->
-                </div>
-                <!--end::Statistics-->
-                <!--begin::Section-->
-                <div class="mb-16">
-                    <!--begin::Top-->
-                    <div class="text-center mb-12">
-                        <!--begin::Title-->
-
-                        <!--end::Title-->
-                        <!--begin::Text-->
-
-                        <!--end::Text-->
-                    </div>
-                    <!--end::Top-->
-                    <!--begin::Row-->
+                        <!--begin::Row-->
 
 
-                </div>
-                <!--end::Section-->
-                <!--begin::Team-->
-                <div class="mb-18">
-                    <!--begin::Heading-->
-                    <div class="text-center mb-12">
-                        <!--begin::Title-->
-                        <h3 class="fs-2hx text-dark mb-5">اعضای تیم ما</h3>
-                        <!--end::Title-->
-                        <!--begin::Sub-title-->
-                        <!--end::Sub-title=-->
                     </div>
-                    <!--end::Heading-->
-                    <!--begin::Slider-->
-                    <div class="tns tns-default mb-10 tns-initiazlied" >
-                        <!--begin::Wrapper-->
-                        <div class="tns-outer" id="tns1-ow">
-                            <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide
-                                <span class="current">8 to 10</span> of 7
-                            </div>
-                            <div id="tns1-mw" class="tns-ovh">
-                                <div class="tns-inner" id="tns1-iw">
-                                    <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false"
-                                         data-tns-speed="2000" data-tns-autoplay="true"
-                                         data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false"
-                                         data-tns-items="1" data-tns-center="false" data-tns-dots="false"
-                                         data-tns-prev-button="#kt_team_slider_prev"
-                                         data-tns-next-button="#kt_team_slider_next"
-                                         data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}"
-                                         class="  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
-                                         id="tns1" style="transform: translate3d(-46.6667%, 0px, 0px);">
-                                        {% for a in object.our_team.all %}
-                                            <div class="text-center tns-item tns-slide-cloned" aria-hidden="true"
-                                                 tabindex="-1">
-                                                <!--begin::Photo-->
-                                                <div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center"
-                                                     style="background-image:url('{{ a.image.url }}')"></div>
-                                                <!--end::Photo-->
-                                                <!--begin::Person-->
-                                                <div class="mb-0">
-                                                    <!--begin::Name-->
-                                                    <h3 class="text-dark fw-bolder text-hover-primary fs-3">
-                                                        {% if a.get_full_name %}
-                                                            {{ a.get_full_name }}{% else %}
-                                                            {{ a }}{% endif %}</h3>
-                                                    <!--end::Name-->
-                                                </div>
-                                                <!--end::Person-->
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
+                    <!--end::Section-->
+                    <!--begin::Team-->
+                    <div class="mb-18">
+                        <!--begin::Heading-->
+                        <div class="text-center mb-12">
+                            <!--begin::Title-->
+                            <h3 class="fs-2hx text-dark mb-5">اعضای تیم ما</h3>
+                            <!--end::Title-->
+                            <!--begin::Sub-title-->
+                            <!--end::Sub-title=-->
                         </div>
-                        <!--end::Wrapper-->
-                        <!--begin::Button-->
-                        <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev"
-                                aria-controls="tns1" tabindex="-1" data-controls="prev">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
-                            <span class="svg-icon svg-icon-3x">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                         viewBox="0 0 24 24" fill="none">
-														<path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z"
-                                                              fill="currentColor"></path>
-													</svg>
-												</span>
-                            <!--end::Svg Icon-->
-                        </button>
-                        <!--end::Button-->
-                        <!--begin::Button-->
-                        <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next"
-                                aria-controls="tns1" tabindex="-1" data-controls="next">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg-->
-                            <span class="svg-icon svg-icon-3x">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                         viewBox="0 0 24 24" fill="none">
-														<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z"
-                                                              fill="currentColor"></path>
-													</svg>
-												</span>
-                            <!--end::Svg Icon-->
-                        </button>
-                        <!--end::Button-->
+                        <!--end::Heading-->
+                        <!--begin::Slider-->
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 gy-10">
+                                                {% for a in object.our_team.all %}
+													<!--begin::Item-->
+													<div class="col text-center mb-9">
+														<!--begin::Photo-->
+														<div class="octagon mx-auto mb-2 d-flex w-150px h-150px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url({{ a.image.url }})"></div>
+														<!--end::Photo-->
+														<!--begin::Person-->
+														<div class="mb-0">
+															<!--begin::Name-->
+															<a href="/metronic8/demo1/../demo1/pages/user-profile/projects.html" class="text-dark fw-bold text-hover-primary fs-3"> {% if a.get_full_name %}
+                                                    {{ a.get_full_name }}{% else %}
+                                                    {{ a }}{% endif %}</a>
+															<!--end::Name-->
+															<!--begin::Position-->
+															<div class="text-muted fs-6 fw-semibold">Development Lead</div>
+															<!--begin::Position-->
+														</div>
+														<!--end::Person-->
+													</div>
+													<!--end::Item-->
+													<!--begin::Item-->
+													{% endfor %}
+													<!--end::Item-->
+												</div>
+
+
+                        <!--end::Slider-->
                     </div>
-                    <!--end::Slider-->
-                </div>
-                <!--end::Team-->
-                <!--begin::Card-->
-                <div class="card mb-4 bg-light text-center">
-                    <!--begin::Body-->
-                    <div class="card-body py-12">
-                        <!--begin::Icon-->
-                        {% for s in object.social_media.all %}
-                            <a href="https://{{ s.link }}" class="mx-4">
-                                <img src="{{ s.image.url }}" class="h-30px my-2"
-                                     alt="{{ s.title }}">
-                            </a>
-                        {% endfor %}
-                        <!--end::Icon-->
+                    <!--end::Team-->
+                    <!--begin::Card-->
+                    <div class="card mb-4 bg-light text-center">
+                        <!--begin::Body-->
+                        <div class="card-body py-12">
+                            <!--begin::Icon-->
+                            {% for s in object.social_media.all %}
+                                <a href="https://{{ s.link }}" class="mx-4">
+                                    <img src="{{ s.image.url }}" class="h-30px my-2"
+                                         alt="{{ s.title }}">
+                                </a>
+                            {% endfor %}
+                            <!--end::Icon-->
+                        </div>
+                        <!--end::Body-->
                     </div>
-                    <!--end::Body-->
-                </div>
                     <!--end::Card-->
                 </div>
                 <!--end::Body-->
