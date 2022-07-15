@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 from blog.models import Blog
 from content.forms import ContactUsForm
-from content.models import About, ContactUs, Communication, Slider, First
+from content.models import About, ContactUs, Communication, Slider, First, Why
 from costumer.models import Costumer
 from product.models import ProductCategory, Product
 from project.models import Project
@@ -50,6 +50,7 @@ def contactus(request):
 def home(request):
     context = {
         'slide': Slider.objects.all(),
+        'why': Why.objects.all(),
         'category': ProductCategory.objects.filter(status='p'),
         'project': Project.objects.filter(status='p'),
         'product': Product.objects.filter(status='p'),

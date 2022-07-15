@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from content.models import About, SocialMedia, ContactUs, SiteSetting, Communication, Slider, Licence, First
+from content.models import About, SocialMedia, ContactUs, SiteSetting, Communication, Slider, Licence, First, Why
 
 admin.site.register(About)
 
@@ -62,3 +62,11 @@ class FirstAdmin(admin.ModelAdmin):
     list_display = (
         'thumb',)
     list_display_links = ('thumb',)
+
+
+@admin.register(Why)
+class WhyAdmin(admin.ModelAdmin):
+    list_display = (
+        'thumb',
+        'title',)
+    list_display_links = ('thumb', 'title')

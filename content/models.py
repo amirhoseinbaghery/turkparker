@@ -1,7 +1,6 @@
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.utils.html import format_html
-
 from account.models import User
 
 
@@ -141,6 +140,24 @@ class First(models.Model):
     class Meta:
         verbose_name = 'بخش زیر اسلایدر'
         verbose_name_plural = 'بخش زیر اسلایدر'
+
+    def thumb(self):
+        return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
+
+    thumb.short_description = "تصویر"
+
+
+class Why(models.Model):
+    title = models.CharField(max_length=50, verbose_name='عنوان')
+    image = models.FileField(upload_to='why/', verbose_name='عکس')
+    body = models.CharField(max_length=200, verbose_name=' توضیحات')
+
+    class Meta:
+        verbose_name = 'چرا تورک پارکر'
+        verbose_name_plural = 'چرا تورک پارکر'
+
+    def __str__(self):
+        return self.title
 
     def thumb(self):
         return format_html("<img width=90 style='border-radius: 5px' src='{}'>".format(self.image.url))
