@@ -1,0 +1,216 @@
+
+.news_full span.category {
+    display: none
+}
+.news_full .tag-chain {
+    margin-bottom: 2.22em;
+    width: 100%;
+    display: block
+}
+.news_full .tag-chain .tag-chain-item {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    display: inline-block;
+    color: #3B3B3B;
+    text-transform: uppercase
+}
+.news_full .tag-chain .tag-chain-item:after {
+    content: "/";
+    display: inline-block;
+    margin-left: 0.52em;
+    margin-right: 0.27em
+}
+.news_full .tag-chain .tag-chain-item:last-child:after {
+    display: none
+}
+.news_full .blog-downloads-section {
+    padding: 1em 0 3em
+}
+.news_full .blog-downloads-section .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    max-width: 1222px;
+    max-width: clamp(15.5em, 86%, 67.9em)
+}
+.news_full .blog-downloads-section .inside .section-title {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 1em
+}
+.news_full .blog-downloads-section .inside .blog-downloads-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.news_jobdetail .ce_headertext .text-content-wrap {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start
+}
+.news_jobdetail .ce_headertext .text-content-wrap .back-btn {
+    margin: -3em 0 2em
+}
+.news_jobdetail .ce_headertext .text-content-wrap .header-text-wrap {
+    margin-top: 3em
+}
+.news_jobdetail .ce_headertext .job-details-subheading {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    color: #3B3B3B;
+    text-transform: uppercase;
+    margin: 0 0 1.2em
+}
+.news_jobdetail .ce_headertext .job-details-title {
+    font-size: 3.05em;
+    font-size: clamp(1.55em, 2.8vw, 3.05em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.18em;
+    display: block;
+    color: #FFFFFF;
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif
+}
+.news_jobdetail .ce_separation {
+    background: #3B3B3B url("../../bundles/viacorbasic/img/ce-separation-bg-sport.png") center bottom / 100% auto no-repeat
+}
+@media only screen and (max-width:1024px) {
+    .news_jobdetail .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-1024.png")
+    }
+}
+@media only screen and (max-width:768px) {
+    .news_jobdetail .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-768.png")
+    }
+}
+@media only screen and (max-width:414px) {
+    .news_jobdetail .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-414.png")
+    }
+}
+.news_jobdetail .ce_separation p {
+    font-family: "universal-extended", helvetica, arial, sans-serif
+}
+.news_jobdetail .tabs-wrap {
+    width: 100%;
+    margin: 8em auto;
+    margin: clamp(4em, 8vw, 8em) auto
+}
+.news_jobdetail .tabs-wrap .tab-header {
+    display: none
+}
+.news_jobdetail .tabs-wrap .tabs-content {
+    width: 100%;
+    margin: 0 auto
+}
+.news_jobdetail .tabs-wrap .tabs-content .ce_fulltext ul li:last-child {
+    border-bottom: 2px solid #FFFFFF
+}
+.news_jobdetail .ce_ctatext {
+    padding-top: 0;
+    background: #C5C4BE
+}
+.news_jobdetail .ce_ctatext .wrapper {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    max-width: 1222px;
+    max-width: clamp(15.5em, 86%, 67.9em);
+    max-width: 45em;
+    text-align: center
+}
+.news_jobdetail .ce_ctatext .wrapper .category {
+    color: #3B3B3B;
+    text-align: left
+}
+.news_jobdetail .ce_ctatext .wrapper .big-heading {
+    margin: 2em 0 3em;
+    text-align: left
+}
+.news_jobdetail .ce_ctatext .wrapper .big-heading a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+.news_jobdetail .ce_ctatext .wrapper p {
+    font-size: 1em;
+    font-family: "universal-roman", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    text-transform: none;
+    max-width: none
+}
+.news_jobdetail .ce_ctatext .wrapper ul {
+    color: #FFFFFF
+}
+.news_jobdetail .ce_ctatext .wrapper .button {
+    position: relative;
+    overflow: hidden;
+    color: #3B3B3B;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 2em;
+    padding: 0.665em 1.4em 0.465em;
+    transition: all 0.4s ease;
+    color: #C5C4BE;
+    color: #3B3B3B
+}
+.news_jobdetail .ce_ctatext .wrapper .button:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    max-width: 3.8em;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: rgba(59, 59, 59, 0.32);
+    border-radius: inherit;
+    transition: transform 0.5s ease
+}
+.news_jobdetail .ce_ctatext .wrapper .button:hover {
+    background: rgba(59, 59, 59, 0.05)
+}
+.news_jobdetail .ce_ctatext .wrapper .button:active:after,
+.news_jobdetail .ce_ctatext .wrapper .button.active:after {
+    transform: translateX(0)
+}
+.news_jobdetail .ce_ctatext .wrapper .button:focus {
+    background: rgba(59, 59, 59, 0.17)
+}
+.news_jobdetail .ce_ctatext .wrapper .button:disabled,
+.news_jobdetail .ce_ctatext .wrapper .button.disabled {
+    opacity: 0.2;
+    cursor: default
+}
+.news_jobdetail + .back-button-section {
+    display: none
+}
+.tl_content .ce_ctatext {
+    background: #C5C4BE
+}
+.tl_content .ce_ctatext .category {
+    color: #3B3B3B
+}

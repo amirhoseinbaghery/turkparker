@@ -1,0 +1,209 @@
+
+.ce_separation {
+    width: 100%;
+    height: auto;
+    background: #3B3B3B;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 7.55em 0em
+}
+@media only screen and (max-width:768px) {
+    .ce_separation {
+        padding: 5.11em 0
+    }
+}
+.ce_separation .wrapper {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    max-width: 1222px;
+    max-width: clamp(15.5em, 86%, 67.9em)
+}
+.ce_separation p {
+    width: 100%;
+    display: block;
+    margin: auto auto 0.9em;
+    font-size: 1.777em;
+    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-size: clamp(1.38em, 1.66vw, 1.777em);
+    line-height: 1.3em;
+    color: #FFFFFF
+}
+.ce_separation p.big {
+    font-size: 3.05em;
+    font-size: clamp(1.55em, 2.8vw, 3.05em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.18em;
+    display: block;
+    color: #FFFFFF;
+    margin-bottom: 1em
+}
+.ce_separation p a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+.ce_separation p:last-child {
+    margin-bottom: 0
+}
+.tl_content .ce_separation .wrapper {
+    max-width: 100%;
+    padding: 0 10vw
+}
+.tl_content .ce_separation .wrapper strong {
+    color: #FFFFFF
+}
+body.industry .ce_separation,
+body.health .ce_separation,
+body.spaces .ce_separation,
+body.sport .ce_separation,
+body.parking .ce_separation {
+    padding-bottom: 11.7em
+}
+@media only screen and (max-width:1024px) {
+    body.industry .ce_separation,
+    body.health .ce_separation,
+    body.spaces .ce_separation,
+    body.sport .ce_separation,
+    body.parking .ce_separation {
+        padding: 5.11em 0 10.7em
+    }
+}
+@media only screen and (max-width:414px) {
+    body.industry .ce_separation,
+    body.health .ce_separation,
+    body.spaces .ce_separation,
+    body.sport .ce_separation,
+    body.parking .ce_separation {
+        padding-bottom: 12.7em
+    }
+}
+body.health .ce_separation {
+    background: #3B3B3B left bottom / 100% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health.png");
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health.webp")
+}
+@media only screen and (max-width:1024px) {
+    body.health .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-1024.webp")
+    }
+}
+@media only screen and (max-width:768px) {
+    body.health .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-768.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-768.webp")
+    }
+}
+@media only screen and (max-width:414px) {
+    body.health .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-414.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-health-414.webp")
+    }
+}
+body.industry .ce_separation {
+    background: #3B3B3B center bottom / 100% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry.png");
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry.webp")
+}
+@media only screen and (max-width:1024px) {
+    body.industry .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-1024.webp")
+    }
+}
+@media only screen and (max-width:768px) {
+    body.industry .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-768.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-768.webp")
+    }
+}
+@media only screen and (max-width:414px) {
+    body.industry .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-414.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-industry-414.webp")
+    }
+}
+body.spaces .ce_separation {
+    background: #3B3B3B right bottom / 100% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces.png");
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces.webp")
+}
+@media only screen and (max-width:1024px) {
+    body.spaces .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-1024.webp")
+    }
+}
+@media only screen and (max-width:768px) {
+    body.spaces .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-768.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-768.webp")
+    }
+}
+@media only screen and (max-width:414px) {
+    body.spaces .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-414.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-spaces-414.webp")
+    }
+}
+body.sport .ce_separation {
+    background: #3B3B3B center bottom / 100% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport.png");
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport.webp")
+}
+@media only screen and (max-width:1024px) {
+    body.sport .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-1024.webp")
+    }
+}
+@media only screen and (max-width:768px) {
+    body.sport .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-768.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-768.webp")
+    }
+}
+@media only screen and (max-width:414px) {
+    body.sport .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-414.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-sport-414.webp")
+    }
+}
+body.parking .ce_separation {
+    background: #3B3B3B center bottom / 100% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking.png");
+    background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking.webp")
+}
+@media only screen and (max-width:1024px) {
+    body.parking .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-1024.webp")
+    }
+}
+@media only screen and (max-width:768px) {
+    body.parking .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-768.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-768.webp")
+    }
+}
+@media only screen and (max-width:414px) {
+    body.parking .ce_separation {
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-414.png");
+        background-image: url("../../bundles/viacorbasic/img/ce-separation-bg-parking-414.webp")
+    }
+}

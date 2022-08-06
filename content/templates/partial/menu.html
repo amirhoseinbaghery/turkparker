@@ -1,76 +1,18 @@
-<div class="header-menu container-xxl flex-column align-items-stretch flex-lg-row"
-     data-kt-drawer="true"
-     data-kt-drawer-name="header-menu"
-     data-kt-drawer-activate="{default: true, lg: false}"
-     data-kt-drawer-overlay="true"
-     data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-     data-kt-drawer-direction="start"
-     data-kt-drawer-toggle="#kt_header_menu_toggle"
-     data-kt-swapper="true"
-     data-kt-swapper-mode="prepend"
-     data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}"
->
-    <!--begin::Menu-->
-    <div
-            class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch flex-grow-1"
-            id="#kt_header_menu"
-            data-kt-menu="true"
-    >
-        <div
-                class="menu-item {% if app == 'blog' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"><a href="{% url 'blog:PostList' %}">
-                      <span class="menu-title text-dark fs-3">مقالات</span>
-                        </a>
-                    </span>
+{% for a in object %}
+    <li class="{% if a.Child.count != 0 %} submenu {% endif %}sport first"><a
+            href="{% url 'product:categoryList' a.slug %}"
+            class="submenu sport first"
+            aria-haspopup="true" itemprop="url"><span
+            itemprop="name">{{ a.title }}</span></a>
+        <div class="submenu level_3 ps-20">
+            <ul class="level_3">
+                {% for b in a.Child.all %}
+                    <li class="sport first"><a
+                            href="{% url 'product:categoryList' b.slug %}"
+                            class="sport first" itemprop="url"><span itemprop="name">{{ b.title }}</span></a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-        <div
-                class="menu-item {% if app == 'product' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"><a href="{% url 'product:ProductList' %}">
-                      <span class="menu-title text-dark fs-3">محصولات</span>
-                        </a>
-                    </span>
-        </div>
-        <div
-                class="menu-item {% if app == 'project' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"><a href="{% url 'project:ProjectList' %}">
-                      <span class="menu-title text-dark fs-3">پروژه ها</span>
-                        </a>
-                    </span>
-        </div>
-       <div
-                class="menu-item {% if app == 'catalog' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"> <a href="{% url 'catalog:List' %}">
-                      <span class="menu-title text-dark fs-3">کاتالوگ</span>
-                        </a>
-                    </span>
-        </div>
-        <div
-                class="menu-item {% if app_ == 'contactus' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"><a href="{% url 'content:contactus' %}">
-                      <span class="menu-title text-dark fs-3">تماس با ما</span>
-                        </a>
-                    </span>
-        </div>
-        <div
-                class="menu-item {% if app_ == 'about' %}here show{% else %}{% endif %} menu-lg-down-accordion me-lg-1"
-        >
-                    <span class="menu-link py-3"><a href="{% url 'content:about' %}">
-                      <span class="menu-title text-dark fs-3">درباره ما</span>
-
-                    </a>
-                    </span>
-        </div>
-    </div>
-    <!--end::Menu-->
-    <!--begin::Actions-->
-
-    <!--end::Actions-->
-</div>
-
-
-
+    </li>
+{% endfor %}

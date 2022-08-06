@@ -1,0 +1,18 @@
+{% for a in object %}
+    <li class="{% if a.Child.count != 0 %} submenu {% endif %}sport first"><a
+            href="{% url 'blog:categoryList' a.slug %}"
+            class="submenu sport first"
+            aria-haspopup="true" itemprop="url"><span
+            itemprop="name">{{ a.title }}</span></a>
+        <div class="submenu level_3 ps-20">
+            <ul class="level_3">
+                {% for b in a.Child.all %}
+                    <li class="sport first"><a
+                            href="{% url 'blog:categoryList' b.slug %}"
+                            class="sport first" itemprop="url"><span itemprop="name">{{ b.title }}</span></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+{% endfor %}

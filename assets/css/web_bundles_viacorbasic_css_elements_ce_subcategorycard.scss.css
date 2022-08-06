@@ -1,0 +1,175 @@
+
+#main .ce_subcategorycard {
+    position: relative;
+    width: 20.95em;
+    height: 30em;
+    margin-right: 1.11em;
+    flex-shrink: 0;
+    border-radius: 1.38em
+}
+#main .ce_subcategorycard:last-child {
+    margin-right: 0
+}
+@media only screen and (max-width:1024px) {
+    #main .ce_subcategorycard {
+        width: 13.5em;
+        height: 20em
+    }
+}
+#main .ce_subcategorycard .wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1.44em;
+    border-radius: 1.38em;
+    box-shadow: 0 0.88em 2.22em rgba(59, 59, 59, 0.4);
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    transition: height 0.4s linear
+}
+@media only screen and (max-width:1024px) {
+    #main .ce_subcategorycard .wrapper {
+        padding: 1.2em
+    }
+}
+#main .ce_subcategorycard .wrapper .card-title {
+    font-size: 3.05em;
+    font-size: clamp(1.55em, 2.8vw, 3.05em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.18em;
+    display: block;
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    z-index: 2
+}
+#main .ce_subcategorycard .wrapper .image_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+#main .ce_subcategorycard .wrapper .image_container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 500ms
+}
+#main .ce_subcategorycard .wrapper .image_container:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.55)
+}
+#main .ce_subcategorycard .wrapper .plus-icon {
+    position: relative;
+    display: inline-block;
+    margin: 1em 0 0 auto;
+    width: 2.33em;
+    height: 2.33em
+}
+@media only screen and (max-width:1024px) {
+    #main .ce_subcategorycard .wrapper .plus-icon {
+        width: 1.8em;
+        height: 1.8em
+    }
+}
+#main .ce_subcategorycard .wrapper .plus-icon:after,
+#main .ce_subcategorycard .wrapper .plus-icon:before {
+    content: "";
+    display: block;
+    background: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: all 600ms
+}
+#main .ce_subcategorycard .wrapper .plus-icon:after {
+    width: 100%;
+    height: 2px
+}
+#main .ce_subcategorycard .wrapper .plus-icon:before {
+    height: 100%;
+    width: 2px
+}
+#main .ce_subcategorycard .wrapper:hover .image_container img {
+    transform: scale(1.1)
+}
+#main .ce_subcategorycard .wrapper:hover .plus-icon:before {
+    transform: translate(-50%, -50%) rotate(-90deg)
+}
+#main .ce_subcategorycard .block-text {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    top: 45%;
+    overflow: auto;
+    visibility: hidden;
+    font-size: 1em;
+    padding: 2.5em 0.8em 1em 0;
+    z-index: 1;
+    transition: height 0.4s linear
+}
+#main .ce_subcategorycard .block-text::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: inset 0 0 6px rgba(59, 59, 59, 0.6);
+    border-radius: 10px
+}
+#main .ce_subcategorycard .block-text::-webkit-scrollbar {
+    width: 10px;
+    background-color: #C5C4BE
+}
+#main .ce_subcategorycard .block-text::-webkit-scrollbar-thumb {
+    background-color: #3B3B3B;
+    border-radius: 10px
+}
+#main .ce_subcategorycard .block-text p:not(:last-child) {
+    margin-bottom: 1em
+}
+#main .ce_subcategorycard.card-active .block-text {
+    height: auto;
+    max-height: 55%;
+    opacity: 1;
+    visibility: visible
+}
+#main .ce_subcategorycard.card-active .wrapper {
+    height: 45%
+}
+#main .ce_subcategorycard.card-active .wrapper .card-title {
+    font-size: clamp(1em, 2.8vw, 2em)
+}
+#main .ce_subcategorycard.card-active .wrapper .plus-icon {
+    transform: rotate(45deg);
+    transition: all 0.4s ease
+}
+#main .ce_subcategorycard.card-active .wrapper:hover .plus-icon {
+    transform: rotate(0)
+}

@@ -1,0 +1,61 @@
+
+.mod_newsreader .back-button-section {
+    padding: 5em 0
+}
+.mod_newsreader .back-button-section .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    max-width: 1222px;
+    max-width: clamp(15.5em, 86%, 67.9em)
+}
+.mod_newsreader a.back-btn {
+    position: relative;
+    overflow: hidden;
+    color: #3B3B3B;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 2em;
+    padding: 0.665em 1.4em 0.465em;
+    transition: all 0.4s ease;
+    display: inline-block;
+    text-decoration: none
+}
+.mod_newsreader a.back-btn:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    max-width: 3.8em;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: rgba(59, 59, 59, 0.32);
+    border-radius: inherit;
+    transition: transform 0.5s ease
+}
+.mod_newsreader a.back-btn:hover {
+    background: rgba(59, 59, 59, 0.05)
+}
+.mod_newsreader a.back-btn:active:after,
+.mod_newsreader a.back-btn.active:after {
+    transform: translateX(0)
+}
+.mod_newsreader a.back-btn:focus {
+    background: rgba(59, 59, 59, 0.17)
+}
+.mod_newsreader a.back-btn:disabled,
+.mod_newsreader a.back-btn.disabled {
+    opacity: 0.2;
+    cursor: default
+}
+.mod_newsreader a.back-btn #arrow-back {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -0.2em 0.4em 0 0
+}

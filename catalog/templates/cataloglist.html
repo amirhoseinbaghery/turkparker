@@ -1,79 +1,70 @@
-{% extends 'shared/main.html' %}
+{% extends 'shared/main_.html' %}
 {% load static %}
 {% load BlogTT %}
 {% block title %}کاتالوگ ها{% endblock %}
 {% block desc %}{% endblock %}
 {% block keywords %}{% endblock %}
 {% block content %}
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start mt-10 container-xxl">
-        <div class="card flex-row-fluid" id="kt_content">
-            <div class="card-body pt-9 pb-0">
-                <!--begin::Details-->
-                <div class="d-flex flex-wrap flex-sm-nowrap mb-6">
-                    <!--begin::Wrapper-->
-                    <div class="flex-grow-1">
-                        <!--begin::Head-->
-                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                            <!--begin::Details-->
-                            <div class="d-flex flex-column">
-                                <!--begin::Status-->
-                                <div class="d-flex align-items-center mb-1">
-                                    <h1 class="text-gray-800 text-hover-primary fs-1 fw-bold me-3">
-                                        کاتالوگ های
-                                    </h1>
-                                </div>
-                                <div class="d-flex align-items-center mb-1">
-                                    <h3 class="text-gray-800 text-hover-primary fs-2 fw-bold me-3">
-                                        تورک پارکر
-                                    </h3>
-                                </div>
-                                <!--end::Status-->
-                                <!--begin::Description-->
-                                <div class="d-flex flex-wrap fw-semibold mb-4 fs-5 text-gray-400">
-                                    می توانید کاتالوگ محصولات و مرجع برندهای تورک پارکر را بررسی کنید. برای اطلاعات
-                                    بیشتر در مورد برندها و محصولات ما <span><a href="{% url 'content:contactus' %}"> با ما تماس </a></span>
-                                    بگیرید.
-                                </div>
-                                <!--end::Description-->
+    <div id="container">
+        <main id="main">
+            <div class="inside rtl">
+                <div class="mod_article first last block" id="article-86">
+                    <div class="ce_headerdark first block">
+                        <div class="wrapper">
+                            <div class="text-content-wrap">
+                                <h1>کاتالوگ</h1>
                             </div>
-                            <!--end::Details-->
                         </div>
-                        <!--end::Head-->
                     </div>
-                    <!--end::Wrapper-->
-                </div>
-                <!--end::Details-->
-            </div>
-        </div>
-    </div>
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
-        <div class="content flex-row-fluid" id="kt_content">
-            <div class="card my-15">
-                <div class="card-body  p-lg-15 ">
-                    <div class="row g-10 row-cols-2 row-cols-lg-5">
-                        <!--begin::Col-->
-                        {% for a in object_list %}
-                            <div class="col">
-                                <!--begin::Overlay-->
-                                <a class="d-block overlay"
-                                   href="{{ a.file.url }}">
-                                    <!--begin::Image-->
-                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
-                                         style="background-image:url('{{ a.image.url }}')"></div>
-                                    <!--end::Image-->
-                                    <!--begin::Action-->
-                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                        <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                    </div>
-                                    <!--end::Action-->
-                                </a>
-                            </div>
-                        {% endfor %}
-                        <!--end::Col-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <div class="ce_headertext block">
+                        <div class="wrapper">
+                            <div class="text-content-wrap">
+                                <div class="header-headline-wrap">
+                                    <span class="category">
+                                        کاتالوگ ها
+                                    </span>
+                                </div>
+                                <div class="header-text-wrap"><p><span class="Y2IQFc" lang="en">
+                                    می توانید کاتالوگ محصولات و مرجع برندهای تورک پارکر را بررسی کنید. برای اطلاعات بیشتر در مورد برندها و محصولات ما با ما تماس بگیرید.
 
+                                </span>
+                                </p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce_sliderStart card-slider tools block">
+                        <div class="inside">
+                            <div class="swiper content-slider">
+                                <div class="swiper-wrapper">
+                                    {% for a in object_list %}
+                                    <div class="ce_slidercard swiper-slide  block mx-3">
+                                        <div class="wrapper  ">
+                                            <a href="{{ a.file.url }}">
+                                                <figure class="image_container float_above ">
+                                                    <picture>
+                                                        <img src="{{ a.image.url }}"
+                                                             srcset="{{ a.image.url }} 1x, {{ a.image.url }} 2x"
+                                                             width="420" height="600" alt="{{ a.title }}" loading="lazy"
+                                                             itemprop="image">
+                                                    </picture>
+                                                </figure>
+                                                <p class="card-title">{{ a.title }}</p>
+                                                <span class="plus-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div><!-- .swiper-wrapper -->
+                                <div class="slider-control">
+                                    <div class="swiper-button-prev slider-prev"></div>
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="swiper-button-next slider-next"></div>
+                                </div>
+                            </div><!-- .swiper -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 {% endblock %}

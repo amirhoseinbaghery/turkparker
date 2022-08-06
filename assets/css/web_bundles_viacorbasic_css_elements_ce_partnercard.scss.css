@@ -1,0 +1,121 @@
+
+.ce_partnercard {
+    position: relative;
+    width: 17em;
+    padding: 2em 1.4em
+}
+.ce_partnercard .partnercard-logo {
+    width: 80%;
+    max-width: 11.6em;
+    margin: 0 auto 1em
+}
+.ce_partnercard .partnercard-logo img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+.ce_partnercard .partnercard-info {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #FFFFFF;
+    text-transform: uppercase
+}
+.ce_partnercard .partnercard-info .partnercard-country {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    letter-spacing: 0.08em;
+    color: #3B3B3B
+}
+.ce_partnercard .partnercard-info .partnercard-title {
+    font-size: 1.38em;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    margin: 0.2em 0 0.4em
+}
+.ce_partnercard .partnercard-info .partnercard-address {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    margin-bottom: 0.6em
+}
+.ce_partnercard .partnercard-info .partnercard-link {
+    margin-top: 0.8em;
+    color: #FFFFFF;
+    text-transform: none
+}
+.ce_partnercard .partnercard-info .partnercard-link svg {
+    display: inline-block;
+    width: 1.2em;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0.4em
+}
+.ce_partnercard .partnercard-info .partnercard-link svg path {
+    fill: #FFFFFF
+}
+@media (min-width:1025px) {
+    .ce_partnercard .partnercard-info {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 200%;
+        max-width: 28em;
+        padding: 1.8em;
+        background: #C5C4BE;
+        border-radius: 1.38em;
+        box-shadow: 0 0.88em 2.22em rgba(59, 59, 59, 0.4);
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: all 0.5s ease
+    }
+    .ce_partnercard:hover {
+        z-index: 50
+    }
+    .ce_partnercard:hover .partnercard-info {
+        opacity: 1
+    }
+    .ce_partnercard:last-child .partnercard-info {
+        left: auto;
+        right: 0
+    }
+}
+@media (max-width:1024px) {
+    .ce_partnercard {
+        height: auto;
+        margin-right: 1.11em;
+        border-radius: 1.38em;
+        box-shadow: 0 0.88em 2.22em rgba(59, 59, 59, 0.4)
+    }
+    .ce_partnercard:last-child {
+        margin-right: 0
+    }
+    .ce_partnercard .partnercard-logo {
+        width: 80%;
+        margin-bottom: 2em
+    }
+}
+.tl_content .limit_height {
+    background: #C5C4BE
+}
+@media (min-width:1025px) {
+    .tl_content .ce_partnercard .partnercard-info {
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateY(0)
+    }
+}

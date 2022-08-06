@@ -1,0 +1,229 @@
+
+.ce_historysection {
+    padding: 6 0;
+    padding: clamp(3em, 4vw, 6em) 0
+}
+.ce_historysection .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.ce_historysection .historysection-column {
+    width: 100%
+}
+.ce_historysection .history-col-text {
+    margin-bottom: 10%
+}
+.ce_historysection .history-col-text .section-subtitle {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 1.2em
+}
+.ce_historysection .history-col-text .section-title {
+    font-size: 4.16em;
+    font-size: clamp(1.77em, 3.9vw, 4.16em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 0.5em
+}
+.ce_historysection .history-col-text .section-title em {
+    display: block;
+    font-size: 60%
+}
+.ce_historysection .history-col-text p:not(:last-child) {
+    padding-bottom: 1em
+}
+.ce_historysection .history-col-text a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+.ce_historysection .historysection-slider {
+    position: relative;
+    overflow: hidden;
+    height: 22.8em;
+    border-radius: 1.38em;
+    background: #3B3B3B;
+    padding: 10% 12%
+}
+.ce_historysection .historysection-slider .history-slider-scrollbar {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.6s linear
+}
+.ce_historysection .historysection-slider .history-slider-scrollbar:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.1em;
+    height: 100%;
+    border-radius: 1.38em;
+    background: rgba(255, 255, 255, 0.5)
+}
+.ce_historysection .historysection-slider .history-slider-scrollbar .swiper-scrollbar-drag {
+    width: 0.3em;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 1.38em
+}
+.ce_historysection .historysection-slider:hover .history-slider-scrollbar {
+    opacity: 1
+}
+.ce_historysection .history-slide {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%
+}
+.ce_historysection .history-slide-image {
+    display: block;
+    position: absolute;
+    width: 136%;
+    height: 178%;
+    left: -18%;
+    top: -38%;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s linear
+}
+.ce_historysection .history-slide-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1)
+}
+.ce_historysection .history-slide-image:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6)
+}
+.ce_historysection .history-slide.swiper-slide-active .history-slide-image {
+    opacity: 1;
+    transform: scale(1)
+}
+.ce_historysection .history-slide-date {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    font-size: 0.88em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    z-index: 3
+}
+.ce_historysection .history-slide-date:before {
+    content: "";
+    display: block;
+    width: 2.4em;
+    height: 2.4em;
+    background: url("../../bundles/viacorbasic/img/circles-icon.svg") center / cover no-repeat;
+    margin-right: 0.8em
+}
+.ce_historysection .history-slide-content {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-height: 10.5em;
+    margin-top: 0.6em;
+    padding: 2.5em 0 2.5em 3em;
+    color: #FFFFFF;
+    z-index: 4
+}
+.ce_historysection .history-slide-content:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 1em;
+    background: #FFFFFF
+}
+.ce_historysection .history-slide-title {
+    font-size: 1.77em;
+    font-size: clamp(1.38em, 1.66vw, 1.77em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    line-height: 1.09em;
+    font-family: "universal-roman", helvetica, arial, sans-serif;
+    transition: all 0.6s linear
+}
+.ce_historysection .history-slide-text {
+    display: block
+}
+.ce_historysection .history-slide.swiper-slide-prev .history-slide-title,
+.ce_historysection .history-slide.swiper-slide-prev .history-slide-text {
+    opacity: 0
+}
+@media (min-width:1024px) {
+    .ce_historysection .historysection-column {
+        width: 50%
+    }
+    .ce_historysection .historysection-column.history-col-text {
+        margin-bottom: 0;
+        padding-right: 6.667em
+    }
+}

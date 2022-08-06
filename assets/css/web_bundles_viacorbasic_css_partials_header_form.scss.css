@@ -1,0 +1,244 @@
+
+.header_form #container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.header_form #container #main {
+    display: none
+}
+.header_form #container aside {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh
+}
+.header_form #container aside .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    padding: 5em 0
+}
+.header_form #container #left {
+    background: #3B3B3B;
+    padding-top: 4em
+}
+.header_form #container #left .mod_article {
+    width: 90%;
+    max-width: 25em;
+    margin: 0 auto
+}
+.header_form #container #left .mod_article .formbody {
+    width: 100%
+}
+.header_form #container #left .mod_article .formbody .widget {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em
+}
+.header_form #container #left .mod_article .formbody .widget input,
+.header_form #container #left .mod_article .formbody .widget select,
+.header_form #container #left .mod_article .formbody .widget textarea {
+    font-size: 1em;
+    font-family: "universal-roman", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    text-transform: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+    background: #3B3B3B;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 0.7em 0.5em;
+    outline: none;
+    border-radius: 0;
+    letter-spacing: 0.08em;
+    -webkit-appearance: none
+}
+.header_form #container #left .mod_article .formbody .widget textarea {
+    resize: none;
+    width: 100%;
+    max-width: 100%;
+    max-height: 3em;
+    transition: max-height 0.6s linear
+}
+.header_form #container #left .mod_article .formbody .widget textarea::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: inset 0 0 3px rgba(59, 59, 59, 0.6);
+    border-radius: 6px
+}
+.header_form #container #left .mod_article .formbody .widget textarea::-webkit-scrollbar {
+    width: 6px;
+    background-color: #C5C4BE
+}
+.header_form #container #left .mod_article .formbody .widget textarea::-webkit-scrollbar-thumb {
+    background-color: #3B3B3B;
+    border-radius: 6px
+}
+.header_form #container #left .mod_article .formbody .widget label {
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+    font-size: 1em;
+    color: #C5C4BE;
+    cursor: text;
+    z-index: 5;
+    transition: all 0.4s linear
+}
+.header_form #container #left .mod_article .formbody .widget label.labelUP,
+.header_form #container #left .mod_article .formbody .widget label.error {
+    top: -1.4em;
+    left: 0;
+    font-size: 0.778em
+}
+.header_form #container #left .mod_article .formbody .widget label.labelUP + textarea,
+.header_form #container #left .mod_article .formbody .widget label.error + textarea {
+    max-height: 12em;
+    transition: max-height 0.8s linear
+}
+.header_form #container #left .mod_article .formbody .widget p.error {
+    font-size: 0.8em;
+    font-style: italic;
+    padding-top: 0.8em
+}
+.header_form #container #left .mod_article .formbody .widget .captcha_text {
+    display: block;
+    color: #FFFFFF;
+    padding-top: 0.5em
+}
+.header_form #container #left .mod_article .widget-submit {
+    text-align: center
+}
+.header_form #container #left .mod_article .widget-submit button {
+    position: relative;
+    overflow: hidden;
+    color: #3B3B3B;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 2em;
+    padding: 0.665em 1.4em 0.465em;
+    transition: all 0.4s ease;
+    color: #3B3B3B;
+    background: #C5C4BE;
+    opacity: 0.21;
+    cursor: pointer;
+    min-width: 75%;
+    padding: 1em 0.8em 0.8em
+}
+.header_form #container #left .mod_article .widget-submit button:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    max-width: 3.8em;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: rgba(59, 59, 59, 0.32);
+    border-radius: inherit;
+    transition: transform 0.5s ease
+}
+.header_form #container #left .mod_article .widget-submit button:hover {
+    background: rgba(59, 59, 59, 0.05)
+}
+.header_form #container #left .mod_article .widget-submit button:active:after,
+.header_form #container #left .mod_article .widget-submit button.active:after {
+    transform: translateX(0)
+}
+.header_form #container #left .mod_article .widget-submit button:focus {
+    background: rgba(59, 59, 59, 0.17)
+}
+.header_form #container #left .mod_article .widget-submit button:disabled,
+.header_form #container #left .mod_article .widget-submit button.disabled {
+    opacity: 0.2;
+    cursor: default
+}
+.header_form #container #left .mod_article .widget-submit button:hover,
+.header_form #container #left .mod_article .widget-submit button:focus {
+    background: #C5C4BE;
+    opacity: 1
+}
+.header_form #container #left .mod_article .widget-explanation {
+    margin-bottom: 2em
+}
+.header_form #container #left .mod_article .widget-explanation a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+.header_form #container #left .mod_article .widget-explanation a:hover {
+    opacity: 0.6
+}
+.header_form #container #right .ce_headertext {
+    padding: 0
+}
+.header_form #container #right .ce_headertext .wrapper {
+    width: 90%;
+    max-width: 90%;
+    padding: 0
+}
+.header_form #container #right .ce_headertext .text-content-wrap div {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0
+}
+.header_form #container #right .ce_headertext .text-content-wrap div h1 {
+    margin: 0 0 0.36em -0.1em
+}
+.header_form #container #right .ce_headertext .text-content-wrap .header-text-wrap p {
+    font-size: clamp(0.88em, 2vw, 1em);
+    color: #3B3B3B;
+    padding-bottom: 0.2em
+}
+@media (max-width:1024px) {
+    .header_form #container {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse
+    }
+    .header_form #container aside {
+        width: 100%;
+        min-height: auto
+    }
+    .header_form #container aside#left {
+        padding-top: 0
+    }
+    .header_form #container aside#left .inside {
+        padding: 15% 0
+    }
+    .header_form #container aside#left .mod_article {
+        width: 100%
+    }
+    .header_form #container aside#right {
+        padding-top: 4em;
+        background-position: right -7em center
+    }
+    .header_form #container aside#right .ce_headertext .wrapper {
+        width: 100%;
+        max-width: 100%
+    }
+}

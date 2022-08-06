@@ -1,421 +1,110 @@
-{% extends 'shared/main.html' %}
+{% extends 'shared/main_.html' %}
 {% load static %}
 {% load BlogTT %}
 {% block title %}مقالات{% endblock %}
 {% block desc %}{{ object.description }}{% endblock %}
 {% block keywords %}{{ object.keyword }}{% endblock %}
 {% block content %}
-    <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
-        <!--begin::Page title-->
-        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
-            <div class="page-title d-flex flex-column me-3">
-                <!--begin::Title-->
-                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">مقالات</h1>
-                <!--end::Title-->
-                <!--begin::Breadcrumb-->
-                <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="/"
-                           class="text-gray-600 text-hover-primary">خانه</a>
-                    </li>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="{% url 'blog:PostList' %}"
-                           class="text-gray-600 text-hover-primary">مقالات</a>
-                    </li>
-                    <!--end::Item-->
-                </ul>
-                <!--end::Breadcrumb-->
-            </div>
-        </div>
-        <!--end::Page title-->
-    </div>
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
-
-        <!--begin::Post-->
-        <div class="content flex-row-fluid" id="kt_content">
-            <!--begin::Home card-->
-            <div class="card">
-                <!--begin::Body-->
-                <div class="card-body">
-                    <!--begin::Section-->
-                    <div class="mb-17">
-                        <!--begin::Title-->
-                        <h3 class="text-dark mb-7">
-                            جدیدترین ها
-                        </h3>
-                        <!--end::Title-->
-                        <!--begin::Separator-->
-                        <div class="separator separator-dashed mb-9"></div>
-                        <!--end::Separator-->
-                        <!--begin::Row-->
-                        <div class="row">
-                            <!--begin::Col-->
-                            <div class="col-md-6">
-                                <!--begin::Feature post-->
-                                {% for a in newest %}
-                                    <div
-                                            class="h-100 d-flex flex-column pe-lg-6 mb-lg-0 mb-10"
-                                    >
-                                        <!--begin::Video-->
-                                        <div class="mb-3">
-                                            {% if a.image %}
-                                                <a href="{% url 'blog:SinglePost' a.slug %}">
-                                                    <img class="card-img" src="{{ a.image.url }}" alt="{{ a.title }}">
-                                                </a>
-                                            {% else %}
-                                                <iframe
-                                                        class="embed-responsive-item card-rounded h-275px w-100"
-                                                        src="{{ a.iframe_link }}"
-                                                        allowfullscreen="allowfullscreen"
-                                                >
-                                                </iframe>
-                                            {% endif %}
-                                        </div>
-                                        <!--end::Video-->
-                                        <!--begin::Body-->
-                                        <div class="mb-5">
-                                            <!--begin::Title-->
-                                            <a
-                                                    href="{% url 'blog:SinglePost' a.slug %}"
-                                                    class="fs-2 text-dark fw-bolder text-hover-primary text-dark lh-base"
-                                            >{{ a.title }}</a
-                                            >
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <div
-                                                    class="fw-bold fs-5 text-gray-600 text-dark mt-4"
-                                            >{{ a.description|truncatewords_html:30|safe }}
-                                            </div>
-                                            <!--end::Text-->
-                                            <div class="d-flex flex-stack flex-wrap mt-6">
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center pe-2">
-                                                    <!--begin::Avatar-->
-                                                    <a href="{% url 'blog:Author' a.author %}"
-                                                       class="text-gray-700 text-hover-primary">
-                                                        <div class="symbol symbol-35px symbol-circle me-3">
-                                                            <img src="{{ a.author.image.url }}" class=""
-                                                                 alt="{% if a.author.get_full_name %}
-                                                        {{ a.author.get_full_name }}{% else %}
-                                                        {{ a.author }}{% endif %}">
-                                                        </div>
-                                                    </a>
-                                                    <!--end::Avatar-->
-                                                    <!--begin::Text-->
-                                                    <div class="fs-5 fw-bolder">
-                                                        <a href="{% url 'blog:Author' a.author %}"
-                                                           class="text-gray-700 text-hover-primary">
-                                                            {% if a.author.get_full_name %}
-                                                                {{ a.author.get_full_name }}{% else %}
-                                                                {{ a.author }}{% endif %}</a>
-                                                        <span class="text-muted">{{ a.jpublish }}</span>
-                                                    </div>
-                                                    <!--end::Text-->
-                                                </div>
-                                                <!--end::Item-->
-                                                <!--begin::Label-->
-                                                {% for category in a.category.all %}
-                                                    <a href="{% url 'blog:categoryList' category.slug %}">
-                                                        <span class="badge badge-light-info fw-bolder my-2">{{ category.title }}</span>
-                                                    </a>
-                                                {% endfor %}
-                                                <!--end::Label-->
-                                            </div>
-                                        </div>
-                                        <!--end::Body-->
-                                        <!--begin::Footer-->
-
-                                        <!--end::Footer-->
-                                    </div>
-                                {% endfor %}
-                                <!--end::Feature post-->
+    <div id="container">
+        <main id="main">
+            <div class="inside">
+                <div class="mod_article first last block" id="article-85">
+                    <!-- indexer::stop -->
+                    <div class="mod_newsarchive block">
+                        <div class="news_teaser-container">
+                            <div class="news_teaser-filters-wrap">
+                                <a href="" class="news_teaser-filter-button offcanvas-open"><span><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="18.273" height="19.679"
+                                        viewBox="0 0 18.273 19.679">
+<path id="funnel-fill"
+      d="M1.5,1.7A.7.7,0,0,1,2.2,1H19.071a.7.7,0,0,1,.7.7V4.514a.7.7,0,0,1-.18.469l-6.146,6.829v6.758a.7.7,0,0,1-.481.666L8.75,20.643a.7.7,0,0,1-.925-.666V11.812L1.68,4.984a.7.7,0,0,1-.18-.469Z"
+      transform="translate(-1.5 -5)" fill="#3b3b3b"/>
+</svg></span>فیلترها</a>
                             </div>
-                            <!--end::Col-->
-                            <!--begin::Col-->
-                            <div
-                                    class="col-md-6 justify-content-between d-flex flex-column"
-                            >
-                                <!--begin::Post-->
-                                {% for b in new %}
+                            <!---POPUP Starts Below-->
+                            <div class="additional-filters-container">
+                                <div class="filters-container_title-row">
+                                    <h4 class="filters-container_title">فیلترها</h4>
+                                    <a href="" class="news_teaser-filter clear-filter-button offcanvas-close"
+                                       data-filter="*"></a>
+                                </div>
+                                <div class="filters-container_filter-row">
+                                    <h5 class="filters-container_filter-title">دسته بندی ها</h5>
+                                    <ul class="news_teaser-filters-list offcanvas-filter-list">
+                                        {% for b in category %}
+                                            <li><a href="{% url 'blog:categoryList' b.slug %}"
+                                                   class="news_teaser-filter select-filter-button offcanvas-close"
+                                                   data-filter="public-private">{{ b.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="filters-container_filter-row">
+                                    <h5 class="filters-container_filter-title">برچسب ها</h5>
+                                    <ul class="news_teaser-filters-list offcanvas-filter-list">
+                                        {% for c in tag %}
+                                        <li><a href="{% url 'blog:tagList' c.slug %}"
+                                               class="news_teaser-filter select-filter-button offcanvas-close"
+                                               data-filter="references">{{ c.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
 
-                                    <div class="ps-lg-6 mb-16 mt-md-0 mt-17">
-                                        <!--begin::Body-->
-                                        <div class="mb-6">
-                                            <!--begin::Title-->
-                                            <a
-                                                    href="{% url 'blog:SinglePost' b.slug %}"
-                                                    class="fw-bolder text-dark mb-4 fs-2 lh-base text-hover-primary"
-                                            >{{ b.title }}</a
-                                            >
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <div
-                                                    class="fw-bold fs-5 mt-4 text-gray-600 text-dark"
-                                            >
-                                                {{ b.description|truncatewords_html:40|safe }}
-                                            </div>
-                                            <!--end::Text-->
-                                        </div>
-                                        <!--end::Body-->
-                                        <!--begin::Footer-->
-                                        <div class="d-flex flex-stack flex-wrap">
-                                            <!--begin::Item-->
-                                            <div class="d-flex align-items-center pe-2">
-                                                <!--begin::Avatar-->
-                                                <a href="{% url 'blog:Author' b.author %}"
-                                                   class="text-gray-700 text-hover-primary">
-                                                    <div class="symbol symbol-35px symbol-circle me-3">
-                                                        <img
-                                                                src="{{ b.author.image.url }}"
-                                                                class=""
-                                                                alt="{% if b.author.get_full_name %}
-                                                        {{ b.author.get_full_name }}{% else %}
-                                                        {{ b.author }}{% endif %}"
-                                                        />
-                                                    </div>
-                                                </a>
-                                                <!--end::Avatar-->
-                                                <!--begin::Text-->
-                                                <div class="fs-5 fw-bolder">
-                                                    <a
-                                                            href="{% url 'blog:Author' b.author %}"
-                                                            class="text-gray-700 text-hover-primary"
-                                                    >{% if b.author.get_full_name %}
-                                                        {{ b.author.get_full_name }}{% else %}
-                                                        {{ b.author }}{% endif %}</a
-                                                    >
-                                                    <span class="text-muted">{{ b.jpublish }}</span>
-                                                </div>
-                                                <!--end::Text-->
-                                            </div>
-                                            <!--end::Item-->
-                                            <!--begin::Label-->
-                                            {% for category in b.category.all %}
-                                                <a href="{% url 'blog:categoryList' category.slug %}">
-                                            <span class="badge badge-light-info fw-bolder my-2"
-                                            >{{ category.title }}</span
-                                            >
-                                                </a>
-                                            {% endfor %}
-                                            <!--end::Label-->
-                                        </div>
-                                        <!--end::Footer-->
-                                    </div>
-                                {% endfor %}
-
-                                <!--end::Post-->
                             </div>
-                            <!--end::Col-->
-                        </div>
-                        <!--begin::Row-->
-                    </div>
-                    <!--end::Section-->
-                    <!--begin::Section-->
-                </div>
-
-                <!--end::Home card-->
-            </div>
-            <div class="card mt-10">
-                <div class="card-body p-lg-10 pb-lg-0">
-                    <div class="mb-17">
-                        <!--begin::Content-->
-                        <div class="d-flex flex-stack mb-5">
-                            <!--begin::Title-->
-                            <h3 class="text-dark">مطالب مشابه</h3>
-                            <!--end::Title-->
-                            <!--begin::Link-->
-                            <a href="#" class="fs-6 fw-bold link-primary"
-                            >مشاهده همه</a
-                            >
-                            <!--end::Link-->
-                        </div>
-                        <!--end::Content-->
-                        <!--begin::Separator-->
-                        <div class="separator separator-dashed mb-9"></div>
-                        <!--end::Separator-->
-                        <!--begin::Row-->
-                        <div class="row g-10">
-                            <!--begin::Col-->
-                            {% for c in similar %}
-
-                                <div class="col-md-4">
-                                    <!--begin::Feature post-->
-                                    <div class="card-xl-stretch me-md-6">
-                                        <!--begin::Image-->
-                                        <a
-                                                class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                                                style="
-                                                        background-image: url('{{ c.image.url }}');
-                                                        "
-                                                data-fslightbox="lightbox-video-tutorials"
-                                                href="{% url 'blog:SinglePost' c.slug %}"
-                                        >
-                                            <img
-                                                    src="{{ c.image.url }}"
-                                                    class="position-absolute top-50 start-50 translate-middle card-img"
-                                                    alt="{{ c.title }}"
-                                            />
+                            <div class="news_teaser-wrap">
+                                <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
+                                     data-filter='case-studies parking' itemscope itemtype="http://schema.org/Article">
+                                    <div class="news_teaser-image-wrap">
+                                        <picture>
+                                            <img src="{{ first.image.url }}"
+                                                 width="810" height="350" alt="{{ first.title }}" loading="lazy" itemprop="image">
+                                        </picture>
+                                    </div>
+                                    <div class="news_teaser-content-wrap">
+                                    <span class="tag-chain tag-chain-item">
+                                        {{ first.category.first }}
+                                    </span>
+                                        <h2 itemprop="name"><a href="{% url 'blog:SinglePost' first.slug %}"
+                                                               itemprop="url"><span itemprop="headline">{{ first.title }}</span></a>
+                                        </h2>
+                                        <div class="ce_text block" itemprop="description">
+                                            <p>دسته : {% for e in first.category.all %} {{ e.title }}, {% endfor %}</p></div>
+                                        <p class="more"><a href="en/blog/os-10-coating-in-the-car-park.html"
+                                                           itemprop="url">مطالعه<span class="invisible"> {{ first.title }}</span></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            {% for r in blog %}
+                                <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
+                                     data-filter='logistics industry manufacturing' itemscope
+                                     itemtype="http://schema.org/Article">
+                                    <figure class="image_container float_above">
+                                        <a href="{% url 'blog:SinglePost' r.slug %}">
+                                            <picture>
+                                                <img src="{{ r.image.url }}"
+                                                     width="395" height="350" alt="{{ r.title }}" loading="lazy" itemprop="image">
+                                            </picture>
                                         </a>
-                                        <!--end::Image-->
-                                        <!--begin::Body-->
-                                        <div class="m-0">
-                                            <!--begin::Title-->
-                                            <a
-                                                    href="{% url 'blog:SinglePost' c.slug %}"
-                                                    class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base"
-                                            >{{ c.title }}</a
-                                            >
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <div
-                                                    class="fw-bold fs-5 text-gray-600 text-dark my-4"
-                                            >
-                                                {{ c.description }}
-                                            </div>
-                                            <!--end::Text-->
-                                            <!--begin::Content-->
-                                            <div class="fs-6 fw-bolder">
-                                                <!--begin::Author-->
-                                                <a href="{% url 'blog:Author' c.author %}"
-                                                   class="text-gray-700 text-hover-primary">
-                                                    <div class="symbol symbol-35px symbol-circle me-3">
-                                                        <img
-                                                                src="{{ c.author.image.url }}"
-                                                                class=""
-                                                                alt="{% if c.author.get_full_name %}
-                                                        {{ c.author.get_full_name }}{% else %}
-                                                        {{ c.author }}{% endif %}"
-                                                        />
-                                                    </div>
-                                                </a>
-                                                <a
-                                                        href="{% url 'blog:Author' c.author %}"
-                                                        class="text-gray-700 text-hover-primary"
-                                                >{% if c.author.get_full_name %}
-                                                    {{ c.author.get_full_name }}{% else %}
-                                                    {{ c.author }}{% endif %}</a
-                                                >
-                                                <!--end::Author-->
-                                                <!--begin::Date-->
-                                                <span class="text-muted">{{ c.jpublish }}</span>
-                                                <!--end::Date-->
-                                            </div>
-                                            <!--end::Content-->
-                                        </div>
-                                        <!--end::Body-->
+                                    </figure>
+                                    <div class="news_teaser-content-wrap">
+<span class="tag-chain tag-chain-item">
+{{ r.category.first }}        </span>
+                                        <h2 itemprop="name"><a
+                                                href="{% url 'blog:SinglePost' r.slug %}"
+                                                itemprop="url"><span itemprop="headline">{{ r.title }}</span></a>
+                                        </h2>
+                                        <p class="more"><a
+                                                href="{% url 'blog:SinglePost' r.slug %}"
+                                                itemprop="url"></a>
+                                        </p>
                                     </div>
-                                    <!--end::Feature post-->
                                 </div>
                             {% endfor %}
-
-                            <!--end::Col-->
-                            <!--end::Row-->
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <!--end::Post-->
-                <div class="card-body p-lg-10 pb-lg-0">
-                    <div class="mb-17">
-                        <!--begin::Content-->
-                        <div class="d-flex flex-stack mb-5">
-                            <!--begin::Title-->
-                            <h3 class="text-dark">پرخواننده ترین</h3>
-                            <!--end::Title-->
-                            <!--begin::Link-->
-                            <a href="#" class="fs-6 fw-bold link-primary"
-                            >مشاهده همه</a
-                            >
-                            <!--end::Link-->
-                        </div>
-                        <!--end::Content-->
-                        <!--begin::Separator-->
-                        <div class="separator separator-dashed mb-9"></div>
-                        <!--end::Separator-->
-                        <!--begin::Row-->
-                        <div class="row g-10">
-                            <!--begin::Col-->
-                            {% for d in filter %}
-
-                                <div class="col-md-4">
-                                    <!--begin::Feature post-->
-                                    <div class="card-xl-stretch me-md-6">
-                                        <!--begin::Image-->
-                                        <a
-                                                class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-5"
-                                                data-fslightbox="lightbox-video-tutorials"
-                                                href="{% url 'blog:SinglePost' d.slug %}"
-                                        >
-                                            <img
-                                                    src="{{ d.image.url }}"
-                                                    class="position-absolute top-50 start-50 translate-middle card-img"
-                                                    alt="{{ d.title }}"
-                                            />
-                                        </a>
-                                        <!--end::Image-->
-                                        <!--begin::Body-->
-                                        <div class="m-0">
-                                            <!--begin::Title-->
-                                            <a
-                                                    href="{% url 'blog:SinglePost' d.slug %}"
-                                                    class="fs-4 text-dark fw-bolder text-hover-primary text-dark lh-base"
-                                            >{{ d.title }}</a
-                                            >
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <div
-                                                    class="fw-bold fs-5 text-gray-600 text-dark my-4"
-                                            >
-                                                {{ d.description }}
-                                            </div>
-                                            <!--end::Text-->
-                                            <!--begin::Content-->
-                                            <div class="fs-6 fw-bolder">
-                                                <!--begin::Author-->
-                                                <a href="{% url 'blog:Author' d.author %}"
-                                                   class="text-gray-700 text-hover-primary">
-                                                    <div class="symbol symbol-35px symbol-circle me-3">
-                                                        <img
-                                                                src="{{ d.author.image.url }}"
-                                                                class=""
-                                                                alt="{% if d.author.get_full_name %}
-                                                        {{ d.author.get_full_name }}{% else %}
-                                                        {{ d.author }}{% endif %}"
-                                                        />
-                                                    </div>
-                                                </a>
-                                                <a
-                                                        href="{% url 'blog:Author' d.author %}"
-                                                        class="text-gray-700 text-hover-primary"
-                                                >{% if d.author.get_full_name %}
-                                                    {{ d.author.get_full_name }}{% else %}
-                                                    {{ d.author }}{% endif %}</a
-                                                >
-                                                <!--end::Author-->
-                                                <!--begin::Date-->
-                                                <span class="text-muted">{{ d.jpublish }}</span>
-                                                <!--end::Date-->
-                                            </div>
-                                            <!--end::Content-->
-                                        </div>
-                                        <!--end::Body-->
-                                    </div>
-                                    <!--end::Feature post-->
-                                </div>
-                            {% endfor %}
-
-                            <!--end::Col-->
-                            <!--end::Row-->
-                        </div>
-                    </div>
-
+                    <!-- indexer::continue -->
                 </div>
             </div>
-            <!--end::Container-->
-            <!--begin::Footer-->
-        </div>
+        </main>
     </div>
 {% endblock %}

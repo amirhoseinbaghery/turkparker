@@ -67,7 +67,6 @@ class SearchProduct(ListView):
     template_name = "productlist.html"
     paginate_by = 15
 
-
     def get_queryset(self):  # new
         query = self.request.GET.get("q")
         object_list = Product.objects.filter(

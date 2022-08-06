@@ -1,0 +1,170 @@
+
+.ce_memberfullwidth {
+    background: #3B3B3B;
+    padding: 7% 0;
+    margin: 0 0 5em
+}
+.ce_memberfullwidth:last-child {
+    margin-bottom: 0
+}
+.ce_memberfullwidth .innerbox {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.ce_memberfullwidth .image_container {
+    width: 12%;
+    margin-right: 5%
+}
+.ce_memberfullwidth .image_container img {
+    width: 100%;
+    height: auto;
+    max-width: 10.3em;
+    border-radius: 1.38em;
+    overflow: hidden
+}
+.ce_memberfullwidth .text_container {
+    width: 45%;
+    margin-right: 5%
+}
+.ce_memberfullwidth .text_container h3 {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    color: #C5C4BE;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.4em
+}
+.ce_memberfullwidth .text_container p strong {
+    font-size: 4.16em;
+    font-size: clamp(1.77em, 3.9vw, 4.16em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+    line-height: 1em
+}
+.ce_memberfullwidth .text_container .job_title {
+    font-size: 1.38em;
+    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    line-height: 1.8em;
+    color: #FFFFFF;
+    line-height: 1.2em;
+    margin-top: 0.8em
+}
+.ce_memberfullwidth .links_container {
+    width: 33%;
+    margin-top: 4.2%
+}
+.ce_memberfullwidth .links_container ul li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 7%
+}
+.ce_memberfullwidth .links_container ul li:last-child {
+    margin-bottom: 0
+}
+.ce_memberfullwidth .links_container ul li svg {
+    display: block;
+    width: 1.8em;
+    margin-right: 1.1em
+}
+.ce_memberfullwidth .links_container ul li a {
+    font-size: 1.38em;
+    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    line-height: 1.8em;
+    color: #FFFFFF;
+    color: #C5C4BE;
+    line-height: 1em;
+    text-decoration: underline
+}
+@media only screen and (min-width:981px) and (max-width:1024px) {
+    .ce_memberfullwidth .image_container {
+        width: 15%
+    }
+    .ce_memberfullwidth .links_container {
+        width: 30%;
+        margin-top: 5%
+    }
+}
+@media only screen and (min-width:681px) and (max-width:980px) {
+    .ce_memberfullwidth .innerbox {
+        display: block
+    }
+    .ce_memberfullwidth .innerbox:after {
+        content: "";
+        display: block;
+        clear: both
+    }
+    .ce_memberfullwidth .image_container {
+        width: 25%;
+        margin-right: 7%;
+        max-width: none;
+        float: left
+    }
+    .ce_memberfullwidth .text_container {
+        width: 68%;
+        margin-right: 0;
+        float: left
+    }
+    .ce_memberfullwidth .links_container {
+        width: 68%;
+        float: left
+    }
+    .ce_memberfullwidth .links_container ul li {
+        margin-bottom: 0.6em
+    }
+    .ce_memberfullwidth .links_container ul li svg {
+        width: 1.44em
+    }
+}
+@media (max-width:680px) {
+    .ce_memberfullwidth {
+        padding: 3.66em 0
+    }
+    .ce_memberfullwidth .text_container {
+        order: -1;
+        width: 100%;
+        margin: 0
+    }
+    .ce_memberfullwidth .image_container {
+        width: 100%;
+        margin: 2.66em 0;
+        text-align: center
+    }
+    .ce_memberfullwidth .links_container {
+        margin: auto;
+        width: auto
+    }
+    .ce_memberfullwidth .links_container ul li svg {
+        width: 1.44em
+    }
+}

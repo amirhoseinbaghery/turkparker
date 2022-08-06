@@ -39,12 +39,22 @@ def SinglePost(request, slug):
 
 
 class PostList(ListView):
-    template_name = 'list.html'
+    template_name = 'home.html'
 
     def get_queryset(self):
-        global blog
+        global blog, category, tag
         blog = Blog.objects.filter(status='p')
+        category = BlogCategory.objects.filter(status='p')
+        tag = BlogTag.objects.all()
         return blog
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = category
+        context['first'] = blog.first()
+        context['blog'] = blog[1:]
+        context['tag'] = tag
+        return context
 
 
 class categoryList(ListView):
@@ -55,7 +65,7 @@ class categoryList(ListView):
         global category
         slug = self.kwargs.get('slug')
         category = get_object_or_404(BlogCategory, status='p', slug=slug)
-        return category.Category.all()
+        return category.Category.filter(status='p')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

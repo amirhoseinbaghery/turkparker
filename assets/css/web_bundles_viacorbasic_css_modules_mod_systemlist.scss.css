@@ -1,0 +1,73 @@
+
+.mod_systemlist .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em)
+}
+.system-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    margin: 1.11em auto clamp(4em, 8vw, 9.55em)
+}
+.system-wrapper .product-filters-wrap {
+    width: calc(25.25% - 1.11em);
+    margin-right: 1.11em
+}
+.system-wrapper .system-list-grid {
+    width: 74.75%
+}
+@media only screen and (max-width:1200px) {
+    .system-wrapper {
+        margin-top: 0
+    }
+    .system-wrapper .product-filters-wrap,
+    .system-wrapper .system-list-grid {
+        width: 100%;
+        margin: 0
+    }
+}
+.system-list-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.11em;
+    max-width: 68em;
+    margin: 0 auto
+}
+@media only screen and (max-width:1024px) {
+    .system-list-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+@media (max-width:620px) {
+    .system-list-grid {
+        display: block
+    }
+}
+.system-list-grid .system-teaser {
+    min-height: 19.45em
+}
+@media only screen and (max-width:1440px) {
+    .system-list-grid .system-teaser {
+        min-height: 17em
+    }
+}
+@media (max-width:620px) {
+    .system-list-grid .system-teaser {
+        max-width: 18.111em;
+        margin: 0 auto 1.11em
+    }
+}
