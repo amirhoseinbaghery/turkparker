@@ -1,0 +1,40 @@
+
+.social-links p {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: #C5C4BE
+}
+.social-links ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+.social-links ul li {
+    margin-right: 1em
+}
+.social-links ul li:last-child {
+    margin-right: 0
+}
+.social-links ul li a {
+    display: block;
+    transition: all 400ms
+}
+.social-links ul li a svg {
+    display: block;
+    width: 1.88em
+}
+.social-links ul li a svg path {
+    transition: all 400ms
+}
+.social-links ul li a:hover svg path {
+    fill: #FFFFFF
+}

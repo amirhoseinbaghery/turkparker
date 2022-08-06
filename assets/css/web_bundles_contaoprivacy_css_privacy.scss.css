@@ -1,0 +1,764 @@
+
+#footer {
+    transition: padding-bottom 0.6s ease
+}
+#footer .privacy-bar .content-wrapper,
+#footer .privacy-bar .inside {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap
+}
+@media screen and (max-width:1199px) {
+    #footer .privacy-bar .content-wrapper,
+    #footer .privacy-bar .inside {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+}
+.privacy-bar {
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1em 0;
+    background: #656565;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: all 0.6s ease
+}
+.privacy-bar .content-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 0
+}
+.privacy-bar .privacy-bar-text {
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding-right: 4em;
+    font-size: 0.8em;
+    line-height: 1.5;
+    width: 70%
+}
+.privacy-bar .privacy-bar-text a {
+    position: relative;
+    color: #FFF;
+    text-decoration: underline;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out
+}
+.privacy-bar .privacy-bar-btns {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 30%;
+    min-width: 22em
+}
+.privacy-bar button {
+    width: 100%;
+    background: #eee;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-block;
+    margin-right: 1em;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #656565;
+    font-size: 0.8em;
+    transition: all 0.3s ease-in-out
+}
+.privacy-bar button.open-privacy-settings {
+    margin-right: 0
+}
+.privacy-bar button:hover {
+    background: #fff
+}
+@media screen and (max-width:1199px) {
+    .privacy-bar {
+        padding: 1.5em 0
+    }
+    .privacy-bar .privacy-bar-text {
+        width: 100%;
+        margin-bottom: 1em;
+        padding-right: 0
+    }
+    .privacy-bar .privacy-bar-btns {
+        width: 100%;
+        min-width: auto;
+        margin: 0 auto
+    }
+    .privacy-bar .privacy-bar-btns .button {
+        margin-top: 1em
+    }
+}
+@media screen and (max-width:414px) {
+    .privacy-bar .privacy-bar-btns {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+    .privacy-bar .privacy-bar-btns button {
+        width: calc(50% - 0.5em);
+        margin-right: 0
+    }
+    .privacy-bar .privacy-bar-btns button.button-enable-all {
+        margin-right: 1em
+    }
+    .privacy-bar .privacy-bar-btns button.open-privacy-settings {
+        width: 100%
+    }
+}
+.ce_privacyPopOpener {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 1.5em
+}
+#privacy-settings {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(101, 101, 101, 0.8);
+    opacity: 0;
+    transition: opacity 0.8s ease
+}
+#privacy-settings .innerbox {
+    display: inline-block;
+    width: 100%;
+    max-width: 57em;
+    max-height: 90%;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    padding: 2.5em 2em 2em;
+    background: #fff;
+    transform: translate(-50%, -50%)
+}
+#privacy-settings .privacy-settings-main,
+#privacy-settings .privacy-settings-history {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100%
+}
+#privacy-settings .privacy-settings-main .right-col,
+#privacy-settings .privacy-settings-history .right-col {
+    overflow-y: auto;
+    height: auto;
+    max-height: 74vh;
+    scrollbar-width: none;
+    scrollbar-color: rgba(101, 101, 101, 0.5) #efefef
+}
+#privacy-settings .privacy-settings-main .right-col::-webkit-scrollbar,
+#privacy-settings .privacy-settings-history .right-col::-webkit-scrollbar {
+    width: 4px;
+    height: 4px
+}
+#privacy-settings .privacy-settings-main .right-col::-webkit-scrollbar-track,
+#privacy-settings .privacy-settings-history .right-col::-webkit-scrollbar-track {
+    background: #efefef
+}
+#privacy-settings .privacy-settings-main .right-col::-webkit-scrollbar-thumb,
+#privacy-settings .privacy-settings-history .right-col::-webkit-scrollbar-thumb {
+    background: rgba(101, 101, 101, 0.5);
+    border-radius: 4px
+}
+#privacy-settings .privacy-settings-main .right-col::-webkit-scrollbar-thumb:hover,
+#privacy-settings .privacy-settings-history .right-col::-webkit-scrollbar-thumb:hover {
+    background: #656565
+}
+#privacy-settings .privacy-settings-history .right-col {
+    max-height: 28em
+}
+#privacy-settings .cookie-details li {
+    padding-bottom: 0.5em
+}
+#privacy-settings .cookie-details li:last-of-type {
+    padding-bottom: 0
+}
+#privacy-settings .left-col {
+    width: 34%;
+    padding-right: 1.75em;
+    min-height: 10em;
+    box-sizing: border-box
+}
+#privacy-settings .right-col {
+    width: 66%;
+    width: calc(66% + 18px);
+    margin-right: -18px;
+    padding-left: 1.75em;
+    padding-right: 14px;
+    border-left: 1px solid #a9acb0;
+    box-sizing: border-box
+}
+#privacy-settings h3 {
+    font-size: 1.1em;
+    font-weight: 800;
+    margin-bottom: 1em
+}
+#privacy-settings h4 {
+    font-size: 1em;
+    font-weight: 800
+}
+#privacy-settings .save-close {
+    display: block;
+    float: right;
+    margin-top: 2em;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.45em 1.1em;
+    transition: all 0.3s ease-in-out
+}
+#privacy-settings .save-close:hover {
+    opacity: 0.9
+}
+#privacy-settings .toggle-history {
+    position: absolute;
+    bottom: 2em;
+    left: 2.5em;
+    margin-bottom: 0;
+    text-decoration: underline;
+    cursor: pointer
+}
+#privacy-settings .close-privacy {
+    position: absolute;
+    font-size: 1.25em;
+    top: 0.95em;
+    right: 1.3em;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20
+}
+#privacy-settings .close-privacy svg {
+    display: block;
+    cursor: pointer
+}
+#privacy-settings .button {
+    display: inline-block;
+    margin-left: 2em;
+    padding: 2px 12px;
+    transition: background-color 0.3s ease-in-out;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+    cursor: pointer
+}
+#privacy-settings .button:hover {
+    background-color: #656565
+}
+#privacy-settings .tools {
+    margin-bottom: 0.8em
+}
+#privacy-settings .status-line {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap;
+    color: #9d9599;
+    margin-bottom: 0
+}
+#privacy-settings .switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 1.8em;
+    margin: 0 1em 0 0
+}
+#privacy-settings .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none
+}
+#privacy-settings .switch .switch-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 1.8em;
+    border: 1px solid #a9acb0
+}
+#privacy-settings .switch .switch-btn:before {
+    position: absolute;
+    content: "";
+    height: 1.8em;
+    width: 1.8em;
+    left: -1px;
+    bottom: -1px;
+    background-color: #919499;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%
+}
+#privacy-settings .switch input:checked + .switch-btn:before {
+    background-color: #4A8329
+}
+#privacy-settings .switch input:focus + .switch-btn {
+    box-shadow: 0 0 1px #2196F3
+}
+#privacy-settings .switch input:checked + .switch-btn:before {
+    -webkit-transform: translateX(1.7em);
+    -ms-transform: translateX(1.7em);
+    transform: translateX(1.7em)
+}
+#privacy-settings .status-enabled {
+    display: none;
+    color: #4A8329
+}
+#privacy-settings .status-disabled {
+    display: inline-block;
+    color: #919499
+}
+#privacy-settings .btn-off {
+    background-color: red
+}
+#privacy-settings .btn-on {
+    background-color: privacy-toggle-active
+}
+#privacy-settings .gmap-active-status,
+#privacy-settings .g-analytics-active-status {
+    display: none
+}
+#privacy-settings.active-gmap .gmap-active-status {
+    display: block
+}
+#privacy-settings.active-gmap .gmap-inactive-status {
+    display: none
+}
+#privacy-settings.active-analytics .status-enabled {
+    display: block
+}
+#privacy-settings.active-analytics .status-disabled {
+    display: none
+}
+#privacy-settings .icon-arrow {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 2.5em;
+    right: 0;
+    top: 0;
+    text-align: center
+}
+#privacy-settings .icon-arrow:before {
+    content: "";
+    display: inline-block;
+    height: 0.8em;
+    width: 0.8em;
+    border-style: solid;
+    border-width: 0.2em 0.2em 0 0;
+    transform: translateY(0.6em) rotate(135deg);
+    transition: transform 0.6s ease
+}
+#privacy-settings .accordion-item + h4 {
+    margin-top: 2em
+}
+#privacy-settings .accordion-heading {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 0.25em;
+    padding: 0.5em 2.5em 0.5em 1em;
+    background: #e6e7e9;
+    transition: all 0.15s ease-in-out
+}
+#privacy-settings .accordion-heading .acc-title {
+    cursor: pointer
+}
+#privacy-settings .accordion-heading.active {
+    background: #494b4e
+}
+#privacy-settings .accordion-heading.active .status-line,
+#privacy-settings .accordion-heading.active .acc-title,
+#privacy-settings .accordion-heading.active .status-enabled,
+#privacy-settings .accordion-heading.active .status-disabled {
+    color: #fff
+}
+#privacy-settings .accordion-heading.active .icon-arrow:before {
+    color: #fff;
+    transform: translateY(1em) rotate(-45deg)
+}
+#privacy-settings .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease
+}
+#privacy-settings .accordion-content .accordion-inner {
+    display: block;
+    height: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em
+}
+#privacy-settings .accordion-content p,
+#privacy-settings .accordion-content ul {
+    font-size: 0.9em
+}
+#privacy-settings p {
+    font-size: 0.9em;
+    color: #656565;
+    margin-bottom: 1em
+}
+#privacy-settings p a {
+    color: inherit;
+    font-weight: 900
+}
+#privacy-settings .switch-wrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    min-width: 15em
+}
+#privacy-settings .cookie-info {
+    width: 100%;
+    font-size: 0.9em
+}
+#privacy-settings .cookie-info td,
+#privacy-settings .cookie-info th {
+    padding: 0.35em 0.75em 0.35em 0;
+    text-align: left
+}
+#privacy-settings .cookie-info tr {
+    border-bottom: 1px solid #ccc
+}
+#privacy-settings .cookie-info tr:last-of-type {
+    border-bottom: none
+}
+@media (max-height:680px) and (min-width:881px) {
+    #privacy-settings .privacy-settings-history .right-col {
+        max-height: 60vh
+    }
+}
+@media (max-width:880px) {
+    #privacy-settings {
+        padding: 1em
+    }
+    #privacy-settings .innerbox {
+        overflow: auto
+    }
+    #privacy-settings .privacy-settings-main .right-col {
+        max-height: none
+    }
+    #privacy-settings .privacy-settings-history .right-col {
+        max-height: 48vh
+    }
+    #privacy-settings .switch-wrap {
+        min-width: 13em
+    }
+    #privacy-settings .toggle-history {
+        position: relative;
+        margin-bottom: 0;
+        left: auto;
+        bottom: auto
+    }
+    #privacy-settings p {
+        font-size: 16px
+    }
+    #privacy-settings .left-col,
+    #privacy-settings .right-col {
+        width: 100%;
+        padding: 0
+    }
+    #privacy-settings .left-col {
+        margin-bottom: 1.25em;
+        min-height: 0
+    }
+    #privacy-settings .right-col {
+        border-left: none
+    }
+}
+@media (max-width:880px) and (orientation:landscape) {
+    #privacy-settings .privacy-settings-history .right-col {
+        max-height: 40vh
+    }
+}
+@media (max-width:520px) {
+    #privacy-settings p.accordion-heading {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: baseline;
+        -moz-box-align: baseline;
+        -ms-flex-align: baseline;
+        -webkit-align-items: baseline;
+        align-items: baseline
+    }
+    #privacy-settings p.accordion-heading .switch-wrap {
+        margin: 0.75em 0 0.25em
+    }
+    #privacy-settings .accordion-content {
+        padding-top: 0.75em;
+        padding-bottom: 0
+    }
+}
+@media (max-width:480px) {
+    #privacy-settings .innerbox {
+        padding: 1em
+    }
+    #privacy-settings .close-privacy {
+        top: 0.75em;
+        right: 0.75em
+    }
+    #privacy-settings p {
+        font-size: 16px
+    }
+}
+#privacy-history-table {
+    width: 100%;
+    margin-bottom: 0
+}
+#privacy-history-table tr:nth-child(even) {
+    background: #f4f5f6
+}
+#privacy-history-table td {
+    padding: 0.36em 1em;
+    font-size: 0.95em
+}
+.ce_dlh_googlemaps,
+.mod_dlh_googlemaps,
+.ce_openstreetmap {
+    height: auto;
+    padding-bottom: 56.25%;
+    background: #eee;
+    border-bottom: 1px solid #fff
+}
+.ce_dlh_googlemaps .map-question-block,
+.mod_dlh_googlemaps .map-question-block,
+.ce_openstreetmap .map-question-block {
+    width: 100%;
+    max-width: 658px;
+    padding: 2em;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+.ce_dlh_googlemaps .dlh_googlemap,
+.ce_dlh_googlemaps .open-street-map-block,
+.mod_dlh_googlemaps .dlh_googlemap,
+.mod_dlh_googlemaps .open-street-map-block,
+.ce_openstreetmap .dlh_googlemap,
+.ce_openstreetmap .open-street-map-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.25%
+}
+.ce_dlh_googlemaps .dlh_googlemap.map-hidden,
+.ce_dlh_googlemaps .open-street-map-block.map-hidden,
+.mod_dlh_googlemaps .dlh_googlemap.map-hidden,
+.mod_dlh_googlemaps .open-street-map-block.map-hidden,
+.ce_openstreetmap .dlh_googlemap.map-hidden,
+.ce_openstreetmap .open-street-map-block.map-hidden {
+    opacity: 0
+}
+@media screen and (max-width:520px) {
+    .ce_dlh_googlemaps,
+    .mod_dlh_googlemaps,
+    .ce_openstreetmap {
+        padding-bottom: 95%
+    }
+    .ce_dlh_googlemaps .dlh_googlemap,
+    .ce_dlh_googlemaps .open-street-map-block,
+    .mod_dlh_googlemaps .dlh_googlemap,
+    .mod_dlh_googlemaps .open-street-map-block,
+    .ce_openstreetmap .dlh_googlemap,
+    .ce_openstreetmap .open-street-map-block {
+        padding-bottom: 95%
+    }
+}
+.map-container {
+    margin-bottom: 1em
+}
+.map-container.active-gmap .open-privacy-btn {
+    display: block
+}
+.privacy-vimeo-question-block,
+.privacy-youtube-question-block {
+    position: relative;
+    text-align: center;
+    background: #eee
+}
+.privacy-vimeo-question-block .vimeo-question-block,
+.privacy-vimeo-question-block .youtube-question-block,
+.privacy-youtube-question-block .vimeo-question-block,
+.privacy-youtube-question-block .youtube-question-block {
+    position: absolute;
+    width: 100%;
+    max-width: 658px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2em
+}
+@media screen and (max-width:520px) {
+    .privacy-vimeo-question-block .vimeo-question-block,
+    .privacy-vimeo-question-block .youtube-question-block,
+    .privacy-youtube-question-block .vimeo-question-block,
+    .privacy-youtube-question-block .youtube-question-block {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: initial;
+        -ms-transform: initial;
+        transform: initial
+    }
+}
+.privacy-vimeo-question-block p,
+.privacy-youtube-question-block p {
+    margin-bottom: 1em;
+    line-height: 1.4
+}
+.vimeo-question-block,
+.youtube-question-block,
+.map-question-block,
+.mapbox-question-block {
+    box-sizing: border-box
+}
+.vimeo-question-block button,
+.youtube-question-block button,
+.map-question-block button,
+.mapbox-question-block button {
+    border: none;
+    outline: none;
+    background: #656565;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin: 0 0.3em 0.7em
+}
+.vimeo-question-block button:hover,
+.youtube-question-block button:hover,
+.map-question-block button:hover,
+.mapbox-question-block button:hover {
+    background: #333
+}
+.vimeo-question-block button:last-child,
+.youtube-question-block button:last-child,
+.map-question-block button:last-child,
+.mapbox-question-block button:last-child {
+    margin-bottom: 0
+}
+.youtube-video-block .video-play-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    max-width: 100px;
+    height: auto;
+    fill: #eee;
+    transition: all 0.3s ease
+}
+.youtube-video-block .video-play-icon:hover {
+    opacity: 0.8
+}
+.ce_privacyPopOpener button,
+.btn-privacy,
+.open-privacy-btn {
+    outline: none;
+    background: #656565;
+    font-size: 0.9em;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    margin-top: 0.2em;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+.ce_privacyPopOpener button:hover,
+.btn-privacy:hover,
+.open-privacy-btn:hover {
+    background: #333
+}

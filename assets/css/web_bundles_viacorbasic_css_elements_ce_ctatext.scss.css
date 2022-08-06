@@ -1,0 +1,108 @@
+
+.ce_ctatext {
+    box-sizing: border-box;
+    padding: 8em 0;
+    padding: clamp(4em, 10vw, 8em) 0;
+    background: #3B3B3B
+}
+.ce_ctatext .wrapper {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em)
+}
+.ce_ctatext .category {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    color: #C5C4BE
+}
+.ce_ctatext .big-heading p {
+    font-size: 4.16em;
+    font-size: clamp(1.77em, 3.9vw, 4.16em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    max-width: 16em;
+    margin: 0.44em 0
+}
+.ce_ctatext ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1em
+}
+.ce_ctatext ul li {
+    margin-bottom: 0.5em
+}
+.ce_ctatext ul li:last-child {
+    margin-bottom: 0
+}
+.ce_ctatext ol {
+    counter-reset: list
+}
+.ce_ctatext ol > li {
+    margin-bottom: 0.5em
+}
+.ce_ctatext ol > li:last-child {
+    margin-bottom: 0
+}
+.ce_ctatext ol > li:before {
+    content: counter(list, decimal) ".) ";
+    counter-increment: list
+}
+.ce_ctatext .button {
+    position: relative;
+    overflow: hidden;
+    color: #3B3B3B;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 2em;
+    padding: 0.665em 1.4em 0.465em;
+    transition: all 0.4s ease;
+    color: #C5C4BE;
+    display: inline-block;
+    min-width: 14em
+}
+.ce_ctatext .button:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    max-width: 3.8em;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: rgba(59, 59, 59, 0.32);
+    border-radius: inherit;
+    transition: transform 0.5s ease
+}
+.ce_ctatext .button:hover {
+    background: rgba(59, 59, 59, 0.05)
+}
+.ce_ctatext .button:active:after,
+.ce_ctatext .button.active:after {
+    transform: translateX(0)
+}
+.ce_ctatext .button:focus {
+    background: rgba(59, 59, 59, 0.17)
+}
+.ce_ctatext .button:disabled,
+.ce_ctatext .button.disabled {
+    opacity: 0.2;
+    cursor: default
+}
+.tl_content .limit_height {
+    background: #C5C4BE
+}
+.tl_content .ce_ctatext {
+    max-width: 100%
+}

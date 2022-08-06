@@ -1,0 +1,47 @@
+
+.ce_dlh_googlemaps,
+.mod_dlh_googlemaps,
+.ce_openstreetmap {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 50%
+}
+.ce_dlh_googlemaps .dlh_googlemap,
+.mod_dlh_googlemaps .dlh_googlemap,
+.ce_openstreetmap .dlh_googlemap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+@media screen and (max-width:520px) {
+    .ce_dlh_googlemaps,
+    .mod_dlh_googlemaps,
+    .ce_openstreetmap {
+        padding-bottom: 80%
+    }
+}
+.ce_openstreetmap {
+    position: relative
+}
+.ce_openstreetmap .open-street-map-block {
+    position: relative;
+    padding-bottom: 50%
+}
+@media screen and (max-width:520px) {
+    .ce_openstreetmap .open-street-map-block {
+        padding-bottom: 80%
+    }
+}
+.ce_openstreetmap iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.map-container {
+    position: relative
+}

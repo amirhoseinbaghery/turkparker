@@ -1,0 +1,80 @@
+
+.card-slider {
+    margin: 0 auto;
+    padding: 7em 0;
+    overflow: hidden
+}
+@media only screen and (max-width:768px) {
+    .card-slider {
+        padding: 4.5em 0
+    }
+}
+.card-slider .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em)
+}
+.card-slider .title {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 2em
+}
+.card-slider .swiper {
+    overflow: visible
+}
+.card-slider .swiper-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+.card-slider .slider-control {
+    margin: 3.55em 0 3.55em 4.55em
+}
+@media only screen and (max-width:560px) {
+    .card-slider .slider-control {
+        margin: 2.66em 0
+    }
+}
+.card-slider .slider-control .slider-prev,
+.card-slider .slider-control .slider-next {
+    display: none
+}
+.card-slider .slider-control .swiper-scrollbar {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: rgba(59, 59, 59, 0.5);
+    direction: rtl;
+
+}
+.card-slider .slider-control .swiper-scrollbar-drag {
+    direction: rtl;
+    position: absolute;
+    height: 0.66em;
+    top: -0.33em;
+    right: 0 !important;
+    background: #3B3B3B;
+    border-radius: 1.38em
+}
+.card-slider.with-text .title {
+    font-size: 1em;
+    font-family: "universal-roman", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    text-transform: none;
+    color: #FFFFFF;
+    max-width: 45em;
+    margin-bottom: 6em
+}
+@media only screen and (max-width:768px) {
+    .card-slider.with-text .title {
+        margin-bottom: 3.5em
+    }
+}

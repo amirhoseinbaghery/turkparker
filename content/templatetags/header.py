@@ -1,21 +1,25 @@
 from django import template
 
+from blog.models import BlogCategory
 from content.models import SiteSetting, About, Communication, SocialMedia
+from product.models import ProductCategory
 
 register = template.Library()
 
 
 @register.inclusion_tag('partial/menu.html')
-def menu(request):
-    app = request.resolver_match.app_names[0]
-    app_ = request.resolver_match.url_name
-    about_ = About.objects.all().first()
-    communicate = Communication.objects.all().first()
+def menuProduct():
+    category = ProductCategory.objects.filter(status='p', subClass=None)
     return {
-        'object': about_,
-        'com': communicate,
-        'app': app,
-        'app_': app_,
+        'object': category,
+    }
+
+
+@register.inclusion_tag('partial/menuBlog.html')
+def menuBlog():
+    category = BlogCategory.objects.filter(status='p', subClass=None)
+    return {
+        'object': category,
     }
 
 

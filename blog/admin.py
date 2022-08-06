@@ -7,17 +7,15 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'thumb',
         'title',
-        'author',
         'jpublish',
         'status',
         'categorySTR',)
 
     list_display_links = ('thumb', 'title')
-    list_filter = ('author',
-                   'status')
+    list_filter = ('status',)
     prepopulated_fields = {"slug": ("title",)}
     search_fields = ['title', 'body']
-    list_editable = ('status', 'author',)
+    list_editable = ('status',)
 
 
 admin.site.register(Blog, BlogAdmin)

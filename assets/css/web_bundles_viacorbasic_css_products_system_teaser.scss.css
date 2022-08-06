@@ -1,0 +1,147 @@
+
+.system-teaser {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #3B3B3B;
+    border-radius: 1.389em;
+    padding: 1.389em
+}
+.system-teaser picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -45%;
+    left: -15%;
+    transition: all 0.8s ease
+}
+@media only screen and (max-width:1200px) {
+    .system-teaser picture {
+        top: -50%;
+        left: -10%
+    }
+}
+.system-teaser picture img {
+    display: block;
+    width: auto;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 0.8s ease
+}
+.system-teaser .system-teaser_content-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+    z-index: 2
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_title {
+    width: 100%;
+    font-size: 1.38em;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    font-size: clamp(1em, 1.5vw, 1.38em);
+    line-height: 1.2em;
+    margin-bottom: 1em
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_title strong {
+    font-size: 1.38em;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.4em
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_subtitle {
+    width: 100%;
+    margin: auto 0 0.5em;
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    font-size: clamp(0.66em, 2vw, 0.88em);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.8s ease
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_desc {
+    display: -webkit-box;
+    width: calc(100% - 3.555em);
+    margin-right: 1.222em;
+    max-height: 4.111em;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    align-self: flex-end;
+    color: #3B3B3B;
+    transition: all 0.8s ease
+}
+@media only screen and (max-width:768px) {
+    .system-teaser .system-teaser_content-wrapper .system-teaser_desc {
+        width: 100%;
+        max-height: 2.889em;
+        -webkit-line-clamp: 2;
+        margin: 1em 0 0
+    }
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_read-more {
+    display: inline-block;
+    position: relative;
+    width: 2.333em;
+    height: 2.333em;
+    align-self: flex-end;
+    margin-left: auto
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_read-more:before,
+.system-teaser .system-teaser_content-wrapper .system-teaser_read-more:after {
+    content: "";
+    display: block;
+    background: #3B3B3B;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: all 400ms
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_read-more:before {
+    height: 100%;
+    width: 2px
+}
+.system-teaser .system-teaser_content-wrapper .system-teaser_read-more:hover:before {
+    transform: translate(-50%, -50%) rotate(-90deg)
+}
+@media only screen and (max-width:1024px) {
+    .system-teaser .system-teaser_content-wrapper .system-teaser_read-more {
+        width: 1.833em;
+        height: 1.833em
+    }
+}
+@media only screen and (max-width:560px) {
+    .system-teaser .system-teaser_content-wrapper .system-teaser_read-more {
+        width: 1.556em;
+        height: 1.556em
+    }
+}
+.system-teaser:hover picture {
+    top: 0
+}
+.system-teaser:hover picture img {
+    filter: grayscale(0)
+}
+.system-teaser:hover .system-teaser_content-wrapper .system-teaser_subtitle,
+.system-teaser:hover .system-teaser_content-wrapper .system-teaser_desc {
+    opacity: 0;
+    transform: translateY(200px)
+}

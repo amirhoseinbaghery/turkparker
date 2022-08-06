@@ -1,0 +1,70 @@
+
+.joblisting-section {
+    padding: 8em 0;
+    padding: clamp(4em, 10vw, 8em) 0
+}
+.joblisting-section .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.joblisting-section .joblisting-jobs-column {
+    width: 48%
+}
+.joblisting-section .joblisting-about-column {
+    width: 52%;
+    padding-left: 6.667em
+}
+.joblisting-section .joblisting-about-column .joblisting-about-subtitle {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    letter-spacing: 0.08em
+}
+.joblisting-section .joblisting-about-column .joblisting-about-title {
+    font-size: 4.16em;
+    font-size: clamp(1.77em, 3.9vw, 4.16em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.06em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 0.6em
+}
+.joblisting-section .joblisting-about-column.ce_bigheadlinetext {
+    padding-top: 0
+}
+.joblisting-section .joblisting-about-column.ce_bigheadlinetext .wrapper {
+    width: 100%;
+    max-width: 100%
+}
+@media only screen and (max-width:1024px) {
+    .joblisting-section .inside {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse
+    }
+    .joblisting-section .joblisting-jobs-column,
+    .joblisting-section .joblisting-about-column {
+        width: 100%
+    }
+    .joblisting-section .joblisting-about-column {
+        padding: 0 0 3em
+    }
+}

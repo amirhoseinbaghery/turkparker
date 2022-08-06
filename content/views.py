@@ -48,15 +48,14 @@ def contactus(request):
 
 
 def home(request):
+    blog = Blog.objects.filter(status='p')
     context = {
         'slide': Slider.objects.all(),
         'why': Why.objects.all(),
-        'category': ProductCategory.objects.filter(status='p'),
+        'category': ProductCategory.objects.filter(status='p', subClass=None),
         'project': Project.objects.filter(status='p'),
         'product': Product.objects.filter(status='p'),
-        'blog': Blog.objects.filter(status='p'),
-        'first': First.objects.first(),
-        'costumer': Costumer.objects.all(),
-        'about': About.objects.all().first(),
+        'blog': blog.first(),
+        'blog_': blog[1:5],
     }
     return render(request, 'index.html', context)

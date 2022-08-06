@@ -1,0 +1,292 @@
+
+@charset "UTF-8";
+.ce_textgallery,
+.ce_textimage,
+.ce_textyoutube {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap;
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    max-width: 1222px;
+    max-width: clamp(15.5em, 86%, 67.9em);
+    margin-top: 7.77em;
+    margin-bottom: 7.77em;
+    box-sizing: border-box;
+    background: #C5C4BE;
+    color: #FFFFFF
+}
+@media only screen and (max-width:1024px) {
+    .ce_textgallery,
+    .ce_textimage,
+    .ce_textyoutube {
+        flex-direction: column
+    }
+}
+.ce_textgallery .gallery_sliderblock,
+.ce_textgallery .image_container,
+.ce_textgallery .video_container,
+.ce_textimage .gallery_sliderblock,
+.ce_textimage .image_container,
+.ce_textimage .video_container,
+.ce_textyoutube .gallery_sliderblock,
+.ce_textyoutube .image_container,
+.ce_textyoutube .video_container {
+    width: 49%;
+    position: relative
+}
+.ce_textgallery .gallery_sliderblock:after,
+.ce_textgallery .image_container:after,
+.ce_textgallery .video_container:after,
+.ce_textimage .gallery_sliderblock:after,
+.ce_textimage .image_container:after,
+.ce_textimage .video_container:after,
+.ce_textyoutube .gallery_sliderblock:after,
+.ce_textyoutube .image_container:after,
+.ce_textyoutube .video_container:after {
+    content: "";
+    display: block;
+    padding-top: 100%
+}
+@media only screen and (max-width:1024px) {
+    .ce_textgallery .gallery_sliderblock,
+    .ce_textgallery .image_container,
+    .ce_textgallery .video_container,
+    .ce_textimage .gallery_sliderblock,
+    .ce_textimage .image_container,
+    .ce_textimage .video_container,
+    .ce_textyoutube .gallery_sliderblock,
+    .ce_textyoutube .image_container,
+    .ce_textyoutube .video_container {
+        order: 1;
+        width: 100%;
+        margin-bottom: 2.2em;
+        max-width: 30em
+    }
+}
+.ce_textgallery .text-content-wrap,
+.ce_textimage .text-content-wrap,
+.ce_textyoutube .text-content-wrap {
+    width: 51%;
+    padding-left: 3.33em
+}
+@media only screen and (max-width:1024px) {
+    .ce_textgallery .text-content-wrap,
+    .ce_textimage .text-content-wrap,
+    .ce_textyoutube .text-content-wrap {
+        width: 100%;
+        padding-left: 0;
+        order: 2
+    }
+}
+.ce_textgallery .text-content-wrap h2,
+.ce_textgallery .text-content-wrap h3,
+.ce_textimage .text-content-wrap h2,
+.ce_textimage .text-content-wrap h3,
+.ce_textyoutube .text-content-wrap h2,
+.ce_textyoutube .text-content-wrap h3 {
+    font-size: 1.777em;
+    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-size: clamp(1.38em, 1.66vw, 1.777em);
+    line-height: 1.3em;
+    color: #FFFFFF;
+    line-height: 1.3em;
+    margin-bottom: 1.25em
+}
+.ce_textgallery .text-content-wrap blockquote,
+.ce_textimage .text-content-wrap blockquote,
+.ce_textyoutube .text-content-wrap blockquote {
+    font-size: 1.38em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 1.6em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    position: relative
+}
+.ce_textgallery .text-content-wrap blockquote p:before,
+.ce_textimage .text-content-wrap blockquote p:before,
+.ce_textyoutube .text-content-wrap blockquote p:before {
+    content: "“";
+    display: inline
+}
+.ce_textgallery .text-content-wrap blockquote p:after,
+.ce_textimage .text-content-wrap blockquote p:after,
+.ce_textyoutube .text-content-wrap blockquote p:after {
+    content: "”";
+    display: inline
+}
+.ce_textgallery .text-content-wrap p,
+.ce_textimage .text-content-wrap p,
+.ce_textyoutube .text-content-wrap p {
+    margin-bottom: 1.66em
+}
+.ce_textgallery .text-content-wrap p:last-child,
+.ce_textimage .text-content-wrap p:last-child,
+.ce_textyoutube .text-content-wrap p:last-child {
+    margin-bottom: 0
+}
+.ce_textgallery .text-content-wrap a,
+.ce_textimage .text-content-wrap a,
+.ce_textyoutube .text-content-wrap a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+.ce_textgallery .text-content-wrap img,
+.ce_textimage .text-content-wrap img,
+.ce_textyoutube .text-content-wrap img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin-top: 1.66em;
+    margin-bottom: 1.66em
+}
+.ce_textgallery .text-content-wrap .author,
+.ce_textimage .text-content-wrap .author,
+.ce_textyoutube .text-content-wrap .author {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    color: #3B3B3B;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.33em
+}
+.ce_textgallery .text-content-wrap ul,
+.ce_textimage .text-content-wrap ul,
+.ce_textyoutube .text-content-wrap ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1em
+}
+.ce_textgallery .text-content-wrap ul li,
+.ce_textimage .text-content-wrap ul li,
+.ce_textyoutube .text-content-wrap ul li {
+    margin-bottom: 0.5em
+}
+.ce_textgallery .text-content-wrap ul li:last-child,
+.ce_textimage .text-content-wrap ul li:last-child,
+.ce_textyoutube .text-content-wrap ul li:last-child {
+    margin-bottom: 0
+}
+.ce_textgallery .text-content-wrap ol,
+.ce_textimage .text-content-wrap ol,
+.ce_textyoutube .text-content-wrap ol {
+    counter-reset: list
+}
+.ce_textgallery .text-content-wrap ol > li,
+.ce_textimage .text-content-wrap ol > li,
+.ce_textyoutube .text-content-wrap ol > li {
+    margin-bottom: 0.5em
+}
+.ce_textgallery .text-content-wrap ol > li:last-child,
+.ce_textimage .text-content-wrap ol > li:last-child,
+.ce_textyoutube .text-content-wrap ol > li:last-child {
+    margin-bottom: 0
+}
+.ce_textgallery .text-content-wrap ol > li:before,
+.ce_textimage .text-content-wrap ol > li:before,
+.ce_textyoutube .text-content-wrap ol > li:before {
+    content: counter(list, decimal) ".) ";
+    counter-increment: list
+}
+.ce_textgallery.gallery-right,
+.ce_textgallery.image-right,
+.ce_textimage.gallery-right,
+.ce_textimage.image-right,
+.ce_textyoutube.gallery-right,
+.ce_textyoutube.image-right {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+@media only screen and (max-width:1024px) {
+    .ce_textgallery.gallery-right,
+    .ce_textgallery.image-right,
+    .ce_textimage.gallery-right,
+    .ce_textimage.image-right,
+    .ce_textyoutube.gallery-right,
+    .ce_textyoutube.image-right {
+        flex-direction: column
+    }
+}
+.ce_textgallery.gallery-right .text-content-wrap,
+.ce_textgallery.image-right .text-content-wrap,
+.ce_textimage.gallery-right .text-content-wrap,
+.ce_textimage.image-right .text-content-wrap,
+.ce_textyoutube.gallery-right .text-content-wrap,
+.ce_textyoutube.image-right .text-content-wrap {
+    padding-right: 0;
+    padding-right: 3.33em
+}
+@media only screen and (max-width:1024px) {
+    .ce_textgallery.gallery-right .text-content-wrap,
+    .ce_textgallery.image-right .text-content-wrap,
+    .ce_textimage.gallery-right .text-content-wrap,
+    .ce_textimage.image-right .text-content-wrap,
+    .ce_textyoutube.gallery-right .text-content-wrap,
+    .ce_textyoutube.image-right .text-content-wrap {
+        padding-left: 0
+    }
+}
+.ce_textimage .image_container:after,
+.ce_textimage .video_container:after,
+.ce_textyoutube .image_container:after,
+.ce_textyoutube .video_container:after {
+    display: none
+}
+.ce_textimage .image_container picture,
+.ce_textimage .video_container picture,
+.ce_textyoutube .image_container picture,
+.ce_textyoutube .video_container picture {
+    display: block;
+    width: 100%;
+    height: auto
+}
+.ce_textimage .image_container picture img,
+.ce_textimage .video_container picture img,
+.ce_textyoutube .image_container picture img,
+.ce_textyoutube .video_container picture img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+.tl_content .limit_height {
+    background: #C5C4BE
+}
+.tl_content .ce_textimage {
+    max-width: 100%;
+    padding: 0 10vw
+}
+.tl_content .ce_textyoutube {
+    max-width: 100%;
+    padding: 0 10vw
+}
+.tl_content .ce_textyoutube .video_container .youtube-video-block iframe {
+    width: 100%;
+    height: auto
+}
+.tl_content .ce_textgallery {
+    max-width: 100%;
+    padding: 0 10vw
+}

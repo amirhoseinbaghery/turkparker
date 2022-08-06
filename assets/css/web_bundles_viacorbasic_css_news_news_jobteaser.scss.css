@@ -1,0 +1,69 @@
+
+.joblisting-section .joblist li {
+    padding-bottom: 2.2em;
+    margin-bottom: 2.4em;
+    border-bottom: 2px solid #FFFFFF
+}
+.joblisting-section .joblist li:last-child {
+    margin-bottom: 0
+}
+.joblisting-section .joblist li a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    position: relative;
+    color: #FFFFFF;
+    text-transform: uppercase
+}
+.joblisting-section .joblist li a .joblist-teaser-text {
+    padding-right: 2em
+}
+.joblisting-section .joblist li a .joblist-teaser-title {
+    font-size: 1.38em;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.4em
+}
+.joblisting-section .joblist li a .joblist-teaser-subheadline {
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    display: block;
+    margin-top: 0.4em
+}
+.joblisting-section .joblist li a .joblist-teaser-more-icon svg {
+    display: block
+}
+@media only screen and (max-width:414px) {
+    .joblisting-section .joblist li a .joblist-teaser-more-icon svg {
+        width: 1.2em;
+        height: auto
+    }
+}
+.joblisting-section .joblist li a:hover .joblist-teaser-more-icon {
+    animation: expolerJob 0.5s forwards 1 ease-in-out
+}
+@keyframes expolerJob {
+    0% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(-10px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}

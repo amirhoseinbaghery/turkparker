@@ -1,423 +1,135 @@
-{% extends 'shared/main.html' %}
+{% extends 'shared/main_.html' %}
 {% load static %}
 {% block title %}پروژه | {{ object.title }}{% endblock %}
 {% block desc %}{{ object.description }}{% endblock %}
 {% block keywords %}{{ object.keyword }}{% endblock %}
 
 {% block content %}
-    <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
-        <!--begin::Page title-->
-        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
-            <div class="page-title d-flex flex-column me-3">
-                <!--begin::Title-->
-                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">{{ object.title }}</h1>
-                <!--end::Title-->
-                <!--begin::Breadcrumb-->
-                <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="/"
-                           class="text-gray-600 text-hover-primary">خانه</a>
-                    </li>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="{% url 'project:ProjectList' %}"
-                           class="text-gray-600 text-hover-primary">پرژه ها</a>
-                    </li>
-                    <!--end::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="{% url 'project:Project' object.slug %}"
-                           class="text-gray-600 text-hover-primary">{{ object.title }}</a>
-                    </li>
-                </ul>
-                <!--end::Breadcrumb-->
-            </div>
-        </div>
-        <!--end::Page title-->
-    </div>
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
-        <div class="content flex-row-fluid" id="kt_content">
-            <!--begin::Careers - List-->
-            <div class="card">
-                <!--begin::Body-->
-                <div class="card-body p-lg-17">
-                    <!--begin::Hero-->
-
-                    <!--end::-->
-                    <!--begin::Layout-->
-                    <div class="d-flex flex-column flex-lg-row mb-17">
-
-                        <!--begin::Content-->
-                        <div class="flex-lg-row-fluid me-0 me-lg-20">
-                            <!--begin::Job-->
-                            <div class="mb-17">
-
-                                    <!--begin::Overlay-->
-                                    <div class="overlay overlay-show">
-                                        <!--begin::Image-->
-                                       <img class="card-img card-rounded" src="{{ object.image.url }}"/>
-                                        <!--end::Image-->
-                                    </div>
-                                    <!--end::Overlay-->
-                                    <!--begin::Heading-->
-
-                                <!--begin::Description-->
-                                <div class="mt-8">
-                                    <!--begin::Title-->
-                                    <h1 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h1>
-                                    <!--end::Title-->
-                                    <!--begin::Text-->
-                                    <p class="fw-bold fs-4 text-gray-600 mb-2">{{ object.body|safe }}</p>
-                                    <!--end::Text-->
-                                </div>
-                                <!--end::Description-->
-                                <!--begin::Accordion-->
-                                <!--begin::Section-->
-                                <div class="m-0">
-                                    <!--begin::Heading-->
-                                    <div class="d-flex align-items-center collapsible py-3 toggle mb-0"
-                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_1">
-                                        <!--begin::Icon-->
-                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="6.0104" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-                                            <span class="svg-icon toggle-off svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="10.8891" y="17.8033" width="12" height="2"
-                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
-                                                                          fill="currentColor"></rect>
-																	<rect x="6.01041" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
+    <div id="container">
+        <main id="main">
+            <div class="inside rtl">
+                <div class="mod_article first last block" id="article-85">
+                    <div class="mod_newsreader block">
+                        <div class="news_full block has-image" itemscope itemtype="http://schema.org/Article">
+                            <div class="news-header">
+                                <div class="ce_headerimage header-type2 block">
+                                    <div class="wrapper header-2-col-wrapper">
+                                        <div class="header-left-column">
+                                            <figure class="image_container float_above">
+                                                <picture>
+                                                    <img src="{{ object.image.url }}"
+                                                         width="625" height="750" alt="{{ object.title }}"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
                                         </div>
-                                        <!--end::Icon-->
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">گالری تصاویر</h4>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Heading-->
-                                    <!--begin::Body-->
-                                    <div id="kt_job_1_1" class="collapse show fs-6 ms-1">
-                                        <!--begin::Item-->
-                                        <div class="row g-10 row-cols-2 row-cols-lg-5">
-                                            {% for c in object.gallery.all %}
-                                                <!--begin::Col-->
-                                                <div class="col">
-                                                    <!--begin::Overlay-->
-                                                    <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
-                                                       href="{{ c.image.url }}">
-                                                        <!--begin::Image-->
-                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
-                                                             style="background-image:url('{{ c.image.url }}')"></div>
-                                                        <!--end::Image-->
-                                                        <!--begin::Action-->
-                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                                            <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                                        </div>
-                                                        <!--end::Action-->
-                                                    </a>
+                                        <div class="header-right-column">
+                                            <div class="text-content-wrap">
+                                                <ul class="tag-chain">
+                                                    <li class="tag-chain-item first">
+                                                        {% for t in object.category.all %}{{ t.title }}{% endfor %}
+                                                    </li>
+                                                </ul>
+                                                <h1>{{ object.title }}</h1>
+                                                <div class="teaser">
+                                                    <p><span class="Y2IQFc" lang="en">
+                                                            تاریخ شروع: {{ object.jstart }}
+                                                    </span>
+                                                    </p>
+                                                    <p><span class="" lang="en">
+                                                            تاریخ پایان: {{ object.jend }}
+                                                    </span>
+                                                    </p>
+                                                    <p><span class="" lang="en">
+                                                            طرف قرارداد: {{ object.costumer }}
+                                                    </span>
+                                                    </p>
                                                 </div>
-                                                <!--end::Col-->
-                                            {% endfor %}
-                                        </div>
 
-                                        <!--end::Item-->
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!--end::Content-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed mt-3"></div>
-                                    <!--end::Separator-->
+                                </div>
+                            </div>
+                            <div class="ce_separation block">
+                                <div class="wrapper">
+                                    {% for y in object.category.all %}
+                                        <div>
+                                            <a href="{% url 'project:CategoryList' y.slug %}"><h2 class="Y2IQFc"
+                                                                                               lang="en">{{ y.title }}</h2>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+
+                                    {% for u in object.tag.all %}
+                                        <div>
+                                            <a href="{% url 'project:tagList' u.slug %}"><h2 class="Y2IQFc"
+                                                                                          lang="en">{{ u.title }}</h2>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="ce_fulltext block">
+                                <div class="wrapper">
+                                    <p>
+                                        {{ object.body|safe }}
+                                    </p></div>
+                            </div>
+                            <div class="mod_newslist block">
+                                <div class="news_teaser-container">
+                                    <div class="section-titles">
+                                        <span class="category">تصاویر</span>
+                                    </div>
+                                    <div class="news_teaser-wrap">
+                                        {% for u in object.gallery.all %}
+                                            <div class="news_teaser arc_3 block last even has-image news logistics industry manufacturing"
+                                                 data-filter="news logistics industry manufacturing" itemscope=""
+                                                 itemtype="http://schema.org/Article">
+                                                <figure class="image_container float_above">
+                                                    <a href="{{ u.image.url }}">
+                                                        <picture>
+                                                            <img src="{{ u.image.url }}" width="395"
+                                                                 height="350" alt="{{ u.title }}" loading="lazy"
+                                                                 itemprop="image">
+                                                        </picture>
+                                                    </a>
+                                                </figure>
+                                                <div class="news_teaser-content-wrap">
+                                                    <h2 itemprop="name"><a
+                                                            href="{{ u.image.url }}"
+                                                            itemprop="url"><span itemprop="headline"></span></a>
+                                                    </h2>
+                                                    <p class="more"><a href="{{ u.image.url }}"
+                                                                       itemprop="url">
+                                                    </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--end::Content-->
-                        <!--begin::Sidebar-->
-                        <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px">
-                            <div class=" card bg-light card-flush" >
-                                    <div class=" d-lg-block  d-none">
-                                <!--begin::Body-->
-                                <div class="card-body">
-                                    <!--begin::Top-->
-                                    <div class="mb-7">
-                                        <!--begin::Title-->
-                                        <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
-                                        <!--end::Title-->
-                                        <!--begin::Text-->
-                                        <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Top-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">سفارش دهنده</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
 
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.costumer }}</div>
-                                                <div class="text-gray-600 fw-bold fs-6">، {{ object.costumer.location }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">تاریخ شروع</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.jstart }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">تاریخ پایان</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.endDate }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for s in object.category.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <a href="{% url 'project:CategoryList' s.slug %}">
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
-                                                    </a>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for d in object.tag.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <a href="{% url 'project:tagList' d.slug %}">
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
-                                                    </a>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
-
-                                </div>
-                                <!--end::Body-->
+                        <!-- indexer::stop -->
+                        <div class="back-button-section">
+                            <div class="inside">
+                                <a class="back-btn" href="{% url 'project:ProjectList' %}" title="Go back">
+                                    <svg id="arrow-back" xmlns="http://www.w3.org/2000/svg" width="16.5" height="17.65">
+                                        <path data-name="Path 1591"
+                                              d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"
+                                              fill="#3b3b3b"/>
+                                    </svg>
+                                    پروژه ها</a>
                             </div>
-                            </div>
-                            <!--begin::Careers about-->
-                            <div class="card bg-light  d-lg-none  d-block">
-                                <!--begin::Body-->
-                                <div class="card-body">
-                                    <!--begin::Top-->
-                                    <div class="mb-7">
-                                        <!--begin::Title-->
-                                        <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
-                                        <!--end::Title-->
-                                        <!--begin::Text-->
-                                        <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Top-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">سفارش دهنده</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.costumer }}</div>
-                                                <div class="text-gray-600 fw-bold fs-6">، {{ object.costumer.location }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">تاریخ شروع</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.jstart }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">تاریخ پایان</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-
-                                            <div class="d-flex align-items-center mb-3">
-                                                <!--begin::Bullet-->
-                                                <span class="bullet me-3"></span>
-                                                <!--end::Bullet-->
-                                                <!--begin::Label-->
-                                                <div class="text-gray-600 fw-bold fs-6">{{ object.endDate }}</div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for s in object.category.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <a href="{% url 'project:CategoryList' s.slug %}">
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
-                                                    </a>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for d in object.tag.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <a href="{% url 'project:tagList' d.slug %}">
-                                                        <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
-                                                    </a>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
-
-                                </div>
-                                <!--end::Body-->
-                            </div>
-                            <!--end::Careers about-->
                         </div>
-                        <!--end::Sidebar-->
+                        <!-- indexer::continue -->
                     </div>
                 </div>
-                <!--end::Body-->
             </div>
-            <!--end::Careers - List-->
-        </div>
+        </main>
     </div>
 {% endblock %}
+
+

@@ -17,8 +17,6 @@ class Blog(models.Model):
     )
     title = models.CharField(verbose_name='عنوان', max_length=50)
     slug = models.SlugField(verbose_name='آدرس', unique=True, max_length=100, allow_unicode=True)
-    author = models.ForeignKey(User, verbose_name='نویسنده', on_delete=models.SET_NULL, null=True,
-                               related_name='author')
     publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
     createdDate = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ انتشار')
     updatedDate = models.DateTimeField(auto_now=True, verbose_name='تاریخ بروزرسانی')
@@ -28,8 +26,6 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='blog/', verbose_name='تصویر', null=True)
     body = RichTextUploadingField(verbose_name='متن مقاله', null=True)
     category = models.ManyToManyField('BlogCategory', related_name="Category", verbose_name='دسته بندی')
-    similar_category = models.ForeignKey('BlogCategory', on_delete=models.SET_NULL, null=True,
-                                         related_name='similar_category', verbose_name='دسته بندی اصلی')
     tag = models.ManyToManyField('BlogTag', related_name='tag', verbose_name='برچسب ها')
     ip = models.ManyToManyField(IpAddress, through='PostVisit', verbose_name='بازدید', related_name='blogIp',
                                 blank=True)

@@ -1,436 +1,255 @@
-{% extends 'shared/main.html' %}
+{% extends 'shared/main_.html' %}
 {% load static %}
 {% block title %} محصول | {{ object.title }}{% endblock %}
 {% block desc %}{{ object.description }}{% endblock %}
 {% block keywords %}{{ object.keyword }}{% endblock %}
-
 {% block content %}
-    <div id="kt_toolbar" class="toolbar py-5 py-lg-7">
-        <!--begin::Page title-->
-        <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap">
-            <div class="page-title d-flex flex-column me-3">
-                <!--begin::Title-->
-                <h1 class="d-flex text-dark fw-bolder my-1 fs-3">{{ object.title }}</h1>
-                <!--end::Title-->
-                <!--begin::Breadcrumb-->
-                <ul class="breadcrumb breadcrumb-dot fw-bold text-gray-600 fs-7 my-1">
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="/"
-                           class="text-gray-600 text-hover-primary">خانه</a>
-                    </li>
-                    <!--end::Item-->
-                    <!--begin::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a href="{% url 'product:ProductList' %}"
-                           class="text-gray-600 text-hover-primary">محصولات</a>
-                    </li>
-                    <!--end::Item-->
-                    <li class="breadcrumb-item text-gray-600">
-                        <a
-                                class="text-gray-600 text-hover-primary">{{ object.title }}</a>
-                    </li>
-                </ul>
-                <!--end::Breadcrumb-->
-            </div>
-        </div>
-        <!--end::Page title-->
-    </div>
-    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
-        <div class="content flex-row-fluid" id="kt_content">
-            <!--begin::Careers - List-->
-            <div class="card">
-                <!--begin::Body-->
-                <div class="card-body p-lg-17">
-                    <!--begin::Hero-->
-
-                    <!--end::-->
-                    <!--begin::Layout-->
-                    <div class="d-flex flex-column flex-lg-row mb-17 position-lg-relative">
-                        <!--begin::Content-->
-                        <div class="flex-lg-row-fluid me-0 me-lg-20">
-                            <!--begin::Job-->
-                            <div class="mb-17">
-                                <div class="overlay mt-8">
-                                    <!--begin::Image-->
-                                    {#                            <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="#}
-                                    {#                                background-image: url('assets/media/stock/1600x800/img-1.jpg');#}
-                                    {#                              "></div>#}
-                                    <img class="card-img  card-rounded" src="{{ object.image.url }}"/>
-                                    <!--end::Image-->
-                                    <!--begin::Links-->
-
-                                    <!--end::Links-->
+    <div id="container">
+        <main id="main">
+            <div class="inside">
+                <div class="mod_article first last block" id="article-174">
+                    <div class="mod_systemreader">
+                        <div class="system-full product-system">
+                            <div class="full-hero">
+                                <div class="back-button-wrapper">
+                                    <a href="https://www.viacor.de/en/systems/sports-and-fun/overview-sports-flooring-systems.html"
+                                       class="back-button" id="back" title="Back">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#C5C4BE" width="16.5"
+                                             height="17.65" viewBox="0 0 16.5 17.65">
+                                            <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"></path>
+                                        </svg>
+                                        Back
+                                    </a>
                                 </div>
-                                <!--begin::Description-->
-                                <div class="m-0">
-                                    <!--begin::Title-->
-                                    <h1 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h1>
-                                    <!--end::Title-->
-                                    <!--begin::Text-->
-                                    <p class="fw-bold fs-4 text-gray-600 mb-2">{{ object.body|safe }}</p>
-                                    <!--end::Text-->
-                                </div>
-                                <!--end::Description-->
-                                <!--begin::Accordion-->
-                                <!--begin::Section-->
-                                <div class="m-0">
-                                    <!--begin::Heading-->
-                                    <div class="d-flex align-items-center collapsible py-3 toggle mb-0"
-                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_1">
-                                        <!--begin::Icon-->
-                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="6.0104" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-                                            <span class="svg-icon toggle-off svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="10.8891" y="17.8033" width="12" height="2"
-                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
-                                                                          fill="currentColor"></rect>
-																	<rect x="6.01041" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                        </div>
-                                        <!--end::Icon-->
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">موارد مصرف</h4>
-                                        <!--end::Title-->
+                                <div class="wrapper header-2-col-wrapper">
+                                    <div class="header-left-column">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <img src=""
+                                                     width="950" height="534" alt="" itemprop="image">
+                                            </picture>
+                                        </figure>
                                     </div>
-                                    <!--end::Heading-->
-                                    <!--begin::Body-->
-                                    <div id="kt_job_1_1" class="collapse show fs-6 ms-1">
-                                        <!--begin::Item-->
-                                        {% for a in object.usage.all %}
-                                            <div class="mb-4">
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ps-10 mb-n1">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <div class="text-gray-600 fw-bold fs-6">{{ a.title }}</div>
-                                                    <!--end::Label-->
-                                                </div>
-                                                <!--end::Item-->
+                                    <div class="header-right-column">
+                                        <div class="text-content-wrap">
+<span class="category full-heading-small">
+Sports &amp; Fun / Running Tracks                    </span>
+                                            <h1 class="full-title"><strong>PORPLASTIC</strong> SW smart</h1>
+                                            <div class="attributes">
+                                                <p class="full-heading-small">Tags</p>
+                                                <ul>
+                                                    <li>abrasion resistant</li>
+                                                    <li>easy on your joints</li>
+                                                    <li>elastic</li>
+                                                    <li>heavy-duty</li>
+                                                    <li>indoor</li>
+                                                    <li>jointless</li>
+                                                    <li>outdoor</li>
+                                                </ul>
                                             </div>
-                                        {% endfor %}
-                                        <!--end::Item-->
-                                    </div>
-                                    <!--end::Content-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed"></div>
-                                    <!--end::Separator-->
-                                </div>
-                                <!--end::Section-->
-                                <!--begin::Section-->
-                                <div class="m-0">
-                                    <!--begin::Heading-->
-                                    <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0"
-                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_2">
-                                        <!--begin::Icon-->
-                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="6.0104" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-                                            <span class="svg-icon toggle-off svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="10.8891" y="17.8033" width="12" height="2"
-                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
-                                                                          fill="currentColor"></rect>
-																	<rect x="6.01041" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                        </div>
-                                        <!--end::Icon-->
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">مزایا</h4>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Heading-->
-                                    <!--begin::Body-->
-                                    <div id="kt_job_1_2" class="collapse fs-6 ms-1">
-                                        <!--begin::Item-->
-                                        {% for b in object.feature.all %}
-                                            <div class="mb-4">
-                                                <!--begin::Item-->
-                                                <div class="d-flex align-items-center ps-10 mb-n1">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <div class="text-gray-600 fw-bold fs-6">{{ b.title }}</div>
-                                                    <!--end::Label-->
-                                                </div>
-                                                <!--end::Item-->
-                                            </div>
-                                        {% endfor %}
-                                        <!--end::Item-->
-                                    </div>
-                                    <!--end::Content-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed"></div>
-                                    <!--end::Separator-->
-                                </div>
-                                <!--end::Section-->
-                                <!--begin::Section-->
-                                <div class="m-0">
-                                    <!--begin::Heading-->
-                                    <div class="d-flex align-items-center collapsible py-3 toggle collapsed mb-0"
-                                         data-bs-toggle="collapse" data-bs-target="#kt_job_1_3">
-                                        <!--begin::Icon-->
-                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen036.svg-->
-                                            <span class="svg-icon toggle-on svg-icon-primary svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="6.0104" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                            <!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
-                                            <span class="svg-icon toggle-off svg-icon-1">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                     height="24" viewBox="0 0 24 24" fill="none">
-																	<rect opacity="0.3" x="2" y="2" width="20"
-                                                                          height="20" rx="5" fill="currentColor"></rect>
-																	<rect x="10.8891" y="17.8033" width="12" height="2"
-                                                                          rx="1" transform="rotate(-90 10.8891 17.8033)"
-                                                                          fill="currentColor"></rect>
-																	<rect x="6.01041" y="10.9247" width="12" height="2"
-                                                                          rx="1" fill="currentColor"></rect>
-																</svg>
-															</span>
-                                            <!--end::Svg Icon-->
-                                        </div>
-                                        <!--end::Icon-->
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 fw-bolder cursor-pointer mb-0">گالری تصاویر</h4>
-                                        <!--end::Title-->
-                                    </div>
-                                    <!--end::Heading-->
-                                    <!--begin::Body-->
-                                    <div id="kt_job_1_3" class="collapse fs-6 ms-1">
-                                        <div class="row g-10 row-cols-2 row-cols-lg-5">
-                                            {% for c in object.gallery.all %}
-                                                <!--begin::Col-->
-                                                <div class="col mx-10">
-                                                    <!--begin::Overlay-->
-                                                    <a class="d-block overlay"
-                                                       href="{{ c.image.url }}"
-                                                        data-fslightbox="lightbox-hot-sales"
-                                                    >
-                                                        <!--begin::Image-->
-                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover  card-rounded min-h-150px"
-                                                             style="background-image:url('{{ c.image.url }}');width: 200px">
-
-                                                        </div>
-                                                        <!--end::Image-->
-                                                        <!--begin::Action-->
-                                                        <div class="overlay-layer card-rounded bg-dark bg-opacity-25"
-                                                             style="width: 200px">
-                                                            <i class="bi bi-eye-fill fs-2x text-white"></i>
-                                                        </div>
-                                                        <!--end::Action-->
-                                                    </a>
-                                                </div>
-                                                <!--end::Col-->
-                                            {% endfor %}
                                         </div>
                                     </div>
-                                    <!--end::Content-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed"></div>
-                                    <!--end::Separator-->
                                 </div>
-                                <!--end::Section-->
-                                <!--end::Accordion-->
                             </div>
-                            <!--end::Job-->
-                            <!--begin::Job-->
-
-                            <!--end::Job-->
+                            <div class="ce_separation block">
+                                <div class="wrapper">
+                                    <p class="big">For small areas or indoor</p>
+                                    <p>Sandwich construction consisting of an elastic mat, pore sealer and cast coating
+                                        spread with coloured EPDM-granules, water-impermeable</p>
+                                </div>
+                            </div>
+                            <div class="full-parameterlist block">
+                                <div class="wrapper">
+                                    <h2 class="section-title">System Benefits</h2>
+                                    <ul>
+                                        <li>total system thickness approx. 13 - 17 mm</li>
+                                        <li>tested in accordance with IAAF criteria</li>
+                                        <li>water-impermeable</li>
+                                        <li>sandwich-construction</li>
+                                        <li>extremely spike-resistant</li>
+                                        <li>structured surface</li>
+                                        <li>excellent conditions even when wet or raining</li>
+                                        <li>available in many colours</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-components">
+                                <div class="wrapper">
+                                    <h2 class="section-title">Build-up &amp; System Components</h2>
+                                    <div class="product-list-grid">
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC X8090</h3>
+                                            <p class="product-teaser_category">Line paint</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-x8090.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC X8090</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC S6000P</h3>
+                                            <p class="product-teaser_category">flexible top finish Sport </p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-s6000p.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC S6000P</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC C570</h3>
+                                            <p class="product-teaser_category">Elastic Layer</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-c570.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC C570</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC L370</h3>
+                                            <p class="product-teaser_category">Pore closure</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-l370.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC L370</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">VIASOL Elastikmatte</h3>
+                                            <p class="product-teaser_category">Elastic mat</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/viasol-elastikmatte.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">VIASOL Elastikmatte</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC B976</h3>
+                                            <p class="product-teaser_category">Adhesion</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-b976.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC B976</span>
+                                            </a>
+                                        </div>
+                                        <div class="product-teaser">
+                                            <h3 class="product-teaser_title">PORPLASTIC P270</h3>
+                                            <p class="product-teaser_category">Primer</p>
+                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-p270.html"
+                                               class="product-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC P270</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-downloads">
+                                <div class="wrapper">
+                                    <h2 class="section-title">Downloads</h2>
+                                    <div class="autowrap autowrap-downloads">
+                                        <div class="inside">
+                                            <div class="ce_downloads download-big block">
+                                                <a href="en/systems/sports-and-fun-floorings/porplastic-sw-smart.html?file=files/Systeme/Systemdatenblatt/en/sysDS%20PORPLASTIC%20SW%20smart.pdf"
+                                                   title="Download sysDS PORPLASTIC SW smart.pdf"
+                                                   class="download-inner ext-pdf" type="application/pdf">SysDSbr&gt;PORPLASTIC<b>
+                                                    SW smart</b>
+                                                    <span class="size">pdf, 333.4 KiB</span>
+                                                    <span class="icon">
+<span class="icon__download">
+<svg class="download-icon" fill="#3b3b3b" xmlns="http://www.w3.org/2000/svg" width="29.8" height="28.9"
+     viewBox="0 0 29.8 28.9">
+<path class="download-icon_arrow"
+      d="M22.37,8.76,15.8,15.33V0H14V15.33L7.43,8.76,6.16,10.03l8.74,8.74,8.74-8.74Z"></path>
+<path class="download-icon_bottom"
+      d="M26.28,28.9H3.53A3.53,3.53,0,0,1,0,25.38V14H1.8V25.38A1.72,1.72,0,0,0,3.53,27.1H26.28A1.72,1.72,0,0,0,28,25.38V14h1.8V25.38a3.53,3.53,0,0,1-3.52,3.52Z"></path>
+</svg>
+</span>
+</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-button">
+                                <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html"
+                                   class="back-button" id="back" title="zurück">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#C5C4BE" width="16.5" height="17.65"
+                                         viewBox="0 0 16.5 17.65">
+                                        <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"></path>
+                                    </svg>
+                                    Back
+                                </a>
+                            </div>
                         </div>
-                        <!--end::Content-->
-                        <!--begin::Sidebar-->
-                        <div class="flex-lg-row-auto w-100 w-lg-275px w-xxl-350px position-lg-relative">
-                            <!--begin::Careers about-->
-
-                            <div class="card bg-light sticky " data-sticky-container
-                                 data-margin-top="20" data-sticky-for="1023" data-sticky-class="is-sticky">
-                                <div class=" d-lg-block  d-none ">
-                                    <!--begin::Body-->
-                                    <div class="card-body">
-                                        <!--begin::Top-->
-                                        <div class="mb-7">
-                                            <!--begin::Title-->
-                                            <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
-                                            <!--end::Title-->
-                                            <!--begin::Text-->
-                                            <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
-                                            <!--end::Text-->
-                                        </div>
-                                        <!--end::Top-->
-                                        <!--begin::Item-->
-                                        <div class="mb-8">
-                                            <!--begin::Title-->
-                                            <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
-                                            <!--end::Title-->
-                                            <!--begin::Section-->
-                                            <div class="my-2">
-                                                <!--begin::Row-->
-                                                {% for s in object.category.all %}
-                                                    <div class="d-flex align-items-center mb-3">
-                                                        <!--begin::Bullet-->
-                                                        <span class="bullet me-3"></span>
-                                                        <!--end::Bullet-->
-                                                        <!--begin::Label-->
-                                                        <a href="{% url 'product:categoryList' s.slug %}">
-                                                            <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
-                                                        </a>
-                                                        <!--end::Label-->
-                                                    </div>
-                                                {% endfor %}
-                                                <!--end::Row-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <div class="mb-8">
-                                            <!--begin::Title-->
-                                            <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
-                                            <!--end::Title-->
-                                            <!--begin::Section-->
-                                            <div class="my-2">
-                                                <!--begin::Row-->
-                                                {% for d in object.tag.all %}
-                                                    <div class="d-flex align-items-center mb-3">
-                                                        <!--begin::Bullet-->
-                                                        <span class="bullet me-3"></span>
-                                                        <!--end::Bullet-->
-                                                        <!--begin::Label-->
-                                                        <a href="{% url 'product:tagList' d.slug %}">
-                                                            <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
-                                                        </a>
-                                                        <!--end::Label-->
-                                                    </div>
-                                                {% endfor %}
-                                                <!--end::Row-->
-                                            </div>
-                                            <!--end::Section-->
-                                        </div>
-                                        <!--end::Item-->
-                                    </div>
-                                    <!--end::Body-->
-                                </div>
-
+                    </div>
+                    <div class="ce_memberfullwidth member-ulrich">
+                        <div class="innerbox">
+                            <div class="image_container">
+                                <picture>
+                                    <source srcset="assets/images/9/Meike-Ulrich-small-afa983a8.webp" type="image/webp"
+                                            width="200" height="288">
+                                    <img src="assets/images/5/Meike-Ulrich-small-36fac605.jpg" width="200" height="288"
+                                         alt="Meike Ulrich" itemprop="image">
+                                </picture>
                             </div>
-                            <script>
-                                var sticky = new Sticky('.sticky');
-                            </script>
-                            <div class="card bg-light  d-lg-none  d-block">
-                                <!--begin::Body-->
-                                <div class="card-body">
-                                    <!--begin::Top-->
-                                    <div class="mb-7">
-                                        <!--begin::Title-->
-                                        <h2 class="fs-1 text-gray-800 w-bolder mb-6">{{ object.title }}</h2>
-                                        <!--end::Title-->
-                                        <!--begin::Text-->
-                                        <p class="fw-bold fs-6 text-gray-600">{{ object.description }}</p>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Top-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">دسته بندی</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for s in object.category.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <div class="text-gray-600 fw-bold fs-6">{{ s.title }}</div>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
-                                    <!--begin::Item-->
-                                    <div class="mb-8">
-                                        <!--begin::Title-->
-                                        <h4 class="text-gray-700 w-bolder mb-0">برچسب ها</h4>
-                                        <!--end::Title-->
-                                        <!--begin::Section-->
-                                        <div class="my-2">
-                                            <!--begin::Row-->
-                                            {% for d in object.tag.all %}
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <!--begin::Bullet-->
-                                                    <span class="bullet me-3"></span>
-                                                    <!--end::Bullet-->
-                                                    <!--begin::Label-->
-                                                    <div class="text-gray-600 fw-bold fs-6">{{ d.title }}</div>
-                                                    <!--end::Label-->
-                                                </div>
-                                            {% endfor %}
-                                            <!--end::Row-->
-                                        </div>
-                                        <!--end::Section-->
-                                    </div>
-                                    <!--end::Item-->
+                            <div class="text_container">
+                                <h3>Contact</h3>
+                                <p>
+                                    <strong>
+                                        Meike Ulrich </strong>
+                                </p>
+                                <div class="job_title">
+                                    <span>Business Unit Manager PORPLASTIC</span>
                                 </div>
-                                <!--end::Body-->
                             </div>
-
-                            <!--end::Careers about-->
+                            <div class="links_container">
+                                <ul>
+                                    <li class="mail">
+                                        <svg id="mail-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"
+                                             width="33.8" height="27.8" viewBox="0 0 33.8 27.8">
+                                            <path id="Path_1573" data-name="Path 1573"
+                                                  d="M0,27.8H33.8V0H0ZM19.09,13.44a3.11,3.11,0,0,1-4.38,0L3.07,1.8H30.73ZM32,3.07V16.73L25.17,9.9ZM8.63,9.9,1.8,16.73V3.07ZM1.8,26V19.27l8.1-8.1,3.54,3.54a4.91,4.91,0,0,0,6.93,0l3.53-3.54,8.1,8.1V26Z"
+                                                  fill="#C5C4BE"></path>
+                                        </svg>
+                                        <a href="mailto:meike.ulrich@viacor.de">E-Mail</a>
+                                    </li>
+                                    <li class="phone">
+                                        <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
+                                             height="33.708" viewBox="0 0 33.646 33.708">
+                                            <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
+                                                <g id="Ebene_1" data-name="Ebene 1">
+                                                    <path id="Path_1576" data-name="Path 1576"
+                                                          d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
+                                                          fill="#C5C4BE"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <a href="tel:+4974729499995">+49 7472 94999 - 95</a>
+                                    </li>
+                                    <li class="mobile">
+                                        <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
+                                             height="33.708" viewBox="0 0 33.646 33.708">
+                                            <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
+                                                <g id="Ebene_1" data-name="Ebene 1">
+                                                    <path id="Path_1576" data-name="Path 1576"
+                                                          d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
+                                                          fill="#C5C4BE"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <a href="tel:+491759330875">+49 175 9330875</a>
+                                    </li>
+                                    <li class="fax">
+                                        <svg id="fax-icon" xmlns="http://www.w3.org/2000/svg" width="33.801"
+                                             height="33.8" viewBox="0 0 33.801 33.8">
+                                            <g id="Ebene_1" data-name="Ebene 1">
+                                                <path id="Path_1570" data-name="Path 1570"
+                                                      d="M29.8,0H6V5H0V28.8H6v5H29.8v-5h4V5h-4ZM7.8,1.8H28v9.1A2.1,2.1,0,0,1,25.9,13H9.9a2.1,2.1,0,0,1-2.1-2.1ZM28,32H7.8V22.9a2.1,2.1,0,0,1,2.1-2.1h16A2.1,2.1,0,0,1,28,22.9ZM32,6.8V27H29.8V22.9A3.91,3.91,0,0,0,25.9,19H9.9A3.91,3.91,0,0,0,6,22.9V27H1.8V18.9H4.9v-4H1.8V6.8H6v4.1a3.91,3.91,0,0,0,3.9,3.9h16a3.91,3.91,0,0,0,3.9-3.9V6.8Z"
+                                                      fill="#C5C4BE"></path>
+                                            </g>
+                                        </svg>
+                                        <a href="tel:+4974729499939">+49 7472 94999 - 39</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <!--end::Sidebar-->
                     </div>
                 </div>
-                <!--end::Body-->
             </div>
-            <!--end::Careers - List-->
-        </div>
+        </main>
     </div>
 {% endblock %}

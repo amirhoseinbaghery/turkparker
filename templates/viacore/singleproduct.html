@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>singleproduct</title>
+    <link rel="stylesheet" href="assets/css/style.bundle.rtl.css">
+    <link rel="stylesheet" href="assets/css/plugins.bundle.rtl.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_contaobasic_css_reset.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_contaobasic_css_basic-video.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_contaobasic_css_basic-maps.scss.css">
+    <link rel="stylesheet"
+          href="assets/css/web_bundles_viacorbasic_css_partials_header-2-col-wrapper.scss.css">
+    <link rel="stylesheet"
+          href="assets/css/web_bundles_viacorbasic_css_elements_ce_header_category.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_elements_ce_separation.scss.css">
+    <link rel="stylesheet"
+          href="assets/css/web_bundles_viacorbasic_css_elements_ce_subcategorycard.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_swiper.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_elements_cardslider.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_products_system_teaser.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_modules_mod_systemlist.scss.css">
+    <link rel="stylesheet"
+          href="assets/css/web_bundles_viacorbasic_css_elements_ce_member_fullwidth.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_contaoprivacy_css_privacy.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_global.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_frontend_header.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_frontend_footer.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_frontend_social-links.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_frontend_offcanvas.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_modules_mod_systemfilter.scss.css">
+    <link rel="stylesheet" href="assets/css/web_bundles_viacorbasic_css_partials_header_form.scss.css">
+    <script src="assets/jquery/js/jquery.min.js"></script>
+    <script src="bundles/heimrichhannotcontaoutils/js/contao-utils-bundle.js"></script>
+    <script src="bundles/viacorbasic/js/ce_subcategorycard.js"></script>
+    <script src="bundles/viacorbasic/js/swiper-bundle.min.js"></script>
+    <script src="bundles/viacorbasic/js/cardslider.js"></script>
+    <script src="bundles/viacorbasic/js/menu.js"></script>
+    <script src="bundles/viacorbasic/js/offcanvas.js"></script>
+    <script src="bundles/viacorbasic/js/systemfilter.js"></script>
+    <script src="bundles/viacorbasic/js/form_animation.js"></script>
+    <script src="bundles/contaoprivacy/js/privacy.js"></script>
+
+
+
+</head>
+<body id="top" class="sport" itemscope itemtype="http://schema.org/WebPage">
+<div id="wrapper">
+    <div dir="rtl" id="offcanvas">
+        <div class="inside">
+            <a href="" class="offcanvas-close close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32.527" height="32.527" viewBox="0 0 32.527 32.527">
+                    <g id="Group_28" data-name="Group 28" transform="translate(16.263 -13.435) rotate(45)">
+                        <line id="Line_5" data-name="Line 5" y2="42" transform="translate(21 0)" fill="none"
+                              stroke="#c5c4be" stroke-linecap="round" stroke-width="2"></line>
+                        <line id="Line_6" data-name="Line 6" y2="42" transform="translate(42 21) rotate(90)" fill="none"
+                              stroke="#c5c4be" stroke-linecap="round" stroke-width="2"></line>
+                    </g>
+                </svg>
+            </a>
+            <div class="offcanvas-content"></div>
+        </div>
+    </div>
+    <header dir="rtl" id="header">
+        <div class="inside">
+            <div id="nav-icon" class="">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div><!-- end nav icon -->
+            <a id="logo" href="en/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="logo-svg" x="0px" y="0px"
+                     viewBox="0 0 195 70" width="195" height="70">
+        <path fill="#fff" class="logo-title"
+              d="M182.8-34.2c0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8-1.5 0-3-.7-4.1-1.7-1.1-1.1-1.7-2.6-1.7-4.1m-5.5-14.3h-.1c-.9-.2-1.8-.3-2.7-.3-1.5 0-3 .4-4.3 1.1-.5.4-1 .9-1.3 1.5-.7 1.2-1 2.6-.8 4v12.9h-10.9V-58h10.6l-.1 3.6c.4-.3.7-.6 1.1-.9 2.2-1.9 5-2.9 7.9-3 1.7.1 3.4.4 5 .9l-4.4 8.9zm-42.4-1.3c2.5-.1 4.7 1.4 5.5 3.7.3.8.4 1.6.4 2.4 0 2.7-1.1 5-3.7 5.9-.8.3-1.6.4-2.4.4-3.2.2-6-2.3-6.1-5.5v-.7c-.2-3.2 2.2-6 5.4-6.3.4.1.7.1.9.1m0-9.1c-6.5.1-13.1 2.6-16.1 8.9-.9 2.1-1.4 4.5-1.4 6.8-.2 4.8 2.1 9.3 6 12 4.4 3 9.4 2.9 11.1 2.9 3.9 0 7.4-.5 10.8-2.5 4.4-2.6 7-7.4 6.8-12.5 0-6.7-3.6-12.3-10.1-14.6-2.4-.7-4.7-1-7.1-1M110.6-38l-.6.3c-.8.3-1.6.4-2.4.4-3.2.2-6-2.3-6.1-5.5v-.7c-.2-3.2 2.2-6 5.4-6.3h.8c1 0 1.9.2 2.8.6l4.3-8.7c-2.3-.7-4.7-1-7.1-1-6.5.1-13.2 2.6-16.1 8.9-.9 2.1-1.4 4.5-1.4 6.8-.2 4.8 2.1 9.3 6 12 4.4 3 9.4 2.9 11.1 2.9 2.5.1 5.1-.3 7.5-1l-4.2-8.7zm-32.2 8.7L71.9-44l-6.2 14.7H54.2L67.7-58h8.4l13.7 28.7H78.4zM39.2-66.6c0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8-1.5 0-3-.7-4.1-1.7-1.1-1-1.7-2.5-1.7-4.1m11.4 37.3H39.7V-58h10.8v28.7zM24.2-58 18-43.3 11.5-58H0l13.8 28.7h8.4L35.7-58H24.2z"
+              transform="translate(0 72.315)"></path>
+                    <path fill="#3B3B3B" class="logo-slogan"
+                          d="M192.2 68.9h2.3v-2.3h-2.3v2.3zm-8.6-12.2 2-.8v2.7h3V60h-3v5.9c0 1.1.3 1.7 1.6 1.7.5 0 1 0 1.5-.1v1.4c-.6.1-1.3.1-1.9.1-2 0-3.2-.7-3.2-3v-6.1H181v-1.4h2.7v-1.8zm-7.3-.6h2V54h-2v2.1zm0 12.8h2V58.5h-2v10.4zm-22.9-8c0-.8 0-1.5-.1-2.3h1.9c0 .5.1 1.1.1 1.8 1-1.5 2.7-2.3 4.5-2.2 2.9 0 5 1.6 5 4.8v5.9h-2v-5.8c0-2.3-1.4-3.6-3.3-3.6s-4.1 1.2-4.1 4.4v4.9h-2v-7.9zm-9.5 8.3c-4.2 0-6.4-2-6.4-5.5 0-3.3 2.1-5.5 6.4-5.5 4.2 0 6.4 2 6.4 5.5s-2.2 5.5-6.4 5.5m-4.3-5.5c-.1 2.2 1.6 4 3.7 4.2h.6c2.2.2 4.1-1.4 4.3-3.6v-.6c.1-2.2-1.6-4-3.7-4.2h-.6c-2.2-.2-4.1 1.4-4.3 3.6v.6m-11.9.5H118c0 2 1.7 3.7 3.7 3.6h.1c1.5.1 2.9-.7 3.4-2.1h2.1c-.4 2.8-3.2 3.5-5.5 3.5-3.8 0-5.9-2.1-5.9-5.3 0-3.8 2.3-5.8 6-5.8s5.7 2 5.7 5.5l.1.6zm-2.1-1.4c0-2.4-1.8-3.3-3.6-3.3-1.9-.2-3.7 1.2-3.8 3.1v.1l7.4.1zm-13.1-4.3-4.3 8.5-4.3-8.5h-2.3l5.3 10.3h2.6l5.3-10.3h-2.3zm-15.2-2.4h2V54h-2v2.1zm0 12.8h2V58.5h-2v10.4zM84.1 54v14.8h10.7v-1.7h-8.5V54h-2.2zM74 62.5v1.7H53.5v-1.7H74z"></path>
+        </svg>
+            </a>
+            <div id="search-login">
+                <div id="search">
+                    <!-- indexer::stop -->
+                    <div class="ce_form block">
+                        <form action="search.html" method="get" enctype="application/x-www-form-urlencoded">
+                            <div class="formbody">
+                                <div class="widget widget-text mandatory">
+                                    <input type="text" name="keywords" id="ctrl_16" class="text mandatory p-6" value=""
+                                           required="" placeholder="What are you looking for?">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- indexer::continue -->
+                    <svg id="close_icon" xmlns="http://www.w3.org/2000/svg" width="22.258" height="22.259">
+                        <path fill="#3b3b3b"
+                              d="M15.855 0a6.4 6.4 0 0 0-4.931 10.486L0 21.41l.843.849 10.924-10.924A6.4 6.4 0 1 0 15.855 0Zm0 11.614a5.21 5.21 0 1 1 5.21-5.21 5.21 5.21 0 0 1-5.21 5.21Z"></path>
+                    </svg>
+                    <svg id="search_icon" xmlns="http://www.w3.org/2000/svg" width="33.538" height="33.54"
+                         viewBox="0 0 33.538 33.54">
+                        <path fill="#fff"
+                              d="M23.89 0a9.64 9.64 0 0 0-7.43 15.8L0 32.26l1.27 1.28 16.46-16.46A9.65 9.65 0 1 0 23.89 0Zm0 17.5a7.85 7.85 0 1 1 7.85-7.85 7.85 7.85 0 0 1-7.85 7.85Z"></path>
+                    </svg>
+                </div>
+                <div id="login">
+                    <a href="en/login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32.8" height="33.777" viewBox="0 0 32.8 33.777">
+                            <path fill="#fff"
+                                  d="M32.8 29.377a16.48 16.48 0 0 0-8.42-14.33 9.65 9.65 0 1 0-16 0A16.48 16.48 0 0 0 0 29.377v4.4h32.8Zm-16.4-27.6a7.85 7.85 0 1 1-7.85 7.85 7.85 7.85 0 0 1 7.85-7.85Zm14.6 30.2H1.8v-2.6a14.65 14.65 0 0 1 7.8-12.91 9.63 9.63 0 0 0 13.6 0 14.65 14.65 0 0 1 7.8 12.91Z"
+                                  data-name="Path 1593"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div id="language">
+                    <!-- indexer::stop -->
+                    <nav class="mod_changelanguage block" itemscope=""
+                         itemtype="http://schema.org/SiteNavigationElement">
+                        <div class="submenu level_1">
+                            <ul class="level_1">
+                                <li class="lang-de first"><a href="index.html"
+                                                             title="Industrieboden-, Sportboden Beschichtungssysteme"
+                                                             class="lang-de first" hreflang="de" lang="de"
+                                                             itemprop="url"><span itemprop="name">DE</span></a></li>
+                                <li class="lang-en active last"><a href="https://www.viacor.de/en/index.html"
+                                                                   title="VIACOR Polymer GmbH - Manufacturer Resin Floors"
+                                                                   class="lang-en active last" hreflang="en" lang="en"
+                                                                   itemprop="url"><span itemprop="name">EN</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <svg class="arrow-white-down" xmlns="http://www.w3.org/2000/svg" width="17.65" height="10.1"
+                             viewBox="0 0 17.65 10.1">
+                            <g id="Ebene_2" data-name="Ebene 2" transform="translate(17.65) rotate(90)">
+                                <g id="Ebene_1" data-name="Ebene 1">
+                                    <path id="Path_1592" data-name="Path 1592"
+                                          d="M1.27,17.65,10.1,8.82,1.27,0,0,1.27,7.55,8.82,0,16.37Z" fill="#fff"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </nav>
+                    <!-- indexer::continue -->
+                </div>
+            </div>
+            <!-- indexer::stop -->
+            <nav class="mod_navigation block" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="nav-inner-wrapper">
+                    <a href="en/index.html#skipNavigation1" class="invisible">Skip navigation</a>
+                    <div class="submenu level_1">
+                        <ul class="level_1">
+                            <li class="active first"><a href="en/index.html"
+                                                        title="VIACOR Polymer GmbH - Manufacturer Resin Floors"
+                                                        class="active first" itemprop="url"><span
+                                    itemprop="name">Home</span></a></li>
+                            <li class="submenu open sibling">
+                                <a href="en/products-sports-and-industrial-flooring-systems.html"
+                                   title="Sports and Industrial Flooring Systems" class="submenu open sibling"
+                                   aria-haspopup="true" itemprop="url">
+                <span itemprop="name">
+                    Products
+                </span>
+                                </a>
+                                <div class="submenu level_2 ps-20">
+                                    <span class="headline">Products</span>
+                                    <button class="btn light" id="back">
+                                        <svg id="arrow-back" xmlns="http://www.w3.org/2000/svg" width="16.5"
+                                             height="17.65">
+                                            <path data-name="Path 1591"
+                                                  d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"
+                                                  fill="#3b3b3b"></path>
+                                        </svg>
+                                        Back
+                                    </button>
+                                    <ul class="level_2 ">
+                                        <li class="submenu sport first"><a
+                                                href="en/systems/sports-and-fun-floorings.html"
+                                                href="en/systems/sports-and-fun-floorings.html"
+                                                title="Sports and Fun Flooring Systems" class="submenu sport first"
+                                                aria-haspopup="true" itemprop="url"><span itemprop="name">Sports &amp; Fun</span></a>
+                                            <div class="submenu level_3 ps-20">
+                                                <ul class="level_3">
+                                                    <li class="sport first"><a
+                                                            href="en/systems/sports-and-fun/overview-sports-flooring-systems.html"
+                                                            title="Overview Sports and Playground Flooring Systems"
+                                                            class="sport first" itemprop="url"><span itemprop="name">Overview</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#laufbahnen"
+                                                           title="Running tracks" itemprop="url"><span itemprop="name">Running tracks</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#multifunktionsspielfelder"
+                                                           title="Multipurpose playing fields" itemprop="url"><span
+                                                                itemprop="name">Multipurpose playing fields</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#tennisplaetze"
+                                                           title="Tennis courts" itemprop="url"><span itemprop="name">Tennis courts</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#fitnessstudio"
+                                                           title="Fitness studio" itemprop="url"><span itemprop="name">Fitness studio</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#sporthalle"
+                                                           title="Sports hall" itemprop="url"><span itemprop="name">Sports hall</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#spielplaetze-fallschutz"
+                                                           title="Playgrounds &amp; Falll protection"
+                                                           itemprop="url"><span itemprop="name">Playgrounds &amp; Falll protection</span></a>
+                                                    </li>
+                                                    <li class="last"><a
+                                                            href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#freizeitanlagen"
+                                                            title="Leisure facilities" class="last" itemprop="url"><span
+                                                            itemprop="name">Leisure facilities</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="submenu industry"><a
+                                                href="en/systems/industry-production-logistics-flooring-systems.html"
+                                                title="Flooring Systems for Industry" class="submenu industry"
+                                                aria-haspopup="true" itemprop="url"><span itemprop="name">Industry, Production, Logistics</span></a>
+                                            <div class="submenu level_3">
+                                                <ul class="level_3">
+                                                    <li class="industry first"><a
+                                                            href="en/systems/industry-production-logistcs/overview.html"
+                                                            title="Overview - Industrial and Funtional Flooring Systems"
+                                                            class="industry first" itemprop="url"><span itemprop="name">Overview - Industrial Flooring Systems</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#automotive"
+                                                           title="Automotive" itemprop="url"><span itemprop="name">Automotive</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#chemie"
+                                                           title="Chemicals" itemprop="url"><span itemprop="name">Chemicals</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#pharma"
+                                                           title="Pharmaceuticals" itemprop="url"><span itemprop="name">Pharmaceuticals</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#elektronik"
+                                                           title="Electronics" itemprop="url"><span itemprop="name">Electronics</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#food-beverage"
+                                                           title="Food &amp; Beverage" itemprop="url"><span
+                                                                itemprop="name">Food &amp; Beverage</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#logistik"
+                                                           title="Logistics" itemprop="url"><span itemprop="name">Logistics</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/industry-production-logistcs/overview.html#produktions-werkhallen"
+                                                           title="Mechanical engineering" itemprop="url"><span
+                                                                itemprop="name">Mechanical engineering</span></a></li>
+                                                    <li class="last"><a
+                                                            href="en/systems/industry-production-logistcs/overview.html#waterproofing"
+                                                            title="Waterproofing" class="last" itemprop="url"><span
+                                                            itemprop="name">Waterproofing</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="submenu health"><a
+                                                href="en/systems/healthcare-and-gastronomy-flooring-systems.html"
+                                                title="Flooring Systems for Healthcare &amp; Gastronomy"
+                                                class="submenu health" aria-haspopup="true" itemprop="url"><span
+                                                itemprop="name">Healthcare &amp; Gastronomy</span></a>
+                                            <div class="submenu level_3">
+                                                <ul class="level_3">
+                                                    <li class="health first"><a
+                                                            href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html"
+                                                            title="Overview - Hygienic Floor Coverings for Healthcare &amp; Gastronomy"
+                                                            class="health first" itemprop="url"><span itemprop="name">Overview</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#krankenhaeuser"
+                                                           title="Hospitals" itemprop="url"><span itemprop="name">Hospitals</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#arztpraxen"
+                                                           title="Medical Practices" itemprop="url"><span
+                                                                itemprop="name">Medical Practices</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#labore"
+                                                           title="Laboratories" itemprop="url"><span itemprop="name">Laboratories</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#restaurants"
+                                                           title="Restaurants" itemprop="url"><span itemprop="name">Restaurants</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#kuechen"
+                                                           title="Kitchens" itemprop="url"><span itemprop="name">Kitchens</span></a>
+                                                    </li>
+                                                    <li class="last"><a
+                                                            href="en/systems/healthcare-gastro/overview-hygienic-flooring-systems.html#kantinen"
+                                                            title="Canteens" class="last" itemprop="url"><span
+                                                            itemprop="name">Canteens</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="submenu parking"><a
+                                                href="en/systems/car-parking-flooring-systems.html"
+                                                title="Car Parking Flooring Systems" class="submenu parking"
+                                                aria-haspopup="true" itemprop="url"><span itemprop="name">Parking</span></a>
+                                            <div class="submenu level_3">
+                                                <ul class="level_3">
+                                                    <li class="parking first"><a
+                                                            href="en/systems/parken/overview-car-parking-flooring-systems.html"
+                                                            title="Overview - VIASOL Car Parking Flooring Systems"
+                                                            class="parking first" itemprop="url"><span itemprop="name">Overview</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/parken/overview-car-parking-flooring-systems.html#freidecks"
+                                                           title="Exposed parking areas" itemprop="url"><span
+                                                                itemprop="name">Exposed parking areas</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/parken/overview-car-parking-flooring-systems.html#tiefgaragen"
+                                                           title="Underground car park" itemprop="url"><span
+                                                                itemprop="name">Underground car park</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/parken/overview-car-parking-flooring-systems.html#zwischendecks"
+                                                           title="Intermediate Decks" itemprop="url"><span
+                                                                itemprop="name">Intermediate Decks</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/parken/overview-car-parking-flooring-systems.html#rampen-spindeln"
+                                                           title="Ramps &amp; Spiral ramps" itemprop="url"><span
+                                                                itemprop="name">Ramps &amp; Spiral ramps</span></a></li>
+                                                    <li class="last"><a
+                                                            href="en/systems/parken/overview-car-parking-flooring-systems.html#brueckengehwege"
+                                                            title="Bridge Sidewalks" class="last" itemprop="url"><span
+                                                            itemprop="name">Bridge Sidewalks</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="submenu spaces last"><a
+                                                href="en/systems/public-private/elastic-flooring-systems-for-offices.html"
+                                                title="Elastic Flooring Systems for Offices, Schools, Kindergarden"
+                                                class="submenu spaces last" aria-haspopup="true" itemprop="url"><span
+                                                itemprop="name">Public &amp; Private</span></a>
+                                            <div class="submenu level_3">
+                                                <ul class="level_3">
+                                                    <li class="spaces first"><a
+                                                            href="en/systems/public-private/overview-elastic-pu-flooring-systems.html"
+                                                            title="Overview - Elastic Flooring Systems for Public and Private"
+                                                            class="spaces first" itemprop="url"><span itemprop="name">Overview</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#bueros"
+                                                           title="Offices" itemprop="url"><span
+                                                                itemprop="name">Offices</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#schulen"
+                                                           title="Schools" itemprop="url"><span
+                                                                itemprop="name">Schools</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#kindergaerten"
+                                                           title="Kindergarden" itemprop="url"><span itemprop="name">Kindergarden</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#flure"
+                                                           title="Floors" itemprop="url"><span
+                                                                itemprop="name">Floors</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#shops-einzelhandel"
+                                                           title="Shops &amp; Einzelhandel" itemprop="url"><span
+                                                                itemprop="name">Shops &amp; Einzelhandel</span></a></li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#showrooms"
+                                                           title="Showrooms" itemprop="url"><span itemprop="name">Showrooms</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#wohnungen"
+                                                           title="Wohnungen" itemprop="url"><span itemprop="name">Wohnungen</span></a>
+                                                    </li>
+                                                    <li class="last"><a
+                                                            href="en/systems/public-private/overview-elastic-pu-flooring-systems.html#sanitaer-sozialraeume"
+                                                            title="Sanitär- &amp; Sozialräume" class="last"
+                                                            itemprop="url"><span itemprop="name">Sanitär- &amp; Sozialräume</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sibling"><a href="en/blog.html" title="Blog" class="sibling" itemprop="url"><span
+                                    itemprop="name">Blog</span></a></li>
+                            <li class="submenu sibling"><a href="en/tools.html"
+                                                           title="VIACOR Tools for flooring work and installers"
+                                                           class="submenu sibling" aria-haspopup="true"
+                                                           itemprop="url"><span itemprop="name">Tools</span></a>
+                                <div class="submenu level_2">
+                                    <span class="headline">Tools</span>
+                                    <button class="btn light" id="back">
+                                        <svg id="arrow-back" xmlns="http://www.w3.org/2000/svg" width="16.5"
+                                             height="17.65">
+                                            <path data-name="Path 1591"
+                                                  d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"
+                                                  fill="#3b3b3b"></path>
+                                        </svg>
+                                        Back
+                                    </button>
+                                    <ul class="level_2">
+                                        <li class="first"><a href="en/tools/viacor-2in1-app.html"
+                                                             title="The 2in1 Flooring Material App - for installer and planner"
+                                                             class="first" itemprop="url"><span itemprop="name">VIACOR 2in1 App</span></a>
+                                        </li>
+                                        <li><a href="en/tools/tenders.html" title="Tenders" itemprop="url"><span
+                                                itemprop="name">Tenders</span></a></li>
+                                        <li class="last"><a href="en/downloadcenter.html"
+                                                            title="Download Area for Flooring Systems and Products"
+                                                            class="last" itemprop="url"><span itemprop="name">Downloadcenter</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="unternehmen sibling"><a href="en/company.html"
+                                                               title="VIACOR - Live on it. We work with and for people."
+                                                               class="unternehmen sibling" itemprop="url"><span
+                                    itemprop="name">Company</span></a></li>
+                            <li class="sibling"><a href="en/company/team.html" title="The Team of VIACOR"
+                                                   class="sibling" itemprop="url"><span itemprop="name">Team</span></a>
+                            </li>
+                            <li class="sibling last"><a href="en/career.html" title="Career" class="sibling last"
+                                                        itemprop="url"><span itemprop="name">Career</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- indexer::stop -->
+                    <nav class="mod_customnav servicelinks block" itemscope=""
+                         itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="en/index.html#skipNavigation7" class="invisible">Skip navigation</a>
+                        <div class="submenu level_1">
+                            <ul class="level_1">
+                                <li class="first"><a href="en/imprint.html" title="Imprint" class="first"
+                                                     itemprop="url"><span itemprop="name">Imprint</span></a></li>
+                                <li><a href="en/privacy.html" title="Privacy" itemprop="url"><span itemprop="name">Privacy</span></a>
+                                </li>
+                                <li class="last"><a href="https://porplastic.de/?lang=en" title="Porplastic - redirect"
+                                                    class="last" target="_blank" rel="noreferrer noopener"
+                                                    itemprop="url"><span itemprop="name">Porplastic</span></a></li>
+                            </ul>
+                        </div>
+                        <a id="skipNavigation7" class="invisible">&nbsp;</a>
+                    </nav>
+                    <!-- indexer::continue -->
+                    <div class="social-links">
+                        <p>Stay up to date</p>
+                        <ul>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/viacor_porplastic/" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="34.146"
+                                         viewBox="0 0 34.147 34.146">
+                                        <path id="instagram"
+                                              d="M17.074,0c-4.633,0-5.216.021-7.036.1A12.581,12.581,0,0,0,5.89.9a8.36,8.36,0,0,0-3.024,1.97A8.381,8.381,0,0,0,.9,5.89,12.506,12.506,0,0,0,.1,10.03C.021,11.855,0,12.436,0,17.075s.021,5.216.1,7.036A12.577,12.577,0,0,0,.9,28.256,8.741,8.741,0,0,0,5.888,33.25a12.535,12.535,0,0,0,4.145.794c1.823.081,2.4.1,7.041.1s5.216-.021,7.039-.1a12.6,12.6,0,0,0,4.147-.794,8.741,8.741,0,0,0,4.992-4.994,12.633,12.633,0,0,0,.794-4.145c.081-1.82.1-2.4.1-7.038s-.021-5.218-.1-7.041a12.618,12.618,0,0,0-.794-4.142,8.379,8.379,0,0,0-1.97-3.024A8.347,8.347,0,0,0,28.257.9,12.561,12.561,0,0,0,24.11.1c-1.823-.081-2.4-.1-7.041-.1h.006Zm-1.53,3.077h1.532c4.559,0,5.1.015,6.9.1a9.462,9.462,0,0,1,3.171.587,5.3,5.3,0,0,1,1.963,1.278A5.275,5.275,0,0,1,30.385,7a9.377,9.377,0,0,1,.587,3.169c.083,1.8.1,2.339.1,6.9s-.017,5.1-.1,6.9a9.445,9.445,0,0,1-.587,3.169,5.659,5.659,0,0,1-3.242,3.237,9.393,9.393,0,0,1-3.169.589c-1.8.081-2.339.1-6.9.1s-5.1-.019-6.9-.1a9.431,9.431,0,0,1-3.169-.589A5.289,5.289,0,0,1,5.043,29.1a5.293,5.293,0,0,1-1.281-1.963,9.432,9.432,0,0,1-.587-3.169c-.081-1.8-.1-2.339-.1-6.9s.017-5.1.1-6.9A9.446,9.446,0,0,1,3.765,7,5.3,5.3,0,0,1,5.043,5.034,5.275,5.275,0,0,1,7.007,3.758a9.431,9.431,0,0,1,3.169-.589c1.575-.073,2.185-.094,5.367-.1v0ZM26.189,5.912A2.049,2.049,0,1,0,28.238,7.96a2.049,2.049,0,0,0-2.049-2.049ZM17.076,8.306a8.769,8.769,0,1,0,8.769,8.769,8.768,8.768,0,0,0-8.769-8.769Zm0,3.075a5.692,5.692,0,1,1-5.692,5.692A5.692,5.692,0,0,1,17.076,11.381Z"
+                                              fill="#c5c4be"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/ViacorPolymerGmbH/" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.151" height="34.151"
+                                         viewBox="0 0 34.151 34.151">
+                                        <path id="facebook-2"
+                                              d="M34.149,17.179A17.076,17.076,0,1,0,14.4,34.15v-12H10.071V17.181h4.337V13.393c0-4.3,2.55-6.682,6.45-6.682a26.116,26.116,0,0,1,3.822.335v4.226H22.527a2.476,2.476,0,0,0-2.781,2.685v3.223h4.734l-.756,4.964h-3.98v12A17.152,17.152,0,0,0,34.149,17.179Z"
+                                              transform="translate(0.002 0.001)" fill="#c5c4be"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="https://www.youtube.com/channel/UC6QUEQVpyh4GoULzSOyt4JQ" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.84" height="24.474"
+                                         viewBox="0 0 34.84 24.474">
+                                        <path id="youtube-2"
+                                              d="M17.532,2h.194c1.79.007,10.86.072,13.305.729a4.377,4.377,0,0,1,3.081,3.092,19.719,19.719,0,0,1,.479,3.053l.022.226.048.566.017.226c.142,1.99.159,3.854.161,4.262v.163c0,.422-.022,2.413-.179,4.486l-.017.229-.02.226a21.571,21.571,0,0,1-.512,3.393,4.37,4.37,0,0,1-3.081,3.092c-2.526.679-12.127.727-13.458.729h-.309c-.673,0-3.456-.013-6.374-.113l-.37-.013-.189-.009-.372-.015-.372-.015a35.006,35.006,0,0,1-5.779-.566,4.37,4.37,0,0,1-3.081-3.09,21.531,21.531,0,0,1-.512-3.393L.2,19.03.179,18.8Q.017,16.59,0,14.37V14.1c0-.468.022-2.086.139-3.872l.015-.224.007-.113.017-.226L.226,9.1l.022-.226A19.676,19.676,0,0,1,.727,5.821,4.37,4.37,0,0,1,3.809,2.728a35.746,35.746,0,0,1,5.779-.566l.37-.015.375-.013.187-.007.372-.015Q14,2.012,17.112,2h.42Zm-3.6,6.99V19.481l9.052-5.244Z"
+                                              transform="translate(0 -1.999)" fill="#c5c4be"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="https://www.linkedin.com/company/viacor-polymer-gmbh" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="34.146"
+                                         viewBox="0 0 34.147 34.146">
+                                        <path id="linkedin-3"
+                                              d="M0,2.446A2.477,2.477,0,0,1,2.508,0H31.639a2.477,2.477,0,0,1,2.508,2.446V31.7a2.477,2.477,0,0,1-2.508,2.446H2.508A2.477,2.477,0,0,1,0,31.7ZM10.549,28.585V13.166H5.425V28.585ZM7.988,11.059a2.672,2.672,0,1,0,.034-5.327,2.671,2.671,0,1,0-.068,5.327ZM18.463,28.585V19.973a3.479,3.479,0,0,1,.171-1.251,2.8,2.8,0,0,1,2.629-1.874c1.855,0,2.6,1.413,2.6,3.487v8.248h5.124V19.741c0-4.738-2.527-6.94-5.9-6.94a5.092,5.092,0,0,0-4.621,2.546V15.4h-.034l.034-.053V13.166H13.341c.064,1.447,0,15.419,0,15.419Z"
+                                              fill="#c5c4be"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/ViacorPolymer" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="27.746"
+                                         viewBox="0 0 34.147 27.746">
+                                        <path id="twitter"
+                                              d="M10.726,29.745c12.886,0,19.935-10.677,19.935-19.92,0-.3,0-.6-.013-.9a14.267,14.267,0,0,0,3.5-3.632A14.21,14.21,0,0,1,30.116,6.4,7.045,7.045,0,0,0,33.2,2.52,13.943,13.943,0,0,1,28.75,4.212,7.013,7.013,0,0,0,16.807,10.6,19.9,19.9,0,0,1,2.365,3.284a7.019,7.019,0,0,0,2.173,9.352,7.092,7.092,0,0,1-3.171-.871v.1a7.017,7.017,0,0,0,5.617,6.868,6.836,6.836,0,0,1-1.846.245,6.893,6.893,0,0,1-1.31-.122,7.007,7.007,0,0,0,6.546,4.859,14.06,14.06,0,0,1-8.708,3A13.488,13.488,0,0,1,0,26.618a19.942,19.942,0,0,0,10.726,3.127Z"
+                                              transform="translate(0 -1.999)" fill="#c5c4be"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="xing">
+                                <a href="https://www.xing.com/companies/viacorpolymergmbh" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38.405" height="40.965"
+                                         viewBox="0 0 38.405 40.965">
+                                        <g id="xing" transform="translate(0)">
+                                            <g id="Group_69" data-name="Group 69" transform="translate(14.617)">
+                                                <g id="Group_68" data-name="Group 68">
+                                                    <path id="Path_27" data-name="Path 27"
+                                                          d="M222.476,0h-9.57L198.688,24.9l9.161,16.061h9.57L208.258,24.9Z"
+                                                          transform="translate(-198.688)" fill="#c5c4be"></path>
+                                                </g>
+                                            </g>
+                                            <g id="Group_71" data-name="Group 71" transform="translate(0 7.681)">
+                                                <g id="Group_70" data-name="Group 70">
+                                                    <path id="Path_28" data-name="Path 28"
+                                                          d="M26.659,96H17.636l5.22,9.194L16,116.482h9.023l6.856-11.288Z"
+                                                          transform="translate(-16 -96)" fill="#c5c4be"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a id="skipNavigation1" class="invisible">&nbsp;</a>
+                </div>
+            </nav>
+            <!-- indexer::continue -->            </div>
+    </header>
+    <!--<div id="wrapper">-->
+    <div id="container">
+        <main id="main">
+            <div class="inside rtl">
+                <div class="mod_article first last block" id="article-175">
+                    <div class="ce_headercategory first block">
+                        <div class="wrapper header-2-col-wrapper">
+                            <div class="header-left-column">
+                                <ul class="cols_4" itemscope itemtype="http://schema.org/ImageGallery">
+                                    <li class="row_0 row_first row_last even col_0 col_first">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/e/Sport-Category-Collage-Image-1-2-c3893d87.webp"
+                                                        media="(min-width: 3840px)" type="image/webp" width="1280"
+                                                        height="800">
+                                                <source srcset="assets/images/6/Sport-Category-Collage-Image-1-2-d691eeae.jpg"
+                                                        media="(min-width: 3840px)" width="1280" height="800">
+                                                <source srcset="assets/images/f/Sport-Category-Collage-Image-1-2-eceda5e6.webp"
+                                                        media="(min-width: 2560px) and (max-width: 3839px)"
+                                                        type="image/webp" width="1000" height="625">
+                                                <source srcset="assets/images/a/Sport-Category-Collage-Image-1-2-da72e896.jpg"
+                                                        media="(min-width: 2560px) and (max-width: 3839px)" width="1000"
+                                                        height="625">
+                                                <source srcset="assets/images/9/Sport-Category-Collage-Image-1-2-55335315.webp"
+                                                        media="(min-width: 1921px) and (max-width: 2559px)"
+                                                        type="image/webp" width="800" height="800">
+                                                <source srcset="assets/images/4/Sport-Category-Collage-Image-1-2-af1f0a05.jpg"
+                                                        media="(min-width: 1921px) and (max-width: 2559px)" width="800"
+                                                        height="800">
+                                                <source srcset="assets/images/4/Sport-Category-Collage-Image-1-2-2bfbb7fb.webp"
+                                                        media="(min-width: 1201px) and (max-width: 1920px)"
+                                                        type="image/webp" width="400" height="600">
+                                                <source srcset="assets/images/4/Sport-Category-Collage-Image-1-2-482ffe38.jpg"
+                                                        media="(min-width: 1201px) and (max-width: 1920px)" width="400"
+                                                        height="600">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-1-2-58b714e9.webp"
+                                                        media="(min-width: 768px) and (max-width: 1200px)"
+                                                        type="image/webp" width="600" height="400">
+                                                <source srcset="assets/images/b/Sport-Category-Collage-Image-1-2-34cfc21f.jpg"
+                                                        media="(min-width: 768px) and (max-width: 1200px)" width="600"
+                                                        height="400">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-1-2-4f948b43.webp"
+                                                        media="(min-width: 415px) and (max-width: 767px)"
+                                                        type="image/webp" width="385" height="285">
+                                                <source srcset="assets/images/5/Sport-Category-Collage-Image-1-2-30ac6e59.jpg"
+                                                        media="(min-width: 415px) and (max-width: 767px)" width="385"
+                                                        height="285">
+                                                <source srcset="assets/images/e/Sport-Category-Collage-Image-1-2-cff24740.webp"
+                                                        media="(max-width: 414px)" type="image/webp" width="250"
+                                                        height="250">
+                                                <source srcset="assets/images/4/Sport-Category-Collage-Image-1-2-dfe01d47.jpg"
+                                                        media="(max-width: 414px)" width="250" height="250">
+                                                <source srcset="assets/images/e/Sport-Category-Collage-Image-1-2-94d50654.webp"
+                                                        type="image/webp" width="1280" height="1280">
+                                                <img src="assets/images/2/Sport-Category-Collage-Image-1-2-7f0b79b2.jpg"
+                                                     width="1280" height="1280" alt="" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                    </li>
+                                    <li class="row_0 row_first row_last even col_1">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/9/Sport-Category-Collage-Image-2-9695c3f9.webp"
+                                                        media="(min-width: 3840px)" type="image/webp" width="1280"
+                                                        height="800">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-2-a6b970bc.jpg"
+                                                        media="(min-width: 3840px)" width="1280" height="800">
+                                                <source srcset="assets/images/2/Sport-Category-Collage-Image-2-4cdb5526.webp"
+                                                        media="(min-width: 2560px) and (max-width: 3839px)"
+                                                        type="image/webp" width="1000" height="625">
+                                                <source srcset="assets/images/8/Sport-Category-Collage-Image-2-07007c76.jpg"
+                                                        media="(min-width: 2560px) and (max-width: 3839px)" width="1000"
+                                                        height="625">
+                                                <source srcset="assets/images/3/Sport-Category-Collage-Image-2-37c32959.webp"
+                                                        media="(min-width: 1921px) and (max-width: 2559px)"
+                                                        type="image/webp" width="800" height="800">
+                                                <source srcset="assets/images/2/Sport-Category-Collage-Image-2-0f212bc0.jpg"
+                                                        media="(min-width: 1921px) and (max-width: 2559px)" width="800"
+                                                        height="800">
+                                                <source srcset="assets/images/7/Sport-Category-Collage-Image-2-3be46ed0.webp"
+                                                        media="(min-width: 1201px) and (max-width: 1920px)"
+                                                        type="image/webp" width="400" height="600">
+                                                <source srcset="assets/images/b/Sport-Category-Collage-Image-2-ad4052da.jpg"
+                                                        media="(min-width: 1201px) and (max-width: 1920px)" width="400"
+                                                        height="600">
+                                                <source srcset="assets/images/8/Sport-Category-Collage-Image-2-2075dc6e.webp"
+                                                        media="(min-width: 768px) and (max-width: 1200px)"
+                                                        type="image/webp" width="600" height="400">
+                                                <source srcset="assets/images/8/Sport-Category-Collage-Image-2-4aea6767.jpg"
+                                                        media="(min-width: 768px) and (max-width: 1200px)" width="600"
+                                                        height="400">
+                                                <source srcset="assets/images/5/Sport-Category-Collage-Image-2-c106c857.webp"
+                                                        media="(min-width: 415px) and (max-width: 767px)"
+                                                        type="image/webp" width="385" height="285">
+                                                <source srcset="assets/images/5/Sport-Category-Collage-Image-2-2b9d1724.jpg"
+                                                        media="(min-width: 415px) and (max-width: 767px)" width="385"
+                                                        height="285">
+                                                <source srcset="assets/images/e/Sport-Category-Collage-Image-2-e64a1671.webp"
+                                                        media="(max-width: 414px)" type="image/webp" width="250"
+                                                        height="250">
+                                                <source srcset="assets/images/7/Sport-Category-Collage-Image-2-386cad1f.jpg"
+                                                        media="(max-width: 414px)" width="250" height="250">
+                                                <source srcset="assets/images/c/Sport-Category-Collage-Image-2-3d711586.webp"
+                                                        type="image/webp" width="1280" height="1280">
+                                                <img src="assets/images/e/Sport-Category-Collage-Image-2-d972a9f5.jpg"
+                                                     width="1280" height="1280" alt="" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                    </li>
+                                    <li class="row_0 row_first row_last even col_2">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/Sport-Category-Collage-Image-3-2-65bff73a.webp"
+                                                        media="(min-width: 2560px)" type="image/webp" width="300"
+                                                        height="600">
+                                                <source srcset="assets/images/3/Sport-Category-Collage-Image-3-2-73a85fc7.jpg"
+                                                        media="(min-width: 2560px)" width="300" height="600">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-3-2-0d309900.webp"
+                                                        media="(min-width: 1201px) and (max-width: 2559px)"
+                                                        type="image/webp" width="150" height="500">
+                                                <source srcset="assets/images/9/Sport-Category-Collage-Image-3-2-3d52fcd0.jpg"
+                                                        media="(min-width: 1201px) and (max-width: 2559px)" width="150"
+                                                        height="500">
+                                                <source srcset="assets/images/e/Sport-Category-Collage-Image-3-2-046b1b5c.webp"
+                                                        media="(min-width: 768px) and (max-width: 1200px)"
+                                                        type="image/webp" width="200" height="400">
+                                                <source srcset="assets/images/2/Sport-Category-Collage-Image-3-2-39ed42bf.jpg"
+                                                        media="(min-width: 768px) and (max-width: 1200px)" width="200"
+                                                        height="400">
+                                                <source srcset="assets/images/6/Sport-Category-Collage-Image-3-2-c56dae2e.webp"
+                                                        media="(max-width: 767px)" type="image/webp" width="150"
+                                                        height="300">
+                                                <source srcset="assets/images/6/Sport-Category-Collage-Image-3-2-fefb7b84.jpg"
+                                                        media="(max-width: 767px)" width="150" height="300">
+                                                <source srcset="assets/images/d/Sport-Category-Collage-Image-3-2-65bff73a.webp"
+                                                        type="image/webp" width="300" height="600">
+                                                <img src="assets/images/3/Sport-Category-Collage-Image-3-2-73a85fc7.jpg"
+                                                     width="300" height="600" alt="" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                    </li>
+                                    <li class="row_0 row_first row_last even col_3 col_last">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-4-3e6a8ea0.webp"
+                                                        media="(min-width: 3840px)" type="image/webp" width="1500"
+                                                        height="1000">
+                                                <source srcset="assets/images/6/Sport-Category-Collage-Image-4-b9166a82.jpg"
+                                                        media="(min-width: 3840px)" width="1500" height="1000">
+                                                <source srcset="assets/images/6/Sport-Category-Collage-Image-4-b3a76e43.webp"
+                                                        media="(min-width: 2560px)" type="image/webp" width="1400"
+                                                        height="933">
+                                                <source srcset="assets/images/d/Sport-Category-Collage-Image-4-78a8d4e3.jpg"
+                                                        media="(min-width: 2560px)" width="1400" height="933">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-4-2cbf32d8.webp"
+                                                        media="(min-width: 1920px)" type="image/webp" width="920"
+                                                        height="613">
+                                                <source srcset="assets/images/f/Sport-Category-Collage-Image-4-64ffc1eb.jpg"
+                                                        media="(min-width: 1920px)" width="920" height="613">
+                                                <source srcset="assets/images/3/Sport-Category-Collage-Image-4-36e37d23.webp"
+                                                        media="(min-width: 1600px)" type="image/webp" width="750"
+                                                        height="500">
+                                                <source srcset="assets/images/2/Sport-Category-Collage-Image-4-32986a7b.jpg"
+                                                        media="(min-width: 1600px)" width="750" height="500">
+                                                <source srcset="assets/images/3/Sport-Category-Collage-Image-4-d7a38713.webp"
+                                                        media="(min-width: 1201px) and (max-width: 1599px)"
+                                                        type="image/webp" width="580" height="387">
+                                                <source srcset="assets/images/0/Sport-Category-Collage-Image-4-f5c36a4c.jpg"
+                                                        media="(min-width: 1201px) and (max-width: 1599px)" width="580"
+                                                        height="387">
+                                                <source srcset="assets/images/c/Sport-Category-Collage-Image-4-46ce8bce.webp"
+                                                        media="(min-width: 768px) and (max-width: 1200px)"
+                                                        type="image/webp" width="1080" height="500">
+                                                <source srcset="assets/images/4/Sport-Category-Collage-Image-4-1e155e18.jpg"
+                                                        media="(min-width: 768px) and (max-width: 1200px)" width="1080"
+                                                        height="500">
+                                                <source srcset="assets/images/3/Sport-Category-Collage-Image-4-4c969959.webp"
+                                                        media="(min-width: 481px) and (max-width: 767px)"
+                                                        type="image/webp" width="680" height="450">
+                                                <source srcset="assets/images/d/Sport-Category-Collage-Image-4-d9d71571.jpg"
+                                                        media="(min-width: 481px) and (max-width: 767px)" width="680"
+                                                        height="450">
+                                                <source srcset="assets/images/8/Sport-Category-Collage-Image-4-ef4e390d.webp"
+                                                        media="(max-width: 480px)" type="image/webp" width="420"
+                                                        height="250">
+                                                <source srcset="assets/images/c/Sport-Category-Collage-Image-4-b06f2ee9.jpg"
+                                                        media="(max-width: 480px)" width="420" height="250">
+                                                <source srcset="assets/images/5/Sport-Category-Collage-Image-4-3a7aac6b.webp"
+                                                        type="image/webp" width="1920" height="1280">
+                                                <img src="assets/images/9/Sport-Category-Collage-Image-4-469ee303.jpg"
+                                                     width="1920" height="1280" alt="" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-right-column">
+                                <div class="text-content-wrap">
+<span class="category">
+Sport                    </span>
+                                    <h1>Win on it.<br>Count on it.<br>Live on it.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce_separation block">
+                        <div class="wrapper">
+                            <p class="big"><strong>Winning means that you are willing to run longer, to work harder, and
+                                to give more than everyone else [<span class="su-quote-cite">Vince Lombardi - American Football Coach]</span></strong>
+                            </p>
+                            <p>Since more than 50 years we develop sports flooring systems. PORPLASTIC sports coatings
+                                are being used worldwide in sports clubs / sports centres, for running tracks, sports
+                                halls, multifunctional playing fields, fall protection for playgrounds and artificial
+                                turf.</p></div>
+                    </div>
+                    <div class="mod_categorylist ce_sliderStart card-slider category-card-slider">
+                        <div class="inside">
+                            <h2 class="title">Sub-Areas</h2>
+                            <div class="swiper content-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="ce_subcategorycard swiper-slide" data-subcategory="tennisplaetze">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/f/Porplastic-Tennisplatz-01-b39fc1cf.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/7/Porplastic-Tennisplatz-01-4b652e26.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/2/Porplastic-Tennisplatz-01-11e55fc0.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/c/Porplastic-Tennisplatz-01-3fe8b695.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Tennis Courts</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>The diversity of tennis court systems! Low-maintenance all-weather sand
+                                                courts or hard courts for tennis halls or outdoor facilities. Since many
+                                                years Porsche counts on the PORPLASTIC RedClay pro system for the WTA
+                                                tournament in Stuttgart.</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide" data-subcategory="laufbahnen">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/0/porplastic-laufbahn-01-fe59d43a.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/2/porplastic-laufbahn-01-226fc8b9.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/3/porplastic-laufbahn-01-09b124c9.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/9/porplastic-laufbahn-01-81ad68b2.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Running Tracks</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>Athletic surfaces for stadium, schools and sport centers - Excellent
+                                                track record as sporting surfaces used in mass sports as well as the
+                                                optimum surface for pros when performing during top-class level national
+                                                or international competitions and tournaments.</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide" data-subcategory="sporthallen">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/3/combined-elastic-sports-flooring-system-porplastic-40dbf711.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/7/combined-elastic-sports-flooring-system-porplastic-21858afe.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/4/combined-elastic-sports-flooring-system-porplastic-f3533b4f.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/3/combined-elastic-sports-flooring-system-porplastic-a7d86c8c.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Sports Halls</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>The individual layers of the indoor flooring system determine the type of
+                                                sports for usage. The point elastic systems are ideal for school sports
+                                                halls and areas used for gymnastics. The combined elastic systems are an
+                                                ideal system for heavier loads and ball sports.</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide"
+                                         data-subcategory="spielplaetze-fallschutz">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/9/porplastic-spielplatz-01-3039fd21.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/0/porplastic-spielplatz-01-c5d83078.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/8/porplastic-spielplatz-01-acf47e40.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/b/porplastic-spielplatz-01-d035f9a1.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Play&shy;grounds & Fall Protection</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>Children’s play areas should be clean, safe and fun. The highly elastic
+                                                PORPLASTIC impact-absorbing surfaces prevent accidents and protect from
+                                                injury: smooth surfaces to prevent tripping. Public fitness areas for
+                                                outdoor workouts must comply with stringent legal requirements
+                                                concerning the safety aspects of fall protection.</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide"
+                                         data-subcategory="multifunktionsfelder">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/b/porplastic-spielfeld-01-e400234e.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/6/porplastic-spielfeld-01-a58eb26c.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/3/porplastic-spielfeld-01-57224a77.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/6/porplastic-spielfeld-01-dc6bb8d8.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Multi&shy;purpose Playing Fields</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>The all-rounder for all team sports! Our „All-round sport surfaces“ for
+                                                playing fields and running tracks are economical possibilities for
+                                                schools and clubs due to little maintenance effort and since all sports
+                                                can be practiced on these floors. The ideal sports field for all:
+                                                soccer, futsal, handball, tennis, school sport, rugby, basketball,
+                                                volleyball and many more.</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide" data-subcategory="fitnessstudio">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/8/porplastic-fitness-studio-cf757870.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/9/porplastic-fitness-studio-b8e89a39.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/f/porplastic-fitness-studio-85dd35d4.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/2/porplastic-fitness-studio-22db8fbb.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Fitness Studio</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>The power surface for man and machine! The impact of heavy load machines,
+                                                robust training equipment or people on the ground of a fitness studio
+                                                could not be different. The floor covering PORPLASTIC ACTIVE Fitness was
+                                                created especially for these demands. One for All!</p></div>
+                                    </div>
+                                    <div class="ce_subcategorycard swiper-slide ms-5" data-subcategory="freizeitanlagen">
+                                        <div class="wrapper">
+                                            <figure class="image_container">
+                                                <picture>
+                                                    <source srcset="assets/images/e/porplastic-freizeitanlage-01-e895ff62.webp"
+                                                            media="(max-width: 1024px)" type="image/webp" width="300"
+                                                            height="428">
+                                                    <source srcset="assets/images/6/porplastic-freizeitanlage-01-688e7055.jpg"
+                                                            media="(max-width: 1024px)" width="300" height="428">
+                                                    <source srcset="assets/images/c/porplastic-freizeitanlage-01-3c75ca20.webp"
+                                                            type="image/webp" width="420" height="600">
+                                                    <img src="assets/images/b/porplastic-freizeitanlage-01-1d1acdf2.jpg"
+                                                         width="420" height="600" alt="" loading="lazy"
+                                                         itemprop="image">
+                                                </picture>
+                                            </figure>
+                                            <h3 class="card-title">Leisure Facilities</h3>
+                                            <div class="plus-icon"></div>
+                                        </div>
+                                        <div class="block-text">
+                                            <p>Jogging-Tracks, Outdoor Gyms, Skater Parks, Fun Parks and much more. The
+                                                sporting activities are more diverse than ever before and the
+                                                requirements for the sports surfaces have strongly increased. The
+                                                systems of the Active Line offer perfect protection and performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-control">
+                                    <div class="swiper-button-prev slider-prev"></div>
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="swiper-button-next slider-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- indexer::stop -->
+                    <div class="mod_systemlist">
+                        <div class="inside">
+                            <div class="system-wrapper">
+                                <div class="system-filters-wrap">
+                                    <ul class="system-filters-list">
+                                        <li>
+                                            <a href="" class="system-teaser-filter all-filter"
+                                               data-subcategory="*">All</a>
+                                        </li>
+                                        <li>
+                                            <a href="#tennisplaetze" class="system-teaser-filter"
+                                               data-subcategory="tennisplaetze">Tennis Courts</a>
+                                        </li>
+                                        <li>
+                                            <a href="#laufbahnen" class="system-teaser-filter"
+                                               data-subcategory="laufbahnen">Running Tracks</a>
+                                        </li>
+                                        <li>
+                                            <a href="#sporthallen" class="system-teaser-filter"
+                                               data-subcategory="sporthallen">Sports Halls</a>
+                                        </li>
+                                        <li>
+                                            <a href="#spielplaetze-fallschutz" class="system-teaser-filter"
+                                               data-subcategory="spielplaetze-fallschutz">Play&shy;grounds & Fall
+                                            Protection</a>
+                                        </li>
+                                        <li>
+                                            <a href="#multifunktionsfelder" class="system-teaser-filter"
+                                               data-subcategory="multifunktionsfelder">Multi&shy;purpose Playing
+                                            Fields</a>
+                                        </li>
+                                        <li>
+                                            <a href="#fitnessstudio" class="system-teaser-filter"
+                                               data-subcategory="fitnessstudio">Fitness Studio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#freizeitanlagen" class="system-teaser-filter"
+                                               data-subcategory="freizeitanlagen">Leisure Facilities</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="system-list-grid">
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/photo2.jpg"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/photo2.jpg"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC Tennis comfort</h3>
+                                            <p class="system-teaser_desc">Tennis court flooring system for indoor and
+                                                outdoor point-elastic according to DIN V 18032-2 and EN 14904, ITF
+                                                classified</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-tennis-comfort.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC Tennis comfort</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/photo2.jpg"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/photo2.jpg"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC Tennis comfort eco</h3>
+                                            <p class="system-teaser_desc">Tennis court flooring system for indoor and
+                                                outdoor point-elastic according to EN 14904</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-tennis-comfort-eco.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC Tennis comfort eco</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/photo2.jpg"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/photo2.jpg"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC TENNIS carpet comfort</h3>
+                                            <p class="system-teaser_desc">Tennis court flooring system for indoor use
+                                                point-elastic according to DIN V 18032-2 and EN 14904</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-tennis-carpet-comfort.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC TENNIS carpet comfort</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/photo2.jpg"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/photo2.jpg"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC Tennis eco</h3>
+                                            <p class="system-teaser_desc">Economical tennis court flooring system for
+                                                indoor and outdoor</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-tennis-eco.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC Tennis eco</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/photo2.jpg"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/photo2.jpg"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC Tennis club</h3>
+                                            <p class="system-teaser_subtitle">Hard court with permanent light
+                                                elasticity</p>
+                                            <p class="system-teaser_desc">Tennis court flooring system for indoor and
+                                                outdoor</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-tennis-club.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC Tennis club</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/f/Porplastic-Molympic-ultra-2021-8ff0f499.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/8/Porplastic-Molympic-ultra-2021-0981323f.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC M olympic ultra</h3>
+                                            <p class="system-teaser_subtitle">The ultimate sports surface</p>
+                                            <p class="system-teaser_desc">Only Two-Layer Full PU-Bound System with
+                                                coloured EPDM Granules</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-m-olympic-ultra.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC M olympic ultra</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/8/Porplastic-Molympic-gold-2021-8a883d05.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/c/Porplastic-Molympic-gold-2021-95f4dfdb.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC M olympic gold</h3>
+                                            <p class="system-teaser_subtitle">World-Class sports surface</p>
+                                            <p class="system-teaser_desc">Massive, one or multi&shy;layer full PU-bound
+                                                system spread with coloured EPDM granules, water-impermeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-m-olympic-gold.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC M olympic gold</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/f/Porplastic-Molympic-2021-f9acab16.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/0/Porplastic-Molympic-2021-3efbe997.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC M olympic</h3>
+                                            <p class="system-teaser_subtitle">World-Class sports surface</p>
+                                            <p class="system-teaser_desc">Massive, one or multi&shy;layer full PU-bound
+                                                system spread with coloured EPDM granules, water-impermeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-m-olympic.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC M olympic</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/f/Porplastic-SWcompetition-2021-7f197ff1.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/d/Porplastic-SWcompetition-2021-42adfe0a.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC SW competition</h3>
+                                            <p class="system-teaser_subtitle">Great tournaments</p>
+                                            <p class="system-teaser_desc">Sandwich construction consisting of an elastic
+                                                layer, pore sealer und cast coating spread with coloured EPDM-granules,
+                                                water-impermeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-sw-competition.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC SW competition</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/PORPLASTIC-SW-smart-2021-7c31e139.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/3/PORPLASTIC-SW-smart-2021-786ab014.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC SW smart</h3>
+                                            <p class="system-teaser_subtitle">For small areas or indoor</p>
+                                            <p class="system-teaser_desc">Sandwich construction consisting of an elastic
+                                                mat, pore sealer and cast coating spread with coloured EPDM-granules,
+                                                water-impermeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-sw-smart.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC SW smart</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/a/Porplastic-SBeconomic-2021-b419cbd2.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/d/Porplastic-SBeconomic-2021-94248892.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC SB economic</h3>
+                                            <p class="system-teaser_subtitle">Reliable and long-lasting</p>
+                                            <p class="system-teaser_desc">Elastic base mat with spray coating for
+                                                competition, water-permeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-sb-economic.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC SB economic</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="freizeitanlagen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/3/Porplastic-Active-urban-2021-997ca35c.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/6/Porplastic-Active-urban-2021-507476d3.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE urban</h3>
+                                            <p class="system-teaser_desc">For Skaterparks, Fun Parks and Sports
+                                                Parks!The solid and very durable system for Fun-Sports with heavy
+                                                burden.</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-active-urban.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC  ACTIVE urban</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="fitnessstudio">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/4/Porplastic-Active-fitness-2021-2a56199d.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/e/Porplastic-Active-fitness-2021-ec3a4366.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE fitness</h3>
+                                            <p class="system-teaser_desc">The perfect sports surface for aerobics,
+                                                dumbbell training, cross-fit and more!Heavy weight, fitness and
+                                                yoga-courses plus easy to clean: The system combines the most important
+                                                advantages</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-active-fitness.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC  ACTIVE fitness</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="freizeitanlagen laufbahnen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/Porplastic-Active-track-2021-6319b2b0.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/e/Porplastic-Active-track-2021-a58fbb59.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE track</h3>
+                                            <p class="system-teaser_desc">Run, Walk, Talk!Elastic
+                                                Outdoor-Flooring-System: excellent shock absorbance for joint-friendly
+                                                running</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-active-track.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC  ACTIVE track</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="multifunktionsfelder">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/f/Porplastic-2S-da4c6dfc.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/a/Porplastic-2S-88a9ad0b.png" width="650"
+                                                     height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE game+track</h3>
+                                            <p class="system-teaser_desc">For leisure and recreation!elastic base mat
+                                                plus homogeneous coloured EPDM wearing layer, water-permeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-2s-game-track.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC ACTIVE game+track</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="multifunktionsfelder">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/c/Porplastic-Active-multitop-2021-54f2a98a.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/c/Porplastic-Active-multitop-2021-20ccc610.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE multitop</h3>
+                                            <p class="system-teaser_subtitle">For outdoor playing fields</p>
+                                            <p class="system-teaser_desc">Sandwich construction consisting of an elastic
+                                                layer, pore sealer, self-leveling coating and multitop spray coating,
+                                                water-impermeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-sw-multitop.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC ACTIVE multitop</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="multifunktionsfelder">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/b/Porplastic-EPcourt-091aaa1f.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/c/Porplastic-EPcourt-1c2bc64f.png" width="650"
+                                                     height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC ACTIVE court</h3>
+                                            <p class="system-teaser_subtitle">A coating for tennis and more!</p>
+                                            <p class="system-teaser_desc">Single-layer PU/EPDM-coating, homo&shy;geneours
+                                                coloured, water-permeable</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-ep-court.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC ACTIVE court</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="sporthallen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/2/porplastic-indoor-cel-combi-2021-04874fa0.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/d/porplastic-indoor-cel-combi-2021-68f55be5.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC INDOOR CEL combi</h3>
+                                            <p class="system-teaser_desc">Combined elastic sports flooring system for
+                                                school and multipurpose use, according to EN 14904, for indoor use, IHF
+                                                approved</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-indoor-cel-combi.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC INDOOR CEL combi</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="sporthallen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/4/porplastic-indoor-mel-compound-2021-e4587ad7.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/f/porplastic-indoor-mel-compound-2021-7adbb984.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC INDOOR MEL compound</h3>
+                                            <p class="system-teaser_desc">Sports flooring system für school and
+                                                multipurpose use, mixed elastic according to DIN V18032/2 and EN
+                                                14904</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-indoor-mel-compound.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC INDOOR MEL compound</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="sporthallen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/9/porplastic-indoor-pel-basic-2021-0149aa6a.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/b/porplastic-indoor-pel-basic-2021-a14cd44a.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC INDOOR PEL basic</h3>
+                                            <p class="system-teaser_subtitle">The point-elastic floor for sports
+                                                halls</p>
+                                            <p class="system-teaser_desc">Standard flooring system for schools and
+                                                multipurpose sports halls point-elastic according to DIN V18032/2 and EN
+                                                14904, IHF approved</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-indoor-pel-basic.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC INDOOR PEL basic</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="sporthallen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/9/porplastic-indoor-pel-extra-2021-96d8f722.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/5/porplastic-indoor-pel-extra-2021-70f2c6a8.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC INDOOR PEL extra</h3>
+                                            <p class="system-teaser_desc">Flooring system with extra shock absorption -
+                                                for more safety of children and athletes in sports halls - point-elastic
+                                                according to DIN V 18032/2, IHF approved</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-indoor-pel-extra.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC INDOOR PEL extra</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="tennisplaetze">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/PORPLASTIC-Tennis-RedClay-pro-2021-882532e9.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/a/PORPLASTIC-Tennis-RedClay-pro-2021-32d89e07.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC RedClay pro</h3>
+                                            <p class="system-teaser_subtitle">The clay tennis court at the Porsche
+                                                Tennis Grand Prix</p>
+                                            <p class="system-teaser_desc">The low-dust tennis clay court system at the
+                                                Porsche Tennis Grand Prix in the hall and a low-maintenance all-weather
+                                                tennis court for the outside. Real clay court feeling for indoor and
+                                                outdoor use, ITF certified</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-redclay-pro.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC RedClay pro</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="sporthallen">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/5/porplastic-indoor-sky-2021-a164bb6a.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/1/porplastic-indoor-sky-2021-e90d2c9d.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC SKY</h3>
+                                            <p class="system-teaser_desc">Decorative flooring system&nbsp; with 3D
+                                                effect for school and multipurpose sports halls point-, mixed or
+                                                combined elastic according to DIN V 18032-2 and EN 14904</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-sky.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC SKY</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="spielplaetze-fallschutz">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/PORPLASTIC-FUN-40-2021-ed1b82f0.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/5/PORPLASTIC-FUN-40-2021-c0f562d0.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC FUN 40</h3>
+                                            <p class="system-teaser_subtitle">Falling height 1.30 m</p>
+                                            <p class="system-teaser_desc">Elastic and decorative surfaces for
+                                                playgrounds, critical falling height 1.30 m</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-fun-40.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC FUN 40</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="spielplaetze-fallschutz">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/6/PORPLASTIC-FUN-60-2021-598b7357.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/7/PORPLASTIC-FUN-60-2021-b2f6df1e.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC FUN 60</h3>
+                                            <p class="system-teaser_subtitle">Falling height 1.70 m</p>
+                                            <p class="system-teaser_desc">Creativity and safety jointless and boundless.
+                                                Elastic and decorative surfaces for playgrounds, critical falling height
+                                                1.70 m</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-fun-60.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC FUN 60</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="spielplaetze-fallschutz">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/d/PORPLASTIC-FUN-80-2021-03d9c836.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/2/PORPLASTIC-FUN-80-2021-00ceab39.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC FUN 80</h3>
+                                            <p class="system-teaser_subtitle">Falling height 2.30 m</p>
+                                            <p class="system-teaser_desc">Elastic and decorative surfaces for
+                                                playgrounds, critical falling height 2.30 m</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-fun-80.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC FUN 80</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="spielplaetze-fallschutz">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/2/PORPLASTIC-FUN-100-2021-13c2eb49.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/6/PORPLASTIC-FUN-100-2021-595a2cb8.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC FUN 100</h3>
+                                            <p class="system-teaser_subtitle">Falling height 2.90 m</p>
+                                            <p class="system-teaser_desc">Jointless and decorative protection for very
+                                                big falling heights. Elastic and decorative surfaces for playgrounds,
+                                                critical falling height 2.90 m</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-fun-100.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC FUN 100</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="system-teaser" data-subcategory="spielplaetze-fallschutz">
+                                        <figure class="image_container">
+                                            <picture>
+                                                <source srcset="assets/images/2/PORPLASTIC-FUN-120-2021-efa5b450.webp"
+                                                        type="image/webp" width="650" height="366">
+                                                <img src="assets/images/7/PORPLASTIC-FUN-120-2021-01528840.png"
+                                                     width="650" height="366" alt="" loading="lazy" itemprop="image">
+                                            </picture>
+                                        </figure>
+                                        <div class="system-teaser_content-wrapper">
+                                            <h3 class="system-teaser_title">PORPLASTIC FUN 120</h3>
+                                            <p class="system-teaser_subtitle">Falling height 3.30 m</p>
+                                            <p class="system-teaser_desc">The ultimate fall protection: jointless and
+                                                decorative. Elastic and decorative surfaces for playgrounds, critical
+                                                falling height 3.30 m</p>
+                                            <a href="en/systems/sports-and-fun-floorings/porplastic-fun-120.html"
+                                               class="system-teaser_read-more">
+                                                <span class="invisible">PORPLASTIC FUN 120</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- indexer::continue -->
+                    <div class="autowrap autowrap-memberfullwidth autowrap-element-count-1">
+                        <div class="inside">
+                            <div class="ce_memberfullwidth member-ulrich">
+                                <div class="innerbox">
+                                    <div class="image_container">
+                                        <picture>
+                                            <source srcset="assets/images/9/Meike-Ulrich-small-afa983a8.webp"
+                                                    type="image/webp" width="200" height="288">
+                                            <img src="assets/images/5/Meike-Ulrich-small-36fac605.jpg" width="200"
+                                                 height="288" alt="Meike Ulrich" itemprop="image">
+                                        </picture>
+                                    </div>
+                                    <div class="text_container">
+                                        <h3>Contact</h3>
+                                        <p>
+                                            <strong>
+                                                Meike Ulrich </strong>
+                                        </p>
+                                        <div class="job_title">
+                                            <span>Business Unit Manager PORPLASTIC</span>
+                                        </div>
+                                    </div>
+                                    <div class="links_container">
+                                        <ul>
+                                            <li class="mail">
+                                                <svg id="mail-icon" data-name="Ebene 1"
+                                                     xmlns="http://www.w3.org/2000/svg" width="33.8" height="27.8"
+                                                     viewBox="0 0 33.8 27.8">
+                                                    <path id="Path_1573" data-name="Path 1573"
+                                                          d="M0,27.8H33.8V0H0ZM19.09,13.44a3.11,3.11,0,0,1-4.38,0L3.07,1.8H30.73ZM32,3.07V16.73L25.17,9.9ZM8.63,9.9,1.8,16.73V3.07ZM1.8,26V19.27l8.1-8.1,3.54,3.54a4.91,4.91,0,0,0,6.93,0l3.53-3.54,8.1,8.1V26Z"
+                                                          fill="#C5C4BE"/>
+                                                </svg>
+                                                <a href="mailto:&#109;&#x65;&#105;&#x6B;&#101;&#x2E;&#117;&#x6C;&#114;&#x69;&#99;&#x68;&#64;&#x76;&#105;&#x61;&#99;&#x6F;&#114;&#x2E;&#100;&#x65;">E-Mail</a>
+                                            </li>
+                                            <li class="phone">
+                                                <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
+                                                     height="33.708" viewBox="0 0 33.646 33.708">
+                                                    <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
+                                                        <g id="Ebene_1" data-name="Ebene 1">
+                                                            <path id="Path_1576" data-name="Path 1576"
+                                                                  d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
+                                                                  fill="#C5C4BE"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <a href="tel:+4974729499995">+49 7472 94999 - 95</a>
+                                            </li>
+                                            <li class="mobile">
+                                                <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
+                                                     height="33.708" viewBox="0 0 33.646 33.708">
+                                                    <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
+                                                        <g id="Ebene_1" data-name="Ebene 1">
+                                                            <path id="Path_1576" data-name="Path 1576"
+                                                                  d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
+                                                                  fill="#C5C4BE"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <a href="tel:+491759330875">+49 175 9330875</a>
+                                            </li>
+                                            <li class="fax">
+                                                <svg id="fax-icon" xmlns="http://www.w3.org/2000/svg" width="33.801"
+                                                     height="33.8" viewBox="0 0 33.801 33.8">
+                                                    <g id="Ebene_1" data-name="Ebene 1">
+                                                        <path id="Path_1570" data-name="Path 1570"
+                                                              d="M29.8,0H6V5H0V28.8H6v5H29.8v-5h4V5h-4ZM7.8,1.8H28v9.1A2.1,2.1,0,0,1,25.9,13H9.9a2.1,2.1,0,0,1-2.1-2.1ZM28,32H7.8V22.9a2.1,2.1,0,0,1,2.1-2.1h16A2.1,2.1,0,0,1,28,22.9ZM32,6.8V27H29.8V22.9A3.91,3.91,0,0,0,25.9,19H9.9A3.91,3.91,0,0,0,6,22.9V27H1.8V18.9H4.9v-4H1.8V6.8H6v4.1a3.91,3.91,0,0,0,3.9,3.9h16a3.91,3.91,0,0,0,3.9-3.9V6.8Z"
+                                                              fill="#C5C4BE"/>
+                                                    </g>
+                                                </svg>
+                                                <a href="tel:+4974729499939">+49 7472 94999 - 39</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--</div>-->
+    <footer id="footer">
+        <div class="inside rtl">
+            <div class="left">
+                <!-- indexer::stop -->
+                <nav class="mod_customnav quicklinks block" itemscope
+                     itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#skipNavigation10"
+                       class="invisible">Skip navigation</a>
+                    <div class="submenu level_1">
+                        <ul class="level_1">
+                            <li class="first"><a href="en/blog.html" title="Blog" class="first" itemprop="url"><span
+                                    itemprop="name">Blog</span></a></li>
+                            <li><a href="en/tools.html" title="VIACOR Tools for flooring work and installers"
+                                   itemprop="url"><span itemprop="name">Tools</span></a></li>
+                            <li class="unternehmen"><a href="en/company.html"
+                                                       title="VIACOR - Live on it. We work with and for people."
+                                                       class="unternehmen" itemprop="url"><span
+                                    itemprop="name">Company</span></a></li>
+                            <li><a href="en/career.html" title="Career" itemprop="url"><span
+                                    itemprop="name">Career</span></a></li>
+                            <li><a href="en/contact.html" title="Contact" itemprop="url"><span
+                                    itemprop="name">Contact</span></a></li>
+                            <li class="last"><a href="en/downloadcenter.html"
+                                                title="Download Area for Flooring Systems and Products" class="last"
+                                                itemprop="url"><span itemprop="name">Downloadcenter</span></a></li>
+                        </ul>
+                    </div>
+                    <a id="skipNavigation10" class="invisible">&nbsp;</a>
+                </nav>
+                <!-- indexer::continue -->
+                <!-- indexer::stop -->
+                <nav class="mod_customnav servicelinks block" itemscope
+                     itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html#skipNavigation7"
+                       class="invisible">Skip navigation</a>
+                    <div class="submenu level_1">
+                        <ul class="level_1">
+                            <li class="first"><a href="en/imprint.html" title="Imprint" class="first"
+                                                 itemprop="url"><span itemprop="name">Imprint</span></a></li>
+                            <li><a href="en/privacy.html" title="Privacy" itemprop="url"><span
+                                    itemprop="name">Privacy</span></a></li>
+                            <li class="last"><a href="https://porplastic.de/?lang=en" title="Porplastic - redirect"
+                                                class="last" target="_blank" rel="noreferrer noopener"
+                                                itemprop="url"><span itemprop="name">Porplastic</span></a></li>
+                        </ul>
+                    </div>
+                    <a id="skipNavigation7" class="invisible">&nbsp;</a>
+                </nav>
+                <!-- indexer::continue -->
+            </div>
+            <div class="right">
+                <div class="inner-row top-row">
+                    <div class="logo-wrapper"><a href="en/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="logo-svg" x="0px" y="0px" viewBox="0 0 195 70" width="195" height="70">
+<path fill="#fff" class="logo-title"
+      d="M182.8-34.2c0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8-1.5 0-3-.7-4.1-1.7-1.1-1.1-1.7-2.6-1.7-4.1m-5.5-14.3h-.1c-.9-.2-1.8-.3-2.7-.3-1.5 0-3 .4-4.3 1.1-.5.4-1 .9-1.3 1.5-.7 1.2-1 2.6-.8 4v12.9h-10.9V-58h10.6l-.1 3.6c.4-.3.7-.6 1.1-.9 2.2-1.9 5-2.9 7.9-3 1.7.1 3.4.4 5 .9l-4.4 8.9zm-42.4-1.3c2.5-.1 4.7 1.4 5.5 3.7.3.8.4 1.6.4 2.4 0 2.7-1.1 5-3.7 5.9-.8.3-1.6.4-2.4.4-3.2.2-6-2.3-6.1-5.5v-.7c-.2-3.2 2.2-6 5.4-6.3.4.1.7.1.9.1m0-9.1c-6.5.1-13.1 2.6-16.1 8.9-.9 2.1-1.4 4.5-1.4 6.8-.2 4.8 2.1 9.3 6 12 4.4 3 9.4 2.9 11.1 2.9 3.9 0 7.4-.5 10.8-2.5 4.4-2.6 7-7.4 6.8-12.5 0-6.7-3.6-12.3-10.1-14.6-2.4-.7-4.7-1-7.1-1M110.6-38l-.6.3c-.8.3-1.6.4-2.4.4-3.2.2-6-2.3-6.1-5.5v-.7c-.2-3.2 2.2-6 5.4-6.3h.8c1 0 1.9.2 2.8.6l4.3-8.7c-2.3-.7-4.7-1-7.1-1-6.5.1-13.2 2.6-16.1 8.9-.9 2.1-1.4 4.5-1.4 6.8-.2 4.8 2.1 9.3 6 12 4.4 3 9.4 2.9 11.1 2.9 2.5.1 5.1-.3 7.5-1l-4.2-8.7zm-32.2 8.7L71.9-44l-6.2 14.7H54.2L67.7-58h8.4l13.7 28.7H78.4zM39.2-66.6c0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8-1.5 0-3-.7-4.1-1.7-1.1-1-1.7-2.5-1.7-4.1m11.4 37.3H39.7V-58h10.8v28.7zM24.2-58 18-43.3 11.5-58H0l13.8 28.7h8.4L35.7-58H24.2z"
+      class="st0" transform="translate(0 72.315)"/>
+<path fill="#3B3B3B" class="logo-slogan"
+      d="M192.2 68.9h2.3v-2.3h-2.3v2.3zm-8.6-12.2 2-.8v2.7h3V60h-3v5.9c0 1.1.3 1.7 1.6 1.7.5 0 1 0 1.5-.1v1.4c-.6.1-1.3.1-1.9.1-2 0-3.2-.7-3.2-3v-6.1H181v-1.4h2.7v-1.8zm-7.3-.6h2V54h-2v2.1zm0 12.8h2V58.5h-2v10.4zm-22.9-8c0-.8 0-1.5-.1-2.3h1.9c0 .5.1 1.1.1 1.8 1-1.5 2.7-2.3 4.5-2.2 2.9 0 5 1.6 5 4.8v5.9h-2v-5.8c0-2.3-1.4-3.6-3.3-3.6s-4.1 1.2-4.1 4.4v4.9h-2v-7.9zm-9.5 8.3c-4.2 0-6.4-2-6.4-5.5 0-3.3 2.1-5.5 6.4-5.5 4.2 0 6.4 2 6.4 5.5s-2.2 5.5-6.4 5.5m-4.3-5.5c-.1 2.2 1.6 4 3.7 4.2h.6c2.2.2 4.1-1.4 4.3-3.6v-.6c.1-2.2-1.6-4-3.7-4.2h-.6c-2.2-.2-4.1 1.4-4.3 3.6v.6m-11.9.5H118c0 2 1.7 3.7 3.7 3.6h.1c1.5.1 2.9-.7 3.4-2.1h2.1c-.4 2.8-3.2 3.5-5.5 3.5-3.8 0-5.9-2.1-5.9-5.3 0-3.8 2.3-5.8 6-5.8s5.7 2 5.7 5.5l.1.6zm-2.1-1.4c0-2.4-1.8-3.3-3.6-3.3-1.9-.2-3.7 1.2-3.8 3.1v.1l7.4.1zm-13.1-4.3-4.3 8.5-4.3-8.5h-2.3l5.3 10.3h2.6l5.3-10.3h-2.3zm-15.2-2.4h2V54h-2v2.1zm0 12.8h2V58.5h-2v10.4zM84.1 54v14.8h10.7v-1.7h-8.5V54h-2.2zM74 62.5v1.7H53.5v-1.7H74z"
+      class="st0"/>
+</svg>
+                    </a></div>
+                    <div class="contact-info">
+                        <a href="tel:+497472949990" class="tel"><span><svg id="phone-icon"
+                                                                           xmlns="http://www.w3.org/2000/svg"
+                                                                           width="33.646" height="33.708"
+                                                                           viewBox="0 0 33.646 33.708">
+<g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
+<g id="Ebene_1" data-name="Ebene 1">
+<path id="Path_1576" data-name="Path 1576"
+      d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
+      fill="#C5C4BE"/>
+</g>
+</g>
+</svg>
+</span> +49 7472 94999-0</a>
+                        <a href="mailto:info@viacor.de" class="mail"><span><svg id="mail-icon" data-name="Ebene 1"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="33.8" height="27.8"
+                                                                                viewBox="0 0 33.8 27.8">
+<path id="Path_1573" data-name="Path 1573"
+      d="M0,27.8H33.8V0H0ZM19.09,13.44a3.11,3.11,0,0,1-4.38,0L3.07,1.8H30.73ZM32,3.07V16.73L25.17,9.9ZM8.63,9.9,1.8,16.73V3.07ZM1.8,26V19.27l8.1-8.1,3.54,3.54a4.91,4.91,0,0,0,6.93,0l3.53-3.54,8.1,8.1V26Z"
+      fill="#C5C4BE"/>
+</svg>
+</span> info@viacor.de</a>
+                    </div>
+                </div>
+                <div class="inner-row bottom-row">
+                    <div class="address">
+                        <p class="company">VIACOR Polymer GmbH</p>
+                        <p class="postal-address">
+                            <span class="street">Graf-Bentzel-Str. 78</span><br>
+                            <span class="country">D</span>-<span class="zip">72108</span> <span
+                                class="city">Rottenburg</span>
+                        <p>
+                    </div>
+                    <div class="social-links">
+                        <p>Stay up to date</p>
+                        <ul>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/viacor_porplastic/" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="34.146"
+                                         viewBox="0 0 34.147 34.146">
+                                        <path id="instagram"
+                                              d="M17.074,0c-4.633,0-5.216.021-7.036.1A12.581,12.581,0,0,0,5.89.9a8.36,8.36,0,0,0-3.024,1.97A8.381,8.381,0,0,0,.9,5.89,12.506,12.506,0,0,0,.1,10.03C.021,11.855,0,12.436,0,17.075s.021,5.216.1,7.036A12.577,12.577,0,0,0,.9,28.256,8.741,8.741,0,0,0,5.888,33.25a12.535,12.535,0,0,0,4.145.794c1.823.081,2.4.1,7.041.1s5.216-.021,7.039-.1a12.6,12.6,0,0,0,4.147-.794,8.741,8.741,0,0,0,4.992-4.994,12.633,12.633,0,0,0,.794-4.145c.081-1.82.1-2.4.1-7.038s-.021-5.218-.1-7.041a12.618,12.618,0,0,0-.794-4.142,8.379,8.379,0,0,0-1.97-3.024A8.347,8.347,0,0,0,28.257.9,12.561,12.561,0,0,0,24.11.1c-1.823-.081-2.4-.1-7.041-.1h.006Zm-1.53,3.077h1.532c4.559,0,5.1.015,6.9.1a9.462,9.462,0,0,1,3.171.587,5.3,5.3,0,0,1,1.963,1.278A5.275,5.275,0,0,1,30.385,7a9.377,9.377,0,0,1,.587,3.169c.083,1.8.1,2.339.1,6.9s-.017,5.1-.1,6.9a9.445,9.445,0,0,1-.587,3.169,5.659,5.659,0,0,1-3.242,3.237,9.393,9.393,0,0,1-3.169.589c-1.8.081-2.339.1-6.9.1s-5.1-.019-6.9-.1a9.431,9.431,0,0,1-3.169-.589A5.289,5.289,0,0,1,5.043,29.1a5.293,5.293,0,0,1-1.281-1.963,9.432,9.432,0,0,1-.587-3.169c-.081-1.8-.1-2.339-.1-6.9s.017-5.1.1-6.9A9.446,9.446,0,0,1,3.765,7,5.3,5.3,0,0,1,5.043,5.034,5.275,5.275,0,0,1,7.007,3.758a9.431,9.431,0,0,1,3.169-.589c1.575-.073,2.185-.094,5.367-.1v0ZM26.189,5.912A2.049,2.049,0,1,0,28.238,7.96a2.049,2.049,0,0,0-2.049-2.049ZM17.076,8.306a8.769,8.769,0,1,0,8.769,8.769,8.768,8.768,0,0,0-8.769-8.769Zm0,3.075a5.692,5.692,0,1,1-5.692,5.692A5.692,5.692,0,0,1,17.076,11.381Z"
+                                              fill="#c5c4be"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/ViacorPolymerGmbH/" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.151" height="34.151"
+                                         viewBox="0 0 34.151 34.151">
+                                        <path id="facebook-2"
+                                              d="M34.149,17.179A17.076,17.076,0,1,0,14.4,34.15v-12H10.071V17.181h4.337V13.393c0-4.3,2.55-6.682,6.45-6.682a26.116,26.116,0,0,1,3.822.335v4.226H22.527a2.476,2.476,0,0,0-2.781,2.685v3.223h4.734l-.756,4.964h-3.98v12A17.152,17.152,0,0,0,34.149,17.179Z"
+                                              transform="translate(0.002 0.001)" fill="#c5c4be"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="youtube">
+                                <a href="https://www.youtube.com/channel/UC6QUEQVpyh4GoULzSOyt4JQ" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.84" height="24.474"
+                                         viewBox="0 0 34.84 24.474">
+                                        <path id="youtube-2"
+                                              d="M17.532,2h.194c1.79.007,10.86.072,13.305.729a4.377,4.377,0,0,1,3.081,3.092,19.719,19.719,0,0,1,.479,3.053l.022.226.048.566.017.226c.142,1.99.159,3.854.161,4.262v.163c0,.422-.022,2.413-.179,4.486l-.017.229-.02.226a21.571,21.571,0,0,1-.512,3.393,4.37,4.37,0,0,1-3.081,3.092c-2.526.679-12.127.727-13.458.729h-.309c-.673,0-3.456-.013-6.374-.113l-.37-.013-.189-.009-.372-.015-.372-.015a35.006,35.006,0,0,1-5.779-.566,4.37,4.37,0,0,1-3.081-3.09,21.531,21.531,0,0,1-.512-3.393L.2,19.03.179,18.8Q.017,16.59,0,14.37V14.1c0-.468.022-2.086.139-3.872l.015-.224.007-.113.017-.226L.226,9.1l.022-.226A19.676,19.676,0,0,1,.727,5.821,4.37,4.37,0,0,1,3.809,2.728a35.746,35.746,0,0,1,5.779-.566l.37-.015.375-.013.187-.007.372-.015Q14,2.012,17.112,2h.42Zm-3.6,6.99V19.481l9.052-5.244Z"
+                                              transform="translate(0 -1.999)" fill="#c5c4be"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="https://www.linkedin.com/company/viacor-polymer-gmbh" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="34.146"
+                                         viewBox="0 0 34.147 34.146">
+                                        <path id="linkedin-3"
+                                              d="M0,2.446A2.477,2.477,0,0,1,2.508,0H31.639a2.477,2.477,0,0,1,2.508,2.446V31.7a2.477,2.477,0,0,1-2.508,2.446H2.508A2.477,2.477,0,0,1,0,31.7ZM10.549,28.585V13.166H5.425V28.585ZM7.988,11.059a2.672,2.672,0,1,0,.034-5.327,2.671,2.671,0,1,0-.068,5.327ZM18.463,28.585V19.973a3.479,3.479,0,0,1,.171-1.251,2.8,2.8,0,0,1,2.629-1.874c1.855,0,2.6,1.413,2.6,3.487v8.248h5.124V19.741c0-4.738-2.527-6.94-5.9-6.94a5.092,5.092,0,0,0-4.621,2.546V15.4h-.034l.034-.053V13.166H13.341c.064,1.447,0,15.419,0,15.419Z"
+                                              fill="#c5c4be"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/ViacorPolymer" target="_blank" rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34.147" height="27.746"
+                                         viewBox="0 0 34.147 27.746">
+                                        <path id="twitter"
+                                              d="M10.726,29.745c12.886,0,19.935-10.677,19.935-19.92,0-.3,0-.6-.013-.9a14.267,14.267,0,0,0,3.5-3.632A14.21,14.21,0,0,1,30.116,6.4,7.045,7.045,0,0,0,33.2,2.52,13.943,13.943,0,0,1,28.75,4.212,7.013,7.013,0,0,0,16.807,10.6,19.9,19.9,0,0,1,2.365,3.284a7.019,7.019,0,0,0,2.173,9.352,7.092,7.092,0,0,1-3.171-.871v.1a7.017,7.017,0,0,0,5.617,6.868,6.836,6.836,0,0,1-1.846.245,6.893,6.893,0,0,1-1.31-.122,7.007,7.007,0,0,0,6.546,4.859,14.06,14.06,0,0,1-8.708,3A13.488,13.488,0,0,1,0,26.618a19.942,19.942,0,0,0,10.726,3.127Z"
+                                              transform="translate(0 -1.999)" fill="#c5c4be"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="xing">
+                                <a href="https://www.xing.com/companies/viacorpolymergmbh" target="_blank"
+                                   rel="nofollow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38.405" height="40.965"
+                                         viewBox="0 0 38.405 40.965">
+                                        <g id="xing" transform="translate(0)">
+                                            <g id="Group_69" data-name="Group 69" transform="translate(14.617)">
+                                                <g id="Group_68" data-name="Group 68">
+                                                    <path id="Path_27" data-name="Path 27"
+                                                          d="M222.476,0h-9.57L198.688,24.9l9.161,16.061h9.57L208.258,24.9Z"
+                                                          transform="translate(-198.688)" fill="#c5c4be"/>
+                                                </g>
+                                            </g>
+                                            <g id="Group_71" data-name="Group 71" transform="translate(0 7.681)">
+                                                <g id="Group_70" data-name="Group 70">
+                                                    <path id="Path_28" data-name="Path 28"
+                                                          d="M26.659,96H17.636l5.22,9.194L16,116.482h9.023l6.856-11.288Z"
+                                                          transform="translate(-16 -96)" fill="#c5c4be"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="privacy-bar">
+                <div class="content-wrapper inside">
+                    <p class="privacy-bar-text">In order to be able to offer you a perfect service on our website, we
+                        use cookies and third-party tools to improve functionality. You can accept all use, or select
+                        specific partners to enable and disabled in the privacy settings. The settings can be changed
+                        anytime when visiting the <a href="en/privacy.html">privacy policy</a>.</p>
+                    <div class="privacy-bar-btns">
+                        <button class="button button-enable-all" id="enable-all">Activate all</button>
+                        <button class="button button-disable-all" id="disable-all">Disable all</button>
+                        <button class="button open-privacy-settings">Privacy settings</button>
+                    </div>
+                </div>
+            </div>
+            <div id="privacy-settings">
+                <div class="innerbox">
+                    <span class="icomoon-close-icon close-privacy"><svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                                                                        style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                                                                        viewBox="0 0 1024 1024" version="1.1"><path
+                            d="M451.669333 512L55.108267 908.544a42.7776 42.7776 0 0 0 0 60.330667 42.7776 42.7776 0 0 0 60.330666 0L512 572.356267l396.544 396.561066c16.597333 16.597333 43.776 16.597333 60.330667 0 16.597333-16.597333 16.597333-43.776 0-60.373333L572.347733 512l396.561067-396.544c16.597333-16.597333 16.597333-43.776 0-60.330667-16.597333-16.597333-43.776-16.597333-60.373333 0L512 451.6608 115.456 55.125333a42.7776 42.7776 0 0 0-60.330667 0 42.7776 42.7776 0 0 0 0 60.330667L451.669333 512z"/></svg></span>
+                    <!-- MAIN -->
+                    <div class="privacy-settings-main">
+                        <div class="left-col">
+                            <h3>Privacy settings</h3>
+                            <p>More information can be found in the <a href="en/privacy.html">privacy policy</a>.</p>
+                            <p id="privacy-popup-history-show" class="toggle-history">Show history</p>
+                        </div>
+                        <div class="right-col">
+                            <h4 class="tools">Analysis Tools and Advertising</h4>
+                            <!-- GOOGLE ANALYTICS -->
+                            <section class="accordion-item">
+                                <p class="g-analytics status-line accordion-heading">
+                                    <span class="acc-title acc-toggler">Google Analytics</span>
+                                    <span class="switch-wrap">
+<label class="switch">
+<input type="checkbox" name="privacy-g-analytics" id="g-analytics-control">
+<span class="switch-btn"></span>
+</label>
+<span class="status-disabled">
+Currently inactive                                </span>
+<span class="status-enabled">
+Currently active                                </span>
+</span>
+                                    <span class="icon-arrow acc-toggler"></span>
+                                </p>
+                                <div class="accordion-content" role="tabpanel" aria-hidden="true">
+                                    <div class="accordion-inner">
+                                        <!-- Explanation -->
+                                        <p class="content-analytics">We evaluate your use of our online services. With
+                                            the statistical data obtained, we can adapt our offers even better to your
+                                            needs. <strong>Google Analytics</strong> is used for the evaluation, we only
+                                            pass anonymised data, a personal reference is not possible.</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <h4 class="tools">Plugins and Tools</h4>
+                            <!-- YOUTUBE -->
+                            <section class="accordion-item">
+                                <p class="youtube status-line accordion-heading">
+                                    <span class="acc-title acc-toggler">YouTube</span>
+                                    <span class="switch-wrap">
+<label class="switch">
+<input type="checkbox" name="privacy-youtube" id="youtube-control">
+<span class="switch-btn"></span>
+</label>
+<span class="status-disabled">
+Currently inactive                                </span>
+<span class="status-enabled">
+Currently active                                </span>
+</span>
+                                    <span class="icon-arrow acc-toggler"></span>
+                                </p>
+                                <div class="accordion-content" role="tabpanel" aria-hidden="true">
+                                    <div class="accordion-inner">
+                                        <!-- Explanation -->
+                                        <p class="content-youtube">We use a data protection-optimized version of
+                                            <strong>YouTube</strong>, which exchanges less data with YouTube to embed
+                                            videos in the website.</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- HISTORY -->
+                    <div class="privacy-settings-history" style="display: none;">
+                        <div class="left-col">
+                            <h3>History</h3>
+                            <p>You can track all your changes here.</p>
+                            <p id="privacy-popup-history-back-to-main" class="toggle-history">Back to settings</p>
+                        </div>
+                        <div class="right-col">
+                            <table id="privacy-history-table"></table>
+                        </div>
+                        <div id="privacy-history-labels" style="display: none;">
+                            <p id="all1">All activated</p>
+                            <p id="all0">All deactivated</p>
+                            <p id="analytics1">Google Analytics activated</p>
+                            <p id="analytics0">Google Analytics deactivated</p>
+                            <p id="analyticsMatomo1">Matomo Analytics activated</p>
+                            <p id="analyticsMatomo0">Matomo Analytics deactivated</p>
+                            <p id="tagManager1">Tag manager activated</p>
+                            <p id="tagManager0">Tag manager deactivated</p>
+                            <p id="leadlab1">LeadLab activated</p>
+                            <p id="leadlab0">LeadLab deactivated</p>
+                            <p id="gmap1">Google Map activated</p>
+                            <p id="gmap0">Google Map deactivated</p>
+                            <p id="mapbox1">Mapbox activated</p>
+                            <p id="mapbox0">Mapbox deactivated</p>
+                            <p id="youTube1">YouTube activated</p>
+                            <p id="youTube0">YouTube deactivated</p>
+                            <p id="vimeo1">Vimeo activated</p>
+                            <p id="vimeo0">Vimeo deactivated</p>
+                            <p id="openStreetMap1">Open Street Map activated</p>
+                            <p id="openStreetMap0">Open Street Map deactivated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="application/ld+json">{
+        "@context": {
+            "contao": "https:\/\/schema.contao.org\/"
+        },
+        "@type": "contao:Page",
+        "contao:title": "Overview Sports and Playground Flooring Systems",
+        "contao:pageId": 152,
+        "contao:noSearch": false,
+        "contao:protected": false,
+        "contao:groups": [],
+        "contao:fePreview": false
+    }</script>
+</div>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@id": "https://www.viacor.de/#viacor",
+        "@type": "Organization",
+        "name": "VIACOR Polymer GmbH",
+        "description": "Industrial and sports flooring made in Germany",
+        "logo": "https://www.viacor.de/assets/components/css/logo_viacor.svg",
+        "url": "https://www.viacor.de",
+        "telephone": "+49 7472 94999-0",
+        "faxNumber": "+49 7472 94999-39",
+        "sameAs": [
+            "https://twitter.com/ViacorPolymer",
+            "https://www.linkedin.com/company/viacor-polymer-gmbh",
+            "http://plus.google.com/+ViacorPolymerGmbHN%C3%BCrtingen",
+            "https://www.facebook.com/ViacorPolymerGmbH/",
+            "https://www.youtube.com/channel/UC6QUEQVpyh4GoULzSOyt4JQ",
+            "https://www.instagram.com/viacor_porplastic/",
+            "https://www.xing.com/companies/viacorpolymergmbh"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Graf-Bentzel-Straße 78",
+            "addressLocality": " Rottenburg am Neckar",
+            "postalCode": "72108",
+            "addressCountry": "DE"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+49 7472 949990",
+                "contactType": "customer service"
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+49 7472 949990",
+                "contactType": "sales"
+            }
+        ]
+    }
+</script>
+</body>
+</html>

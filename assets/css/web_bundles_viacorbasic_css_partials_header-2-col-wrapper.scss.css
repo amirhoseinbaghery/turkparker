@@ -1,0 +1,239 @@
+
+.header-2-col-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    overflow: hidden
+}
+@media only screen and (max-width:1200px) {
+    .header-2-col-wrapper {
+        flex-direction: column
+    }
+}
+.header-2-col-wrapper .header-left-column {
+    width: 40%;
+    height: 100vh;
+    overflow: hidden
+}
+@media only screen and (max-width:1200px) {
+    .header-2-col-wrapper .header-left-column {
+        width: 100%;
+        height: 50vh
+    }
+}
+.header-2-col-wrapper .header-right-column {
+    width: 60%;
+    max-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background: right center / auto 100% no-repeat
+}
+@media only screen and (max-width:1200px) {
+    .header-2-col-wrapper .header-right-column {
+        width: 100%;
+        min-height: 50vh;
+        max-height: none
+    }
+}
+.header-2-col-wrapper .text-content-wrap {
+    width: 100%;
+    max-width: 56em;
+    padding: 10em 8%
+}
+@media only screen and (max-width:1200px) {
+    .header-2-col-wrapper .text-content-wrap {
+        width: 86%;
+        margin: auto;
+        max-width: 1636px;
+        max-width: clamp(15.5em, 86%, 90.9em);
+        max-width: 1222px;
+        max-width: clamp(15.5em, 86%, 67.9em);
+        padding: 3em 0
+    }
+}
+.header-2-col-wrapper .text-content-wrap h1 {
+    font-size: 4.16em;
+    font-size: clamp(1.77em, 3.9vw, 4.16em);
+    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    line-height: 1.06em;
+    color: #FFFFFF;
+    text-transform: uppercase
+}
+.header-2-col-wrapper .text-content-wrap span,
+.header-2-col-wrapper .text-content-wrap .subheadline {
+    font-size: 1.777em;
+    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-size: clamp(1.38em, 1.66vw, 1.777em);
+    line-height: 1.3em;
+    color: #FFFFFF;
+    padding-top: 0;
+    margin-top: 0.63em;
+    border-top: 0;
+    display: block
+}
+.header-2-col-wrapper .text-content-wrap span.category {
+    font-size: 1.55em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(1em, 1.45vw, 1.55em);
+    line-height: 1.14em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 1.43em;
+    display: block
+}
+.header-2-col-wrapper .text-content-wrap p {
+    color: #FFFFFF;
+    margin-top: 2.22em
+}
+.header-2-col-wrapper .text-content-wrap p:first-of-type {
+    border-top: 2px solid #3B3B3B;
+    padding-top: 2.77em
+}
+.header-2-col-wrapper .text-content-wrap p img,
+.header-2-col-wrapper .text-content-wrap p a {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em 1em 0 0
+}
+.header-2-col-wrapper .text-content-wrap p img:last-child,
+.header-2-col-wrapper .text-content-wrap p a:last-child {
+    margin-right: 0
+}
+.header-2-col-wrapper .text-content-wrap .teaser a {
+    margin-top: 0
+}
+.header-2-col-wrapper .text-content-wrap a {
+    color: #FFFFFF;
+    text-decoration: underline
+}
+body.health .header-right-column {
+    background-image: url("../../bundles/viacorbasic/img/header-health-bg.png");
+    background-image: url("../../bundles/viacorbasic/img/header-health-bg.webp")
+}
+@media only screen and (max-width:1200px) {
+    body.health .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-health-bg-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/header-health-bg-1024.webp")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.health .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-health-bg-414.png");
+        background-image: url("../../bundles/viacorbasic/img/header-health-bg-414.webp")
+    }
+}
+body.industry .header-right-column {
+    background-image: url("../../bundles/viacorbasic/img/header-industry-bg.png");
+    background-image: url("../../bundles/viacorbasic/img/header-industry-bg.webp")
+}
+@media only screen and (max-width:1200px) {
+    body.industry .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-industry-bg-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/header-industry-bg-1024.webp")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.industry .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-industry-bg-414.png");
+        background-image: url("../../bundles/viacorbasic/img/header-industry-bg-414.webp")
+    }
+}
+body.spaces .header-right-column {
+    background-image: url("../../bundles/viacorbasic/img/header-spaces-bg.png");
+    background-image: url("../../bundles/viacorbasic/img/header-spaces-bg.webp")
+}
+@media only screen and (max-width:1200px) {
+    body.spaces .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-spaces-bg-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/header-spaces-bg-1024.webp")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.spaces .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-spaces-bg-414.png");
+        background-image: url("../../bundles/viacorbasic/img/header-spaces-bg-414.webp")
+    }
+}
+body.sport .header-right-column {
+    background-image: url("../../bundles/viacorbasic/img/header-sport-bg.png");
+    background-image: url("../../bundles/viacorbasic/img/header-sport-bg.webp")
+}
+@media only screen and (max-width:1200px) {
+    body.sport .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-sport-bg-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/header-sport-bg-1024.webp")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.sport .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-sport-bg-414.png");
+        background-image: url("../../bundles/viacorbasic/img/header-sport-bg-414.webp")
+    }
+}
+body.parking .header-right-column {
+    background-image: url("../../bundles/viacorbasic/img/header-parking-bg.png");
+    background-image: url("../../bundles/viacorbasic/img/header-parking-bg.webp")
+}
+@media only screen and (max-width:1200px) {
+    body.parking .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-parking-bg-1024.png");
+        background-image: url("../../bundles/viacorbasic/img/header-parking-bg-1024.webp")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.parking .header-right-column {
+        background-image: url("../../bundles/viacorbasic/img/header-parking-bg-414.png");
+        background-image: url("../../bundles/viacorbasic/img/header-parking-bg-414.webp")
+    }
+}
+body.unternehmen .header-right-column {
+    background: right bottom 20% / 60% auto no-repeat;
+    background-image: url("../../bundles/viacorbasic/img/header-unternehmen-bg.png")
+}
+@media only screen and (max-width:1200px) {
+    body.unternehmen .header-right-column {
+        background-size: auto 90%;
+        background-image: url("../../bundles/viacorbasic/img/header-unternehmen-bg-1024.png")
+    }
+}
+@media only screen and (max-width:560px) {
+    body.unternehmen .header-right-column {
+        background-size: 65% auto;
+        background-position: right center
+    }
+}
+.tl_content .header-2-col-wrapper {
+    background: #C5C4BE
+}
+.tl_content .header-2-col-wrapper .header-left-column {
+    height: 70vh
+}
+.tl_content .header-2-col-wrapper .header-left-column .image_container img {
+    max-width: 100%
+}
+.tl_content .header-2-col-wrapper .header-right-column .text-content-wrap {
+    padding: 5em
+}
+.tl_content .header-2-col-wrapper .header-right-column .tag-chain {
+    display: flex;
+    margin-bottom: 1em
+}
+.tl_content .header-2-col-wrapper .header-right-column .tag-chain .tag-chain-item {
+    margin: 0 2em 1em 0
+}

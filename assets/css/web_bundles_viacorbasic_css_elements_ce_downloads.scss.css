@@ -1,0 +1,141 @@
+
+.autowrap-downloads .inside {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+.full-downloads .autowrap-downloads .inside {
+    width: auto;
+    max-width: none
+}
+.ce_downloads {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 10.38em;
+    min-height: 9.6em;
+    margin: 1.11em 1.11em 0 0;
+    border-radius: 1.38em;
+    border: 2px solid #3B3B3B;
+    box-sizing: border-box
+}
+.ce_downloads h2,
+.ce_downloads h3,
+.ce_downloads h4,
+.ce_downloads h5,
+.ce_downloads h6 {
+    display: none
+}
+.ce_downloads a {
+    display: block;
+    width: 100%;
+    padding: 1.22em 1.22em 4.16em;
+    font-size: 0.88em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    line-height: 1.625em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    transition: all 400ms
+}
+.ce_downloads a:nth-of-type(n+2) {
+    display: none
+}
+.ce_downloads a:hover {
+    background: rgba(59, 59, 59, 0.2)
+}
+.ce_downloads a:hover .download-icon .download-icon_arrow {
+    animation: downloadMe 1s ease-in-out
+}
+.ce_downloads a .size {
+    display: block
+}
+.ce_downloads a .icon {
+    display: block;
+    position: absolute;
+    width: 1.66em;
+    height: 1.66em;
+    bottom: 1.22em;
+    right: 1.22em
+}
+.ce_downloads a .icon__download,
+.ce_downloads a .icon__lock {
+    width: 100%;
+    height: 100%;
+    display: none
+}
+.ce_downloads a .icon__download svg,
+.ce_downloads a .icon__lock svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible
+}
+.ce_downloads a .icon__download {
+    display: block
+}
+.ce_downloads.protected a .icon__download {
+    display: none
+}
+.ce_downloads.protected a .icon__lock {
+    display: block
+}
+.ce_downloads.download-big {
+    width: calc(33.33% - 0.74em)
+}
+.ce_downloads.download-big:nth-child(3n) {
+    margin-right: 0
+}
+.autowrap-element-count-2 .download-big {
+    width: calc(50% - 0.555em);
+    min-width: 15em;
+    max-width: 22.17em
+}
+.autowrap-element-count-2 .download-big:nth-child(2n) {
+    margin-right: 0
+}
+@media only screen and (max-width:1024px) {
+    .ce_downloads.download-big {
+        width: calc(50% - 0.555em);
+        min-width: auto;
+        max-width: none
+    }
+    .ce_downloads.download-big:nth-child(2n) {
+        margin-right: 0
+    }
+}
+@media (max-width:600px) {
+    .ce_downloads.download-big {
+        width: 100%;
+        margin-right: 0
+    }
+}
+@keyframes downloadMe {
+    35% {
+        transform: translateY(-10px)
+    }
+    70% {
+        transform: translateY(5px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+.tl_content .ce_downloads {
+    background: #C5C4BE
+}

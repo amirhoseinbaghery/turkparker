@@ -1,0 +1,80 @@
+
+.team-members-filter-row {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    position: relative;
+    z-index: 50
+}
+.team-members-filter-row .team-members-filter-wrap {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 17.7em;
+    border: 2px solid #3B3B3B;
+    border-radius: 1.389em;
+    background: #C5C4BE
+}
+.team-members-filter-row .team-members-filter-wrap .team-member-filter-button {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+.team-members-filter-row .team-members-filter-wrap .team-member-filter-button .team-filter-toggle {
+    display: inline-block;
+    margin: -2px 0 0 0.9em;
+    transition: transform 0.4s linear
+}
+.team-members-filter-row .team-members-filter-wrap .team-member-filter-button .team-filter-toggle.dropdown-expanded {
+    transform: rotate(180deg)
+}
+.team-members-filter-row .team-members-filter-wrap .team-member-filter-button,
+.team-members-filter-row .team-members-filter-wrap .team-member-filter {
+    cursor: pointer;
+    display: block;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.375em;
+    letter-spacing: 0.058em;
+    text-transform: uppercase;
+    color: #3B3B3B;
+    padding: 0.75em 0.9em 0.5em
+}
+.team-members-filter-row .team-members-filter-wrap .team-members-filter-list {
+    display: none;
+    margin: 0.8em 0
+}
+.team-members-filter-row .team-members-filter-wrap .team-members-filter-list li {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.1)
+}
+.team-members-filter-row .team-members-filter-wrap .team-members-filter-list li:last-child {
+    border: none
+}
+.team-members-filter-row .team-members-filter-wrap .team-members-filter-list li a {
+    opacity: 0.5
+}
+@media only screen and (max-width:1024px) {
+    .team-members-filter-row {
+        padding: 5em 0
+    }
+    .team-members-filter-row .team-members-filter-wrap {
+        top: 3.7em;
+        right: 50%;
+        transform: translateX(50%)
+    }
+}

@@ -1,0 +1,152 @@
+
+.ce_youtube .video_container,
+.ce_vimeo .video_container {
+    position: relative
+}
+.ce_youtube .video_container > iframe,
+.ce_youtube .video_container .ratio-none,
+.ce_vimeo .video_container > iframe,
+.ce_vimeo .video_container .ratio-none {
+    border: 8px solid red
+}
+.ce_youtube .video_container .ratio-none,
+.ce_vimeo .video_container .ratio-none {
+    position: relative;
+    display: block;
+    padding-bottom: 40%
+}
+.ce_youtube .video_container .ratio-none:before,
+.ce_vimeo .video_container .ratio-none:before {
+    content: "Please set aspect ratio";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    background: red;
+    color: #fff;
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1em
+}
+.ce_youtube .video_container .ratio-169,
+.ce_vimeo .video_container .ratio-169 {
+    padding-bottom: 56.25%
+}
+.ce_youtube .video_container .ratio-1610,
+.ce_vimeo .video_container .ratio-1610 {
+    padding-bottom: 62.5%
+}
+.ce_youtube .video_container .ratio-2351,
+.ce_vimeo .video_container .ratio-2351 {
+    padding-bottom: 42.55%
+}
+.ce_youtube .video_container .ratio-219,
+.ce_vimeo .video_container .ratio-219 {
+    padding-bottom: 42.85%
+}
+.ce_youtube .video_container .ratio-2391,
+.ce_youtube .video_container .ratio-dcp2k,
+.ce_vimeo .video_container .ratio-2391,
+.ce_vimeo .video_container .ratio-dcp2k {
+    padding-bottom: 41.84%
+}
+.ce_youtube .video_container .ratio-1851,
+.ce_vimeo .video_container .ratio-1851 {
+    padding-bottom: 54.054%
+}
+.ce_youtube .video_container .ratio-1331,
+.ce_youtube .video_container .ratio-43,
+.ce_vimeo .video_container .ratio-1331,
+.ce_vimeo .video_container .ratio-43 {
+    padding-bottom: 75%
+}
+.ce_youtube .video_container .ratio-21,
+.ce_vimeo .video_container .ratio-21 {
+    padding-bottom: 50%
+}
+.ce_youtube .video_container .ratio-32,
+.ce_vimeo .video_container .ratio-32 {
+    padding-bottom: 66.66%
+}
+.ce_youtube .video_container .ratio-11,
+.ce_vimeo .video_container .ratio-11 {
+    padding-bottom: 100%
+}
+@media screen and (max-width:520px) {
+    .ce_youtube .privacy-vimeo-question-block,
+    .ce_youtube .privacy-youtube-question-block,
+    .ce_vimeo .privacy-vimeo-question-block,
+    .ce_vimeo .privacy-youtube-question-block {
+        height: auto
+    }
+    .ce_youtube .privacy-vimeo-question-block.ratio-169,
+    .ce_youtube .privacy-vimeo-question-block.ratio-1610,
+    .ce_youtube .privacy-vimeo-question-block.ratio-2351,
+    .ce_youtube .privacy-vimeo-question-block.ratio-219,
+    .ce_youtube .privacy-vimeo-question-block.ratio-2391,
+    .ce_youtube .privacy-vimeo-question-block.ratio-dcp2k,
+    .ce_youtube .privacy-vimeo-question-block.ratio-1851,
+    .ce_youtube .privacy-vimeo-question-block.ratio-1331,
+    .ce_youtube .privacy-vimeo-question-block.ratio-43,
+    .ce_youtube .privacy-vimeo-question-block.ratio-21,
+    .ce_youtube .privacy-vimeo-question-block.ratio-32,
+    .ce_youtube .privacy-vimeo-question-block.ratio-11,
+    .ce_youtube .privacy-youtube-question-block.ratio-169,
+    .ce_youtube .privacy-youtube-question-block.ratio-1610,
+    .ce_youtube .privacy-youtube-question-block.ratio-2351,
+    .ce_youtube .privacy-youtube-question-block.ratio-219,
+    .ce_youtube .privacy-youtube-question-block.ratio-2391,
+    .ce_youtube .privacy-youtube-question-block.ratio-dcp2k,
+    .ce_youtube .privacy-youtube-question-block.ratio-1851,
+    .ce_youtube .privacy-youtube-question-block.ratio-1331,
+    .ce_youtube .privacy-youtube-question-block.ratio-43,
+    .ce_youtube .privacy-youtube-question-block.ratio-21,
+    .ce_youtube .privacy-youtube-question-block.ratio-32,
+    .ce_youtube .privacy-youtube-question-block.ratio-11,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-169,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-1610,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-2351,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-219,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-2391,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-dcp2k,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-1851,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-1331,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-43,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-21,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-32,
+    .ce_vimeo .privacy-vimeo-question-block.ratio-11,
+    .ce_vimeo .privacy-youtube-question-block.ratio-169,
+    .ce_vimeo .privacy-youtube-question-block.ratio-1610,
+    .ce_vimeo .privacy-youtube-question-block.ratio-2351,
+    .ce_vimeo .privacy-youtube-question-block.ratio-219,
+    .ce_vimeo .privacy-youtube-question-block.ratio-2391,
+    .ce_vimeo .privacy-youtube-question-block.ratio-dcp2k,
+    .ce_vimeo .privacy-youtube-question-block.ratio-1851,
+    .ce_vimeo .privacy-youtube-question-block.ratio-1331,
+    .ce_vimeo .privacy-youtube-question-block.ratio-43,
+    .ce_vimeo .privacy-youtube-question-block.ratio-21,
+    .ce_vimeo .privacy-youtube-question-block.ratio-32,
+    .ce_vimeo .privacy-youtube-question-block.ratio-11 {
+        padding: 0
+    }
+}
+.video_container .responsive,
+.video_container .youtube-video-block,
+.video_container .vimeo-video-block {
+    position: relative;
+    height: 0
+}
+.video_container iframe,
+.video_container picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+video {
+    max-width: 100%;
+    height: auto
+}

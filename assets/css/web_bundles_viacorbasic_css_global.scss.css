@@ -1,0 +1,133 @@
+
+@font-face {
+    font-family: "universal-light";
+    src: url("../../bundles/viacorbasic/fonts/UniversLTPro45Light/Univers 45 Light.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro45Light/Univers 45 Light.woff") format("woff");
+    font-display: swap;
+    font-style: normal
+}
+@font-face {
+    font-family: "universal-extended";
+    src: url("../../bundles/viacorbasic/fonts/UniversLTPro53Ex/Univers 53 Extended.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro53Ex/Univers 53 Extended.woff") format("woff");
+    font-display: swap;
+    font-style: normal
+}
+@font-face {
+    font-family: "universal-roman";
+    src: url("../../bundles/viacorbasic/fonts/UniversLTPro55Roman/Univers 55 Roman.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro55Roman/Univers 55 Roman.woff") format("woff");
+    font-display: swap;
+    font-style: normal
+}
+@font-face {
+    font-family: "universal-bold-extend";
+    src: url("../../bundles/viacorbasic/fonts/UniversLTPro63BoldExt/Univers 63 Bold Extended.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro63BoldExt/Univers 63 Bold Extended.woff") format("woff");
+    font-display: swap;
+    font-style: normal
+}
+* {
+    font-size: 100%;
+    box-sizing: border-box
+}
+:root {
+    --screen-height: 100%
+}
+html {
+    width: 100%;
+    height: 100vh;
+    height: var(--screen-height)
+}
+body {
+    width: 100%;
+    height: var(--screen-height);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 1.125em;
+    line-height: 1.5;
+    font-family: "universal-roman", helvetica, arial, sans-serif;
+    background: #C5C4BE
+}
+body.scroll-disabled {
+    position: fixed;
+    overflow: hidden scroll
+}
+body.scroll-disabled:after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 190
+}
+p {
+    font-size: 1em;
+    line-height: 1.44;
+    color: #FFFFFF
+}
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em
+}
+a {
+    text-decoration: none
+}
+p.back {
+    width: 86%;
+    margin: auto;
+    max-width: 1636px;
+    max-width: clamp(15.5em, 86%, 90.9em);
+    padding: 2em 0;
+    padding: clamp(2em, 4vw, 4em) 0
+}
+p.back a {
+    position: relative;
+    overflow: hidden;
+    color: #3B3B3B;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: 0.889em;
+    line-height: 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-radius: 2em;
+    padding: 0.665em 1.4em 0.465em;
+    transition: all 0.4s ease;
+    display: inline-block;
+    text-decoration: none
+}
+p.back a:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    max-width: 3.8em;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: rgba(59, 59, 59, 0.32);
+    border-radius: inherit;
+    transition: transform 0.5s ease
+}
+p.back a:hover {
+    background: rgba(59, 59, 59, 0.05)
+}
+p.back a:active:after,
+p.back a.active:after {
+    transform: translateX(0)
+}
+p.back a:focus {
+    background: rgba(59, 59, 59, 0.17)
+}
+p.back a:disabled,
+p.back a.disabled {
+    opacity: 0.2;
+    cursor: default
+}
+.ce_player video {
+    display: block;
+    max-height: calc(100vh - 120px);
+    margin: auto
+}
