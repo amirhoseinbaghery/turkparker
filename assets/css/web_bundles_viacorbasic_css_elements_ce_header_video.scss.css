@@ -118,7 +118,7 @@
 .ce_headervideo .header-video-content .header-video-title {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -127,7 +127,7 @@
 .ce_headervideo .header-video-content p {
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em;
     color: #C5C4BE;
     letter-spacing: 0.08em;

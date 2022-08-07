@@ -41,7 +41,7 @@
                             <div dir="rtl" class="swiper content-slider">
                                 <div class="swiper-wrapper">
                                     {% for a in category %}
-                                        <div class="ce_categorycard swiper-slide sport block">
+                                        <div class="ce_categorycard swiper-slide sport block mx-5" style="background-image: url({{ a.image.url }})">
                                             <div class="wrapper">
                                                 <a href="{% url 'product:categoryList' a.slug %}">
                                                     <p class="card-title"> {{ a.title }} </p>
@@ -347,4 +347,5 @@
             </div>
         </main>
     </div>
+
 {% endblock %}

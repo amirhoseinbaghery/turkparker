@@ -51,7 +51,7 @@
     position: relative;
     z-index: 2;
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     color: #3B3B3B;
@@ -67,7 +67,7 @@
 .news_teaser h2 a {
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em;
     color: #3B3B3B
 }
@@ -235,7 +235,7 @@
 .news_teaser.featured h2 a {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;
@@ -253,7 +253,7 @@
 }
 .news_teaser.featured p.more a {
     font-size: 1.38em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.11em, 1.3vw, 1.38em);
     line-height: 1.8em;
     color: #FFFFFF;

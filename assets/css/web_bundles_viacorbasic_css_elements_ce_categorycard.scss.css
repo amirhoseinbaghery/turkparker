@@ -2,13 +2,13 @@
 .ce_categorycard {
     position: relative;
     flex-shrink: 0;
-    width: 21.888em;
-    height: 29.111em;
+    width: 31.888em;
+    height: 39.111em;
     overflow: hidden;
     border-radius: 1.38em;
     box-shadow: 0 0.88em 2.22em rgba(59, 59, 59, 0.4);
     margin-right: 1.11em;
-    background: #C5C4BE url() right center / auto 100% no-repeat;
+    background: #C5C4BE  right center / auto 100% no-repeat;
     transition: all 0.4s ease
 }
 .ce_categorycard:last-child {
@@ -37,7 +37,7 @@
 .ce_categorycard .wrapper a .card-title {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;
@@ -80,24 +80,7 @@
     height: 100%;
     width: 2px
 }
-.ce_categorycard.sport {
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-sport-bg.png");
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-sport-bg.webp")
-}
-.ce_categorycard.industry {
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-industry-bg.png");
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-industry-bg.webp")
-}
-.ce_categorycard.health {
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-health-bg.png");
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-health-bg.webp")
-}
-.ce_categorycard.parking {
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-parking-bg.png");
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-parking-bg.webp")
-}
-.ce_categorycard.spaces {
-    background-image: url("../../bundles/viacorbasic/img/ce_categorycard-spaces-bg.png");
+
     background-image: url("../../bundles/viacorbasic/img/ce_categorycard-spaces-bg.webp")
 }
 .ce_categorycard:hover {
@@ -110,7 +93,7 @@
 .downloads .ce_categorycard .wrapper a .card-title {
     font-size: 1.77em;
     font-size: clamp(1.38em, 1.66vw, 1.77em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.09em;
     line-height: 1.3
 }

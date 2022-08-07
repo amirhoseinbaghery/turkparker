@@ -10,7 +10,7 @@
 }
 .system-filters-wrap .system-filters-list li a {
     font-size: 1.38em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.11em, 1.3vw, 1.38em);
     line-height: 1.8em;
     color: #FFFFFF;
@@ -19,7 +19,7 @@
 }
 .system-filters-wrap .system-filters-list li a.all-filter {
     font-size: 1.777em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.38em, 1.66vw, 1.777em);
     line-height: 1.3em;
     color: #FFFFFF
@@ -31,7 +31,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;
@@ -170,7 +170,7 @@
 .additional-filters-container .filters-container_title-row .filters-container_title {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -191,7 +191,7 @@
 }
 .additional-filters-container .filters-container_filter-row .filters-container_filter-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -228,7 +228,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;

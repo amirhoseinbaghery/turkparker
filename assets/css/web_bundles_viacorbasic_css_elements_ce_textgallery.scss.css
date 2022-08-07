@@ -104,7 +104,7 @@
 .ce_textyoutube .text-content-wrap h2,
 .ce_textyoutube .text-content-wrap h3 {
     font-size: 1.777em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.38em, 1.66vw, 1.777em);
     line-height: 1.3em;
     color: #FFFFFF;
@@ -118,7 +118,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 1.6em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     position: relative
 }
 .ce_textgallery .text-content-wrap blockquote p:before,
@@ -162,7 +162,7 @@
 .ce_textimage .text-content-wrap .author,
 .ce_textyoutube .text-content-wrap .author {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     color: #3B3B3B;
     text-transform: uppercase;
     text-align: center;

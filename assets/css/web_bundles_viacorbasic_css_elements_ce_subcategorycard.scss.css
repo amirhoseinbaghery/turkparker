@@ -53,7 +53,7 @@
 #main .ce_subcategorycard .wrapper .card-title {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;

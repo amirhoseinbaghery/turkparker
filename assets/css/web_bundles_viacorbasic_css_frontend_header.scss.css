@@ -201,7 +201,7 @@
 #header .mod_navigation .submenu.level_1 li a {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -228,7 +228,7 @@
 #header .mod_navigation .submenu.level_2 > span.headline {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -247,7 +247,7 @@
 #header .mod_navigation .submenu.level_2 > ul > li > a {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;
@@ -275,7 +275,7 @@
 #header .mod_navigation .submenu.level_3 > ul > li > a {
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em;
     color: #3B3B3B;
     text-transform: none
@@ -292,7 +292,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;
@@ -387,7 +387,7 @@
 }
 #header .mod_navigation .mod_customnav .level_1 li a {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     color: #C5C4BE;
@@ -480,7 +480,7 @@
     padding-left: 5em;
     padding-top: 0.3em;
     background: #FFFFFF;
-    font-family: "universal-roman", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     color: #3B3B3B;
     position: absolute;
     left: -12px;
@@ -586,7 +586,7 @@
     top: 100%;
     right: 0;
     transition: all 400ms;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 1.1em;
     text-transform: uppercase;
     color: #FFFFFF;
