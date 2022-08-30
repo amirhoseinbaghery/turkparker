@@ -1,19 +1,19 @@
 
 .news_teaser-container {
-    width: 86%;
-    margin: auto;
-    max-width: 1636px;
-    max-width: clamp(15.5em, 86%, 90.9em);
-    margin: 10em auto
+    width: 86% !important;
+    margin: auto !important;
+    max-width: 1636px !important;
+    /*max-width: clamp(15.5em, 86%, 90.9em) !important;*/
+    margin: 10em auto !important;
 }
 .news_teaser-container .section-titles {
     width: 100%;
     max-width: 45em;
-    margin-bottom: 5.44em
+    margin-bottom: 5.44em;
 }
 @media only screen and (max-width:1200px) {
     .news_teaser-container .section-titles {
-        margin-bottom: 3em
+        margin-bottom: 3em;
     }
 }
 .news_teaser-container .section-titles span.category {
@@ -25,7 +25,7 @@
     text-transform: uppercase;
     display: block;
     margin-bottom: 0.8em;
-    color: #3B3B3B
+    color: #3B3B3B;
 }
 .news_teaser-container .section-titles .title {
     font-size: 4.16em;
@@ -33,10 +33,10 @@
     font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 @media (max-width:1024px) {
     .news_teaser-container {
-        margin: 4em auto 6em
+        margin: 4em auto 6em;
     }
 }

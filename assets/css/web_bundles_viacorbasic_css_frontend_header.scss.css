@@ -149,8 +149,8 @@
     min-height: 100vh;
     overflow: hidden auto;
     background: #3B3B3B center / auto 100% no-repeat;
-    background-image: url(../../bundles/viacorbasic/img/menu-background.jpg);
-    background-image: url(../../bundles/viacorbasic/img/menu-background.webp);
+
+    background-image: url(https://www.viacor.de/bundles/viacorbasic/img/menu-background.webp);
     transform: translateX(-100%);
     transition: all 0.4s ease-in-out
 }

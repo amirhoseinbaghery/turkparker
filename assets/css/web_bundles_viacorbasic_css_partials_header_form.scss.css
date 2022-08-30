@@ -54,7 +54,7 @@
 .header_form #container #left .mod_article .formbody .widget select,
 .header_form #container #left .mod_article .formbody .widget textarea {
     font-size: 1em;
-    font-family: "IRANSansWeb";
+    font-family: "universal-roman", helvetica, arial, sans-serif;
     line-height: 1.4em;
     text-transform: none;
     position: relative;
@@ -93,7 +93,7 @@
 .header_form #container #left .mod_article .formbody .widget label {
     position: absolute;
     top: 0.7em;
-    left: 0.5em;
+    right: 0.5em;
     font-size: 1em;
     color: #C5C4BE;
     cursor: text;
@@ -103,7 +103,7 @@
 .header_form #container #left .mod_article .formbody .widget label.labelUP,
 .header_form #container #left .mod_article .formbody .widget label.error {
     top: -1.4em;
-    left: 0;
+    right: 0;
     font-size: 0.778em
 }
 .header_form #container #left .mod_article .formbody .widget label.labelUP + textarea,
@@ -128,7 +128,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "IRANSansWeb";
+    font-family: "universal-extended", helvetica, arial, sans-serif;
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;
