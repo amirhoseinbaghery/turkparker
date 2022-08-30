@@ -105,7 +105,7 @@
                                          data-filter='logistics industry manufacturing' itemscope
                                          itemtype="http://schema.org/Article">
                                         <figure class="image_container float_above">
-                                            <a href="{% url 'blog:SinglePost' c.slug %}"
+                                            <a href="{% url 'blog:SinglePost' c.slug %}">
                                                 <picture>
                                                     <img src="{{ c.image.url }}"
                                                          width="395" height="350" alt="{{ c.title }}" loading="lazy"
@@ -143,37 +143,33 @@
                                      data-filter='case-studies parking' itemtype="http://schema.org/Article">
                                     <div class="news_teaser-image-wrap">
                                         <picture>
-                                            <img src="{{ blog.image.url }}"
-                                                 width="810" height="350" alt="{{ blog.title }}" loading="lazy"
-                                                 itemprop="image">
+                                            <img src="{{ product_.image.url }}"
+                                                 width="810" height="350" alt="{{ product_.title }}" loading="lazy"
+                                                 itemprop="image"> {{ product_ }}
                                         </picture>
                                     </div>
                                     <div class="news_teaser-content-wrap">
                                         <span class="tag-chain tag-chain-item">
-                                        {{ blog.category.first }}
+                                        {{ product_.category.first }}
                                         </span>
-                                        <h2 itemprop="name"><a href="{% url 'blog:SinglePost' blog.slug %}"
+                                        <h2 itemprop="name"><a href=""
 
                                                                itemprop="url"><span
-                                                itemprop="headline">{{ blog.title }}</span></a>
+                                                itemprop="headline">{{ product_.title }}</span></a>
                                         </h2>
-                                        <div class="ce_text block" itemprop="description">
-                                            <p>نویسنده:{% if blog.author.get_full_name %}
-                                                {{ blog.author.get_full_name }}{% else %}
-                                                {{ blog.author }}{% endif %}</p></div>
-                                        <p class="more"><a href="en/blog/os-10-coating-in-the-car-park.html"
-                                                           title="خواندن مقاله:{{ blog.title }}"
-                                                           itemprop="url">مطالعه<span
-                                                class="invisible">{{ blog.title }}</span></a>
+                                        <p class="more"><a href=""
+                                                           title="مشاهده:{{ product_.title }}"
+                                                           itemprop="url">مشاهده<span
+                                                class="invisible">{{ product_.title }}</span></a>
                                         </p>
                                     </div>
                                 </div>
-                                {% for c in blog_ %}
+                                {% for c in product %}
                                     <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                          data-filter='logistics industry manufacturing' itemscope
                                          itemtype="http://schema.org/Article">
                                         <figure class="image_container float_above">
-                                            <a href="{% url 'blog:SinglePost' c.slug %}"
+                                            <a href="{% url 'blog:SinglePost' c.slug %}">
                                                 <picture>
                                                     <img src="{{ c.image.url }}"
                                                          width="395" height="350" alt="{{ c.title }}" loading="lazy"
@@ -199,40 +195,37 @@
                     <div class="mod_newslist block">
                         <div class="news_teaser-container">
                             <div class="section-titles">
-                                <span class="category">مقالات</span>
-                                <a href="{% url 'blog:PostList' %}"><h2 class="title">مقالات بیشتر</h2></a>
+                                <span class="category">پروژه ها</span>
+                                <a href="{% url 'project:ProjectList' %}"><h2 class="title">پروژه های بیشتر</h2></a>
                             </div>
                             <div class="news_teaser-wrap">
                                 <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
                                      data-filter='case-studies parking' itemtype="http://schema.org/Article">
                                     <div class="news_teaser-image-wrap">
                                         <picture>
-                                            <img src="{{ blog.image.url }}"
-                                                 width="810" height="350" alt="{{ blog.title }}" loading="lazy"
+                                            <img src="{{ project.image.url }}"
+                                                 width="810" height="350" alt="{{ project.title }}" loading="lazy"
                                                  itemprop="image">
                                         </picture>
                                     </div>
                                     <div class="news_teaser-content-wrap">
                                         <span class="tag-chain tag-chain-item">
-                                        {{ blog.category.first }}
+                                        {{ project.category.first }}
                                         </span>
-                                        <h2 itemprop="name"><a href="{% url 'blog:SinglePost' blog.slug %}"
+                                        <h2 itemprop="name"><a href="{% url 'project:Project' project.slug %}"
 
                                                                itemprop="url"><span
-                                                itemprop="headline">{{ blog.title }}</span></a>
+                                                itemprop="headline">{{ project.title }}</span></a>
                                         </h2>
-                                        <div class="ce_text block" itemprop="description">
-                                            <p>نویسنده:{% if blog.author.get_full_name %}
-                                                {{ blog.author.get_full_name }}{% else %}
-                                                {{ blog.author }}{% endif %}</p></div>
-                                        <p class="more"><a href="en/blog/os-10-coating-in-the-car-park.html"
-                                                           title="خواندن مقاله:{{ blog.title }}"
-                                                           itemprop="url">مطالعه<span
-                                                class="invisible">{{ blog.title }}</span></a>
+
+                                        <p class="more"><a href="{% url 'project:Project' project.slug %}"
+                                                           title="مشاهده:{{ project.title }}"
+                                                           itemprop="url">مشاهده<span
+                                                class="invisible">{{ project.title }}</span></a>
                                         </p>
                                     </div>
                                 </div>
-                                {% for c in blog_ %}
+                                {% for c in project_ %}
                                     <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                          data-filter='logistics industry manufacturing' itemscope
                                          itemtype="http://schema.org/Article">
@@ -261,8 +254,8 @@
                     <!-- project -->
                     <div class="tabs-wrap">
                         <div class="tab-header section-titles">
-                            <p class="subheadline">Benefits</p>
-                            <h2 class="title">What we can offer you:</h2>
+                            <p class="subheadline">مزایا</p>
+                            <h2 class="title">چرا تورک پارکر:</h2>
                         </div>
                         <div class="tabs-content">
                             <ul class="ce_tabcontrol nav nav-tabs" id="tabcontrol_tabs_1858" role="tablist"
@@ -288,20 +281,11 @@
                                     <div class="ce_fulltext block">
                                         <div class="wrapper">
                                             <ul>
-                                                <li>Private rooms, in the world of work or sport - the right floor for
-                                                    every area
+                                                {% for b in why %}
+                                                <li>
+                                                    {{ b.body }}
                                                 </li>
-                                                <li>Technical and competent advice from our specialists</li>
-                                                <li>Tested and certified flooring solutions (AgBB, Leed V4, BREEAM, fire
-                                                    classification, ...)
-                                                </li>
-                                                <li>Sustainability for people and the environment in development and
-                                                    production
-                                                </li>
-                                                <li>Products made from renewable raw materials, free of solvents and
-                                                    plasticizers
-                                                </li>
-                                                <li>Wide range of colors and easy-care floor systems</li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                     </div>

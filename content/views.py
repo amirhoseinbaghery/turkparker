@@ -49,12 +49,16 @@ def contactus(request):
 
 def home(request):
     blog = Blog.objects.filter(status='p')
+    prd = Product.objects.filter(status='p')
+    proj = Project.objects.filter(status='p')
     context = {
         'slide': Slider.objects.all(),
         'why': Why.objects.all(),
         'category': ProductCategory.objects.filter(status='p', subClass=None),
-        'project': Project.objects.filter(status='p'),
-        'product': Product.objects.filter(status='p'),
+        'project': proj.first(),
+        'project_': proj[1:5],
+        'product_': prd.first(),
+        'product': prd[1:5],
         'blog': blog.first(),
         'blog_': blog[1:5],
     }
