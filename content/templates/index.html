@@ -87,7 +87,7 @@
                 <!--category-->
                 <div class="ce_sliderStart card-slider block">
                     <div class="inside">
-                        <h2 class="title">محصولات</h2>
+                        <h2 class="title" style="font-size: 30px" >محصولات</h2>
                         <div dir="rtl" class="swiper content-slider">
                             <div class="swiper-wrapper">
                                 {% for a in category %}
@@ -124,7 +124,7 @@
                         </div>
                         <div class="news_teaser-wrap">
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ blog.image.url }}"
@@ -148,6 +148,12 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="news_teaser-wrap">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                             {% for c in blog_ %}
                                 <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                      data-filter='logistics industry manufacturing' itemscope
@@ -163,11 +169,11 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
                                         {{ c.category.first }}        </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' c.slug %}"
-                                                itemprop="url"><span itemprop="headline">{{ c.title }}</span></a>
+                                                itemprop="url"><span class="fnt-sz-25" itemprop="headline">{{ c.title }}</span></a>
                                         </h2>
                                     </div>
                                 </div>
@@ -183,9 +189,9 @@
                             <span class="category">محصولات</span>
                             <a href="{% url 'product:ProductList' %}"><h2 class="title">محصولات بیشتر</h2></a>
                         </div>
-                        <div class="news_teaser-wrap">
+                        <div class="news_teaser-wrap    " >
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ product_.image.url }}"
@@ -209,6 +215,12 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="news_teaser-wrap">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                             {% for c in product %}
                                 <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                      data-filter='logistics industry manufacturing' itemscope
@@ -246,7 +258,7 @@
                         </div>
                         <div class="news_teaser-wrap">
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ project.image.url }}"
@@ -268,6 +280,9 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="news_teaser-wrap">
+
                             {% for c in project_ %}
                                 <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                      data-filter='logistics industry manufacturing' itemscope
@@ -305,19 +320,20 @@
                         <ul class="ce_tabcontrol nav nav-tabs" id="tabcontrol_tabs_1858" role="tablist"
                             data-remember-last-tab="true">
                             <li class="nav-item">
-                                <a class="tab-link nav-link" id="user_1858-tab" data-tab="user_1858"
+                                <a class="tab-link nav-link  px-8 py-3" id="user_1858-tab" data-tab="user_1858"
                                    href="#user_1858" role="tab" aria-controls="user_1858"
-                                   aria-selected="true">کاربر</a>
+                                   aria-selected="true" style="font-size: 14px">کاربر</a>
                             </li>
                             <li class="nav-item">
-                                <a class="tab-link nav-link  active" id="installer_1860-tab"
+                                <a class="tab-link nav-link  active  px-8 py-3" id="installer_1860-tab"
                                    data-tab="installer_1860"
                                    href="#installer_1860" role="tab" aria-controls="installer_1860"
+                                   style="font-size: 14px"
                                    aria-selected="">نصاب</a>
                             </li>
                             <li class="nav-item">
-                                <a class="tab-link nav-link " id="planner_1862-tab" data-tab="planner_1862"
-                                   href="#planner_1862" role="tab" aria-controls="planner_1862" aria-selected="">planner</a>
+                                <a class="tab-link nav-link  px-8 py-3" id="planner_1862-tab" data-tab="planner_1862"
+                                   href="#planner_1862" role="tab" aria-controls="planner_1862" aria-selected="" style="font-size: 14px">planner</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="tabcontrol_content_1858">

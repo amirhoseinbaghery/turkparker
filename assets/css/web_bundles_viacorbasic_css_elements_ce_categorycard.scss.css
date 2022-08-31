@@ -2,8 +2,8 @@
 .ce_categorycard {
     position: relative;
     flex-shrink: 0;
-    width: 21.888em !important;
-    height: 29.111em !important;
+    width: 31.888em !important;
+    height: 39.111em !important;
     overflow: hidden;
     border-radius: 1.38em;
     box-shadow: 0 0.88em 2.22em rgba(59, 59, 59, 0.4);
@@ -16,15 +16,15 @@
 }
 @media only screen and (max-width:1024px) {
     .ce_categorycard {
-        width: 12.555em !important;
-        height: 20em !important;
+        width: 12.555em ;
+        height: 20em ;
     }
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
  .ce_categorycard {
-             width: 12.555em !important;
-        height: 20em !important;
+             width: 18.555em !important;
+        height: 30em !important;
     }
 }
 .ce_categorycard .wrapper {
