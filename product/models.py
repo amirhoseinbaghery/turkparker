@@ -108,7 +108,9 @@ class ProductCategory(models.Model):
     subClass = models.ForeignKey("self", verbose_name='دسته مادر', related_name='Child', null=True, blank=True,
                                  on_delete=models.CASCADE)
     image = models.FileField(upload_to='productCategory/', verbose_name='تصویر', null=True)
-
+    image2 = models.FileField(upload_to='productCategory/', verbose_name='تصویر', null=True)
+    image3 = models.FileField(upload_to='productCategory/', verbose_name='تصویر', null=True)
+    image4 = models.FileField(upload_to='productCategory/', verbose_name='تصویر', null=True)
     keyword = models.CharField(max_length=300, verbose_name='کلمات کلیدی', null=True, blank=True)
     description = models.CharField(max_length=300, null=True, blank=True, verbose_name='متای توضیحات')
     publish = models.DateTimeField(default=timezone.now, verbose_name='تاریخ')
