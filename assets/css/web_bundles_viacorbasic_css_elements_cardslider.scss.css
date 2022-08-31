@@ -16,7 +16,7 @@
     max-width: clamp(15.5em, 86%, 90.9em)
 }
 .card-slider .title {
-    font-size: 1.55em;
+    font-size: 1.55em ;
     font-family: "universal-extended", helvetica, arial, sans-serif;
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;

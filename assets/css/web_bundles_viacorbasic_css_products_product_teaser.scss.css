@@ -1,0 +1,84 @@
+
+.product-teaser {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #3B3B3B;
+    border-radius: 1.389em;
+    padding: 1.389em;
+    color: #FFFFFF
+}
+.product-teaser .product-teaser_title {
+    font-size: 1.38em;
+    font-size: clamp(1.11em, 1.3vw, 1.38em);
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    line-height: 1.4em;
+    width: 100%
+}
+.product-teaser .product-teaser_title strong {
+    font-family: "universal-bold-extend", helvetica, sans-serif
+}
+.product-teaser .product-teaser_category {
+    width: 100%;
+    margin: auto 0 0.5em;
+    font-size: 0.88em;
+    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-size: clamp(0.66em, 0.83vw, 0.88em);
+    line-height: 1.6em;
+    font-size: clamp(0.66em, 2vw, 0.88em);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    overflow: hidden
+}
+.product-teaser .product-teaser_read-more {
+    display: inline-block;
+    position: relative;
+    width: 2.333em;
+    height: 2.333em;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-top: auto
+}
+.product-teaser .product-teaser_read-more:before,
+.product-teaser .product-teaser_read-more:after {
+    content: "";
+    display: block;
+    background: #3B3B3B;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: all 400ms
+}
+.product-teaser .product-teaser_read-more:before {
+    height: 100%;
+    width: 2px
+}
+.product-teaser .product-teaser_read-more:hover:before {
+    transform: translate(-50%, -50%) rotate(-90deg)
+}
+@media only screen and (max-width:1024px) {
+    .product-teaser .product-teaser_read-more {
+        width: 1.833em;
+        height: 1.833em
+    }
+}
+@media only screen and (max-width:560px) {
+    .product-teaser .product-teaser_read-more {
+        width: 1.556em;
+        height: 1.556em
+    }
+}
