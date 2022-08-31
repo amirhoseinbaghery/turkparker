@@ -93,7 +93,7 @@
 .header_form #container #left .mod_article .formbody .widget label {
     position: absolute;
     top: 0.7em;
-    left: 0.5em;
+    right: 0.5em;
     font-size: 1em;
     color: #C5C4BE;
     cursor: text;
@@ -103,7 +103,7 @@
 .header_form #container #left .mod_article .formbody .widget label.labelUP,
 .header_form #container #left .mod_article .formbody .widget label.error {
     top: -1.4em;
-    left: 0;
+    right: 0;
     font-size: 0.778em
 }
 .header_form #container #left .mod_article .formbody .widget label.labelUP + textarea,

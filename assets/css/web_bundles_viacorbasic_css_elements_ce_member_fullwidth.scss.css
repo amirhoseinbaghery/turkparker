@@ -43,7 +43,7 @@
 }
 .ce_memberfullwidth .text_container h3 {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -55,7 +55,7 @@
 .ce_memberfullwidth .text_container p strong {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -64,7 +64,7 @@
 }
 .ce_memberfullwidth .text_container .job_title {
     font-size: 1.38em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.11em, 1.3vw, 1.38em);
     line-height: 1.8em;
     color: #FFFFFF;
@@ -98,7 +98,7 @@
 }
 .ce_memberfullwidth .links_container ul li a {
     font-size: 1.38em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.11em, 1.3vw, 1.38em);
     line-height: 1.8em;
     color: #FFFFFF;

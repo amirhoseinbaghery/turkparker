@@ -9,7 +9,7 @@
 }
 .news_full .tag-chain .tag-chain-item {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     display: inline-block;
@@ -38,7 +38,7 @@
 }
 .news_full .blog-downloads-section .inside .section-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -72,7 +72,7 @@
 }
 .news_jobdetail .ce_headertext .job-details-subheading {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     color: #3B3B3B;
@@ -82,12 +82,12 @@
 .news_jobdetail .ce_headertext .job-details-title {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;
     color: #FFFFFF;
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif
+    font-family:"IRANSansWeb";
 }
 .news_jobdetail .ce_separation {
     background: #3B3B3B url("../../bundles/viacorbasic/img/ce-separation-bg-sport.png") center bottom / 100% auto no-repeat
@@ -108,7 +108,7 @@
     }
 }
 .news_jobdetail .ce_separation p {
-    font-family: "universal-extended", helvetica, arial, sans-serif
+    font-family: "IRANSansWeb";
 }
 .news_jobdetail .tabs-wrap {
     width: 100%;
@@ -153,7 +153,7 @@
 }
 .news_jobdetail .ce_ctatext .wrapper p {
     font-size: 1em;
-    font-family: "universal-roman", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em;
     text-transform: none;
     max-width: none
@@ -165,7 +165,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;

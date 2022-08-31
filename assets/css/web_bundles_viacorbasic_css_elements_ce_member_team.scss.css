@@ -97,14 +97,14 @@
 .ce_memberteam .innerbox .text_content p strong {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase
 }
 .ce_memberteam .innerbox .text_content .job_title {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     margin-top: 0.6em
@@ -144,7 +144,7 @@
 }
 .ce_memberteam .innerbox .text_content ul li a {
     font-size: 1.38em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.11em, 1.3vw, 1.38em);
     line-height: 1.8em;
     color: #FFFFFF;

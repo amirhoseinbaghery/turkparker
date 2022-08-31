@@ -1,27 +1,14 @@
 
 @font-face {
-    font-family: "universal-light";
-    src: url("../../bundles/viacorbasic/fonts/UniversLTPro45Light/Univers 45 Light.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro45Light/Univers 45 Light.woff") format("woff");
-    font-display: swap;
-    font-style: normal
-}
-@font-face {
-    font-family: "universal-extended";
-    src: url("../../bundles/viacorbasic/fonts/UniversLTPro53Ex/Univers 53 Extended.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro53Ex/Univers 53 Extended.woff") format("woff");
-    font-display: swap;
-    font-style: normal
-}
-@font-face {
-    font-family: "universal-roman";
-    src: url("../../bundles/viacorbasic/fonts/UniversLTPro55Roman/Univers 55 Roman.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro55Roman/Univers 55 Roman.woff") format("woff");
-    font-display: swap;
-    font-style: normal
-}
-@font-face {
-    font-family: "universal-bold-extend";
-    src: url("../../bundles/viacorbasic/fonts/UniversLTPro63BoldExt/Univers 63 Bold Extended.woff2") format("woff2"), url("../../bundles/viacorbasic/fonts/UniversLTPro63BoldExt/Univers 63 Bold Extended.woff") format("woff");
-    font-display: swap;
-    font-style: normal
+  font-family:"IRANSansWeb";
+    src : url("../fonts/IRANSansWeb.eot") format('embedded-opentype');
+  src: url("../fonts/IRANSansWeb.ttf") format("truetype");
+  src : url('../fonts/IRANSansWeb.woff') format('woff'),
+    url("../fonts/IRANSansWeb.woff2");
+    src : url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).eot") format("embedded-opentype");
+    src: url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).ttf") format("truetype");
+  src: url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).woff") format("woff");
+
 }
 * {
     font-size: 100%;
@@ -43,7 +30,7 @@ body {
     text-size-adjust: 100%;
     font-size: 1.125em;
     line-height: 1.5;
-    font-family: "universal-roman", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     background: #C5C4BE
 }
 body.scroll-disabled {
@@ -86,7 +73,7 @@ p.back a {
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;

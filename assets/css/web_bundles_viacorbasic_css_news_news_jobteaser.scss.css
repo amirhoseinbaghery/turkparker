@@ -33,12 +33,12 @@
 .joblisting-section .joblist li a .joblist-teaser-title {
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em
 }
 .joblisting-section .joblist li a .joblist-teaser-subheadline {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     display: block;

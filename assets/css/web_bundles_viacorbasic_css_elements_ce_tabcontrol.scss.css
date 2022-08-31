@@ -16,7 +16,7 @@
 }
 .tab-header .subheadline {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -26,7 +26,7 @@
 .tab-header .title {
     font-size: 4.16em;
     font-size: clamp(1.77em, 3.9vw, 4.16em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family:"IRANSansWeb";
     line-height: 1.06em;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -75,7 +75,7 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: 0.889em;
     line-height: 1.4em;
     text-align: center;
@@ -140,7 +140,7 @@
 }
 .tabs-content .tab-pane .ce_fulltext ul li {
     font-size: 1em;
-    font-family: "universal-roman", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     color: #FFFFFF;
     padding-top: 1.22em;
     padding-bottom: 0.88em;

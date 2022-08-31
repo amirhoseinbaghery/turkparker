@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@font-face {
+  font-family:"IRANSansWeb";
+    src : url("../fonts/IRANSansWeb.eot") format('embedded-opentype');
+  src: url("../fonts/IRANSansWeb.ttf") format("truetype");
+  src : url('../fonts/IRANSansWeb.woff') format('woff'),
+    url("../fonts/IRANSansWeb.woff2");
+    src : url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).eot") format("embedded-opentype");
+    src: url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).ttf") format("truetype");
+  src: url("../fonts/Farsi_numerals/IRANSansWeb(FaNum).woff") format("woff");
+
+}
 :root {
   --bs-blue: #009ef6;
   --bs-indigo: #6610f2;
@@ -43,8 +54,8 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 24, 28, 50;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: Poppins, Helvetica, "sans-serif";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: "IRANSansWeb";
+  --bs-font-monospace: "IRANSansWeb";
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -326,7 +337,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: "IRANSansWeb";
   font-size: inherit;
   line-height: inherit;
 }
@@ -47478,7 +47489,7 @@ body[data-kt-sticky-landing-header=on] {
   }
 }
 html {
-  font-family: sans-serif;
+  font-family: "IRANSansWeb";
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -47491,7 +47502,7 @@ body {
   padding: 0px;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: "IRANSansWeb";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -48437,7 +48448,7 @@ body {
   width: auto;
   background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: "IRANSansWeb";
   z-index: 1000;
   border-radius: 0.475rem;
 }
@@ -48651,7 +48662,7 @@ body {
   }
 }
 .flatpickr-calendar {
-  font-family: inherit;
+  font-family: "IRANSansWeb";
   border: 0;
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   border-radius: 0.475rem;
@@ -49266,7 +49277,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
   text-indent: 0 !important;
   content: "+";
   color: #5E6278;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: "IRANSansWeb";
   background-color: #E4E6EF;
   border-radius: 0.475rem;
 }
@@ -49531,7 +49542,7 @@ table.dataTable > tbody > tr.child span.dtr-data {
 }
 
 .ql-toolbar {
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: "IRANSansWeb";
 }
 .ql-toolbar.ql-snow {
   border: 1px solid #EFF2F5;
@@ -49892,7 +49903,7 @@ body.swal2-height-auto {
 .apexcharts-text,
 .apexcharts-title-text,
 .apexcharts-legend-text {
-  font-family: Poppins, Helvetica, "sans-serif" !important;
+  font-family: "IRANSansWeb" !important;
 }
 
 .apexcharts-title-text {
@@ -50063,7 +50074,7 @@ body.swal2-height-auto {
   box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075) !important;
 }
 .leaflet-container .leaflet-popup-content-wrapper .leaflet-popup-content {
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: "IRANSansWeb";
   font-size: 1rem;
 }
 

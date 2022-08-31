@@ -50,7 +50,7 @@
     width: 100%;
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em;
     font-size: clamp(1em, 1.5vw, 1.38em);
     line-height: 1.2em;
@@ -59,14 +59,14 @@
 .system-teaser .system-teaser_content-wrapper .system-teaser_title strong {
     font-size: 1.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     line-height: 1.4em
 }
 .system-teaser .system-teaser_content-wrapper .system-teaser_subtitle {
     width: 100%;
     margin: auto 0 0.5em;
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     font-size: clamp(0.66em, 2vw, 0.88em);

@@ -38,7 +38,7 @@
     display: block;
     margin: auto auto 0.9em;
     font-size: 1.777em;
-    font-family: "universal-light", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-size: clamp(1.38em, 1.66vw, 1.777em);
     line-height: 1.3em;
     color: #FFFFFF
@@ -46,7 +46,7 @@
 .ce_separation p.big {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb";
     font-weight: normal;
     line-height: 1.18em;
     display: block;
