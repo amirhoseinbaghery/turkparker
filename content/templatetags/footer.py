@@ -1,5 +1,5 @@
 from django import template
-from content.models import SiteSetting, About, Communication, Licence
+from content.models import SiteSetting, About, Communication, Licence, SocialMedia
 
 register = template.Library()
 
@@ -12,5 +12,7 @@ def footer():
         'object': about_,
         'com': communicate,
         'logo': SiteSetting.objects.last(),
-        'licence': Licence.objects.all()
+        'licence': Licence.objects.all(),
+        'social': SocialMedia.objects.all(),
+
     }

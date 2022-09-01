@@ -14,9 +14,9 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 {% for a in slide %}
-                                <div class="swiper-slide swiper-slide_2">
+                                <div class="swiper-slide swiper-slide_2"><a href="https://{{ a.link }}">
                                     <img src="{{ a.image.url }}"
-                                         alt="{{ a.title }}">
+                                         alt="{{ a.title }}"></a>
                                 </div>
                                 {% endfor %}
                             </div>
@@ -119,8 +119,8 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                        {{ blog.category.first }}
+                                        <span class="tag-chain tag-chain-item"><a href="{% url 'blog:categoryList' blog.category.first.slug %}">
+                                        {{ blog.category.first }}</a>
                                         </span>
                                     <h2 itemprop="name"><a href="{% url 'blog:SinglePost' blog.slug %}"
 
@@ -155,8 +155,9 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item fnt-size-18">
-                                        {{ c.category.first }}        </span>
+                                        <span class="tag-chain tag-chain-item fnt-size-18"><a href="{% url 'blog:categoryList' c.category.first.slug %}">
+                                        {{ c.category.first }}</a>
+                                        </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' c.slug %}"
                                                 itemprop="url"><span class="fnt-sz-25" itemprop="headline">{{ c.title }}</span></a>
@@ -186,8 +187,8 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                        {{ product_.category.first }}
+                                        <span class="tag-chain tag-chain-item"><a href="{% url 'product:categoryList' product_.category.first.slug %}">
+                                        {{ product_.category.first }}</a>
                                         </span>
                                     <h2 itemprop="name"><a href="{% url 'product:product' product_.slug %}"
 
@@ -222,8 +223,8 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                        {{ c.category.first }}        </span>
+                                        <span class="tag-chain tag-chain-item"><a href="{% url 'product:categoryList' c.category.first.slug %}">
+                                        {{ c.category.first }}</a></span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'product:product' c.slug %}"
                                                 itemprop="url"><span itemprop="headline">{{ c.title }}</span></a>
@@ -253,8 +254,8 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                        {{ project.category.first }}
+                                        <span class="tag-chain tag-chain-item"><a href="{% url 'project:CategoryList' project.category.first.slug %}">
+                                        {{ project.category.first }}</a>
                                         </span>
                                     <h2 itemprop="name"><a href="{% url 'project:Project' project.slug %}" itemprop="url"><span
                                             itemprop="headline">{{ project.title }}</span></a>
@@ -287,8 +288,8 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                        {{ c.category.first }}        </span>
+                                        <span class="tag-chain tag-chain-item"><a href="{% url 'project:CategoryList' c.category.first.slug %}">
+                                        {{ c.category.first }}</a></span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'project:Project' c.slug %}"
                                                 itemprop="url"><span itemprop="headline">{{ c.title }}</span></a>

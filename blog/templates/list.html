@@ -32,8 +32,8 @@
                                             </a>
                                         </figure>
                                         <div class="news_teaser-content-wrap">
-<span class="tag-chain tag-chain-item">
-{{ r.category.first }}        </span>
+                                            <span class="tag-chain tag-chain-item">
+                                            <a href="{% url 'blog:categoryList' r.category.first.slug %}">{{ r.category.first }}</a></span>
                                             <h2 itemprop="name"><a
                                                     href="{% url 'blog:SinglePost' r.slug %}"
                                                     itemprop="url"><span itemprop="headline">{{ r.title }}</span></a>

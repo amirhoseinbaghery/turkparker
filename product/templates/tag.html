@@ -12,23 +12,22 @@
                     <div class="ce_headerdark first block">
                         <div class="wrapper">
                             <div class="text-content-wrap">
-                                <h1>محصولات</h1>
+                                <h1> {{ object.title }}</h1>
                             </div>
                         </div>
 
                     </div>
                     <div class="mod_productlist">
                         <div class="inside">
-                            {% for a in category %}
                                 <section class="ce_accordion ce_text block">
                                     <div class="accordion-simple_inner">
                                         <div class="accordion-simple_toggler toggler">
-                                            <h2 class="accordion-simple_title">{{ a.title }}</h2>
+                                            <h2 class="accordion-simple_title">{{ object.title }}</h2>
                                         </div>
                                         <div class="accordion-simple_content accordion">
                                             <div>
                                                 <div class="product-list-grid">
-                                                    {% for b in a.ProductCategory.all %}
+                                                    {% for b in object_list %}
                                                         <div class="product-teaser">
                                                             <h3 class="product-teaser_title">{{ b.title }}</h3>
                                                             <a href="{% url 'product:product' b.slug %}"
@@ -42,7 +41,6 @@
                                         </div>
                                     </div>
                                 </section>
-                            {% endfor %}
                         </div>
                     </div>
                     <!-- indexer::continue -->

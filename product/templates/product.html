@@ -35,7 +35,7 @@
 
                                                 <span class="category full-heading-small">
                                                     {% for a in object.category.all %}
-                                                        <a href="{% url 'product:categoryList' a.slug %}">{{ a.title }}،</a>  {% endfor %}
+                                                        <a href="{% url 'product:categoryList' a.slug %}">{{ a.title }}/</a>  {% endfor %}
                                                 </span>
 
                                             <h1 class="full-title">{{ object.title }}</h1>
@@ -44,7 +44,7 @@
                                                 <ul>
                                                     {% for b in object.tag.all %}
                                                         <li>
-                                                            <a href="{% url 'product:tagList' b.slug %}"> {{ b.title }}</a>
+                                                            <a href="{% url 'product:tagList' b.slug %}"> {{ b.title }}/</a>
                                                         </li>
                                                     {% endfor %}
                                                 </ul>

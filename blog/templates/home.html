@@ -25,16 +25,13 @@
                             <div class="additional-filters-container">
                                 <div class="filters-container_title-row">
                                     <h4 class="filters-container_title">فیلترها</h4>
-                                    <a href="" class="news_teaser-filter clear-filter-button offcanvas-close"
-                                       data-filter="*"></a>
                                 </div>
                                 <div class="filters-container_filter-row">
                                     <h5 class="filters-container_filter-title">دسته بندی ها</h5>
                                     <ul class="news_teaser-filters-list offcanvas-filter-list">
                                         {% for b in category %}
                                             <li><a href="{% url 'blog:categoryList' b.slug %}"
-                                                   class="news_teaser-filter select-filter-button offcanvas-close"
-                                                   data-filter="public-private">{{ b.title }}</a></li>
+                                                   class="news_teaser-filter select-filter-button offcanvas-close">{{ b.title }}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </div>
@@ -61,14 +58,14 @@
                                     </div>
                                     <div class="news_teaser-content-wrap">
                                     <span class="tag-chain tag-chain-item">
-                                        {{ first.category.first }}
+                                        <a href="{% url 'blog:categoryList' first.category.first.slug %}">{{ first.category.first }}</a>
                                     </span>
                                         <h2 itemprop="name"><a href="{% url 'blog:SinglePost' first.slug %}"
                                                                itemprop="url"><span itemprop="headline">{{ first.title }}</span></a>
                                         </h2>
                                         <div class="ce_text block" itemprop="description">
-                                            <p>دسته : {% for e in first.category.all %} {{ e.title }}, {% endfor %}</p></div>
-                                        <p class="more"><a href="en/blog/os-10-coating-in-the-car-park.html"
+                                            <p>دسته : {% for e in first.category.all %} <a href="{% url 'blog:categoryList' e.slug %}"> {{ e.title }}, </a>{% endfor %}</p></div>
+                                        <p class="more"><a href="{% url 'blog:SinglePost' first.slug %}"
                                                            itemprop="url">مطالعه<span class="invisible"> {{ first.title }}</span></a>
                                         </p>
                                     </div>
@@ -93,7 +90,7 @@
                                     </figure>
                                     <div class="news_teaser-content-wrap">
                                         <span class="tag-chain tag-chain-item">
-                                            {{ r.category.first }}
+                                            <a href="{% url 'blog:categoryList' r.category.first.slug %}">{{ r.category.first }}</a>
                                         </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' r.slug %}"

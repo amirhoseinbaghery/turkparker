@@ -22,17 +22,19 @@ def product(request, slug):
 
 class ProductList(ListView):
     template_name = 'prohome.html'
-    paginate_by = 15
 
     def get_queryset(self):
         global product_
         product_ = Product.objects.filter(status='p')
         return product_
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = ProductCategory.objects.filter(status='p')
+        return context
 
 class ProductCategoryList(ListView):
     template_name = 'productlist.html'
-    paginate_by = 15
 
     def get_queryset(self):
         global prod
@@ -47,8 +49,7 @@ class ProductCategoryList(ListView):
 
 
 class ProductTagList(ListView):
-    template_name = 'productlist.html'
-    paginate_by = 15
+    template_name = 'tag.html'
 
     def get_queryset(self):
         global tag, product

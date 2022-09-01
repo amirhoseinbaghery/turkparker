@@ -26,18 +26,16 @@
                                         <div class="header-right-column">
                                             <div class="text-content-wrap">
                                                 <ul class="tag-chain">
-                                                    <li class="tag-chain-item first">
-                                                        {% for t in object.category.all %}{{ t.title }}{% endfor %}
-                                                    </li>
                                                     <li class="d-inline-block">
-                                                        {% for y in object.category.all %}
-                                                            <div>
-                                                                <a class="text-decoration-none fnt-size-20" href="{% url 'project:CategoryList' y.slug %}"><h2
+                                                        <div>
+                                                            {% for y in object.category.all %}
+                                                                <a class="text-decoration-none fnt-size-20"
+                                                                   href="{% url 'project:CategoryList' y.slug %}"><h2
                                                                         class="Y2IQFc"
-                                                                        lang="en">{{ y.title }}</h2>
-                                                                </a>
-                                                            </div>
-                                                        {% endfor %}
+                                                                        lang="en">{{ y.title }}/</h2>
+                                                                </a>                                                        {% endfor %}
+
+                                                        </div>
                                                     </li>
                                                 </ul>
                                                 <h1>{{ object.title }}</h1>
@@ -56,14 +54,18 @@
                                                     </p>
                                                 </div>
                                                 <div class=" fnt-sz-25 py-10" style="border-top: 2px solid #3B3B3B;">
-                                                    {% for u in object.tag.all %}
-                                                        <div>
-                                                            <a class="text-decoration-none" href="{% url 'project:tagList' u.slug %}"><h2
-                                                                    class="Y2IQFc"
-                                                                    lang="en">{{ u.title }}</h2>
+
+                                                    <div>
+                                                        {% for u in object.tag.all %}
+                                                            <a class="text-decoration-none"
+                                                               href="{% url 'project:tagList' u.slug %}">
+                                                                <h2
+                                                                        class="Y2IQFc"
+                                                                        lang="en">{{ u.title }}</h2>
                                                             </a>
-                                                        </div>
-                                                    {% endfor %}
+                                                        {% endfor %}
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +77,7 @@
 
 
                                     <p>
-
+                                        {{ object.description }}
                                     </p>
                                 </div>
                             </div>
