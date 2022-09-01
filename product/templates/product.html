@@ -12,239 +12,98 @@
                         <div class="system-full product-system">
                             <div class="full-hero">
                                 <div class="back-button-wrapper">
-                                    <a href="https://www.viacor.de/en/systems/sports-and-fun/overview-sports-flooring-systems.html"
+                                    <a href="{% url 'product:ProductList' %}"
                                        class="back-button" id="back" title="Back">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="#C5C4BE" width="16.5"
                                              height="17.65" viewBox="0 0 16.5 17.65">
-                                            <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"></path>
+                                            <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"/>
                                         </svg>
-                                        Back
+                                        بازگشت
                                     </a>
                                 </div>
                                 <div class="wrapper header-2-col-wrapper">
                                     <div class="header-left-column">
                                         <figure class="image_container">
                                             <picture>
-                                                <img src=""
-                                                     width="950" height="534" alt="" itemprop="image">
+                                                <img src="{{ object.image.url }}"
+                                                     width="950" height="534" alt="{{ object.title }}" itemprop="image">
                                             </picture>
                                         </figure>
                                     </div>
                                     <div class="header-right-column">
                                         <div class="text-content-wrap">
-<span class="category full-heading-small">
-Sports &amp; Fun / Running Tracks                    </span>
-                                            <h1 class="full-title"><strong>PORPLASTIC</strong> SW smart</h1>
+
+                                                <span class="category full-heading-small">
+                                                    {% for a in object.category.all %}
+                                                        <a href="{% url 'product:categoryList' a.slug %}">{{ a.title }}،</a>  {% endfor %}
+                                                </span>
+
+                                            <h1 class="full-title">{{ object.title }}</h1>
                                             <div class="attributes">
-                                                <p class="full-heading-small">Tags</p>
+                                                <p class="full-heading-small">برچسب ها</p>
                                                 <ul>
-                                                    <li>abrasion resistant</li>
-                                                    <li>easy on your joints</li>
-                                                    <li>elastic</li>
-                                                    <li>heavy-duty</li>
-                                                    <li>indoor</li>
-                                                    <li>jointless</li>
-                                                    <li>outdoor</li>
+                                                    {% for b in object.tag.all %}
+                                                        <li>
+                                                            <a href="{% url 'product:tagList' b.slug %}"> {{ b.title }}</a>
+                                                        </li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="ce_separation block">
+                            <div class="ce_separation block"
+                                 style=" background: #3B3B3B left bottom / 100% auto no-repeat;background-image:url('assets/media/ce-separation-bg-sport.webp');height: 400px">
                                 <div class="wrapper">
-                                    <p class="big">For small areas or indoor</p>
-                                    <p>Sandwich construction consisting of an elastic mat, pore sealer and cast coating
-                                        spread with coloured EPDM-granules, water-impermeable</p>
+                                    <p class="" style="font-size: 28px">{{ object.description }}</p>
                                 </div>
                             </div>
                             <div class="full-parameterlist block">
                                 <div class="wrapper">
-                                    <h2 class="section-title">System Benefits</h2>
-                                    <ul>
-                                        <li>total system thickness approx. 13 - 17 mm</li>
-                                        <li>tested in accordance with IAAF criteria</li>
-                                        <li>water-impermeable</li>
-                                        <li>sandwich-construction</li>
-                                        <li>extremely spike-resistant</li>
-                                        <li>structured surface</li>
-                                        <li>excellent conditions even when wet or raining</li>
-                                        <li>available in many colours</li>
+                                    <h2 class="section-title" style="font-size: 25px">مزایا</h2>
+                                    <ul style="font-size: 18px">
+                                        {% for c in object.feature.all %}
+                                            <li>{{ c.title }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-parameterlist block">
+                                <div class="wrapper">
+                                    <h2 class="section-title" style="font-size: 25px">موارد مصرف</h2>
+                                    <ul style="font-size: 18px">
+                                        {% for c in object.usage.all %}
+                                            <li>{{ c.title }}</li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                             <div class="full-components">
                                 <div class="wrapper">
-                                    <h2 class="section-title">Build-up &amp; System Components</h2>
+                                    <h2 class="section-title" style="font-size: 25px">تصاویر</h2>
                                     <div class="product-list-grid">
+                                        {% for d in object.gallery.all %}
                                         <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC X8090</h3>
-                                            <p class="product-teaser_category">Line paint</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-x8090.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC X8090</span>
+                                            <a href="" class="product-teaser_read-more">
+                                                <img src="{{ d.image.url }}" alt="{{ d.title }}">
+                                                <span class="invisible"
+                                                      style="font-size: 20px">PORPLASTIC S6085 SR</span>
                                             </a>
                                         </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC S6000P</h3>
-                                            <p class="product-teaser_category">flexible top finish Sport </p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-s6000p.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC S6000P</span>
-                                            </a>
-                                        </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC C570</h3>
-                                            <p class="product-teaser_category">Elastic Layer</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-c570.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC C570</span>
-                                            </a>
-                                        </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC L370</h3>
-                                            <p class="product-teaser_category">Pore closure</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-l370.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC L370</span>
-                                            </a>
-                                        </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">VIASOL Elastikmatte</h3>
-                                            <p class="product-teaser_category">Elastic mat</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/viasol-elastikmatte.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">VIASOL Elastikmatte</span>
-                                            </a>
-                                        </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC B976</h3>
-                                            <p class="product-teaser_category">Adhesion</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-b976.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC B976</span>
-                                            </a>
-                                        </div>
-                                        <div class="product-teaser">
-                                            <h3 class="product-teaser_title">PORPLASTIC P270</h3>
-                                            <p class="product-teaser_category">Primer</p>
-                                            <a href="en/products-sports-and-industrial-flooring-systems/porplastic-p270.html"
-                                               class="product-teaser_read-more">
-                                                <span class="invisible">PORPLASTIC P270</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="full-downloads">
-                                <div class="wrapper">
-                                    <h2 class="section-title">Downloads</h2>
-                                    <div class="autowrap autowrap-downloads">
-                                        <div class="inside">
-                                            <div class="ce_downloads download-big block">
-                                                <a href="en/systems/sports-and-fun-floorings/porplastic-sw-smart.html?file=files/Systeme/Systemdatenblatt/en/sysDS%20PORPLASTIC%20SW%20smart.pdf"
-                                                   title="Download sysDS PORPLASTIC SW smart.pdf"
-                                                   class="download-inner ext-pdf" type="application/pdf">SysDSbr&gt;PORPLASTIC<b>
-                                                    SW smart</b>
-                                                    <span class="size">pdf, 333.4 KiB</span>
-                                                    <span class="icon">
-<span class="icon__download">
-<svg class="download-icon" fill="#3b3b3b" xmlns="http://www.w3.org/2000/svg" width="29.8" height="28.9"
-     viewBox="0 0 29.8 28.9">
-<path class="download-icon_arrow"
-      d="M22.37,8.76,15.8,15.33V0H14V15.33L7.43,8.76,6.16,10.03l8.74,8.74,8.74-8.74Z"></path>
-<path class="download-icon_bottom"
-      d="M26.28,28.9H3.53A3.53,3.53,0,0,1,0,25.38V14H1.8V25.38A1.72,1.72,0,0,0,3.53,27.1H26.28A1.72,1.72,0,0,0,28,25.38V14h1.8V25.38a3.53,3.53,0,0,1-3.52,3.52Z"></path>
-</svg>
-</span>
-</span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
                             <div class="full-button">
-                                <a href="en/systems/sports-and-fun/overview-sports-flooring-systems.html"
+                                <a href="{% url 'product:ProductList' %}"
                                    class="back-button" id="back" title="zurück">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#C5C4BE" width="16.5" height="17.65"
                                          viewBox="0 0 16.5 17.65">
-                                        <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"></path>
+                                        <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"/>
                                     </svg>
-                                    Back
+                                    برگشت
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ce_memberfullwidth member-ulrich">
-                        <div class="innerbox">
-                            <div class="image_container">
-                                <picture>
-                                    <source srcset="assets/images/9/Meike-Ulrich-small-afa983a8.webp" type="image/webp"
-                                            width="200" height="288">
-                                    <img src="assets/images/5/Meike-Ulrich-small-36fac605.jpg" width="200" height="288"
-                                         alt="Meike Ulrich" itemprop="image">
-                                </picture>
-                            </div>
-                            <div class="text_container">
-                                <h3>Contact</h3>
-                                <p>
-                                    <strong>
-                                        Meike Ulrich </strong>
-                                </p>
-                                <div class="job_title">
-                                    <span>Business Unit Manager PORPLASTIC</span>
-                                </div>
-                            </div>
-                            <div class="links_container">
-                                <ul>
-                                    <li class="mail">
-                                        <svg id="mail-icon" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"
-                                             width="33.8" height="27.8" viewBox="0 0 33.8 27.8">
-                                            <path id="Path_1573" data-name="Path 1573"
-                                                  d="M0,27.8H33.8V0H0ZM19.09,13.44a3.11,3.11,0,0,1-4.38,0L3.07,1.8H30.73ZM32,3.07V16.73L25.17,9.9ZM8.63,9.9,1.8,16.73V3.07ZM1.8,26V19.27l8.1-8.1,3.54,3.54a4.91,4.91,0,0,0,6.93,0l3.53-3.54,8.1,8.1V26Z"
-                                                  fill="#C5C4BE"></path>
-                                        </svg>
-                                        <a href="mailto:meike.ulrich@viacor.de">E-Mail</a>
-                                    </li>
-                                    <li class="phone">
-                                        <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
-                                             height="33.708" viewBox="0 0 33.646 33.708">
-                                            <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
-                                                <g id="Ebene_1" data-name="Ebene 1">
-                                                    <path id="Path_1576" data-name="Path 1576"
-                                                          d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
-                                                          fill="#C5C4BE"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <a href="tel:+4974729499995">+49 7472 94999 - 95</a>
-                                    </li>
-                                    <li class="mobile">
-                                        <svg id="phone-icon" xmlns="http://www.w3.org/2000/svg" width="33.646"
-                                             height="33.708" viewBox="0 0 33.646 33.708">
-                                            <g id="Ebene_2" data-name="Ebene 2" transform="translate(0 0.011)">
-                                                <g id="Ebene_1" data-name="Ebene 1">
-                                                    <path id="Path_1576" data-name="Path 1576"
-                                                          d="M14,6.88,9.32,1.08A2.89,2.89,0,0,0,5,.85L1.64,4.22A5.63,5.63,0,0,0,.75,11l.83,1.43A52.14,52.14,0,0,0,21.31,31.89L23.36,33A5.66,5.66,0,0,0,30,32.12l2.78-2.74a2.92,2.92,0,0,0,.86-2.26A3,3,0,0,0,32.53,25l-6.94-5.26a2.9,2.9,0,0,0-2.46-.5l-2.74.68a1.11,1.11,0,0,1-1-.23l-5-4.26a1.08,1.08,0,0,1-.38-1l.65-5.38A2.94,2.94,0,0,0,14,6.88Zm4.21,14.17a2.88,2.88,0,0,0,2.58.61L23.57,21a1.08,1.08,0,0,1,.93.2l6.94,5.26a1.1,1.1,0,0,1,.11,1.67l-2.77,2.74a3.85,3.85,0,0,1-4.55.61l-2-1.14a50.15,50.15,0,0,1-19-18.78L2.31,10.1a3.83,3.83,0,0,1,.61-4.61L6.28,2.13h0a1.11,1.11,0,0,1,.78-.33h.06a1.13,1.13,0,0,1,.81.41L12.63,8a1.12,1.12,0,0,1,.24.83l-.65,5.39a2.87,2.87,0,0,0,1,2.56Z"
-                                                          fill="#C5C4BE"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <a href="tel:+491759330875">+49 175 9330875</a>
-                                    </li>
-                                    <li class="fax">
-                                        <svg id="fax-icon" xmlns="http://www.w3.org/2000/svg" width="33.801"
-                                             height="33.8" viewBox="0 0 33.801 33.8">
-                                            <g id="Ebene_1" data-name="Ebene 1">
-                                                <path id="Path_1570" data-name="Path 1570"
-                                                      d="M29.8,0H6V5H0V28.8H6v5H29.8v-5h4V5h-4ZM7.8,1.8H28v9.1A2.1,2.1,0,0,1,25.9,13H9.9a2.1,2.1,0,0,1-2.1-2.1ZM28,32H7.8V22.9a2.1,2.1,0,0,1,2.1-2.1h16A2.1,2.1,0,0,1,28,22.9ZM32,6.8V27H29.8V22.9A3.91,3.91,0,0,0,25.9,19H9.9A3.91,3.91,0,0,0,6,22.9V27H1.8V18.9H4.9v-4H1.8V6.8H6v4.1a3.91,3.91,0,0,0,3.9,3.9h16a3.91,3.91,0,0,0,3.9-3.9V6.8Z"
-                                                      fill="#C5C4BE"></path>
-                                            </g>
-                                        </svg>
-                                        <a href="tel:+4974729499939">+49 7472 94999 - 39</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

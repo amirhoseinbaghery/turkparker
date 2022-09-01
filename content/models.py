@@ -151,6 +151,7 @@ class Why(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     image = models.FileField(upload_to='why/', verbose_name='عکس')
     body = models.CharField(max_length=200, verbose_name=' توضیحات')
+    installer = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'چرا تورک پارکر'
