@@ -73,6 +73,12 @@
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="news_teaser-wrap">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             {% for r in blog %}
                                 <div class="news_teaser arc_3 block odd has-image logistics industry manufacturing"
                                      data-filter='logistics industry manufacturing' itemscope
@@ -86,8 +92,9 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-<span class="tag-chain tag-chain-item">
-{{ r.category.first }}        </span>
+                                        <span class="tag-chain tag-chain-item">
+                                            {{ r.category.first }}
+                                        </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' r.slug %}"
                                                 itemprop="url"><span itemprop="headline">{{ r.title }}</span></a>
