@@ -192,11 +192,13 @@
              itemtype="http://schema.org/SiteNavigationElement">
             <a href="en/index.html#skipNavigation7" class="invisible">Skip navigation</a>
             <div class="submenu level_1">
-                <ul class="level_1">
+                <div class="row">
                     {% for a in licence %}
-                        <li class="first"><img src="{{ a.image.url }}" alt=""></li>
+                        <div class="col-lg-6 col-md-6 col-12 text-center">
+                            <img src="{{ a.image.url }}" alt="">
+                        </div>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
             <a id="skipNavigation7" class="invisible">&nbsp;</a>
         </nav>

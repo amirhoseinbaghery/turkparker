@@ -26,12 +26,26 @@
                                         <div class="header-right-column">
                                             <div class="text-content-wrap">
                                                 <ul class="tag-chain">
-                                                    <li class="tag-chain-item first">
+                                                    <li class="tag-chain-item first fnt-size-14">
                                                         {% for t in object.category.all %}{{ t.title }}{% endfor %}
+                                                    </li>
+                                                    <li class="d-inline-block">
+                                                        {% for y in object.category.all %}
+
+                                                            <div class="d-inline-block">
+                                                                <a class="text-decoration-none fnt-size-18"
+                                                                   href="{% url 'blog:categoryList' y.slug %}">
+                                                                    <h2 class="Y2IQFc" lang="en">
+                                                                        {{ y.title }}
+                                                                    </h2>
+                                                                </a>
+                                                            </div>
+
+                                                        {% endfor %}
                                                     </li>
                                                 </ul>
                                                 <h1>{{ object.title }}</h1>
-                                                <div class="teaser">
+                                                <div class="teaser pb-15">
                                                     <p><span class="Y2IQFc" lang="en">
                                                             تاریخ انتشار: {{ object.jpublish }}
                                                     </span>
@@ -41,7 +55,19 @@
                                                     </span>
                                                     </p>
                                                 </div>
+                                                <div style="border-top: 2px solid #3B3B3B;padding-top: 2.77em;">
+                                                    {% for u in object.tag.all %}
+                                                        <div>
+                                                            <a class="fnt-sz-25 text-decoration-none" href="{% url 'blog:tagList' u.slug %}">
+                                                                <h2 class="Y2IQFc"
 
+                                                                    lang="en">{{ u.title }}
+                                                                </h2>
+                                                            </a>
+                                                        </div>
+                                                    {% endfor %}
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -53,7 +79,6 @@
                                         <div>
                                             <a href="{% url 'blog:categoryList' y.slug %}">
                                                 <h2 class="Y2IQFc"
-
                                                     lang="en">{{ y.title }}
                                                 </h2>
                                             </a>
@@ -70,6 +95,8 @@
                                             </a>
                                         </div>
                                     {% endfor %}
+
+
                                 </div>
                             </div>
                             <div class="ce_fulltext block">
