@@ -10,8 +10,8 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
-    font-size: 0.889em;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
+    font-size: 18px;
     line-height: 1.4em;
     text-align: center;
     text-transform: uppercase;
@@ -62,8 +62,8 @@
         position: relative;
         overflow: hidden;
         color: #3B3B3B;
-        font-family: "universal-extended", helvetica, arial, sans-serif;
-        font-size: 0.889em;
+        font-family: "IRANSansWeb", helvetica, arial, sans-serif;
+        font-size: 18px;
         line-height: 1.4em;
         text-align: center;
         text-transform: uppercase;
@@ -71,7 +71,7 @@
         border-radius: 2em;
         padding: 0.665em 1.4em 0.465em;
         transition: all 0.4s ease;
-        top: 7em
+        top: 6em;
     }
     .system-full .back-button-wrapper .back-button:after {
         content: "";
@@ -119,8 +119,8 @@
     position: relative;
     overflow: hidden;
     color: #3B3B3B;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
-    font-size: 0.889em;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
+    font-size: 18px;
     line-height: 1.4em;
     text-align: center;
     text-transform: uppercase;
@@ -167,8 +167,8 @@
         position: relative;
         overflow: hidden;
         color: #3B3B3B;
-        font-family: "universal-extended", helvetica, arial, sans-serif;
-        font-size: 0.889em;
+        font-family: "IRANSansWeb", helvetica, arial, sans-serif;
+        font-size: 18px;
         line-height: 1.4em;
         text-align: center;
         text-transform: uppercase;
@@ -357,18 +357,18 @@
 .system-full .full-hero .full-title {
     font-size: 3.05em;
     font-size: clamp(1.55em, 2.8vw, 3.05em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-weight: normal;
     line-height: 1.18em;
     display: block;
     color: #FFFFFF
 }
 .system-full .full-hero .full-title strong {
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif
 }
 .system-full .full-hero .attributes li {
     font-size: 0.88em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-size: clamp(0.66em, 0.83vw, 0.88em);
     line-height: 1.6em;
     display: inline-block;
@@ -464,7 +464,7 @@
     opacity: 1
 }
 .system-full .full-hero .certificates .certificate-item .certificate-info-block .certificate-title {
-    font-family: "universal-bold-extend", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     margin-bottom: 1em
 }
 .system-full .full-hero .certificates .certificate-item .certificate-info-block p {
@@ -534,7 +534,7 @@
 }
 .system-full .full-parameterlist .wrapper .section-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -583,7 +583,7 @@
 }
 .system-full .full-components .section-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -609,7 +609,7 @@
 }
 .system-full .full-downloads .section-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;
@@ -637,7 +637,7 @@
 }
 .system-full .downloads-systems .section-title {
     font-size: 1.55em;
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     font-size: clamp(1em, 1.45vw, 1.55em);
     line-height: 1.14em;
     color: #000000;

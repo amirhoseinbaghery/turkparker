@@ -23,7 +23,16 @@
                                 <section class="ce_accordion ce_text block">
                                     <div class="accordion-simple_inner">
                                         <div class="accordion-simple_toggler toggler">
+
+
                                             <h2 class="accordion-simple_title">{{ a.title }}</h2>
+                                             <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" class="dropdown-icon-dark"
+                                                    width="17.65" height="10.1">
+                                                    <path d="m0 1.27 8.83 8.83 8.82-8.83L16.38 0 8.83 7.55 1.28 0Z" fill="#3b3b3b"/>
+                                                </svg>
+                                            </span>
                                         </div>
                                         <div class="accordion-simple_content accordion">
                                             <div>
@@ -34,6 +43,7 @@
                                                             <a href="{% url 'product:product' b.slug %}"
                                                                class="product-teaser_read-more">
                                                             </a>
+
                                                         </div>
                                                     {% endfor %}
 

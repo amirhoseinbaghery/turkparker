@@ -757,11 +757,11 @@
         min-width: 16em;
         padding-left: 1.11em;
         top: 4em;
-        right: -6em
+
     }
     #header #search-login #search_icon,
     #header #search-login #login svg {
-        width: 1.2em
+        width: 2.2em
     }
     #header #language nav .submenu.level_1 .level_1 {
         padding-left: 0.8em
