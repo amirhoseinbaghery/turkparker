@@ -38,14 +38,14 @@
                                 <div class="swiper-wrapper">
                                     {% for a in object_list %}
                                     <div class="ce_slidercard swiper-slide  block mx-3">
-                                        <div class="wrapper  ">
+                                        <div class="wrapper">
                                             <a href="{{ a.file.url }}">
                                                 <figure class="image_container float_above ">
                                                     <picture>
                                                         <img src="{{ a.image.url }}"
                                                              srcset="{{ a.image.url }} 1x, {{ a.image.url }} 2x"
                                                              width="420" height="600" alt="{{ a.title }}" loading="lazy"
-                                                             itemprop="image">
+                                                             itemprop="image">{{ a.image.url }}
                                                     </picture>
                                                 </figure>
                                                 <p class="card-title">{{ a.title }}</p>

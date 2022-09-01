@@ -51,9 +51,10 @@ def home(request):
     blog = Blog.objects.filter(status='p')
     prd = Product.objects.filter(status='p')
     proj = Project.objects.filter(status='p')
+    why = Why.objects.all()
     context = {
         'slide': Slider.objects.all(),
-        'why': Why.objects.all(),
+        'why': why,
         'category': ProductCategory.objects.filter(status='p', subClass=None),
         'project': proj.first(),
         'project_': proj[1:5],

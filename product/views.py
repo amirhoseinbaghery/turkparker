@@ -21,7 +21,7 @@ def product(request, slug):
 
 
 class ProductList(ListView):
-    template_name = 'productlist.html'
+    template_name = 'prohome.html'
     paginate_by = 15
 
     def get_queryset(self):
