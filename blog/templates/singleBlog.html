@@ -51,16 +51,22 @@
                                 <div class="wrapper">
                                     {% for y in object.category.all %}
                                         <div>
-                                            <a href="{% url 'blog:categoryList' y.slug %}"><h2 class="Y2IQFc"
-                                                                                               lang="en">{{ y.title }}</h2>
+                                            <a href="{% url 'blog:categoryList' y.slug %}">
+                                                <h2 class="Y2IQFc"
+
+                                                    lang="en">{{ y.title }}
+                                                </h2>
                                             </a>
                                         </div>
                                     {% endfor %}
 
                                     {% for u in object.tag.all %}
                                         <div>
-                                            <a href="{% url 'blog:tagList' u.slug %}"><h2 class="Y2IQFc"
-                                                                                          lang="en">{{ u.title }}</h2>
+                                            <a href="{% url 'blog:tagList' u.slug %}">
+                                                <h2 class="Y2IQFc"
+
+                                                    lang="en">{{ u.title }}
+                                                </h2>
                                             </a>
                                         </div>
                                     {% endfor %}
