@@ -65,49 +65,20 @@
                     </div>
                     <div class="ce_sliderStart card-slider block">
                         <div class="inside">
-                            <h2 class="title">Application areas</h2>
+                            <h2 class="title">کاتالوگ ها</h2>
                             <div dir="rtl" class="swiper content-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-rtl">
-                                <div class="swiper-wrapper" id="swiper-wrapper-a5f755bfd2a6e8110" aria-live="polite">
+                                <div aria-live="polite" class="swiper-wrapper" id="swiper-wrapper-a5f755bfd2a6e8110">
+                                    {% for a in object_list %}
                                     <div class="ce_categorycard swiper-slide sport block swiper-slide-active" role="group" aria-label="1 / 5">
                                         <div class="wrapper">
-                                            <a href="en/systems/sports-and-fun-floorings.html">
-                                                <p class="card-title">Sports &amp; Fun</p>
+                                            <a href="{{ a.file }}"><img src="{{ a.image.url }}" alt="{{ a.title }}">
+                                                <p class="card-title">{{ a.title }}</p>
                                                 <span class="plus-icon"></span>
+
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ce_categorycard swiper-slide industry block swiper-slide-next" role="group" aria-label="2 / 5">
-                                        <div class="wrapper">
-                                            <a href="en/systems/industry-production-logistics-flooring-systems.html">
-                                                <p class="card-title">Industry Production Logistics</p>
-                                                <span class="plus-icon"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ce_categorycard swiper-slide health block" role="group" aria-label="3 / 5">
-                                        <div class="wrapper">
-                                            <a href="en/systems/healthcare-and-gastronomy-flooring-systems.html">
-                                                <p class="card-title">Healthcare &amp; Gastro­nomy</p>
-                                                <span class="plus-icon"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ce_categorycard swiper-slide parking block" role="group" aria-label="4 / 5">
-                                        <div class="wrapper">
-                                            <a href="en/systems/car-parking-flooring-systems.html">
-                                                <p class="card-title">Parking</p>
-                                                <span class="plus-icon"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ce_categorycard swiper-slide spaces block ms-4" role="group" aria-label="5 / 5">
-                                        <div class="wrapper">
-                                            <a href="systeme/public-private.html">
-                                                <p class="card-title">Public &amp; Private</p>
-                                                <span class="plus-icon"></span>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div><!-- .swiper-wrapper -->
                                 <div class="slider-control">
                                     <div class="swiper-button-prev slider-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-a5f755bfd2a6e8110" aria-disabled="true"></div>
