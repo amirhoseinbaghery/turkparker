@@ -33,18 +33,18 @@
                                     <div class="header-right-column">
                                         <div class="text-content-wrap">
 
-                                                <span class="category full-heading-small">
+                                                <span class="category full-heading-small fnt-size-20">
                                                     {% for a in object.category.all %}
-                                                        <a href="{% url 'product:categoryList' a.slug %}">{{ a.title }}/</a>  {% endfor %}
+                                                        <a class="text-decoration-none" href="{% url 'product:categoryList' a.slug %}">{{ a.title }}/</a>  {% endfor %}
                                                 </span>
 
                                             <h1 class="full-title">{{ object.title }}</h1>
                                             <div class="attributes">
-                                                <p class="full-heading-small">برچسب ها</p>
+                                                <p class="fw-bold fnt-size-20">برچسب ها</p>
                                                 <ul>
                                                     {% for b in object.tag.all %}
-                                                        <li>
-                                                            <a href="{% url 'product:tagList' b.slug %}"> {{ b.title }}/</a>
+                                                        <li class="fnt-size-18 my-5 ">
+                                                            <a class="text-decoration-none" href="{% url 'product:tagList' b.slug %}"> {{ b.title }}/</a>
                                                         </li>
                                                     {% endfor %}
                                                 </ul>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="full-parameterlist block">
                                 <div class="wrapper">
-                                    <h2 class="section-title" style="font-size: 25px">مزایا</h2>
+                                    <h2 class=" fw-bold mb-10 fnt-size-28">مزایا</h2>
                                     <ul style="font-size: 18px">
                                         {% for c in object.feature.all %}
                                             <li>{{ c.title }}</li>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="full-parameterlist block">
                                 <div class="wrapper">
-                                    <h2 class="section-title" style="font-size: 25px">موارد مصرف</h2>
+                                    <h2 class="fw-bold mb-10 fnt-size-28">موارد مصرف</h2>
                                     <ul style="font-size: 18px">
                                         {% for c in object.usage.all %}
                                             <li>{{ c.title }}</li>
@@ -79,25 +79,78 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="full-components">
-                                <div class="wrapper">
-                                    <h2 class="section-title" style="font-size: 25px">تصاویر</h2>
-                                    <div class="product-list-grid">
+                            {#                            <div class="mod_newslist block">#}
+                            {#                                <div class="news_teaser-container">#}
+                            {#                                    <div class="section-titles">#}
+                            {#                                        <span class="category">تصاویر</span>#}
+                            {#                                    </div>#}
+                            {#                                    <div class="news_teaser-wrap">#}
+                            {#                                        {% for u in object.gallery.all %}#}
+                            {#                                            <div class="news_teaser arc_3 block last even has-image news logistics industry manufacturing"#}
+                            {#                                                 data-filter="news logistics industry manufacturing" itemscope=""#}
+                            {#                                                 itemtype="http://schema.org/Article">#}
+                            {#                                                <figure class="image_container float_above">#}
+                            {#                                                    <a href="{{ u.image.url }}">#}
+                            {#                                                        <picture>#}
+                            {#                                                            <img src="{{ u.image.url }}" width="395"#}
+                            {#                                                                 height="350" alt="{{ u.title }}" loading="lazy"#}
+                            {#                                                                 itemprop="image">#}
+                            {#                                                        </picture>#}
+                            {#                                                    </a>#}
+                            {#                                                </figure>#}
+                            {#                                                <div class="news_teaser-content-wrap">#}
+                            {#                                                    <h2 itemprop="name"><a#}
+                            {#                                                            href="{{ u.image.url }}"#}
+                            {#                                                            itemprop="url"><span itemprop="headline"></span></a>#}
+                            {#                                                    </h2>#}
+                            {#                                                    <p class="more"><a href="{{ u.image.url }}"#}
+                            {#                                                                       itemprop="url">#}
+                            {#                                                    </a>#}
+                            {#                                                    </p>#}
+                            {#                                                </div>#}
+                            {#                                            </div>#}
+                            {#                                        {% endfor %}#}
+                            {#                                    </div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                        <div class="mod_newslist block">
+                                <div class="news_teaser-container">
+                                    <div class=" mb-10">
+                                        <span class="category fw-bold fnt-size-28 fw-bold">تصاویر</span>
+                                    </div>
+                                    <div class="news_teaser-wrap">
                                         {% for d in object.gallery.all %}
-                                        <div class="product-teaser">
-                                            <a href="" class="product-teaser_read-more">
-                                                <img src="{{ d.image.url }}" alt="{{ d.title }}">
-                                                <span class="invisible"
-                                                      style="font-size: 20px">PORPLASTIC S6085 SR</span>
-                                            </a>
-                                        </div>
+                                            <div class="news_teaser arc_3 block last even has-image news logistics industry manufacturing"
+                                                 data-filter="news logistics industry manufacturing" itemscope=""
+                                                 itemtype="http://schema.org/Article">
+                                                <figure class="">
+                                                    <a href="{{ d.image.url }}">
+                                                        <picture>
+                                                            <img class="image_container" src="{{ d.image.url }}" width="395"
+                                                                 height="350" alt="{{ u.title }}" loading="lazy"
+                                                                 itemprop="image">
+                                                        </picture>
+                                                    </a>
+                                                </figure>
+                                                <div class="news_teaser-content-wrap">
+                                                    <h2 itemprop="name"><a
+                                                            href="{{ d.image.url }}"
+                                                            itemprop="url"><span itemprop="headline"></span></a>
+                                                    </h2>
+                                                    <p class="more"><a href="{{ d.image.url }}"
+                                                                       itemprop="url">
+                                                    </a>
+                                                    </p>
+                                                </div>
+                                            </div>
                                         {% endfor %}
                                     </div>
                                 </div>
                             </div>
+
                             <div class="full-button">
                                 <a href="{% url 'product:ProductList' %}"
-                                   class="back-button" id="back" title="zurück">
+                                   class=" fw-bold back-button  mb-20" id="back" title="zurück">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#C5C4BE" width="16.5" height="17.65"
                                          viewBox="0 0 16.5 17.65">
                                         <path d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"/>

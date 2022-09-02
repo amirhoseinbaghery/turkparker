@@ -9,14 +9,14 @@
     cursor: pointer
 }
 .ce_accordion .accordion-simple_toggler .accordion-simple_title {
-    font-size: 1.38em;
+    font-size: 2.38em;
     font-size: clamp(1.11em, 1.3vw, 1.38em);
-    font-family: "universal-extended", helvetica, arial, sans-serif;
+    font-family: "IRANSansWeb", helvetica, arial, sans-serif;
     line-height: 1.4em
 }
 .ce_accordion .accordion-simple_toggler .ui-accordion-header-icon {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0.6em;
     width: 1.4em;
     height: 1.4em;

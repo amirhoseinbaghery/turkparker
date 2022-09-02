@@ -50737,10 +50737,20 @@ body {
   border: 1px solid #F5F8FA !important;
   border-radius: 0.475rem;
 }
+.
+.iran{
+    font-family: 'IRANSansWeb' !important;
+}
 .rtl{
     direction: rtl !important;
 }
-.fnt-sz-25{
+.fnt-size-30{
+    font-size: 30px;
+}
+.fnt-size-28{
+    font-size: 28px;
+}
+.fnt-size-25{
     font-size: 25px !important;
 }
 .fnt-size-20{

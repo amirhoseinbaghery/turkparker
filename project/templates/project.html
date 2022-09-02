@@ -60,7 +60,7 @@
                                                             <a class="text-decoration-none"
                                                                href="{% url 'project:tagList' u.slug %}">
                                                                 <h2
-                                                                        class="Y2IQFc"
+                                                                        class="Y2IQFc fnt-size-20"
                                                                         lang="en">{{ u.title }}</h2>
                                                             </a>
                                                         {% endfor %}
@@ -76,14 +76,14 @@
                                 <div class="wrapper">
 
 
-                                    <p>
+                                    <p class="">
                                         {{ object.description }}
                                     </p>
                                 </div>
                             </div>
                             <div class="ce_fulltext block">
                                 <div class="wrapper">
-                                    <p>
+                                    <p class="fnt-size-18">
                                         {{ object.body|safe }}
                                     </p></div>
                             </div>
@@ -126,7 +126,7 @@
                         <!-- indexer::stop -->
                         <div class="back-button-section">
                             <div class="inside">
-                                <a class="back-btn" href="{% url 'project:ProjectList' %}" title="Go back">
+                                <a class="back-btn fnt-size-18" href="{% url 'project:ProjectList' %}" title="Go back">
                                     <svg id="arrow-back" xmlns="http://www.w3.org/2000/svg" width="16.5" height="17.65">
                                         <path data-name="Path 1591"
                                               d="m8.82 17.65 1.27-1.27-6.65-6.65H16.5v-1.8H3.44l6.65-6.65L8.82 0 0 8.83Z"

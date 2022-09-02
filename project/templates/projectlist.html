@@ -31,7 +31,8 @@
                                             </a>
                                         </figure>
                                         <div class="news_teaser-content-wrap">
-                                                <span class="tag-chain tag-chain-item"><a href="{% url 'project:CategoryList' r.category.first.slug %}">
+                                                <span class="tag-chain tag-chain-item fnt-size-18">
+                                                    <a class="text-gray-400" href="{% url 'project:CategoryList' r.category.first.slug %}">
                                                 {{ r.category.first }}</a></span>
                                             <h2 itemprop="name"><a
                                                     href="{% url 'project:Project' r.slug %}"

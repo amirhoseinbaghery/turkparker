@@ -105,12 +105,13 @@
                 <div class="mod_newslist block">
                     <div class="news_teaser-container">
                         <div class="section-titles">
-                            <span class="category">مقالات</span>
+                            <span class="category fnt-size-20">مقالات</span>
                             <a href="{% url 'blog:PostList' %}"><h2 class="title">مقالات بیشتر</h2></a>
                         </div>
                         <div class="news_teaser-wrap">
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article"
+                                 style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ blog.image.url }}"
@@ -119,18 +120,24 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item"><a href="{% url 'blog:categoryList' blog.category.first.slug %}">
-                                        {{ blog.category.first }}</a>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-dark" href="{% url 'blog:categoryList' blog.category.first.slug %}">
+                                                {{ blog.category.first }}
+                                            </a>
                                         </span>
                                     <h2 itemprop="name"><a href="{% url 'blog:SinglePost' blog.slug %}"
 
                                                            itemprop="url"><span
                                             itemprop="headline">{{ blog.title }}</span></a>
                                     </h2>
-                                    <p class="more"><a href="{% url 'blog:SinglePost' blog.slug %}"
-                                                       title="مشاهده:{{ blog.title }}"
-                                                       itemprop="url">مشاهده<span
-                                            class="invisible">{{ blog.title }}</span></a>
+                                    <p class="more">
+                                        <a class="text-decoration-none" href="{% url 'blog:SinglePost' blog.slug %}"
+                                           title="مشاهده:{{ blog.title }}"
+                                           itemprop="url">مشاهده
+                                            <span
+                                                class="invisible">{{ blog.title }}
+                                            </span>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -155,12 +162,15 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item fnt-size-18"><a href="{% url 'blog:categoryList' c.category.first.slug %}">
-                                        {{ c.category.first }}</a>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-gray-400" href="{% url 'blog:categoryList' c.category.first.slug %}">
+                                                {{ c.category.first }}
+                                            </a>
                                         </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' c.slug %}"
-                                                itemprop="url"><span class="fnt-sz-25" itemprop="headline">{{ c.title }}</span></a>
+                                                itemprop="url"><span class="fnt-sz-25"
+                                                                     itemprop="headline">{{ c.title }}</span></a>
                                         </h2>
                                     </div>
                                 </div>
@@ -173,12 +183,13 @@
                 <div class="mod_newslist block">
                     <div class="news_teaser-container">
                         <div class="section-titles">
-                            <span class="category">محصولات</span>
+                            <span class="category fnt-size-20">محصولات</span>
                             <a href="{% url 'product:ProductList' %}"><h2 class="title">محصولات بیشتر</h2></a>
                         </div>
-                        <div class="news_teaser-wrap    " >
+                        <div class="news_teaser-wrap    ">
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article"
+                                 style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ product_.image.url }}"
@@ -187,15 +198,17 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item"><a href="{% url 'product:categoryList' product_.category.first.slug %}">
-                                        {{ product_.category.first }}</a>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-dark" href="{% url 'product:categoryList' product_.category.first.slug %}">
+                                                {{ product_.category.first }}
+                                            </a>
                                         </span>
                                     <h2 itemprop="name"><a href="{% url 'product:product' product_.slug %}"
 
                                                            itemprop="url"><span
                                             itemprop="headline">{{ product_.title }}</span></a>
                                     </h2>
-                                    <p class="more"><a href="{% url 'product:product' product_.slug %}"
+                                    <p class="more"><a class="text-decoration-none" href="{% url 'product:product' product_.slug %}"
                                                        title="مشاهده:{{ product_.title }}"
                                                        itemprop="url">مشاهده<span
                                             class="invisible">{{ product_.title }}</span></a>
@@ -223,8 +236,11 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item"><a href="{% url 'product:categoryList' c.category.first.slug %}">
-                                        {{ c.category.first }}</a></span>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-gray-400" href="{% url 'product:categoryList' c.category.first.slug %}">
+                                                {{ c.category.first }}
+                                            </a>
+                                        </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'product:product' c.slug %}"
                                                 itemprop="url"><span itemprop="headline">{{ c.title }}</span></a>
@@ -240,12 +256,13 @@
                 <div class="mod_newslist block">
                     <div class="news_teaser-container">
                         <div class="section-titles">
-                            <span class="category">پروژه ها</span>
+                            <span class="category fnt-size-20">پروژه ها</span>
                             <a href="{% url 'project:ProjectList' %}"><h2 class="title">پروژه های بیشتر</h2></a>
                         </div>
                         <div class="news_teaser-wrap">
                             <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                 data-filter='case-studies parking' itemtype="http://schema.org/Article" style="height: 400px">
+                                 data-filter='case-studies parking' itemtype="http://schema.org/Article"
+                                 style="height: 400px">
                                 <div class="news_teaser-image-wrap">
                                     <picture>
                                         <img src="{{ project.image.url }}"
@@ -254,13 +271,16 @@
                                     </picture>
                                 </div>
                                 <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item"><a href="{% url 'project:CategoryList' project.category.first.slug %}">
-                                        {{ project.category.first }}</a>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-dark" href="{% url 'project:CategoryList' project.category.first.slug %}">
+                                                {{ project.category.first }}
+                                            </a>
                                         </span>
-                                    <h2 itemprop="name"><a href="{% url 'project:Project' project.slug %}" itemprop="url"><span
+                                    <h2 itemprop="name"><a href="{% url 'project:Project' project.slug %}"
+                                                           itemprop="url"><span
                                             itemprop="headline">{{ project.title }}</span></a>
                                     </h2>
-                                    <p class="more"><a href="{% url 'project:Project' project.slug %}"
+                                    <p class="more"><a class="text-decoration-none" href="{% url 'project:Project' project.slug %}"
                                                        title="مشاهده:{{ project.title }}"
                                                        itemprop="url">مشاهده<span
                                             class="invisible">{{ project.title }}</span></a>
@@ -288,8 +308,11 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item"><a href="{% url 'project:CategoryList' c.category.first.slug %}">
-                                        {{ c.category.first }}</a></span>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-gray-400" href="{% url 'project:CategoryList' c.category.first.slug %}">
+                                                {{ c.category.first }}
+                                            </a>
+                                        </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'project:Project' c.slug %}"
                                                 itemprop="url"><span itemprop="headline">{{ c.title }}</span></a>
@@ -303,7 +326,7 @@
                 <!-- project -->
                 <div class="tabs-wrap">
                     <div class="tab-header section-titles">
-                        <p class="subheadline">مزایا</p>
+                        <p class="subheadline fnt-size-20">مزایا</p>
                         <h2 class="title">چرا تورک پارکر:</h2>
                     </div>
                     <div class="tabs-content">
@@ -330,9 +353,9 @@
                                         <ul>
                                             {% for b in why %}
                                                 {% if b.installer is False %}
-                                                <li>
-                                                    {{ b.body }}
-                                                </li>
+                                                    <li>
+                                                        {{ b.body }}
+                                                    </li>
                                                 {% endif %}
                                             {% endfor %}
                                         </ul>
@@ -346,9 +369,9 @@
                                         <ul>
                                             {% for b in why %}
                                                 {% if b.installer %}
-                                                <li>
-                                                    {{ b.body }}
-                                                </li>
+                                                    <li>
+                                                        {{ b.body }}
+                                                    </li>
                                                 {% endif %}
                                             {% endfor %}
                                         </ul>

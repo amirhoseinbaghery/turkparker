@@ -49,7 +49,7 @@
                             </div>
                             <div class="news_teaser-wrap">
                                 <div class="news_teaser arc_3 block featured featured_first first even has-image case-studies parking"
-                                     data-filter='case-studies parking' itemscope itemtype="http://schema.org/Article">
+                                     data-filter='case-studies parking' itemscope itemtype="http://schema.org/Article"  style="height: 350px">
                                     <div class="news_teaser-image-wrap">
                                         <picture>
                                             <img src="{{ first.image.url }}"
@@ -57,8 +57,10 @@
                                         </picture>
                                     </div>
                                     <div class="news_teaser-content-wrap">
-                                    <span class="tag-chain tag-chain-item">
-                                        <a href="{% url 'blog:categoryList' first.category.first.slug %}">{{ first.category.first }}</a>
+                                    <span class="tag-chain tag-chain-item fnt-size-18">
+                                        <a class="text-white" href="{% url 'blog:categoryList' first.category.first.slug %}">
+                                            {{ first.category.first }}
+                                        </a>
                                     </span>
                                         <h2 itemprop="name"><a href="{% url 'blog:SinglePost' first.slug %}"
                                                                itemprop="url"><span itemprop="headline">{{ first.title }}</span></a>
@@ -89,12 +91,14 @@
                                         </a>
                                     </figure>
                                     <div class="news_teaser-content-wrap">
-                                        <span class="tag-chain tag-chain-item">
-                                            <a href="{% url 'blog:categoryList' r.category.first.slug %}">{{ r.category.first }}</a>
+                                        <span class="tag-chain tag-chain-item fnt-size-18">
+                                            <a class="text-gray-400" href="{% url 'blog:categoryList' r.category.first.slug %}">
+                                                {{ r.category.first }}
+                                            </a>
                                         </span>
                                         <h2 itemprop="name"><a
                                                 href="{% url 'blog:SinglePost' r.slug %}"
-                                                itemprop="url"><span itemprop="headline">{{ r.title }}</span></a>
+                                                itemprop="url"><span class="fnt-size-20" itemprop="headline">{{ r.title }}</span></a>
                                         </h2>
                                         <p class="more"><a
                                                 href="{% url 'blog:SinglePost' r.slug %}"
